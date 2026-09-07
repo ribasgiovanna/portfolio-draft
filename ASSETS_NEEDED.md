@@ -21,21 +21,18 @@ tags, documents, personal data, or anything that needs someone's permission.
 
 `flower-avatar.png` is already in place (an illustration used as the profile image).
 
-## `assets/images/creative/` — Creative gallery (section 07)
-One image per piece. The gallery layout expects a mix of sizes.
-| file | piece | orientation | size |
-|---|---|---|---|
-| `reaching.webp` | REACHING | landscape | ~1800px wide |
-| `moments.webp` | MOMENTS | square-ish | ~1400px |
-| `what-remains.webp` | WHAT REMAINS | portrait | ~1400px tall |
-| `flower.webp` | flower | square-ish | ~1400px |
-| `my-love-2.webp` | My love 2.0 | landscape | ~1600px |
-| `9to5.webp` | 9to5 | landscape | ~1800px wide |
-| `run.webp` | RUN | landscape | ~1600px |
+## `assets/images/playground/` — Playground gallery — **DONE**
+Populated from Giovanna's Google Drive (2026‑09‑07). 23 WebP images, long edge
+≤1500px, in `design/` (digital art + graphic design), `illustration/` (ink
+sketches), `photography/`, `food/`, `volunteering/`. Filter chips + staggered
+reveal + lightbox are wired in `index.html` / `style.css` / `script.js`.
 
-Optional per piece, for the modal: 1–3 detail crops (`reaching-detail-1.webp`, …)
-and a one or two sentence note about the concept (send as text; nothing is invented
-on the site until you provide it).
+Still optional here:
+- a couple more **photography** frames (only one in the folder so far)
+- short concept notes for the digital‑art pieces (REACHING, WHAT REMAINS, etc.)
+  — shown in the lightbox once provided; nothing is invented
+- confirm captions for the two identifiable volunteering photos
+  (currently "Diretoria da Mulher — PUCPR" and "TEIA do Bem — social media")
 
 ## `assets/images/coffee-code/` — Coffee & Code (section 06)
 | file | use | orientation | size |
