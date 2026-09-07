@@ -8,7 +8,7 @@
   var I18N = {
     en: {
       skip: "Skip to content",
-      nav_about: "About", nav_work: "Work", nav_coffee: "Coffee &amp; Code", nav_currently: "Currently", nav_contact: "Contact",
+      nav_about: "About", nav_work: "Work", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Currently", nav_contact: "Contact",
 
       hi: "Hi, my name is",
       say: "she builds things — with code, design &amp; people",
@@ -36,6 +36,18 @@
       p1_desc: "A Selenium robot, a pandas pipeline and a Streamlit dashboard. Course project with Jackson Beggi and wingCODING — I worked on extraction and treatment.",
       p2_desc: "Python and Pygame: state machine, jump physics, random obstacles, a HUD and a saved high score. My code; the art is AI-generated and labelled as such.",
       p3_desc: "Auth, ADM/FUNC access levels, CRUD and a REST API. My part: the Employees module and its link to Deliveries, CPF/CNPJ registration and the admin dashboard.",
+
+      journey_h: "The story so far",
+      journey_p1: "I started in software engineering and kept adding languages to build in. Data came first — cleaning it, automating the boring parts. Then the web, then design, then a community.",
+      journey_p2: "None of it was a plan. Each thing made the next one make sense: a script became a pipeline, a class exercise became a team project, a group of friends became a club.",
+      journey_todo: "&#9432; Placeholder timeline — to be expanded with real dates, the &ldquo;why&rdquo; behind each step, and photos.",
+      j1_t: "2024 &middot; started", j1_d: "Software Engineering at PUCPR.",
+      j2_t: "Python &amp; data", j2_d: "First automations with pandas — public health data, spreadsheets, ETL.",
+      j3_t: "Coffee &amp; Code", j3_d: "Founded and now lead a student tech club.",
+      j4_t: "First Django team project", j4_d: "Pibble Express — auth, access levels, an admin dashboard.",
+      j5_t: "Dev intern", j5_d: "Production software, day to day. Details are proprietary.",
+      j6_t: "Design &amp; people", j6_d: "Visual identity, illustration, events with Diretoria da Mulher.",
+      j7_t: "Off the screen", j7_d: "Baking bread, cookies and other experiments.",
 
       work_h: "Selected work",
       work_intro: "Software, data, a game, a community. Different languages for the same habit — making things.",
@@ -112,7 +124,7 @@
 
     pt: {
       skip: "Pular para o conte&uacute;do",
-      nav_about: "Sobre", nav_work: "Trabalhos", nav_coffee: "Coffee &amp; Code", nav_currently: "Atualmente", nav_contact: "Contato",
+      nav_about: "Sobre", nav_work: "Trabalhos", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Atualmente", nav_contact: "Contato",
 
       hi: "Oi, meu nome &eacute;",
       say: "ela constr&oacute;i coisas — com c&oacute;digo, design &amp; pessoas",
@@ -140,6 +152,18 @@
       p1_desc: "Um rob&ocirc; em Selenium, um pipeline em pandas e um dashboard em Streamlit. Trabalho de curso com Jackson Beggi e wingCODING — eu cuidei de extra&ccedil;&atilde;o e tratamento.",
       p2_desc: "Python e Pygame: m&aacute;quina de estados, f&iacute;sica de pulo, obst&aacute;culos aleat&oacute;rios, HUD e recorde salvo. C&oacute;digo meu; a arte &eacute; gerada por IA e sinalizada como tal.",
       p3_desc: "Autentica&ccedil;&atilde;o, n&iacute;veis de acesso ADM/FUNC, CRUD e API REST. Minha parte: o m&oacute;dulo de Funcion&aacute;rios e a liga&ccedil;&atilde;o com Entregas, cadastro CPF/CNPJ e o dashboard admin.",
+
+      journey_h: "A hist&oacute;ria at&eacute; aqui",
+      journey_p1: "Comecei na engenharia de software e fui juntando linguagens para construir. Dados vieram primeiro — limpar, automatizar a parte chata. Depois a web, depois o design, depois uma comunidade.",
+      journey_p2: "Nada disso foi planejado. Cada coisa fez a pr&oacute;xima fazer sentido: um script virou um pipeline, um exerc&iacute;cio de aula virou um projeto em equipe, um grupo de amigos virou um clube.",
+      journey_todo: "&#9432; Linha do tempo provis&oacute;ria — a expandir com datas reais, o &ldquo;porqu&ecirc;&rdquo; de cada passo e fotos.",
+      j1_t: "2024 &middot; in&iacute;cio", j1_d: "Engenharia de Software na PUCPR.",
+      j2_t: "Python &amp; dados", j2_d: "Primeiras automa&ccedil;&otilde;es com pandas — dados p&uacute;blicos de sa&uacute;de, planilhas, ETL.",
+      j3_t: "Coffee &amp; Code", j3_d: "Criei e hoje lidero um clube universit&aacute;rio de tecnologia.",
+      j4_t: "Primeiro projeto Django em equipe", j4_d: "Pibble Express — autentica&ccedil;&atilde;o, n&iacute;veis de acesso, um dashboard admin.",
+      j5_t: "Est&aacute;gio em dev", j5_d: "Software em produ&ccedil;&atilde;o, no dia a dia. Os detalhes s&atilde;o propriet&aacute;rios.",
+      j6_t: "Design &amp; pessoas", j6_d: "Identidade visual, ilustra&ccedil;&atilde;o, eventos com a Diretoria da Mulher.",
+      j7_t: "Longe da tela", j7_d: "Fazer p&atilde;o, cookies e outros experimentos.",
 
       work_h: "Trabalhos selecionados",
       work_intro: "Software, dados, um jogo, uma comunidade. Linguagens diferentes para o mesmo h&aacute;bito — fazer coisas.",
