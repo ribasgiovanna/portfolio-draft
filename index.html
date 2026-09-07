@@ -51,21 +51,19 @@
 <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
 
 <header class="nav">
-  <a class="nav__mono" href="#top" aria-label="Giovanna Ribas — home">GR</a>
   <nav class="nav__pill" aria-label="Sections">
-    <a href="#work"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span data-i18n="nav_work">Work</span></a>
-    <a href="#creative"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg><span data-i18n="nav_playground">Playground</span></a>
+    <a href="#home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/></svg><span data-i18n="nav_home">Home</span></a>
+    <a href="#projects"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span data-i18n="nav_work">Projects</span></a>
+    <a href="#playground"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg><span data-i18n="nav_playground">Playground</span></a>
     <a href="#about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg><span data-i18n="nav_about">About</span></a>
-    <a href="#currently"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4M8 12h8M8 16h6"/></svg><span data-i18n="nav_cv">CV</span></a>
+    <!-- TODO: replace href with the public Google Drive link to Giovanna's CV -->
+    <a class="nav__cv" href="https://drive.google.com/drive/folders/1Pruit6vpBDIKMRrGLuLLc2SDCXhNd-VL?usp=sharing" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l4 4v14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v4h4M8 12h8M8 16h6"/></svg><span data-i18n="nav_cv">CV</span></a>
   </nav>
-  <a class="nav__mail" href="#contact" aria-label="Contact">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3.5 6.5 12 13l8.5-6.5"/></svg>
-  </a>
   <button id="lang" class="nav__lang" type="button">PT</button>
 </header>
 
 <main id="main">
-<span id="top"></span>
+<span id="top"></span><span id="home"></span>
 
 <!-- ============ ABOUT / IDENTITY PAGE ============ -->
 <section id="about" class="about" aria-labelledby="hero-name">
@@ -141,8 +139,8 @@
 </section>
 
 <!-- ============ SELECTED WORK ============ -->
-<section id="work" class="stack" aria-labelledby="work-h">
-  <h2 id="work-h" class="sr-only" data-i18n="work_h">Selected work</h2>
+<section id="projects" class="stack" aria-labelledby="work-h">
+  <h2 id="work-h" class="sr-only" data-i18n="work_h">Projects</h2>
 
   <!-- PROJECT 01 — DATASUS -->
   <article id="datasus" class="panel panel--tint" aria-labelledby="p1-h">
@@ -200,6 +198,46 @@
       </figure>
     </div>
   </article>
+
+  <!-- PROJECT 04 — IoT FLOOD MONITORING -->
+  <article id="flood" class="panel panel--tint" aria-labelledby="p4-h">
+    <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 04</span>
+    <div class="panel__body">
+      <div class="panel__text">
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p4_date">Academic &middot; IoT + web</span></p>
+        <h3 id="p4-h" data-i18n="flood_h">City flood &amp; waterlogging monitor</h3>
+        <p class="panel__lead" data-i18n="flood_lead">Sensors in the field, an alert on someone's phone before the water rises.</p>
+        <p class="panel__more" data-i18n="flood_desc">An ESP32 reads water-level sensors and feeds an integrated web system that notifies the person in charge when a point is at risk.</p>
+        <p class="tagrow"><span>ESP32</span><span data-i18n="tag_sensors">sensors</span><span data-i18n="tag_web">web</span><span data-i18n="tag_alerts">alerts</span></p>
+        <p class="note" data-i18n="flood_note">Materials (photos, diagram, screens) are being gathered — see notes.</p>
+      </div>
+      <figure class="panel__shot">
+        <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
+        <span class="panel__ph" data-i18n="ph_flood">hardware &amp; web dashboard — image pending</span>
+      </figure>
+    </div>
+  </article>
+
+  <!-- PROJECT 05 — BPMN VET CLINIC -->
+  <article id="bpmn" class="panel panel--dark" aria-labelledby="p5-h">
+    <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 05</span>
+    <div class="panel__body">
+      <div class="panel__text">
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p5_date">Academic &middot; process modeling</span></p>
+        <h3 id="p5-h" data-i18n="bpmn_h">Veterinary clinic — process modeling</h3>
+        <p class="panel__lead" data-i18n="bpmn_lead">Mapping how a clinic actually runs, one process at a time.</p>
+        <p class="panel__more" data-i18n="bpmn_desc">BPMN diagrams for the clinic's main processes — intake, appointments, procedures, records — as a base for spotting friction and redesigning.</p>
+        <p class="tagrow"><span>BPMN</span><span data-i18n="tag_analysis">process analysis</span><span data-i18n="tag_diagrams">diagrams</span></p>
+        <p class="note" data-i18n="bpmn_note">Diagrams are being exported — see notes.</p>
+      </div>
+      <figure class="panel__shot">
+        <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
+        <span class="panel__ph" data-i18n="ph_bpmn">BPMN diagram — image pending</span>
+      </figure>
+    </div>
+  </article>
+
+  <p class="stack__more"><a class="cta" href="https://github.com/ribasgiovanna?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="stack_more">For more work, see my GitHub &rarr;</a></p>
 </section>
 
 <!-- ============ COFFEE & CODE ============ -->
@@ -220,8 +258,8 @@
 </section>
 
 <!-- ============ CREATIVE GALLERY ============ -->
-<section id="creative" class="gallery" aria-labelledby="creative-h">
-  <p class="section-label"><span>04</span> <span id="creative-h" data-i18n="creative_h">Creative work</span></p>
+<section id="playground" class="gallery" aria-labelledby="creative-h">
+  <p class="section-label"><span>04</span> <span id="creative-h" data-i18n="creative_h">Playground</span></p>
   <p class="gallery__intro" data-i18n="creative_intro">Graphic design, image manipulation, digital illustration, photography and visual experiments. A selection — images are being prepared.</p>
   <div class="gallery__grid">
     <button class="art art--lg" type="button" data-title="REACHING" data-cat="image / digital">

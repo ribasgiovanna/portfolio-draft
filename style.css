@@ -91,55 +91,43 @@ a:hover { text-decoration-color: currentColor; }
 }
 .skip:focus { top: 12px; }
 
-/* ---------- nav (monogram + icon pill + mail) ---------- */
+/* ---------- nav (centered outline pill) ---------- */
 .nav {
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; justify-content: center; gap: 10px;
   padding: 14px clamp(14px, 4vw, 44px);
   background: linear-gradient(var(--paper) 55%, transparent);
 }
-.nav__mono {
-  display: grid; place-items: center;
-  width: 44px; height: 44px; flex: none;
-  border: 1px solid var(--line); border-radius: 999px;
-  background: var(--panel);
-  font: 600 13px/1 var(--mono); letter-spacing: .04em;
-  text-decoration: none; color: var(--ink);
-}
-.nav__mono:hover { border-color: var(--accent); color: var(--accent); }
 .nav__pill {
   display: flex; align-items: center; gap: 2px;
   padding: 5px;
   border: 1px solid var(--line); border-radius: 999px;
-  background: color-mix(in srgb, var(--panel) 86%, transparent);
+  background: color-mix(in srgb, var(--panel) 84%, transparent);
   backdrop-filter: saturate(160%) blur(10px);
 }
 .nav__pill a {
   display: inline-flex; align-items: center; gap: 7px;
   text-decoration: none; color: var(--ink-2);
-  padding: 8px 14px; border-radius: 999px;
+  padding: 8px 15px; border-radius: 999px;
   font-size: 14px;
 }
-.nav__pill a svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
-.nav__pill a:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 6%, transparent); }
-.nav__mail {
-  display: grid; place-items: center;
-  width: 44px; height: 44px; flex: none;
-  border-radius: 999px; background: var(--accent); color: var(--paper);
-  text-decoration: none;
+.nav__pill a svg {
+  width: 16px; height: 16px;
+  fill: none; stroke: currentColor; stroke-width: 1.6;
+  stroke-linecap: round; stroke-linejoin: round;
 }
-.nav__mail svg { width: 19px; height: 19px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.nav__mail:hover { filter: brightness(1.07); }
+.nav__pill a:hover { color: var(--ink); background: color-mix(in srgb, var(--ink) 6%, transparent); }
+.nav__pill a.nav__cv { color: var(--accent); }
 .nav__lang {
   font: 600 12px/1 var(--mono); letter-spacing: .08em;
-  padding: 0 12px; height: 44px; flex: none;
+  padding: 0 12px; height: 42px; flex: none;
   border: 1px solid var(--line); border-radius: 999px;
-  background: var(--panel); color: var(--ink); cursor: pointer;
+  background: transparent; color: var(--ink); cursor: pointer;
 }
 .nav__lang:hover { border-color: var(--accent); color: var(--accent); }
-@media (max-width: 700px) {
+@media (max-width: 640px) {
   .nav__pill a span { display: none; }
-  .nav__pill a { padding: 9px; }
+  .nav__pill a { padding: 9px; gap: 0; }
 }
 
 /* ---------- shared layout ---------- */
@@ -364,52 +352,40 @@ p:last-child { margin-bottom: 0; }
   --folder-bg: var(--panel);
   --folder-line: var(--line);
   --folder-fg: var(--ink);
-  --tab-h: 40px;   /* height of the folder tab strip */
-  --tab-w: 230px;  /* width of the tab */
-  --tab-x: 30px;   /* tab offset from the left */
-  --tab-skew: 20px;/* angled right side of the tab */
-  position: sticky; top: 84px;
+  --tab-h: 42px;
+  --tab-w: clamp(180px, 24vw, 260px);
+  --tab-x: 34px;
+  --radius: clamp(22px, 3.2vw, 36px);   /* iOS-style squircle */
+  position: sticky; top: 88px;
   width: min(1180px, calc(100% - clamp(24px, 6vw, 96px)));
-  margin: clamp(58px, 8vh, 92px) auto 0;
+  margin: calc(var(--tab-h) + clamp(30px, 6vh, 64px)) auto 0;
   min-height: 74vh;
   display: grid; align-content: center;
-  padding: calc(var(--tab-h) + clamp(16px, 3vw, 40px)) clamp(34px, 5vw, 68px) clamp(34px, 5vw, 64px);
-  color: var(--folder-fg);
-  filter: drop-shadow(0 30px 42px rgba(24,16,8,.34));
-  /* the folder silhouette: a raised tab on the top-left edge */
-  clip-path: polygon(
-    0 var(--tab-h),
-    var(--tab-x) var(--tab-h),
-    calc(var(--tab-x) + 8px) 0,
-    calc(var(--tab-x) + var(--tab-w)) 0,
-    calc(var(--tab-x) + var(--tab-w) + var(--tab-skew)) var(--tab-h),
-    100% var(--tab-h),
-    100% 100%,
-    0 100%
-  );
-}
-.panel::before {   /* fill + hairline edge, same folder shape */
-  content: ""; position: absolute; inset: 0; z-index: -1;
+  padding: clamp(30px, 4vw, 56px) clamp(34px, 5vw, 68px) clamp(34px, 5vw, 64px);
   background: var(--folder-bg);
-  box-shadow: inset 0 0 0 1px var(--folder-line);
-  clip-path: inherit;
+  color: var(--folder-fg);
+  border: 1px solid var(--folder-line);
+  border-radius: var(--radius);
+  box-shadow: 0 34px 60px -30px rgba(24,16,8,.4), 0 4px 14px -8px rgba(24,16,8,.3);
 }
-.panel:first-of-type { margin-top: 10px; }
+/* the rounded folder tab, protruding above the card */
+.panel__tab {
+  position: absolute; top: calc(-1 * var(--tab-h) + 1px); left: var(--tab-x);
+  min-width: var(--tab-w); height: var(--tab-h);
+  display: flex; align-items: center; padding: 0 26px;
+  font: 600 10.5px/1 var(--mono); letter-spacing: .2em;
+  color: var(--folder-fg);
+  background: var(--folder-bg);
+  border: 1px solid var(--folder-line); border-bottom: 0;
+  border-radius: 16px 16px 0 0;
+}
+.panel:first-of-type { margin-top: clamp(14px, 3vh, 28px); }
 .panel--tint  { --folder-bg: #ecdccd; --folder-line: #d9c4ac; --folder-fg: #2a231b; }
 .panel--dark  { --folder-bg: #292118; --folder-line: #453829; --folder-fg: var(--dark-fg); }
 .panel--cream { --folder-bg: #f6efdf; --folder-line: #e3d7c0; --folder-fg: #2a231b; }
 @media (prefers-color-scheme: dark) {
   .panel--tint  { --folder-bg: #33291d; --folder-line: #4a3b2a; --folder-fg: var(--dark-fg); }
   .panel--cream { --folder-bg: #241d15; --folder-line: #3c3122; --folder-fg: var(--dark-fg); }
-}
-
-/* label sitting inside the folder tab */
-.panel__tab {
-  position: absolute; top: 0; left: calc(var(--tab-x) + 20px);
-  height: var(--tab-h); display: flex; align-items: center;
-  font: 600 10.5px/1 var(--mono); letter-spacing: .2em;
-  color: var(--folder-fg); opacity: .8;
-  pointer-events: none;
 }
 .panel__spark { color: var(--accent); margin-right: 8px; }
 
@@ -436,6 +412,14 @@ p:last-child { margin-bottom: 0; }
   box-shadow: 0 22px 45px -20px rgba(20,14,8,.55);
   transform: rotate(-1.6deg);
 }
+.panel__ph {
+  display: grid; place-items: center; min-height: 220px;
+  color: #7a7166; font: 500 12px/1.5 var(--mono); letter-spacing: .06em;
+  text-transform: uppercase; text-align: center; padding: 20px;
+  background:
+    repeating-linear-gradient(45deg, transparent 0 9px, rgba(0,0,0,.05) 9px 10px), #f1ece2;
+}
+.stack__more { max-width: var(--wide); margin: clamp(24px, 5vh, 48px) auto 0; padding: 0 clamp(20px, 6vw, 72px); }
 .panel:nth-of-type(even) .panel__shot { transform: rotate(1.6deg); }
 .panel__shot img { display: block; width: 100%; height: auto; }
 .tape {

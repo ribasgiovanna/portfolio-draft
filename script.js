@@ -8,7 +8,7 @@
   var I18N = {
     en: {
       skip: "Skip to content",
-      nav_about: "About", nav_work: "Work", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Currently", nav_contact: "Contact",
+      nav_about: "About", nav_work: "Projects", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Currently", nav_contact: "Contact",
 
       hi: "Hi, my name is",
       say: "she builds things — with code, design &amp; people",
@@ -33,6 +33,22 @@
       p1_date: "Team project &middot; Apr 2026",
       p2_date: "Individual &middot; Jun 2026",
       p3_date: "Team project &middot; Jun 2026",
+      nav_home: "Home",
+      p4_date: "Academic &middot; IoT + web", p5_date: "Academic &middot; process modeling",
+      flood_h: "City flood &amp; waterlogging monitor",
+      flood_lead: "Sensors in the field, an alert on someone's phone before the water rises.",
+      flood_desc: "An ESP32 reads water-level sensors and feeds an integrated web system that notifies the person in charge when a point is at risk.",
+      flood_note: "Materials (photos, diagram, screens) are being gathered — see notes.",
+      bpmn_h: "Veterinary clinic — process modeling",
+      bpmn_lead: "Mapping how a clinic actually runs, one process at a time.",
+      bpmn_desc: "BPMN diagrams for the clinic's main processes — intake, appointments, procedures, records — as a base for spotting friction and redesigning.",
+      bpmn_note: "Diagrams are being exported — see notes.",
+      tag_sensors: "sensors", tag_web: "web", tag_alerts: "alerts",
+      tag_analysis: "process analysis", tag_diagrams: "diagrams",
+      ph_flood: "hardware &amp; web dashboard — image pending",
+      ph_bpmn: "BPMN diagram — image pending",
+      stack_more: "For more work, see my GitHub &rarr;",
+
       p1_desc: "A Selenium robot, a pandas pipeline and a Streamlit dashboard. Course project with Jackson Beggi and wingCODING — I worked on extraction and treatment.",
       p2_desc: "Python and Pygame: state machine, jump physics, random obstacles, a HUD and a saved high score. My code; the art is AI-generated and labelled as such.",
       p3_desc: "Auth, ADM/FUNC access levels, CRUD and a REST API. My part: the Employees module and its link to Deliveries, CPF/CNPJ registration and the admin dashboard.",
@@ -124,7 +140,7 @@
 
     pt: {
       skip: "Pular para o conte&uacute;do",
-      nav_about: "Sobre", nav_work: "Trabalhos", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Atualmente", nav_contact: "Contato",
+      nav_about: "Sobre", nav_work: "Projetos", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Atualmente", nav_contact: "Contato",
 
       hi: "Oi, meu nome &eacute;",
       say: "ela constr&oacute;i coisas — com c&oacute;digo, design &amp; pessoas",
@@ -149,6 +165,22 @@
       p1_date: "Projeto em equipe &middot; abr 2026",
       p2_date: "Individual &middot; jun 2026",
       p3_date: "Projeto em equipe &middot; jun 2026",
+      nav_home: "In&iacute;cio",
+      p4_date: "Acad&ecirc;mico &middot; IoT + web", p5_date: "Acad&ecirc;mico &middot; modelagem de processos",
+      flood_h: "Monitor de alagamentos e enchentes na cidade",
+      flood_lead: "Sensores no local, um alerta no celular de algu&eacute;m antes de a &aacute;gua subir.",
+      flood_desc: "Um ESP32 l&ecirc; sensores de n&iacute;vel de &aacute;gua e alimenta um sistema web integrado que avisa a pessoa respons&aacute;vel quando um ponto est&aacute; em risco.",
+      flood_note: "Materiais (fotos, diagrama, telas) est&atilde;o sendo reunidos — ver notas.",
+      bpmn_h: "Cl&iacute;nica veterin&aacute;ria — modelagem de processos",
+      bpmn_lead: "Mapear como uma cl&iacute;nica funciona de verdade, um processo por vez.",
+      bpmn_desc: "Diagramas BPMN dos principais processos da cl&iacute;nica — recep&ccedil;&atilde;o, consultas, procedimentos, prontu&aacute;rios — como base para achar atritos e redesenhar.",
+      bpmn_note: "Diagramas est&atilde;o sendo exportados — ver notas.",
+      tag_sensors: "sensores", tag_web: "web", tag_alerts: "alertas",
+      tag_analysis: "an&aacute;lise de processos", tag_diagrams: "diagramas",
+      ph_flood: "hardware &amp; painel web — imagem pendente",
+      ph_bpmn: "diagrama BPMN — imagem pendente",
+      stack_more: "Para ver mais trabalhos, acesse o meu GitHub &rarr;",
+
       p1_desc: "Um rob&ocirc; em Selenium, um pipeline em pandas e um dashboard em Streamlit. Trabalho de curso com Jackson Beggi e wingCODING — eu cuidei de extra&ccedil;&atilde;o e tratamento.",
       p2_desc: "Python e Pygame: m&aacute;quina de estados, f&iacute;sica de pulo, obst&aacute;culos aleat&oacute;rios, HUD e recorde salvo. C&oacute;digo meu; a arte &eacute; gerada por IA e sinalizada como tal.",
       p3_desc: "Autentica&ccedil;&atilde;o, n&iacute;veis de acesso ADM/FUNC, CRUD e API REST. Minha parte: o m&oacute;dulo de Funcion&aacute;rios e a liga&ccedil;&atilde;o com Entregas, cadastro CPF/CNPJ e o dashboard admin.",
