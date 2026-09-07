@@ -14,12 +14,9 @@ tags, documents, personal data, or anything that needs someone's permission.
 
 ---
 
-## `assets/images/profile/`
-| file | use | orientation | size | notes |
-|---|---|---|---|---|
-| `portrait.webp` | optional editorial portrait for the hero, replacing the flower crop | portrait | ~1200×1500 | rectangular crop, not a circular avatar |
-
-`flower-avatar.png` is already in place (an illustration used as the profile image).
+## `assets/images/profile/` — **DONE**
+`portrait.webp` (Home polaroid) is in place — a real photo of Giovanna, pulled
+from the Drive `Fotos` folder. `flower-avatar.png` still used on the About passport.
 
 ## `assets/images/playground/` — Playground gallery — **DONE**
 Populated from Giovanna's Google Drive (2026‑09‑07). 23 WebP images, long edge
@@ -34,12 +31,10 @@ Still optional here:
 - confirm captions for the two identifiable volunteering photos
   (currently "Diretoria da Mulher — PUCPR" and "TEIA do Bem — social media")
 
-## `assets/images/coffee-code/` — Coffee & Code (section 06)
-| file | use | orientation | size |
-|---|---|---|---|
-| `identity.webp` | logo / visual identity board | landscape | ~1600px |
-| `poster.webp` | a real poster or session photo | portrait or landscape | ~1400px |
-| `social.webp` | a social-media piece | square | ~1200px |
+## `assets/images/coffee-code/` — Coffee & Code — **DONE (2 of 3)**
+`terminal.webp` (the ASCII / 418 identity card) and `logo.webp` (the 418 mug mark)
+are in place, both provided by Giovanna. Optional: one real **session photo** or
+**poster** to add a third, more human tile.
 
 ## `assets/images/community/` — Community & social impact (section 08)
 | file | use | orientation | size |

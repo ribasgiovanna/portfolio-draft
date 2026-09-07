@@ -54,7 +54,7 @@
       tag_analysis: "process analysis", tag_diagrams: "diagrams",
       ph_flood: "hardware &amp; web dashboard — image pending",
       ph_bpmn: "BPMN diagram — image pending",
-      stack_more: "For more work, see my GitHub &rarr;",
+      stack_more: "For more projects, visit my GitHub &rarr;",
 
       p1_desc: "A Selenium robot, a pandas pipeline and a Streamlit dashboard. Course project with Jackson Beggi and wingCODING — I worked on extraction and treatment.",
       p2_desc: "Python and Pygame: state machine, jump physics, random obstacles, a HUD and a saved high score. My code; the art is AI-generated and labelled as such.",
@@ -89,7 +89,7 @@
       datasus_context: "Hemotherapy figures for the state of Paraná live in the DATASUS TabNet — a slow public interface, one query and one export at a time.",
       datasus_built: "A robot (Selenium) that runs the queries and reads the result tables, a pandas layer that cleans and consolidates every period, and a Streamlit dashboard to compare volume across months and years. Final project for a Python course, with two teammates.",
       datasus_role: "I proposed using the blood-bank data and worked on the extraction and treatment modules. Teammates: Jackson Beggi and wingCODING (RPA orchestration and dashboard).",
-      cta_source: "View source on GitHub &rarr;",
+      cta_source: "View project on GitHub &rarr;",
 
       case_game: "Game — individual project",
       corrida_cap: "Start screen. Art is AI-generated (noted below).",
@@ -203,7 +203,7 @@
       tag_analysis: "an&aacute;lise de processos", tag_diagrams: "diagramas",
       ph_flood: "hardware &amp; painel web — imagem pendente",
       ph_bpmn: "diagrama BPMN — imagem pendente",
-      stack_more: "Para ver mais trabalhos, acesse o meu GitHub &rarr;",
+      stack_more: "Para mais projetos, visite o meu GitHub &rarr;",
 
       p1_desc: "Um rob&ocirc; em Selenium, um pipeline em pandas e um dashboard em Streamlit. Trabalho de curso com Jackson Beggi e wingCODING — eu cuidei de extra&ccedil;&atilde;o e tratamento.",
       p2_desc: "Python e Pygame: m&aacute;quina de estados, f&iacute;sica de pulo, obst&aacute;culos aleat&oacute;rios, HUD e recorde salvo. C&oacute;digo meu; a arte &eacute; gerada por IA e sinalizada como tal.",
@@ -238,7 +238,7 @@
       datasus_context: "Os n&uacute;meros de hemoterapia do Paran&aacute; ficam no TabNet do DATASUS — uma interface p&uacute;blica lenta, uma consulta e um export por vez.",
       datasus_built: "Um rob&ocirc; (Selenium) que roda as consultas e l&ecirc; as tabelas de resultado, uma camada em pandas que limpa e consolida cada per&iacute;odo, e um dashboard em Streamlit para comparar o volume entre meses e anos. Trabalho final de um curso de Python, com dois colegas.",
       datasus_role: "Sugeri usar os dados de banco de sangue e trabalhei nos m&oacute;dulos de extra&ccedil;&atilde;o e tratamento. Colegas: Jackson Beggi e wingCODING (orquestra&ccedil;&atilde;o da RPA e dashboard).",
-      cta_source: "Ver o c&oacute;digo no GitHub &rarr;",
+      cta_source: "Ver projeto no GitHub &rarr;",
 
       case_game: "Jogo — projeto individual",
       corrida_cap: "Tela inicial. A arte &eacute; gerada por IA (nota abaixo).",
