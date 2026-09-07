@@ -21,6 +21,7 @@
   --wide: 1180px;
   --measure: 62ch;
   --gap: clamp(60px, 9vw, 128px);
+  --nav-h: 72px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -96,7 +97,7 @@ a:hover { text-decoration-color: currentColor; }
   position: sticky; top: 0; z-index: 20;
   display: flex; align-items: center; justify-content: center; gap: 10px;
   padding: 14px clamp(14px, 4vw, 44px);
-  background: linear-gradient(var(--paper) 55%, transparent);
+  background: transparent;   /* let section backgrounds run edge-to-edge behind it */
 }
 .nav__pill {
   display: flex; align-items: center; gap: 2px;
@@ -178,9 +179,10 @@ p:last-child { margin-bottom: 0; }
 /* ---------- HOME / WELCOME ---------- */
 .home {
   max-width: none;
-  padding: clamp(28px, 5vw, 60px) clamp(18px, 5vw, 56px) clamp(56px, 9vw, 110px);
+  margin-top: calc(-1 * var(--nav-h, 72px));            /* pull up so the grid runs under the nav */
+  padding: calc(var(--nav-h, 72px) + clamp(30px, 6vw, 80px)) 0 clamp(64px, 10vw, 128px);
   border-bottom: 1px solid var(--line);
-  /* graph-paper grid across the whole section */
+  /* graph-paper grid across the whole viewport width */
   background:
     linear-gradient(color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px) 0 0 / 28px 28px,
     linear-gradient(90deg, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px) 0 0 / 28px 28px,
@@ -190,14 +192,9 @@ p:last-child { margin-bottom: 0; }
   position: relative;
   max-width: var(--wide);
   margin: 0 auto;
-  border: 1px solid var(--line);
-  border-radius: clamp(22px, 3.2vw, 36px);
-  background: transparent;
-  box-shadow: 0 30px 60px -40px rgba(24,16,8,.28);
-  padding: clamp(28px, 5vw, 60px);
+  padding: 0 clamp(20px, 5vw, 56px);
   display: grid; grid-template-columns: 1fr auto; gap: clamp(24px, 5vw, 60px);
   align-items: center;
-  overflow: hidden;
 }
 .home__welcome { font-family: "Caveat", var(--serif); font-size: clamp(1.15rem, 2.4vw, 1.7rem); color: var(--ink-2); margin: 0 0 4px; }
 .home__role {
