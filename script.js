@@ -114,8 +114,18 @@
       ph_poster: "poster / session — image pending",
       ph_social: "social piece — image pending",
 
-      creative_h: "Creative work",
-      creative_intro: "Graphic design, image manipulation, digital illustration, photography and visual experiments. A selection — images are being prepared.",
+      creative_h: "Playground",
+      creative_intro: "Everything I make away from a code editor &mdash; digital art, ink drawing, graphic design, photography, things I bake, and volunteering and events. Tap any piece to see it larger.",
+      pf_all: "All",
+      pf_digital: "Digital art",
+      pf_illustration: "Illustration",
+      pf_photo: "Photography",
+      pf_kitchen: "In the kitchen",
+      pf_community: "Volunteering &amp; events",
+      pg_ink: "Ink study <i>Illustration</i>",
+      pg_photo: "Photograph <i>Photography</i>",
+      pg_kitchen: "In the kitchen <i>Food photography</i>",
+      pg_vol: "Volunteering &amp; events <i>Community</i>",
       cta_behance: "More visual work on Behance &rarr;",
 
       community_h: "Community &amp; social impact",
@@ -253,8 +263,18 @@
       ph_poster: "p&ocirc;ster / encontro — imagem pendente",
       ph_social: "pe&ccedil;a de social — imagem pendente",
 
-      creative_h: "Trabalho criativo",
-      creative_intro: "Design gr&aacute;fico, manipula&ccedil;&atilde;o de imagem, ilustra&ccedil;&atilde;o digital, fotografia e experimenta&ccedil;&otilde;es visuais. Uma sele&ccedil;&atilde;o — as imagens est&atilde;o sendo preparadas.",
+      creative_h: "Playground",
+      creative_intro: "Tudo o que fa&ccedil;o longe do editor de c&oacute;digo &mdash; arte digital, desenho a nanquim, design gr&aacute;fico, fotografia, o que ando assando, e voluntariados e eventos. Toque em qualquer pe&ccedil;a para ver maior.",
+      pf_all: "Todos",
+      pf_digital: "Arte digital",
+      pf_illustration: "Ilustra&ccedil;&atilde;o",
+      pf_photo: "Fotografia",
+      pf_kitchen: "Na cozinha",
+      pf_community: "Voluntariado &amp; eventos",
+      pg_ink: "Estudo a nanquim <i>Ilustra&ccedil;&atilde;o</i>",
+      pg_photo: "Fotografia <i>Fotografia</i>",
+      pg_kitchen: "Na cozinha <i>Fotografia de comida</i>",
+      pg_vol: "Voluntariado &amp; eventos <i>Comunidade</i>",
       cta_behance: "Mais trabalho visual no Behance &rarr;",
 
       community_h: "Comunidade &amp; impacto social",
@@ -302,11 +322,13 @@
     return /^pt\b/i.test(navigator.language || "") ? "pt" : "en";
   }
 
-  /* ---------- work filters ---------- */
-  function initFilters() {
-    var chips = document.querySelectorAll(".filters .chip");
-    var items = document.querySelectorAll(".work__grid .wk");
-    if (!chips.length) return;
+  /* ---------- filters (work grid + playground gallery) ---------- */
+  function bindFilterGroup(groupSel, itemSel) {
+    var group = document.querySelector(groupSel);
+    if (!group) return;
+    var chips = group.querySelectorAll(".chip");
+    var items = document.querySelectorAll(itemSel);
+    if (!chips.length || !items.length) return;
     chips.forEach(function (chip) {
       chip.addEventListener("click", function () {
         var f = chip.getAttribute("data-filter");
@@ -316,6 +338,10 @@
         });
       });
     });
+  }
+  function initFilters() {
+    bindFilterGroup(".filters:not(.gallery__filters)", ".work__grid .wk");
+    bindFilterGroup(".gallery__filters", ".gallery__grid .art");
   }
 
   /* ---------- artwork modal ---------- */
@@ -327,13 +353,20 @@
     var titleEl = document.getElementById("modal-title");
     var catEl = document.getElementById("modal-cat");
     var phEl = document.getElementById("modal-ph");
+    var imgEl = document.getElementById("modal-img");
     var lastFocus = null;
 
     function open(btn) {
       lastFocus = btn;
-      titleEl.textContent = btn.getAttribute("data-title") || "";
+      var title = btn.getAttribute("data-title") || "";
+      titleEl.textContent = title;
       catEl.textContent = btn.getAttribute("data-cat") || "";
-      phEl.textContent = btn.getAttribute("data-title") || "";
+      var full = btn.getAttribute("data-full") || "";
+      if (imgEl) {
+        if (full) { imgEl.src = full; imgEl.alt = title; imgEl.hidden = false; }
+        else { imgEl.removeAttribute("src"); imgEl.hidden = true; }
+      }
+      if (phEl) phEl.textContent = full ? "" : title;
       modal.hidden = false;
       document.body.style.overflow = "hidden";
       closeBtn.focus();
@@ -362,6 +395,34 @@
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   }
 
+  /* ---------- staggered reveal for the playground grid ---------- */
+  function initReveal() {
+    var grid = document.querySelector(".gallery__grid");
+    if (!grid || !("IntersectionObserver" in window)) return;
+    var tiles = [].slice.call(grid.querySelectorAll(".art"));
+    if (!tiles.length) return;
+    grid.classList.add("reveal");
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var t = en.target;
+        t.style.transitionDelay = (t._revIdx % 3) * 80 + "ms";
+        t.classList.add("is-in");
+        io.unobserve(t);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
+    tiles.forEach(function (t, i) { t._revIdx = i; io.observe(t); });
+    // safety net: never leave a tile stuck invisible
+    window.addEventListener("load", function () {
+      setTimeout(function () {
+        tiles.forEach(function (t) {
+          var r = t.getBoundingClientRect();
+          if (r.top < window.innerHeight && r.bottom > 0) { t.classList.add("is-in"); io.unobserve(t); }
+        });
+      }, 400);
+    });
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
@@ -374,5 +435,6 @@
 
     initFilters();
     initModal();
+    initReveal();
   });
 })();

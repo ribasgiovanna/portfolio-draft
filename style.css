@@ -545,30 +545,54 @@ p:last-child { margin-bottom: 0; }
 .frame--wide { grid-column: 1 / -1; min-height: 200px; }
 .frame--tall { min-height: 320px; }
 
-/* ---------- CREATIVE GALLERY ---------- */
-.gallery__intro { font-family: var(--serif); font-size: clamp(1.1rem, 2.2vw, 1.45rem); font-weight: 400; margin-bottom: 1.8em; }
-.gallery__grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px 16px; margin-bottom: 2em; align-items: start; }
-.art { grid-column: span 2; background: none; border: 0; padding: 0; cursor: pointer; text-align: left; color: inherit; font: inherit; }
-.art--lg   { grid-column: span 4; }
-.art--wide { grid-column: span 4; }
-.art__frame {
-  display: grid; place-items: center;
-  aspect-ratio: 4 / 3;
-  border: 1px solid var(--line); background: var(--panel);
-  position: relative; transition: transform .25s ease, border-color .25s ease;
+/* ---------- PLAYGROUND ---------- */
+.gallery__intro { font-family: var(--serif); font-size: clamp(1.1rem, 2.2vw, 1.45rem); font-weight: 400; margin-bottom: 1.4em; max-width: 46ch; }
+
+/* filter chips */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 1.8em; }
+.chip {
+  font: 500 12px/1 var(--mono); letter-spacing: .04em;
+  padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px;
+  background: var(--paper); color: var(--ink-2); cursor: pointer;
+  transition: border-color .2s ease, color .2s ease, background .2s ease;
 }
-.art--lg .art__frame   { aspect-ratio: 16 / 10; }
-.art--tall .art__frame { aspect-ratio: 3 / 4; }
-.art--wide .art__frame { aspect-ratio: 12 / 5; }
-.art__frame::before, .art__frame::after { content: ""; position: absolute; width: 10px; height: 10px; border: 1px solid var(--ink-3); }
-.art__frame::before { top: 8px; left: 8px; border-right: 0; border-bottom: 0; }
-.art__frame::after { bottom: 8px; right: 8px; border-left: 0; border-top: 0; }
-.art:hover .art__frame { transform: rotate(-.6deg) translateY(-2px); border-color: var(--accent); }
-.art__cap { display: block; font: 500 12px/1.4 var(--mono); letter-spacing: .04em; margin-top: 8px; color: var(--ink-2); }
-@media (max-width: 760px) {
-  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
-  .art, .art--lg, .art--wide { grid-column: span 1; }
-  .art--lg .art__frame, .art--wide .art__frame { aspect-ratio: 4 / 3; }
+.chip:hover { border-color: var(--ink-3); color: var(--ink); }
+.chip.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* masonry via CSS columns */
+.gallery__grid { columns: 3 240px; column-gap: 18px; margin-bottom: 2em; }
+.art {
+  display: block; width: 100%; margin: 0 0 18px; break-inside: avoid;
+  background: none; border: 0; padding: 0; cursor: pointer; text-align: left;
+  color: inherit; font: inherit;
+}
+.art[hidden] { display: none; }
+.art__frame {
+  display: block; position: relative; overflow: hidden;
+  border: 1px solid var(--line); background: var(--panel);
+  transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease;
+}
+.art__frame img { display: block; width: 100%; height: auto; }
+.art:hover .art__frame { transform: translateY(-3px) rotate(-.5deg); border-color: var(--accent); box-shadow: 6px 8px 0 var(--line); }
+.art:focus-visible .art__frame { outline: 2px solid var(--accent); outline-offset: 3px; }
+.art__cap { display: block; font: 500 12px/1.5 var(--mono); letter-spacing: .04em; margin-top: 8px; color: var(--ink); text-transform: uppercase; }
+.art__cap i { display: block; font-style: normal; text-transform: none; letter-spacing: .02em; color: var(--ink-3); }
+
+@media (max-width: 760px) { .gallery__grid { columns: 2 160px; } }
+@media (max-width: 480px) { .gallery__grid { columns: 2 130px; column-gap: 12px; } .art { margin-bottom: 12px; } }
+
+/* staggered reveal — JS adds .reveal to the grid, then .is-in per tile as it scrolls in.
+   Only opacity + inner transforms animate; transforming a multicol item itself breaks fragmentation. */
+.gallery__grid.reveal .art { opacity: 0; transition: opacity .6s ease; }
+.gallery__grid.reveal .art .art__frame { transform: translateY(24px); transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+.gallery__grid.reveal .art .art__cap { opacity: 0; transition: opacity .5s ease .1s; }
+.gallery__grid.reveal .art.is-in { opacity: 1; }
+.gallery__grid.reveal .art.is-in .art__frame { transform: none; }
+.gallery__grid.reveal .art.is-in .art__cap { opacity: 1; }
+@media (prefers-reduced-motion: reduce) {
+  .gallery__grid.reveal .art,
+  .gallery__grid.reveal .art .art__frame,
+  .gallery__grid.reveal .art .art__cap { opacity: 1; transform: none; transition: none; }
 }
 
 /* ---------- COMMUNITY ---------- */
@@ -619,9 +643,12 @@ p:last-child { margin-bottom: 0; }
 /* ---------- MODAL ---------- */
 .modal { position: fixed; inset: 0; z-index: 60; display: grid; place-items: center; padding: 24px; background: color-mix(in srgb, var(--ink) 55%, transparent); }
 .modal[hidden] { display: none; }
-.modal__box { position: relative; width: min(560px, 100%); background: var(--panel); border: 1px solid var(--ink); border-radius: 4px; padding: 22px; box-shadow: 8px 8px 0 var(--line); }
+.modal__box { position: relative; width: min(680px, 100%); max-height: 92vh; overflow: auto; background: var(--panel); border: 1px solid var(--ink); border-radius: 4px; padding: 22px; box-shadow: 8px 8px 0 var(--line); }
 .modal__close { position: absolute; top: 8px; right: 12px; background: none; border: 0; font-size: 26px; line-height: 1; cursor: pointer; color: var(--ink-2); }
-.modal__frame { display: grid; place-items: center; min-height: 260px; border: 1px solid var(--line); background: var(--paper); margin-bottom: 14px; }
+.modal__frame { display: grid; place-items: center; border: 1px solid var(--line); background: var(--paper); margin-bottom: 14px; }
+.modal__frame img { display: block; max-width: 100%; max-height: 74vh; width: auto; height: auto; }
+.modal__frame img[hidden] { display: none; }
+.modal__frame:has(img[src]) { min-height: 0; }
+.modal__frame:not(:has(img[src])) { min-height: 260px; }
 .modal__box h3 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; margin: 0 0 .2em; }
-.modal__cat { font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0 0 1em; }
-.modal__todo { font-size: 13px; color: var(--ink-2); }
+.modal__cat { font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0; }

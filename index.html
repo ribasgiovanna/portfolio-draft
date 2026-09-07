@@ -198,40 +198,123 @@
   <p class="stack__more"><a class="cta" href="https://github.com/ribasgiovanna?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="stack_more">For more work, see my GitHub &rarr;</a></p>
 </section>
 
-<!-- ============ CREATIVE GALLERY ============ -->
+<!-- ============ PLAYGROUND ============ -->
 <section id="playground" class="gallery" aria-labelledby="creative-h">
   <p class="section-label"><span>01</span> <span id="creative-h" data-i18n="creative_h">Playground</span></p>
-  <p class="gallery__intro" data-i18n="creative_intro">Graphic design, image manipulation, digital illustration, photography and visual experiments. A selection — images are being prepared.</p>
+  <p class="gallery__intro" data-i18n="creative_intro">Everything I make away from a code editor &mdash; digital art, ink drawing, graphic design, photography, things I bake, and volunteering and events. Tap any piece to see it larger.</p>
+
+  <div class="filters gallery__filters" role="group" aria-label="Filter creative work">
+    <button class="chip is-on" type="button" data-filter="all" aria-pressed="true" data-i18n="pf_all">All</button>
+    <button class="chip" type="button" data-filter="digital" aria-pressed="false" data-i18n="pf_digital">Digital art</button>
+    <button class="chip" type="button" data-filter="illustration" aria-pressed="false" data-i18n="pf_illustration">Illustration</button>
+    <button class="chip" type="button" data-filter="photo" aria-pressed="false" data-i18n="pf_photo">Photography</button>
+    <button class="chip" type="button" data-filter="kitchen" aria-pressed="false" data-i18n="pf_kitchen">In the kitchen</button>
+    <button class="chip" type="button" data-filter="community" aria-pressed="false" data-i18n="pf_community">Volunteering &amp; events</button>
+  </div>
+
   <div class="gallery__grid">
-    <button class="art art--lg" type="button" data-title="REACHING" data-cat="image / digital">
-      <span class="art__frame"><span class="art__ph">REACHING</span></span>
-      <span class="art__cap">REACHING</span>
+    <button class="art" type="button" data-kind="digital" data-title="REACHING" data-cat="Digital art" data-full="assets/images/playground/design/reaching.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/reaching.webp" alt="Digital artwork &lsquo;Reaching&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+      <span class="art__cap">REACHING <i>Digital art</i></span>
     </button>
-    <button class="art" type="button" data-title="MOMENTS" data-cat="series">
-      <span class="art__frame"><span class="art__ph">MOMENTS</span></span>
-      <span class="art__cap">MOMENTS</span>
+    <button class="art" type="button" data-kind="digital" data-title="WHAT REMAINS" data-cat="Digital art" data-full="assets/images/playground/design/what-remains.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/what-remains.webp" alt="Digital artwork &lsquo;What Remains&rsquo; by Giovanna Ribas" loading="lazy" width="1056" height="1489"></span>
+      <span class="art__cap">WHAT REMAINS <i>Digital art</i></span>
     </button>
-    <button class="art art--tall" type="button" data-title="WHAT REMAINS" data-cat="image / digital">
-      <span class="art__frame"><span class="art__ph">WHAT REMAINS</span></span>
-      <span class="art__cap">WHAT REMAINS</span>
+    <button class="art" type="button" data-kind="digital" data-title="MOMENTS" data-cat="Digital art" data-full="assets/images/playground/design/moments.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/moments.webp" alt="Digital artwork &lsquo;Moments&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+      <span class="art__cap">MOMENTS <i>Digital art</i></span>
     </button>
-    <button class="art" type="button" data-title="flower" data-cat="illustration">
-      <span class="art__frame"><span class="art__ph">flower</span></span>
-      <span class="art__cap">flower</span>
+    <button class="art" type="button" data-kind="digital" data-title="MY LOVE 2.0" data-cat="Digital art" data-full="assets/images/playground/design/my-love.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/my-love.webp" alt="Digital artwork &lsquo;My Love 2.0&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+      <span class="art__cap">MY LOVE 2.0 <i>Digital art</i></span>
     </button>
-    <button class="art" type="button" data-title="My love 2.0" data-cat="image / digital">
-      <span class="art__frame"><span class="art__ph">My love 2.0</span></span>
-      <span class="art__cap">My love 2.0</span>
+    <button class="art" type="button" data-kind="digital" data-title="9TO5" data-cat="Graphic design" data-full="assets/images/playground/design/nine-to-five.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/nine-to-five.webp" alt="Graphic design piece &lsquo;9to5&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+      <span class="art__cap">9TO5 <i>Graphic design</i></span>
     </button>
-    <button class="art art--wide" type="button" data-title="9to5" data-cat="series">
-      <span class="art__frame"><span class="art__ph">9to5</span></span>
-      <span class="art__cap">9to5</span>
+    <button class="art" type="button" data-kind="digital" data-title="TIME IS TICKING" data-cat="Graphic design" data-full="assets/images/playground/design/time-is-ticking.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/time-is-ticking.webp" alt="Graphic design piece &lsquo;Time is Ticking&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+      <span class="art__cap">TIME IS TICKING <i>Graphic design</i></span>
     </button>
-    <button class="art" type="button" data-title="RUN" data-cat="image / digital">
-      <span class="art__frame"><span class="art__ph">RUN</span></span>
-      <span class="art__cap">RUN</span>
+    <button class="art" type="button" data-kind="digital" data-title="RUN" data-cat="Digital art" data-full="assets/images/playground/design/run.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/run.webp" alt="Digital artwork &lsquo;Run&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+      <span class="art__cap">RUN <i>Digital art</i></span>
+    </button>
+    <button class="art" type="button" data-kind="digital" data-title="WHO ARE YOU" data-cat="Digital art" data-full="assets/images/playground/design/who-are-you.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/who-are-you.webp" alt="Digital artwork &lsquo;Who Are You&rsquo; by Giovanna Ribas" loading="lazy" width="736" height="563"></span>
+      <span class="art__cap">WHO ARE YOU <i>Digital art</i></span>
+    </button>
+
+    <button class="art" type="button" data-kind="illustration" data-title="Ink study" data-cat="Illustration" data-full="assets/images/playground/illustration/sketch-01.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-01.webp" alt="Ink drawing by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Ink study <i>Illustration</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Ink study" data-cat="Illustration" data-full="assets/images/playground/illustration/sketch-02.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-02.webp" alt="Ink drawing by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Ink study <i>Illustration</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Ink study" data-cat="Illustration" data-full="assets/images/playground/illustration/sketch-03.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-03.webp" alt="Ink drawing by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Ink study <i>Illustration</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Ink study" data-cat="Illustration" data-full="assets/images/playground/illustration/sketch-05.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-05.webp" alt="Ink drawing by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Ink study <i>Illustration</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Ink study" data-cat="Illustration" data-full="assets/images/playground/illustration/sketch-06.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-06.webp" alt="Ink drawing by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Ink study <i>Illustration</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Ink study" data-cat="Illustration" data-full="assets/images/playground/illustration/sketch-07.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-07.webp" alt="Ink drawing by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Ink study <i>Illustration</i></span>
+    </button>
+
+    <button class="art" type="button" data-kind="photo" data-title="Photography" data-cat="Photography" data-full="assets/images/playground/photography/photo-01.webp">
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-01.webp" alt="Photograph by Giovanna Ribas" loading="lazy" width="1125" height="1500"></span>
+      <span class="art__cap" data-i18n="pg_photo">Photograph <i>Photography</i></span>
+    </button>
+
+    <button class="art" type="button" data-kind="kitchen" data-title="In the kitchen" data-cat="Food photography" data-full="assets/images/playground/food/food-01.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-01.webp" alt="Something Giovanna Ribas baked" loading="lazy" width="1000" height="1500"></span>
+      <span class="art__cap" data-i18n="pg_kitchen">In the kitchen <i>Food photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="In the kitchen" data-cat="Food photography" data-full="assets/images/playground/food/food-02.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-02.webp" alt="Something Giovanna Ribas baked" loading="lazy" width="1050" height="1500"></span>
+      <span class="art__cap" data-i18n="pg_kitchen">In the kitchen <i>Food photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="In the kitchen" data-cat="Food photography" data-full="assets/images/playground/food/food-03.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-03.webp" alt="Something Giovanna Ribas baked" loading="lazy" width="1500" height="1000"></span>
+      <span class="art__cap" data-i18n="pg_kitchen">In the kitchen <i>Food photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="In the kitchen" data-cat="Food photography" data-full="assets/images/playground/food/food-04.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-04.webp" alt="Something Giovanna Ribas baked" loading="lazy" width="1185" height="1500"></span>
+      <span class="art__cap" data-i18n="pg_kitchen">In the kitchen <i>Food photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="In the kitchen" data-cat="Food photography" data-full="assets/images/playground/food/food-05.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-05.webp" alt="Something Giovanna Ribas baked" loading="lazy" width="844" height="1500"></span>
+      <span class="art__cap" data-i18n="pg_kitchen">In the kitchen <i>Food photography</i></span>
+    </button>
+
+    <button class="art" type="button" data-kind="community" data-title="Diretoria da Mulher — PUCPR" data-cat="Volunteering &amp; events" data-full="assets/images/playground/volunteering/volunteering-03.webp">
+      <span class="art__frame"><img src="assets/images/playground/volunteering/volunteering-03.webp" alt="Giovanna Ribas volunteering at a PUCPR event" loading="lazy" width="1500" height="844"></span>
+      <span class="art__cap" data-i18n="pg_vol">Volunteering &amp; events <i>Community</i></span>
+    </button>
+    <button class="art" type="button" data-kind="community" data-title="TEIA do Bem — social media" data-cat="Volunteering &amp; events" data-full="assets/images/playground/volunteering/volunteering-01.webp">
+      <span class="art__frame"><img src="assets/images/playground/volunteering/volunteering-01.webp" alt="Volunteering material Giovanna Ribas worked on" loading="lazy" width="1500" height="654"></span>
+      <span class="art__cap" data-i18n="pg_vol">Volunteering &amp; events <i>Community</i></span>
+    </button>
+    <button class="art" type="button" data-kind="community" data-title="Volunteering &amp; events" data-cat="Volunteering &amp; events" data-full="assets/images/playground/volunteering/volunteering-02.webp">
+      <span class="art__frame"><img src="assets/images/playground/volunteering/volunteering-02.webp" alt="Giovanna Ribas at a volunteering event" loading="lazy" width="1125" height="1500"></span>
+      <span class="art__cap" data-i18n="pg_vol">Volunteering &amp; events <i>Community</i></span>
+    </button>
+    <button class="art" type="button" data-kind="community" data-title="Volunteering &amp; events" data-cat="Volunteering &amp; events" data-full="assets/images/playground/volunteering/volunteering-05.webp">
+      <span class="art__frame"><img src="assets/images/playground/volunteering/volunteering-05.webp" alt="Giovanna Ribas at a volunteering event" loading="lazy" width="1500" height="947"></span>
+      <span class="art__cap" data-i18n="pg_vol">Volunteering &amp; events <i>Community</i></span>
     </button>
   </div>
+
   <p><a class="cta" href="https://www.behance.net/ribestudio" target="_blank" rel="noopener noreferrer" data-i18n="cta_behance">More visual work on Behance &rarr;</a></p>
 </section>
 
@@ -424,10 +507,9 @@
 <div id="modal" class="modal" hidden>
   <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="modal-title">
     <button id="modal-close" class="modal__close" type="button" aria-label="Close">&times;</button>
-    <div class="modal__frame"><span id="modal-ph"></span></div>
+    <div class="modal__frame"><img id="modal-img" alt="" hidden><span id="modal-ph"></span></div>
     <h3 id="modal-title"></h3>
     <p id="modal-cat" class="modal__cat"></p>
-    <p class="modal__todo" data-i18n="modal_todo">Full image and a short note about this piece are being added.</p>
   </div>
 </div>
 
