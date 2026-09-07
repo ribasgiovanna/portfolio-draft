@@ -16,7 +16,15 @@ tags, documents, personal data, or anything that needs someone's permission.
 
 ## `assets/images/profile/` — **DONE**
 `portrait.webp` (Home polaroid) is in place — a real photo of Giovanna, pulled
-from the Drive `Fotos` folder. `flower-avatar.png` still used on the About passport.
+from the Drive `Fotos` folder. `flower-avatar.png` now only serves as the
+apple-touch-icon (the About passport that used it was removed).
+
+## `assets/images/about/` — About photo fan — **DONE**
+7 photos in the fanned collection at the top of About: `portrait`, `talk`
+(workshop/mic), `team` (Diretoria da Mulher), `oab` (OAB Paraná), `dce`
+(DCE PUCPR event), `dusk` + `shore` (her photography). Pulled from the Drive
+`Voluntariados` / `Fotografias` folders. Swap or add more freely — any
+`assets/images/about/*.webp` referenced from the `.about__fan` block.
 
 ## `assets/images/playground/` — Playground gallery — **DONE**
 Populated from Giovanna's Google Drive (2026‑09‑07). 23 WebP images, long edge
