@@ -176,16 +176,24 @@ p:last-child { margin-bottom: 0; }
 .ticks li::before { content: "—"; position: absolute; left: 0; color: var(--accent); }
 
 /* ---------- HOME / WELCOME ---------- */
-.home { padding-top: clamp(28px, 5vw, 56px); }
+.home {
+  max-width: none;
+  padding: clamp(28px, 5vw, 60px) clamp(18px, 5vw, 56px) clamp(56px, 9vw, 110px);
+  border-bottom: 1px solid var(--line);
+  /* graph-paper grid across the whole section */
+  background:
+    linear-gradient(color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(90deg, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px) 0 0 / 28px 28px,
+    var(--paper);
+}
 .home__card {
   position: relative;
+  max-width: var(--wide);
+  margin: 0 auto;
   border: 1px solid var(--line);
   border-radius: clamp(22px, 3.2vw, 36px);
-  background:
-    linear-gradient(color-mix(in srgb, var(--ink) 5.5%, transparent) 1px, transparent 1px) 0 0 / 26px 26px,
-    linear-gradient(90deg, color-mix(in srgb, var(--ink) 5.5%, transparent) 1px, transparent 1px) 0 0 / 26px 26px,
-    var(--panel);
-  box-shadow: 0 30px 60px -34px rgba(24,16,8,.36);
+  background: transparent;
+  box-shadow: 0 30px 60px -40px rgba(24,16,8,.28);
   padding: clamp(28px, 5vw, 60px);
   display: grid; grid-template-columns: 1fr auto; gap: clamp(24px, 5vw, 60px);
   align-items: center;
