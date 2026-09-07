@@ -162,16 +162,15 @@
     <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 04</span>
     <div class="panel__body">
       <div class="panel__text">
-        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p4_date">Academic &middot; IoT + web</span></p>
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p4_date">Academic &middot; IoT</span></p>
         <h3 id="p4-h" data-i18n="flood_h">City flood &amp; waterlogging monitor</h3>
-        <p class="panel__lead" data-i18n="flood_lead">Sensors in the field, an alert on someone's phone before the water rises.</p>
-        <p class="panel__more" data-i18n="flood_desc">An ESP32 reads water-level sensors and feeds an integrated web system that notifies the person in charge when a point is at risk.</p>
-        <p class="tagrow"><span>ESP32</span><span data-i18n="tag_sensors">sensors</span><span data-i18n="tag_web">web</span><span data-i18n="tag_alerts">alerts</span></p>
-        <p class="note" data-i18n="flood_note">Materials (photos, diagram, screens) are being gathered — see notes.</p>
+        <p class="panel__lead" data-i18n="flood_lead">Sensors in the field, an alert before the water rises.</p>
+        <p class="panel__more" data-i18n="flood_desc">An ESP32 reads an ultrasonic water-level sensor and reports to a Blynk &ldquo;Smart City&rdquo; dashboard, which charts the level and triggers an alarm and a buzzer when a point crosses its threshold.</p>
+        <p class="tagrow"><span>ESP32</span><span data-i18n="tag_sensors">ultrasonic sensor</span><span>Blynk</span><span data-i18n="tag_alerts">alerts</span></p>
       </div>
       <figure class="panel__shot">
         <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
-        <span class="panel__ph" data-i18n="ph_flood">hardware &amp; web dashboard — image pending</span>
+        <img src="assets/images/tech/iot-dashboard.webp" width="1600" height="754" loading="lazy" alt="Blynk &lsquo;Smart City&rsquo; dashboard: a water-level gauge, a history chart and an alarm widget">
       </figure>
     </div>
   </article>
@@ -181,16 +180,16 @@
     <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 05</span>
     <div class="panel__body">
       <div class="panel__text">
-        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p5_date">Academic &middot; process modeling</span></p>
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p5_date">Team project &middot; process modeling</span></p>
         <h3 id="p5-h" data-i18n="bpmn_h">Veterinary clinic — process modeling</h3>
         <p class="panel__lead" data-i18n="bpmn_lead">Mapping how a clinic actually runs, one process at a time.</p>
-        <p class="panel__more" data-i18n="bpmn_desc">BPMN diagrams for the clinic's main processes — intake, appointments, procedures, records — as a base for spotting friction and redesigning.</p>
-        <p class="tagrow"><span>BPMN</span><span data-i18n="tag_analysis">process analysis</span><span data-i18n="tag_diagrams">diagrams</span></p>
-        <p class="note" data-i18n="bpmn_note">Diagrams are being exported — see notes.</p>
+        <p class="panel__more" data-i18n="bpmn_desc">BPMN models in Bizagi for a veterinary clinic&rsquo;s core processes &mdash; appointment management, stock control and staff scheduling &mdash; with subprocesses for client registration and payment. Built from the manager&rsquo;s descriptions; the clinic chose not to be named.</p>
+        <p class="tagrow"><span>BPMN</span><span>Bizagi</span><span data-i18n="tag_analysis">process analysis</span></p>
+        <p class="panel__more panel__more--credit" data-i18n="bpmn_role">Five-person team: Ana Beatriz Patussi Reolon, Ana Clara Ernandes Nogueira, Emelize Bonfim Mlot, Giovanna Ribas dos Reis, Ot&aacute;vio Brito Fonseca.</p>
       </div>
       <figure class="panel__shot">
         <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
-        <span class="panel__ph" data-i18n="ph_bpmn">BPMN diagram — image pending</span>
+        <img src="assets/images/tech/bpmn-vet.webp" width="1600" height="1240" loading="lazy" alt="BPMN diagram of the clinic&rsquo;s stock-management process, modelled in Bizagi">
       </figure>
     </div>
   </article>
@@ -245,6 +244,10 @@
       <span class="art__frame"><img src="assets/images/playground/design/who-are-you.webp" alt="Digital artwork &lsquo;Who Are You&rsquo; by Giovanna Ribas" loading="lazy" width="736" height="563"></span>
       <span class="art__cap">WHO ARE YOU <i>Digital art</i></span>
     </button>
+    <button class="art" type="button" data-kind="digital" data-title="Borboleta Menarca — awareness design" data-cat="Graphic design · @projeto.borboleta.menarca" data-full="assets/images/playground/design/borboleta.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/borboleta.webp" alt="Collage-style awareness post designed by Giovanna Ribas for Projeto Borboleta Menarca" loading="lazy" width="687" height="873"></span>
+      <span class="art__cap" data-i18n="pg_borboleta">Awareness campaign <i>Graphic design</i></span>
+    </button>
 
     <button class="art" type="button" data-kind="illustration" data-title="Ink study" data-cat="Illustration" data-full="assets/images/playground/illustration/sketch-01.webp">
       <span class="art__frame"><img src="assets/images/playground/illustration/sketch-01.webp" alt="Ink drawing by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
@@ -270,9 +273,57 @@
       <span class="art__frame"><img src="assets/images/playground/illustration/sketch-07.webp" alt="Ink drawing by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
       <span class="art__cap" data-i18n="pg_ink">Ink study <i>Illustration</i></span>
     </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-01.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-01.webp" alt="Pencil hand studies by Giovanna Ribas" loading="lazy" width="978" height="1300"></span>
+      <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-04.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-04.webp" alt="Pencil figure study by Giovanna Ribas" loading="lazy" width="1300" height="1060"></span>
+      <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-02.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-02.webp" alt="Pencil portrait studies by Giovanna Ribas" loading="lazy" width="941" height="1300"></span>
+      <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-06.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-06.webp" alt="Pencil character studies by Giovanna Ribas" loading="lazy" width="1202" height="1300"></span>
+      <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-05.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-05.webp" alt="Pencil character studies by Giovanna Ribas" loading="lazy" width="893" height="1300"></span>
+      <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-03.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-03.webp" alt="Pencil study by Giovanna Ribas" loading="lazy" width="516" height="1300"></span>
+      <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
+    </button>
 
     <button class="art" type="button" data-kind="photo" data-title="Photography" data-cat="Photography" data-full="assets/images/playground/photography/photo-01.webp">
       <span class="art__frame"><img src="assets/images/playground/photography/photo-01.webp" alt="Photograph by Giovanna Ribas" loading="lazy" width="1125" height="1500"></span>
+      <span class="art__cap" data-i18n="pg_photo">Photograph <i>Photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="photo" data-title="City light" data-cat="Photography" data-full="assets/images/playground/photography/photo-02.webp">
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-02.webp" alt="Skyscrapers and sun flare — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1000"></span>
+      <span class="art__cap" data-i18n="pg_photo">Photograph <i>Photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="photo" data-title="Nave" data-cat="Photography" data-full="assets/images/playground/photography/photo-03.webp">
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-03.webp" alt="Cathedral interior with a rose window — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1000"></span>
+      <span class="art__cap" data-i18n="pg_photo">Photograph <i>Photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="photo" data-title="Times Square" data-cat="Photography" data-full="assets/images/playground/photography/photo-04.webp">
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-04.webp" alt="Times Square at dusk — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1000"></span>
+      <span class="art__cap" data-i18n="pg_photo">Photograph <i>Photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="photo" data-title="Pietà" data-cat="Photography" data-full="assets/images/playground/photography/photo-06.webp">
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-06.webp" alt="A Piet&agrave; sculpture in a gothic niche — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1120"></span>
+      <span class="art__cap" data-i18n="pg_photo">Photograph <i>Photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="photo" data-title="Sandhill" data-cat="Photography" data-full="assets/images/playground/photography/photo-05.webp">
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-05.webp" alt="A sandhill crane in golden light — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1496"></span>
+      <span class="art__cap" data-i18n="pg_photo">Photograph <i>Photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="photo" data-title="Pair" data-cat="Photography" data-full="assets/images/playground/photography/photo-07.webp">
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-07.webp" alt="Two cranes in a garden — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1337"></span>
       <span class="art__cap" data-i18n="pg_photo">Photograph <i>Photography</i></span>
     </button>
 
@@ -313,6 +364,10 @@
       <span class="art__frame"><img src="assets/images/playground/volunteering/volunteering-05.webp" alt="Giovanna Ribas at a volunteering event" loading="lazy" width="1500" height="947"></span>
       <span class="art__cap" data-i18n="pg_vol">Volunteering &amp; events <i>Community</i></span>
     </button>
+    <button class="art" type="button" data-kind="community" data-title="Team &amp; certificates" data-cat="Volunteering &amp; events" data-full="assets/images/playground/volunteering/volunteering-06.webp">
+      <span class="art__frame"><img src="assets/images/playground/volunteering/volunteering-06.webp" alt="Giovanna Ribas with a group holding certificates at an event" loading="lazy" width="1321" height="820"></span>
+      <span class="art__cap" data-i18n="pg_vol">Volunteering &amp; events <i>Community</i></span>
+    </button>
   </div>
 
   <p><a class="cta" href="https://www.behance.net/ribestudio" target="_blank" rel="noopener noreferrer" data-i18n="cta_behance">More visual work on Behance &rarr;</a></p>
@@ -324,27 +379,27 @@
 
   <div class="about__fan" role="group" aria-label="Photos of Giovanna Ribas">
     <figure class="fanpic">
-      <img src="assets/images/about/portrait.webp" width="619" height="1100" loading="lazy" alt="Giovanna Ribas">
+      <img src="assets/images/about/aquarium.webp" width="619" height="1100" loading="lazy" alt="Giovanna Ribas in front of a jellyfish tank at an aquarium">
     </figure>
     <figure class="fanpic">
       <span class="fanpic__bubble" data-i18n="fan_talk">on stage</span>
       <img src="assets/images/about/talk.webp" width="1100" height="729" loading="lazy" alt="Giovanna Ribas speaking at a workshop, microphone in hand, in front of a wall of sticky notes">
     </figure>
     <figure class="fanpic">
+      <img src="assets/images/about/bouquet.webp" width="894" height="1100" loading="lazy" alt="Giovanna Ribas holding a bouquet at a recognition evening">
+    </figure>
+    <figure class="fanpic">
+      <img src="assets/images/about/portrait.webp" width="619" height="1100" loading="lazy" alt="Giovanna Ribas">
+    </figure>
+    <figure class="fanpic">
       <img src="assets/images/about/team.webp" width="825" height="1100" loading="lazy" alt="Giovanna Ribas with the Diretoria da Mulher team at PUCPR">
     </figure>
     <figure class="fanpic">
-      <img src="assets/images/about/oab.webp" width="949" height="1100" loading="lazy" alt="Giovanna Ribas with two colleagues at OAB Paraná">
-    </figure>
-    <figure class="fanpic">
-      <img src="assets/images/about/dce.webp" width="619" height="1100" loading="lazy" alt="Giovanna Ribas at a DCE PUCPR student-movement event">
+      <img src="assets/images/about/snow.webp" width="825" height="1100" loading="lazy" alt="Giovanna Ribas next to a snowman on a winter trip">
     </figure>
     <figure class="fanpic">
       <span class="fanpic__bubble fanpic__bubble--r" data-i18n="fan_dusk">golden hour</span>
       <img src="assets/images/about/dusk.webp" width="825" height="1100" loading="lazy" alt="Beach at sunset — photograph by Giovanna Ribas">
-    </figure>
-    <figure class="fanpic">
-      <img src="assets/images/about/shore.webp" width="1100" height="825" loading="lazy" alt="A bay and hillside — photograph by Giovanna Ribas">
     </figure>
   </div>
 

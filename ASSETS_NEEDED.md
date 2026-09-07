@@ -20,36 +20,36 @@ from the Drive `Fotos` folder. `flower-avatar.png` now only serves as the
 apple-touch-icon (the About passport that used it was removed).
 
 ## `assets/images/about/` — About photo fan — **DONE**
-7 photos in the fanned collection at the top of About: `portrait`, `talk`
-(workshop/mic), `team` (Diretoria da Mulher), `oab` (OAB Paraná), `dce`
-(DCE PUCPR event), `dusk` + `shore` (her photography). Pulled from the Drive
-`Voluntariados` / `Fotografias` folders. Swap or add more freely — any
-`assets/images/about/*.webp` referenced from the `.about__fan` block.
+7 photos in the fanned collection (opens from one centred photo). Currently:
+`aquarium`, `talk` (workshop/mic), `bouquet`, `portrait` (centre), `team`
+(Diretoria da Mulher), `snow`, `dusk` (her photography). `oab` / `dce` / `shore`
+also sit in the folder, unused — swap any in by editing the `.about__fan` block.
 
 ## `assets/images/playground/` — Playground gallery — **DONE**
-Populated from Giovanna's Google Drive (2026‑09‑07). 23 WebP images, long edge
-≤1500px, in `design/` (digital art + graphic design), `illustration/` (ink
-sketches), `photography/`, `food/`, `volunteering/`. Filter chips + staggered
-reveal + lightbox are wired in `index.html` / `style.css` / `script.js`.
+From Giovanna's Drive (2026‑09‑07, 2nd pull). `design/` (digital art + graphic
+design + `borboleta` awareness campaign), `illustration/` (ink `sketch-*` +
+traditional pencil `trad-*`), `photography/` (`photo-01..07` incl. NYC trip),
+`food/`, `volunteering/` (`volunteering-01..06`). Filter chips + reveal + lightbox
+wired.
 
-Still optional here:
-- a couple more **photography** frames (only one in the folder so far)
-- short concept notes for the digital‑art pieces (REACHING, WHAT REMAINS, etc.)
-  — shown in the lightbox once provided; nothing is invented
-- confirm captions for the two identifiable volunteering photos
-  (currently "Diretoria da Mulher — PUCPR" and "TEIA do Bem — social media")
+Still optional: short concept notes for the digital‑art pieces (shown in the
+lightbox once provided); confirm the identifiable volunteering captions.
 
 ## `assets/images/coffee-code/` — Coffee & Code — **DONE (2 of 3)**
-`terminal.webp` (the ASCII / 418 identity card) and `logo.webp` (the 418 mug mark)
-are in place, both provided by Giovanna. Optional: one real **session photo** or
-**poster** to add a third, more human tile.
+`terminal.webp` + `logo.webp` (both provided by Giovanna). Optional third: a real
+session photo or poster.
 
-## `assets/images/community/` — Community & social impact (section 08)
-| file | use | orientation | size |
-|---|---|---|---|
-| `ddm.webp` | Diretoria da Mulher — one strong photo of an action/event | landscape | ~1600px |
-| `teia-do-bem.webp` | Teia do Bem — one photo | landscape or square | ~1400px |
-| `volunteer.webp` | Interact / environmental / volunteer work | landscape | ~1600px |
+## `assets/images/tech/` — project screenshots — **DONE**
+Added: `iot-dashboard.webp` (Blynk Smart City), `iot-hardware.webp` (ESP32 wiring,
+unused for now), `bpmn-vet.webp` (Bizagi stock-management diagram). Projects 04
+and 05 no longer have placeholders.
+
+## Community / volunteering by organisation — still thin
+The user wants **Teia do Bem, Interact, Diretoria da Mulher, Projeto Borboleta
+Menarca** each represented. Have: Diretoria da Mulher (team photo, in the fan +
+Playground), Borboleta Menarca (one awareness post, `playground/design/borboleta`
+— a messy IG screenshot, a clean export would be better). **Missing clean photos
+for Teia do Bem and Interact.**
 
 ## `assets/images/beyond/` — Beyond the screen (section 10)
 | file | use | orientation | size |

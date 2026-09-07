@@ -42,16 +42,17 @@
       ph_portrait: "portrait &mdash; image pending",
       about_kicker: "About",
       fan_talk: "on stage", fan_dusk: "golden hour",
-      p4_date: "Academic &middot; IoT + web", p5_date: "Academic &middot; process modeling",
+      p4_date: "Academic &middot; IoT", p5_date: "Team project &middot; process modeling",
       flood_h: "City flood &amp; waterlogging monitor",
-      flood_lead: "Sensors in the field, an alert on someone's phone before the water rises.",
-      flood_desc: "An ESP32 reads water-level sensors and feeds an integrated web system that notifies the person in charge when a point is at risk.",
+      flood_lead: "Sensors in the field, an alert before the water rises.",
+      flood_desc: "An ESP32 reads an ultrasonic water-level sensor and reports to a Blynk &ldquo;Smart City&rdquo; dashboard, which charts the level and triggers an alarm and a buzzer when a point crosses its threshold.",
       flood_note: "Materials (photos, diagram, screens) are being gathered — see notes.",
       bpmn_h: "Veterinary clinic — process modeling",
       bpmn_lead: "Mapping how a clinic actually runs, one process at a time.",
-      bpmn_desc: "BPMN diagrams for the clinic's main processes — intake, appointments, procedures, records — as a base for spotting friction and redesigning.",
+      bpmn_desc: "BPMN models in Bizagi for a veterinary clinic&rsquo;s core processes &mdash; appointment management, stock control and staff scheduling &mdash; with subprocesses for client registration and payment. Built from the manager&rsquo;s descriptions; the clinic chose not to be named.",
       bpmn_note: "Diagrams are being exported — see notes.",
-      tag_sensors: "sensors", tag_web: "web", tag_alerts: "alerts",
+      tag_sensors: "ultrasonic sensor", tag_web: "web", tag_alerts: "alerts",
+      bpmn_role: "Five-person team: Ana Beatriz Patussi Reolon, Ana Clara Ernandes Nogueira, Emelize Bonfim Mlot, Giovanna Ribas dos Reis, Ot&aacute;vio Brito Fonseca.",
       tag_analysis: "process analysis", tag_diagrams: "diagrams",
       ph_flood: "hardware &amp; web dashboard — image pending",
       ph_bpmn: "BPMN diagram — image pending",
@@ -124,6 +125,8 @@
       pf_kitchen: "In the kitchen",
       pf_community: "Volunteering &amp; events",
       pg_ink: "Ink study <i>Illustration</i>",
+      pg_pencil: "Pencil study <i>Traditional</i>",
+      pg_borboleta: "Awareness campaign <i>Graphic design</i>",
       pg_photo: "Photograph <i>Photography</i>",
       pg_kitchen: "In the kitchen <i>Food photography</i>",
       pg_vol: "Volunteering &amp; events <i>Community</i>",
@@ -192,16 +195,17 @@
       ph_portrait: "retrato &mdash; imagem pendente",
       about_kicker: "Sobre",
       fan_talk: "no palco", fan_dusk: "hora dourada",
-      p4_date: "Acad&ecirc;mico &middot; IoT + web", p5_date: "Acad&ecirc;mico &middot; modelagem de processos",
+      p4_date: "Acad&ecirc;mico &middot; IoT", p5_date: "Projeto em equipe &middot; modelagem de processos",
       flood_h: "Monitor de alagamentos e enchentes na cidade",
-      flood_lead: "Sensores no local, um alerta no celular de algu&eacute;m antes de a &aacute;gua subir.",
-      flood_desc: "Um ESP32 l&ecirc; sensores de n&iacute;vel de &aacute;gua e alimenta um sistema web integrado que avisa a pessoa respons&aacute;vel quando um ponto est&aacute; em risco.",
+      flood_lead: "Sensores no local, um alerta antes de a &aacute;gua subir.",
+      flood_desc: "Um ESP32 l&ecirc; um sensor ultrass&ocirc;nico de n&iacute;vel de &aacute;gua e reporta a um painel Blynk &ldquo;Smart City&rdquo;, que registra o n&iacute;vel e dispara um alarme e um buzzer quando um ponto passa do limite.",
       flood_note: "Materiais (fotos, diagrama, telas) est&atilde;o sendo reunidos — ver notas.",
       bpmn_h: "Cl&iacute;nica veterin&aacute;ria — modelagem de processos",
       bpmn_lead: "Mapear como uma cl&iacute;nica funciona de verdade, um processo por vez.",
-      bpmn_desc: "Diagramas BPMN dos principais processos da cl&iacute;nica — recep&ccedil;&atilde;o, consultas, procedimentos, prontu&aacute;rios — como base para achar atritos e redesenhar.",
+      bpmn_desc: "Modelos BPMN no Bizagi para os processos centrais de uma cl&iacute;nica veterin&aacute;ria &mdash; gerenciamento de consultas, controle de estoque e gest&atilde;o de funcion&aacute;rios &mdash; com subprocessos de cadastro de cliente e pagamento. Feito a partir das descri&ccedil;&otilde;es do gestor; a cl&iacute;nica optou por n&atilde;o se identificar.",
       bpmn_note: "Diagramas est&atilde;o sendo exportados — ver notas.",
-      tag_sensors: "sensores", tag_web: "web", tag_alerts: "alertas",
+      tag_sensors: "sensor ultrass&ocirc;nico", tag_web: "web", tag_alerts: "alertas",
+      bpmn_role: "Equipe de cinco: Ana Beatriz Patussi Reolon, Ana Clara Ernandes Nogueira, Emelize Bonfim Mlot, Giovanna Ribas dos Reis, Ot&aacute;vio Brito Fonseca.",
       tag_analysis: "an&aacute;lise de processos", tag_diagrams: "diagramas",
       ph_flood: "hardware &amp; painel web — imagem pendente",
       ph_bpmn: "diagrama BPMN — imagem pendente",
@@ -274,6 +278,8 @@
       pf_kitchen: "Na cozinha",
       pf_community: "Voluntariado &amp; eventos",
       pg_ink: "Estudo a nanquim <i>Ilustra&ccedil;&atilde;o</i>",
+      pg_pencil: "Estudo a l&aacute;pis <i>Tradicional</i>",
+      pg_borboleta: "Campanha de conscientiza&ccedil;&atilde;o <i>Design gr&aacute;fico</i>",
       pg_photo: "Fotografia <i>Fotografia</i>",
       pg_kitchen: "Na cozinha <i>Fotografia de comida</i>",
       pg_vol: "Voluntariado &amp; eventos <i>Comunidade</i>",
@@ -425,6 +431,25 @@
     });
   }
 
+  /* ---------- about photo fan: one photo -> pop -> fan open ---------- */
+  function initAboutFan() {
+    var fan = document.querySelector(".about__fan");
+    if (!fan) return;
+    fan.classList.add("is-armed");
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (!("IntersectionObserver" in window)) { fan.classList.add("is-open"); return; }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        io.disconnect();
+        if (reduce) { fan.classList.add("is-open"); return; }
+        fan.classList.add("is-pop");
+        setTimeout(function () { fan.classList.add("is-open"); }, 360);
+      });
+    }, { threshold: 0.4 });
+    io.observe(fan);
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
@@ -438,5 +463,6 @@
     initFilters();
     initModal();
     initReveal();
+    initAboutFan();
   });
 })();
