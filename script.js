@@ -454,14 +454,58 @@
     io.observe(fan);
   }
 
+  /* ---------- typewriter for the Home role heading ---------- */
+  function typeRole() {
+    var el = document.getElementById("home-h");
+    if (!el) return;
+    var full = (el.textContent || "").trim();
+    if (!full) return;
+    el.setAttribute("aria-label", full);           /* AT reads the whole heading */
+    var chars = Array.prototype.slice.call(full);
+    var hl = chars.length - 1;                      /* last non-space char gets the accent */
+    while (hl > 0 && /\s/.test(chars[hl])) hl--;
+    var token = el._twToken = (el._twToken || 0) + 1;
+
+    function esc(c) { return c.replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+    function paint(n, caret) {
+      var html = "";
+      for (var k = 0; k < n; k++) {
+        html += (k === hl) ? '<span class="home__role-hl">' + esc(chars[k]) + "</span>" : esc(chars[k]);
+      }
+      el.innerHTML = html + (caret ? '<span class="home__caret" aria-hidden="true"></span>' : "");
+    }
+
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) { paint(chars.length, false); return; }
+
+    el.classList.add("is-typing");
+    var i = 0;
+    (function step() {
+      if (el._twToken !== token) return;            /* superseded by a newer run */
+      i++;
+      paint(i, true);
+      if (i < chars.length) {
+        setTimeout(step, 50 + Math.random() * 60);
+      } else {
+        setTimeout(function () {
+          if (el._twToken !== token) return;
+          el.classList.remove("is-typing");
+          paint(chars.length, false);               /* drop the caret when settled */
+        }, 1100);
+      }
+    })();
+  }
+
   document.addEventListener("DOMContentLoaded", function () {
     var y = document.getElementById("year");
     if (y) y.textContent = new Date().getFullYear();
 
     applyLang(initialLang());
+    typeRole();
     var btn = document.getElementById("lang");
     if (btn) btn.addEventListener("click", function () {
       applyLang(document.documentElement.lang === "pt-BR" ? "en" : "pt");
+      typeRole();
     });
 
     initFilters();
