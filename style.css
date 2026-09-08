@@ -180,54 +180,58 @@ p:last-child { margin-bottom: 0; }
 .home {
   max-width: none;
   margin-top: calc(-1 * var(--nav-h, 72px));            /* pull up so the grid runs under the nav */
-  padding: calc(var(--nav-h, 72px) + clamp(30px, 6vw, 80px)) 0 clamp(64px, 10vw, 128px);
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex; align-items: center; justify-content: center;
+  padding: calc(var(--nav-h, 72px) + clamp(48px, 9vw, 120px)) 0 clamp(88px, 13vw, 168px);
   border-bottom: 1px solid var(--line);
   /* graph-paper grid across the whole viewport width */
   background:
-    linear-gradient(color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px) 0 0 / 28px 28px,
-    linear-gradient(90deg, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px) 0 0 / 28px 28px,
+    linear-gradient(color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px) 0 0 / 30px 30px,
+    linear-gradient(90deg, color-mix(in srgb, var(--ink) 6%, transparent) 1px, transparent 1px) 0 0 / 30px 30px,
     var(--paper);
 }
 .home__card {
   position: relative;
-  max-width: var(--wide);
+  width: 100%; max-width: var(--wide);
   margin: 0 auto;
   padding: 0 clamp(20px, 5vw, 56px);
-  display: grid; grid-template-columns: 1fr auto; gap: clamp(24px, 5vw, 60px);
+  display: grid; grid-template-columns: 1fr auto; gap: clamp(32px, 6vw, 80px);
   align-items: center;
 }
-.home__welcome { font-family: "Caveat", var(--serif); font-size: clamp(1.2rem, 2.4vw, 1.75rem); color: var(--ink-2); margin: 0 0 4px; }
+.home__welcome { font-family: "Caveat", var(--serif); font-size: clamp(1.25rem, 2.6vw, 1.9rem); color: var(--ink-2); margin: 0 0 6px; }
 .home__role {
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.02em;
-  margin: 0 0 18px;
+  font-size: clamp(2.7rem, 7.8vw, 5.7rem); line-height: 1; letter-spacing: -0.02em;
+  margin: 0 0 22px;
 }
-.home__line { font-family: var(--serif); font-weight: 400; font-size: clamp(1.2rem, 2.6vw, 1.7rem); line-height: 1.3; margin: 0; max-width: 22ch; }
+.home__line { font-family: var(--serif); font-weight: 400; font-size: clamp(1.25rem, 2.7vw, 1.8rem); line-height: 1.3; margin: 0; max-width: 22ch; }
 .home__line em { font-family: "Caveat", var(--serif); font-style: normal; color: var(--accent); font-size: 1.18em; }
 
 /* ---- ID card (replaces the polaroid) ---- */
 .home__id {
   --card: #f7f4ec;
   position: relative; margin: 0; isolation: isolate;
-  width: clamp(300px, 34vw, 392px);
-  padding: clamp(16px, 1.6vw, 22px);
+  width: clamp(322px, 37vw, 428px);
+  padding: clamp(18px, 1.7vw, 24px);
   background: var(--card);
   border: 1px solid rgba(20,14,8,.14);
-  border-radius: 18px;
-  box-shadow: 0 26px 50px -24px rgba(20,14,8,.5), inset 0 0 0 6px rgba(255,255,255,.5);
+  border-radius: 20px;
+  box-shadow: 0 30px 56px -24px rgba(20,14,8,.5), inset 0 0 0 6px rgba(255,255,255,.5);
   transform: rotate(1.6deg);
 }
 .home__id::after {   /* faint plastic-sleeve sheen */
-  content: ""; position: absolute; inset: -7px; border-radius: 24px;
+  content: ""; position: absolute; inset: -8px; border-radius: 27px;
   border: 1px solid rgba(20,14,8,.10);
   background: linear-gradient(135deg, rgba(255,255,255,.35), rgba(255,255,255,0) 40%);
   pointer-events: none; z-index: -1;
 }
 .home__clip {
-  position: absolute; top: -34px; left: 50%; transform: translateX(-50%);
-  width: 52px; height: 66px; filter: drop-shadow(0 5px 5px rgba(20,14,8,.28));
+  position: absolute; top: -40px; left: 50%; transform: translateX(-50%);
+  width: 60px; height: 74px;
+  filter: drop-shadow(0 6px 6px rgba(20,14,8,.3));
 }
-.home__clip svg { width: 100%; height: 100%; }
+.home__clip svg { width: 100%; height: 100%; display: block; }
 
 .idcard__top { display: grid; grid-template-columns: 40% 1fr; gap: 14px; align-items: start; }
 .idcard__photo {
@@ -248,8 +252,8 @@ p:last-child { margin-bottom: 0; }
 .idcard__fields dd { margin: 0; font: 500 10px/1.4 var(--mono); color: #2a231b; }
 
 .idcard__sig { margin-top: 14px; padding-top: 8px; border-top: 1px solid rgba(20,14,8,.16); display: flex; align-items: baseline; gap: 10px; }
-.idcard__siglabel { font: 700 8px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
-.idcard__signame { font-family: "Caveat", cursive; font-size: 1.6rem; line-height: .9; color: #1c1c1c; transform: rotate(-3deg); transform-origin: left; }
+.idcard__siglabel { flex: none; font: 700 8px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.idcard__signame { font-family: "Caveat", cursive; font-size: clamp(1.3rem, 3.4vw, 1.55rem); line-height: .9; color: #1c1c1c; transform: rotate(-2.5deg); transform-origin: left; white-space: nowrap; }
 .idcard__barcode {
   margin-top: 12px; height: 34px; border-radius: 2px;
   background-image: repeating-linear-gradient(90deg,
