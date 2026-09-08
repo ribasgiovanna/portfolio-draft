@@ -536,6 +536,29 @@ p:last-child { margin-bottom: 0; }
   .panel--cream { --folder-bg: #241d15; --folder-line: #3c3122; --folder-fg: var(--dark-fg); }
 }
 .panel__spark { color: var(--accent); margin-right: 8px; }
+.panel__text code, .pmodal__desc code {
+  font: 500 .86em/1 var(--mono);
+  background: color-mix(in srgb, var(--folder-fg, var(--ink)) 10%, transparent);
+  padding: .1em .34em; border-radius: 4px;
+}
+
+/* the whole card opens the case study */
+.panel[data-pm] { cursor: pointer; transition: box-shadow .3s ease, transform .3s ease; }
+.panel[data-pm]:hover { box-shadow: 0 44px 74px -30px rgba(24,16,8,.5), 0 6px 18px -8px rgba(24,16,8,.34); }
+.panel[data-pm]:hover .panel__shot { transform: rotate(-1.2deg) scale(1.015); }
+.panel[data-pm]:hover.panel:nth-of-type(even) .panel__shot { transform: rotate(1.2deg) scale(1.015); }
+.panel__open {
+  position: absolute; right: clamp(20px, 4vw, 44px); bottom: clamp(18px, 3vw, 36px);
+  font: 600 10px/1 var(--mono); letter-spacing: .18em; text-transform: uppercase;
+  color: var(--folder-fg); opacity: .45;
+  display: inline-flex; align-items: center; gap: 6px;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.panel[data-pm]:hover .panel__open { opacity: 1; transform: translateX(2px); }
+.panel__open::before { content: ""; width: 22px; height: 1px; background: currentColor; }
+@media (prefers-reduced-motion: reduce) {
+  .panel[data-pm]:hover, .panel[data-pm]:hover .panel__shot { transform: none; }
+}
 
 .panel__body {
   width: 100%;
@@ -728,3 +751,39 @@ p:last-child { margin-bottom: 0; }
 .modal__frame:not(:has(img[src])) { min-height: 260px; }
 .modal__box h3 { font-family: var(--serif); font-weight: 500; font-size: 1.3rem; margin: 0 0 .2em; }
 .modal__cat { font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; color: var(--accent); margin: 0; }
+
+/* ---------- PROJECT DETAIL MODAL ---------- */
+.pmodal {
+  position: fixed; inset: 0; z-index: 70; display: grid; place-items: center;
+  padding: clamp(14px, 4vw, 40px);
+  background: color-mix(in srgb, var(--ink) 62%, transparent);
+  backdrop-filter: blur(2px);
+}
+.pmodal[hidden] { display: none; }
+.pmodal__box {
+  position: relative; width: min(880px, 100%); max-height: 92vh; overflow: auto;
+  background: var(--panel); color: var(--ink);
+  border: 1px solid var(--ink); border-radius: 18px;
+  box-shadow: 0 40px 90px -30px rgba(20,14,8,.7);
+}
+.pmodal__close {
+  position: absolute; top: 12px; right: 14px; z-index: 2;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: color-mix(in srgb, var(--paper) 88%, transparent); border: 1px solid var(--line);
+  font-size: 22px; line-height: 1; cursor: pointer; color: var(--ink-2);
+}
+.pmodal__shot { margin: 0; background: #11100e; border-bottom: 1px solid var(--line); display: grid; place-items: center; }
+.pmodal__shot img { display: block; width: 100%; max-height: 54vh; object-fit: contain; }
+.pmodal__body { padding: clamp(22px, 4vw, 40px); }
+.pmodal__meta { font: 600 11px/1 var(--mono); letter-spacing: .16em; text-transform: uppercase; color: var(--accent); margin: 0 0 .6em; }
+.pmodal__sep { opacity: .5; margin: 0 .4em; }
+.pmodal__box h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.6rem, 3.4vw, 2.4rem); line-height: 1.05; margin: 0 0 .35em; letter-spacing: -.01em; }
+.pmodal__lead { font-family: var(--serif); font-size: clamp(1.05rem, 2.1vw, 1.3rem); line-height: 1.35; color: var(--ink); margin: 0 0 1em; }
+.pmodal__desc p { font-size: .96rem; line-height: 1.6; color: var(--ink-2); margin: 0 0 .9em; }
+.pmodal__desc code { font: 500 .85em/1 var(--mono); background: color-mix(in srgb, var(--ink) 8%, transparent); padding: .12em .35em; border-radius: 4px; }
+.pmodal__desc .panel__more--credit { font-size: .82rem; opacity: .68; }
+.pmodal .tagrow { margin: 1.1em 0 1.3em; }
+.pmodal__links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin: 0; }
+.pmodal__links .cta { font-size: 13px; }
+@media (prefers-reduced-motion: reduce) { .pmodal { backdrop-filter: none; } }
+@media (max-width: 560px) { .pmodal__shot img { max-height: 40vh; } }

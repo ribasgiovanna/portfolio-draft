@@ -27,11 +27,18 @@
       role_5: "Data &amp; automation",
       role_6: "Building with people",
 
-      datasus_lead: "Reading a slow public-health database with a robot instead of by hand.",
-      corrida_lead: "A tiny game about being late for class — built to learn state machines and game loops.",
-      pibble_lead: "Building the employees side of a Django delivery system, with two teammates.",
+      datasus_lead: "Years of public blood-supply data, trapped in a 1990s government form. So I sent a robot in.",
+      p1_detail: "Course project at Harve (April 2026) with Jackson Beggi and wingCODING &mdash; I proposed using blood-bank data and built the extraction and treatment modules. The hard part was the form itself: selectors by <code>id</code> to get past accented <code>name</code> attributes like <code>SRegi&atilde;o</code>, an explicit wait on every interaction, and tab switching by polling <code>window_handles</code> with a timeout. Real SUS data &mdash; Outpatient Production, subgroup 0306 (Hemotherapy), &ldquo;approved quantity&rdquo;, state of Paran&aacute;.",
+      p2_detail: "High score is persisted to disk; if an art file is missing, the game falls back to plain shapes and keeps running. My own code &mdash; the sprites and the menu / win / lose screens are AI-generated and labelled as such. Individual academic project.",
+      p3_detail: "Built with two teammates on a fork of <code>rodavio/pibble_express</code>. My part: the Employees module and its integration with Deliveries, the CPF-or-CNPJ registration (form + migration), the administrative dashboard, and standardising the forms and the logout across all four apps.",
+      p4_detail: "A Curitiba-focused prototype: catch the drains that clog and flood before the rain does. Each monitored point has its own threshold; when the level crosses it, the on-screen alarm and the physical buzzer trigger together. Built on the ESP32 with an ultrasonic distance sensor as the gauge and Blynk as the dashboard and notification layer.",
+      p5_detail: "Three processes modelled end to end &mdash; appointment management, stock control and staff scheduling &mdash; plus subprocesses for client registration and payment.",
+      pm_hint: "open &nearr;",
+      pm_video: "Watch the demo &nearr;",
+      corrida_lead: "A student who&rsquo;s late for class, an endless city, and a state machine written from scratch.",
+      pibble_lead: "The employees side of a Django delivery system &mdash; auth, access levels, and a form that speaks both CPF and CNPJ.",
       p1_date: "Team project &middot; Apr 2026",
-      p2_date: "Individual &middot; Jun 2026",
+      p2_date: "Individual &middot; academic",
       p3_date: "Team project &middot; Jun 2026",
       nav_home: "Home",
       home_welcome: "Welcome to my portfolio &mdash; I'm a",
@@ -44,10 +51,10 @@
       ph_portrait: "portrait &mdash; image pending",
       about_kicker: "About",
       fan_talk: "on stage", fan_dusk: "golden hour",
-      p4_date: "Academic &middot; IoT", p5_date: "Team project &middot; process modeling",
-      flood_h: "City flood &amp; waterlogging monitor",
-      flood_lead: "Sensors in the field, an alert before the water rises.",
-      flood_desc: "An ESP32 reads an ultrasonic water-level sensor and reports to a Blynk &ldquo;Smart City&rdquo; dashboard, which charts the level and triggers an alarm and a buzzer when a point crosses its threshold.",
+      p4_date: "Academic &middot; Jun 2026", p5_date: "Team project &middot; Jun 2026",
+      flood_h: "Storm-drain trash &amp; flooding monitor &mdash; Curitiba",
+      flood_lead: "Blocked storm drains are why streets flood. This keeps an eye on them.",
+      flood_desc: "An ESP32 with an ultrasonic sensor measures how much a storm drain has filled with water and debris, and reports to a Blynk &ldquo;Smart City&rdquo; dashboard that charts the level and fires an alarm and a buzzer when a drain is close to overflowing.",
       flood_note: "Materials (photos, diagram, screens) are being gathered — see notes.",
       bpmn_h: "Veterinary clinic — process modeling",
       bpmn_lead: "Mapping how a clinic actually runs, one process at a time.",
@@ -60,9 +67,9 @@
       ph_bpmn: "BPMN diagram — image pending",
       stack_more: "For more projects, visit my GitHub &rarr;",
 
-      p1_desc: "A Selenium robot, a pandas pipeline and a Streamlit dashboard. Course project with Jackson Beggi and wingCODING — I worked on extraction and treatment.",
-      p2_desc: "Python and Pygame: state machine, jump physics, random obstacles, a HUD and a saved high score. My code; the art is AI-generated and labelled as such.",
-      p3_desc: "Auth, ADM/FUNC access levels, CRUD and a REST API. My part: the Employees module and its link to Deliveries, CPF/CNPJ registration and the admin dashboard.",
+      p1_desc: "A Selenium bot drives the DATASUS TabNet form &mdash; every filter, every period &mdash; and reads the result tables with pandas, BeautifulSoup as a fallback. A parallel runner does three workers with staggered starts and checkpointing, consolidates the exports and cleans them; a Streamlit dashboard compares hemotherapy volume across months and years.",
+      p2_desc: "Python + Pygame endless-runner. Hand-rolled state machine (menu &rarr; play &rarr; win/lose &rarr; menu), gravity-based jump, obstacles that spawn faster as the score climbs, speed that ramps every 100 points up to a cap, three lives with post-hit invincibility and a blink, and a HUD with a progress bar to the 1000-point goal.",
+      p3_desc: "Django + DRF app for delivery management: clients, products, employees and deliveries, login / logout, and ADM / FUNC access levels tied to a Django <code>User</code> through a <code>OneToOneField</code>. Full CRUD on all four resources, a REST API at <code>/api/</code>, and front-end input masks.",
 
       journey_h: "The story so far",
       journey_p1: "I started in software engineering and kept adding languages to build in. Data came first — cleaning it, automating the boring parts. Then the web, then design, then a community.",
@@ -182,11 +189,18 @@
       role_5: "Dados &amp; automa&ccedil;&atilde;o",
       role_6: "Construir com pessoas",
 
-      datasus_lead: "Ler uma base p&uacute;blica de sa&uacute;de lenta com um rob&ocirc;, em vez de na m&atilde;o.",
-      corrida_lead: "Um joguinho sobre estar atrasada para a aula — feito para aprender m&aacute;quinas de estado e game loops.",
-      pibble_lead: "Construindo o lado de Funcion&aacute;rios de um sistema de entregas em Django, com dois colegas.",
+      datasus_lead: "Anos de dados p&uacute;blicos de hemoterapia, presos num formul&aacute;rio de governo dos anos 90. Ent&atilde;o mandei um rob&ocirc;.",
+      p1_detail: "Trabalho de curso na Harve (abril de 2026) com Jackson Beggi e wingCODING &mdash; eu propus usar os dados de banco de sangue e constru&iacute; os m&oacute;dulos de extra&ccedil;&atilde;o e tratamento. O dif&iacute;cil era o formul&aacute;rio: seletores por <code>id</code> para driblar atributos <code>name</code> com acento como <code>SRegi&atilde;o</code>, wait expl&iacute;cito em cada intera&ccedil;&atilde;o e troca de aba por polling de <code>window_handles</code> com timeout. Dados reais do SUS &mdash; Produ&ccedil;&atilde;o Ambulatorial, subgrupo 0306 (Hemoterapia), &ldquo;quantidade aprovada&rdquo;, Paran&aacute;.",
+      p2_detail: "O recorde &eacute; salvo em disco; se faltar um arquivo de arte, o jogo cai para formas simples e continua rodando. C&oacute;digo meu &mdash; os sprites e as telas de menu / vit&oacute;ria / derrota s&atilde;o gerados por IA e sinalizados como tal. Projeto acad&ecirc;mico individual.",
+      p3_detail: "Feito com dois colegas, num fork de <code>rodavio/pibble_express</code>. Minha parte: o m&oacute;dulo de Funcion&aacute;rios e a integra&ccedil;&atilde;o com Entregas, o cadastro por CPF ou CNPJ (form + migration), o dashboard administrativo e a padroniza&ccedil;&atilde;o dos formul&aacute;rios e do logout nos quatro apps.",
+      p4_detail: "Um prot&oacute;tipo com foco em Curitiba: pegar os bueiros que entopem e alagam antes da chuva. Cada ponto monitorado tem seu limite; quando o n&iacute;vel passa, o alarme na tela e o buzzer f&iacute;sico disparam juntos. Feito no ESP32 com um sensor ultrass&ocirc;nico de dist&acirc;ncia como medidor e o Blynk como painel e camada de notifica&ccedil;&atilde;o.",
+      p5_detail: "Tr&ecirc;s processos modelados de ponta a ponta &mdash; gerenciamento de consultas, controle de estoque e gest&atilde;o de funcion&aacute;rios &mdash; mais subprocessos de cadastro de cliente e pagamento.",
+      pm_hint: "abrir &nearr;",
+      pm_video: "Ver o v&iacute;deo &nearr;",
+      corrida_lead: "Um estudante atrasado para a aula, uma cidade infinita e uma m&aacute;quina de estados feita do zero.",
+      pibble_lead: "O lado de funcion&aacute;rios de um sistema de entregas em Django &mdash; autentica&ccedil;&atilde;o, n&iacute;veis de acesso e um cadastro que aceita CPF e CNPJ.",
       p1_date: "Projeto em equipe &middot; abr 2026",
-      p2_date: "Individual &middot; jun 2026",
+      p2_date: "Individual &middot; acad&ecirc;mico",
       p3_date: "Projeto em equipe &middot; jun 2026",
       nav_home: "In&iacute;cio",
       home_welcome: "Bem-vindo (a) ao meu portf&oacute;lio &mdash; eu sou",
@@ -199,10 +213,10 @@
       ph_portrait: "retrato &mdash; imagem pendente",
       about_kicker: "Sobre",
       fan_talk: "no palco", fan_dusk: "hora dourada",
-      p4_date: "Acad&ecirc;mico &middot; IoT", p5_date: "Projeto em equipe &middot; modelagem de processos",
-      flood_h: "Monitor de alagamentos e enchentes na cidade",
-      flood_lead: "Sensores no local, um alerta antes de a &aacute;gua subir.",
-      flood_desc: "Um ESP32 l&ecirc; um sensor ultrass&ocirc;nico de n&iacute;vel de &aacute;gua e reporta a um painel Blynk &ldquo;Smart City&rdquo;, que registra o n&iacute;vel e dispara um alarme e um buzzer quando um ponto passa do limite.",
+      p4_date: "Acad&ecirc;mico &middot; jun 2026", p5_date: "Projeto em equipe &middot; jun 2026",
+      flood_h: "Monitor de lixo em bueiros e alagamentos &mdash; Curitiba",
+      flood_lead: "Bueiro entupido &eacute; o motivo de rua alagada. Isto fica de olho neles.",
+      flood_desc: "Um ESP32 com sensor ultrass&ocirc;nico mede o quanto um bueiro encheu de &aacute;gua e detritos e reporta a um painel Blynk &ldquo;Smart City&rdquo;, que registra o n&iacute;vel e dispara um alarme e um buzzer quando o bueiro est&aacute; perto de transbordar.",
       flood_note: "Materiais (fotos, diagrama, telas) est&atilde;o sendo reunidos — ver notas.",
       bpmn_h: "Cl&iacute;nica veterin&aacute;ria — modelagem de processos",
       bpmn_lead: "Mapear como uma cl&iacute;nica funciona de verdade, um processo por vez.",
@@ -215,9 +229,9 @@
       ph_bpmn: "diagrama BPMN — imagem pendente",
       stack_more: "Para mais projetos, visite o meu GitHub &rarr;",
 
-      p1_desc: "Um rob&ocirc; em Selenium, um pipeline em pandas e um dashboard em Streamlit. Trabalho de curso com Jackson Beggi e wingCODING — eu cuidei de extra&ccedil;&atilde;o e tratamento.",
-      p2_desc: "Python e Pygame: m&aacute;quina de estados, f&iacute;sica de pulo, obst&aacute;culos aleat&oacute;rios, HUD e recorde salvo. C&oacute;digo meu; a arte &eacute; gerada por IA e sinalizada como tal.",
-      p3_desc: "Autentica&ccedil;&atilde;o, n&iacute;veis de acesso ADM/FUNC, CRUD e API REST. Minha parte: o m&oacute;dulo de Funcion&aacute;rios e a liga&ccedil;&atilde;o com Entregas, cadastro CPF/CNPJ e o dashboard admin.",
+      p1_desc: "Um rob&ocirc; Selenium opera o formul&aacute;rio do DATASUS TabNet &mdash; cada filtro, cada per&iacute;odo &mdash; e l&ecirc; as tabelas com pandas, BeautifulSoup como fallback. Um runner paralelo roda tr&ecirc;s workers com in&iacute;cio escalonado e checkpoint, consolida as exporta&ccedil;&otilde;es e faz a limpeza; um dashboard em Streamlit compara o volume de hemoterapia entre meses e anos.",
+      p2_desc: "Endless-runner em Python + Pygame. M&aacute;quina de estados feita &agrave; m&atilde;o (menu &rarr; jogo &rarr; vit&oacute;ria/derrota &rarr; menu), pulo com gravidade, obst&aacute;culos que surgem mais r&aacute;pido conforme a pontua&ccedil;&atilde;o sobe, velocidade que acelera a cada 100 pontos at&eacute; um teto, tr&ecirc;s vidas com invencibilidade e piscada ap&oacute;s dano, e um HUD com barra de progresso at&eacute; a meta de 1000 pontos.",
+      p3_desc: "App em Django + DRF para gest&atilde;o de entregas: clientes, produtos, funcion&aacute;rios e entregas, login / logout e n&iacute;veis de acesso ADM / FUNC ligados a um <code>User</code> do Django por um <code>OneToOneField</code>. CRUD completo nos quatro recursos, uma API REST em <code>/api/</code> e m&aacute;scaras de entrada no front.",
 
       journey_h: "A hist&oacute;ria at&eacute; aqui",
       journey_p1: "Comecei na engenharia de software e fui juntando linguagens para construir. Dados vieram primeiro — limpar, automatizar a parte chata. Depois a web, depois o design, depois uma comunidade.",
@@ -407,6 +421,113 @@
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   }
 
+  /* ---------- project detail modal ---------- */
+  function initProjectModal() {
+    var modal = document.getElementById("pmodal");
+    var panels = document.querySelectorAll(".panel[data-pm]");
+    if (!modal || !panels.length) return;
+    var box = modal.querySelector(".pmodal__box");
+    var closeBtn = document.getElementById("pm-close");
+    var elImg = document.getElementById("pm-img");
+    var elNum = document.getElementById("pm-num");
+    var elDate = document.getElementById("pm-date");
+    var elTitle = document.getElementById("pm-title");
+    var elLead = document.getElementById("pm-lead");
+    var elDesc = document.getElementById("pm-desc");
+    var elTags = document.getElementById("pm-tags");
+    var elLinks = document.getElementById("pm-links");
+    var lastFocus = null;
+    var i18n = (typeof I18N !== "undefined") ? I18N : null;
+    function t(key, fallback) {
+      var lang = document.documentElement.lang === "pt-BR" ? "pt" : "en";
+      return (i18n && i18n[lang] && i18n[lang][key]) || fallback;
+    }
+
+    function txt(node, sel) { var n = node.querySelector(sel); return n ? n.textContent.trim() : ""; }
+
+    function open(panel) {
+      lastFocus = document.activeElement;
+      var img = panel.getAttribute("data-pm-img") || (panel.querySelector(".panel__shot img") || {}).src || "";
+      elImg.src = img;
+      elImg.alt = panel.getAttribute("data-pm-alt") || txt(panel, "h3");
+      elNum.textContent = txt(panel, ".panel__tab").replace(/^[^A-Za-z0-9]+/, "");
+      elDate.textContent = txt(panel, ".panel__date");
+      elTitle.textContent = txt(panel, "h3");
+      elLead.textContent = txt(panel, ".panel__lead");
+
+      elDesc.innerHTML = "";
+      var more = panel.querySelector(".panel__body .panel__text > .panel__more");
+      if (more) { var p = document.createElement("p"); p.innerHTML = more.innerHTML; elDesc.appendChild(p); }
+      var detail = panel.querySelector(".panel__detail");
+      if (detail) {
+        Array.prototype.forEach.call(detail.children, function (c) {
+          var p = document.createElement("p");
+          p.className = c.className;
+          p.innerHTML = c.innerHTML;
+          elDesc.appendChild(p);
+        });
+      }
+
+      var tags = panel.querySelector(".tagrow");
+      elTags.innerHTML = tags ? tags.innerHTML : "";
+
+      elLinks.innerHTML = "";
+      var repo = panel.getAttribute("data-pm-repo");
+      if (repo) {
+        var a = document.createElement("a");
+        a.className = "cta"; a.href = repo; a.target = "_blank"; a.rel = "noopener noreferrer";
+        a.innerHTML = t("cta_source", "View project on GitHub &rarr;");
+        elLinks.appendChild(a);
+      }
+      var vid = panel.getAttribute("data-pm-video");
+      if (vid) {
+        var v = document.createElement("a");
+        v.className = "cta"; v.href = vid; v.target = "_blank"; v.rel = "noopener noreferrer";
+        v.innerHTML = t("pm_video", "Watch the demo &nearr;");
+        elLinks.appendChild(v);
+      }
+
+      modal.hidden = false;
+      document.body.style.overflow = "hidden";
+      box.scrollTop = 0;
+      closeBtn.focus();
+      document.addEventListener("keydown", onKey);
+    }
+    function close() {
+      modal.hidden = true;
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKey);
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    function onKey(e) {
+      if (e.key === "Escape") { close(); return; }
+      if (e.key === "Tab") {
+        var f = box.querySelectorAll("button, a[href]");
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+
+    Array.prototype.forEach.call(panels, function (panel) {
+      panel.setAttribute("tabindex", "0");
+      panel.setAttribute("role", "button");
+      panel.addEventListener("click", function (e) {
+        if (e.target.closest("a[href], button")) return;   /* let real links/buttons work */
+        open(panel);
+      });
+      panel.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") {
+          if (e.target !== panel) return;
+          e.preventDefault(); open(panel);
+        }
+      });
+    });
+    closeBtn.addEventListener("click", close);
+    modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
+  }
+
   /* ---------- staggered reveal for the playground grid ---------- */
   function initReveal() {
     var grid = document.querySelector(".gallery__grid");
@@ -513,6 +634,7 @@
 
     initFilters();
     initModal();
+    initProjectModal();
     initReveal();
     initAboutFan();
   });
