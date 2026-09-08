@@ -11,9 +11,9 @@
       nav_about: "About", nav_work: "Projects", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Currently", nav_contact: "Contact",
 
       hi: "Hi, my name is",
-      say: "she builds things — with code, design &amp; people",
+      say: "I build things — with code, design &amp; people",
       roles_kicker: "&gt; WHAT I DO &gt;&gt;",
-      bio: "Giovanna Ribas is a software engineering student and developer from Curitiba, Brazil. She works across software, data and design — building production features and automations, and visual work and community projects the rest of the time. She founded and leads Coffee &amp; Code, a student tech club at PUCPR.",
+      bio: "I'm a software engineering student and developer from Curitiba, Brazil. I work across software, data and design — production features and automations during the week, visual work and community projects the rest of the time. I founded and lead Coffee &amp; Code, a student tech club at PUCPR, together with the team.",
 
       id_name: "NAME", id_based: "BASED IN", id_exp: "EXPERIENCE", id_exp_v: "Software Development Intern",
       id_edu: "EDUCATION",
@@ -23,15 +23,15 @@
       role_1: "Software Engineering Student",
       role_2: "Software Development Intern",
       role_3: "Visual &amp; Creative Designer",
-      role_4: "Coffee &amp; Code — Founder",
+      role_4: "Coffee &amp; Code — founder &amp; lead",
       role_5: "Data &amp; automation",
       role_6: "Building with people",
 
-      datasus_lead: "Years of public blood-supply data, trapped in a 1990s government form. So I sent a robot in.",
-      p1_detail: "Course project at Harve (April 2026) with Jackson Beggi and wingCODING &mdash; I proposed using blood-bank data and built the extraction and treatment modules. The hard part was the form itself: selectors by <code>id</code> to get past accented <code>name</code> attributes like <code>SRegi&atilde;o</code>, an explicit wait on every interaction, and tab switching by polling <code>window_handles</code> with a timeout. Real SUS data &mdash; Outpatient Production, subgroup 0306 (Hemotherapy), &ldquo;approved quantity&rdquo;, state of Paran&aacute;.",
+      datasus_lead: "Years of SUS hemotherapy records, one slow query at a time. So I sent a robot in.",
+      p1_detail: "Course project at Harve (April 2026) with Jackson Beggi and wingCODING &mdash; I proposed using blood-bank data and built the extraction and treatment modules. The data is real SUS data: Outpatient Production, subgroup 0306 (Hemotherapy), the &ldquo;approved quantity&rdquo; metric, filtered to Paran&aacute; &mdash; approved hemotherapy procedures recorded in SUS, an indicator related to, but not the same as, blood donations. (The published dashboard still labels it &ldquo;donations&rdquo; &mdash; a teammate&rsquo;s wording; a corrected capture is pending.) The form itself was the hard part &mdash; details in the repo.",
       p2_detail: "High score is persisted to disk; if an art file is missing, the game falls back to plain shapes and keeps running. My own code &mdash; the sprites and the menu / win / lose screens are AI-generated and labelled as such. Individual academic project.",
-      p3_detail: "Built with two teammates on a fork of <code>rodavio/pibble_express</code>. My part: the Employees module and its integration with Deliveries, the CPF-or-CNPJ registration (form + migration), the administrative dashboard, and standardising the forms and the logout across all four apps.",
-      p4_detail: "A Curitiba-focused prototype: catch the drains that clog and flood before the rain does. Each monitored point has its own threshold; when the level crosses it, the on-screen alarm and the physical buzzer trigger together. Built on the ESP32 with an ultrasonic distance sensor as the gauge and Blynk as the dashboard and notification layer.",
+      p3_detail: "Academic project for a fictional delivery company, built with two teammates on a fork of <code>rodavio/pibble_express</code>. My part: the Employees module and its integration with Deliveries, the CPF-or-CNPJ registration (form + migration), the administrative dashboard, and standardising the forms and the logout across all four apps.",
+      p4_detail: "A Curitiba-focused prototype. The sensor measures how full a drain is; a clog is one factor that can contribute to a point flooding. Each monitored point has its own threshold; when the level crosses it, the on-screen alarm and the physical buzzer trigger together. Built on the ESP32 with an ultrasonic distance sensor as the gauge and Blynk as the dashboard and notification layer. What a real deployment in street drains would need is future work.",
       p5_detail: "Three processes modelled end to end &mdash; appointment management, stock control and staff scheduling &mdash; plus subprocesses for client registration and payment.",
       pm_hint: "open &nearr;",
       pm_video: "Watch the demo &nearr;",
@@ -42,7 +42,12 @@
       p3_date: "Team project &middot; Jun 2026",
       nav_home: "Home",
       home_welcome: "Welcome to my portfolio &mdash; I'm a",
-      home_role: "Software Engineer",
+      home_role: "Software Engineering Student",
+      cat_photo: "Photography",
+      journey_harve: "Python course cohort at Harve, with certificates.",
+      p1_sub: "Hemotherapy data automation &amp; analysis",
+      ci_borboleta: "Design and media for a women&rsquo;s-health awareness project. I design the awareness pieces &mdash; layout, type and collage &mdash; from the content the team provides.",
+      ci_more: "I also join environmental actions, activities with children and other volunteering with Interact and around Curitiba.",
       home_line: "<em>Code, design &amp; people</em> &mdash; I build where they meet.",
       id_kicker: "DEV &middot; DESIGN LICENSE",
       id_since: "SINCE", id_sig: "signature", id_sticker_a: "BUILT BY HAND",
@@ -53,7 +58,7 @@
       fan_talk: "on stage", fan_dusk: "golden hour",
       p4_date: "Academic &middot; Jun 2026", p5_date: "Team project &middot; Jun 2026",
       flood_h: "Storm-drain trash &amp; flooding monitor &mdash; Curitiba",
-      flood_lead: "Blocked storm drains are why streets flood. This keeps an eye on them.",
+      flood_lead: "A clogged storm drain can turn heavy rain into a flooded street. This keeps an eye on them.",
       flood_desc: "An ESP32 with an ultrasonic sensor measures how much a storm drain has filled with water and debris, and reports to a Blynk &ldquo;Smart City&rdquo; dashboard that charts the level and fires an alarm and a buzzer when a drain is close to overflowing.",
       flood_note: "Materials (photos, diagram, screens) are being gathered — see notes.",
       bpmn_h: "Veterinary clinic — process modeling",
@@ -71,14 +76,14 @@
       p2_desc: "Python + Pygame endless-runner. Hand-rolled state machine (menu &rarr; play &rarr; win/lose &rarr; menu), gravity-based jump, obstacles that spawn faster as the score climbs, speed that ramps every 100 points up to a cap, three lives with post-hit invincibility and a blink, and a HUD with a progress bar to the 1000-point goal.",
       p3_desc: "Django + DRF app for delivery management: clients, products, employees and deliveries, login / logout, and ADM / FUNC access levels tied to a Django <code>User</code> through a <code>OneToOneField</code>. Full CRUD on all four resources, a REST API at <code>/api/</code>, and front-end input masks.",
 
-      journey_h: "The story so far",
-      journey_p1: "I started in software engineering and kept adding languages to build in. Data came first — cleaning it, automating the boring parts. Then the web, then design, then a community.",
-      journey_p2: "None of it was a plan. Each thing made the next one make sense: a script became a pipeline, a class exercise became a team project, a group of friends became a club.",
+      journey_h: "The threads",
+      journey_p1: "I'm a software engineering student, and I build across a few areas at once rather than in a straight line: software and data, the web, visual design, and community.",
+      journey_p2: "They feed each other. A script becomes a pipeline; a class exercise becomes a team project; a group of friends becomes a club. The cards below are areas of my path, not a strict timeline.",
       journey_todo: "&#9432; Placeholder timeline — to be expanded with real dates, the &ldquo;why&rdquo; behind each step, and photos.",
-      j1_t: "2024 &middot; started", j1_d: "Software Engineering at PUCPR.",
+      j1_t: "Software engineering", j1_d: "Studying at PUCPR (started 2026).",
       j2_t: "Python &amp; data", j2_d: "First automations with pandas — public health data, spreadsheets, ETL.",
-      j3_t: "Coffee &amp; Code", j3_d: "Founded and now lead a student tech club.",
-      j4_t: "First Django team project", j4_d: "Pibble Express — auth, access levels, an admin dashboard.",
+      j3_t: "Coffee &amp; Code", j3_d: "Founded and now lead a student tech club, with the team.",
+      j4_t: "Web, in a team", j4_d: "Pibble Express — the employees module, access levels, an admin dashboard.",
       j5_t: "Dev intern", j5_d: "Production software, day to day. Details are proprietary.",
       j6_t: "Design &amp; people", j6_d: "Visual identity, illustration, events with Diretoria da Mulher.",
       j7_t: "Off the screen", j7_d: "Baking bread, cookies and other experiments.",
@@ -133,19 +138,19 @@
       pf_photo: "Photography",
       pf_kitchen: "In the kitchen",
       pf_community: "Volunteering &amp; events",
-      pg_ink: "Ink study <i>Illustration</i>",
+      pg_ink: "Digital study <i>Character studies</i>",
       pg_pencil: "Pencil study <i>Traditional</i>",
       pg_borboleta: "Awareness campaign <i>Graphic design</i>",
       pg_photo: "Photograph <i>Photography</i>",
-      pg_kitchen: "In the kitchen <i>Food photography</i>",
+      pg_kitchen: "Baked by me <i>In the kitchen</i>",
       pg_vol: "Volunteering &amp; events <i>Community</i>",
       cta_behance: "More visual work on Behance &rarr;",
 
       community_h: "Community &amp; social impact",
-      community_lead: "Building with people — collaboration, volunteering, communication and events.",
+      community_lead: "Building with people — each of these is a different role, in a different place.",
       ph_action: "selected photo — image pending",
-      ci_ddm: "Events Coordinator: organizing events and communication, and initiatives around inclusion and social impact.",
-      ci_teia: "Social media: communication and outreach for the project's actions.",
+      ci_ddm: "Events Coordinator at the students&rsquo; union women&rsquo;s board. I plan and run events and their communication, and initiatives around inclusion and social impact.",
+      ci_teia: "Social media volunteer. I write the content briefings — the story-by-story script, the pillar and the goal — that the team turns into the published posts.",
       ci_vol_h: "Interact &amp; volunteer work",
       ci_vol: "Environmental actions, activities with children and other volunteer work.",
       privacy_note: "Photos are selected with care — no children's faces in sensitive contexts, no legible badges or personal data.",
@@ -173,9 +178,9 @@
       nav_about: "Sobre", nav_work: "Projetos", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Atualmente", nav_contact: "Contato",
 
       hi: "Oi, meu nome &eacute;",
-      say: "ela constr&oacute;i coisas — com c&oacute;digo, design &amp; pessoas",
+      say: "eu construo coisas — com c&oacute;digo, design &amp; pessoas",
       roles_kicker: "&gt; O QUE EU FA&Ccedil;O &gt;&gt;",
-      bio: "Giovanna Ribas &eacute; estudante de Engenharia de Software e desenvolvedora, de Curitiba. Trabalha entre software, dados e design — construindo funcionalidades em produ&ccedil;&atilde;o e automa&ccedil;&otilde;es, e trabalho visual e projetos de comunidade no resto do tempo. Criou e lidera o Coffee &amp; Code, um clube universit&aacute;rio de tecnologia na PUCPR.",
+      bio: "Sou estudante de Engenharia de Software e desenvolvedora, de Curitiba. Trabalho entre software, dados e design — funcionalidades em produ&ccedil;&atilde;o e automa&ccedil;&otilde;es durante a semana, trabalho visual e projetos de comunidade no resto do tempo. Criei e lidero o Coffee &amp; Code, um clube universit&aacute;rio de tecnologia na PUCPR, junto com a equipe.",
 
       id_name: "NOME", id_based: "BASE", id_exp: "EXPERI&Ecirc;NCIA", id_exp_v: "Estagi&aacute;ria de Desenvolvimento de Software",
       id_edu: "FORMA&Ccedil;&Atilde;O",
@@ -185,15 +190,15 @@
       role_1: "Estudante de Engenharia de Software",
       role_2: "Estagi&aacute;ria de Desenvolvimento",
       role_3: "Designer Visual &amp; Criativa",
-      role_4: "Coffee &amp; Code — Fundadora",
+      role_4: "Coffee &amp; Code — fundadora &amp; l&iacute;der",
       role_5: "Dados &amp; automa&ccedil;&atilde;o",
       role_6: "Construir com pessoas",
 
-      datasus_lead: "Anos de dados p&uacute;blicos de hemoterapia, presos num formul&aacute;rio de governo dos anos 90. Ent&atilde;o mandei um rob&ocirc;.",
-      p1_detail: "Trabalho de curso na Harve (abril de 2026) com Jackson Beggi e wingCODING &mdash; eu propus usar os dados de banco de sangue e constru&iacute; os m&oacute;dulos de extra&ccedil;&atilde;o e tratamento. O dif&iacute;cil era o formul&aacute;rio: seletores por <code>id</code> para driblar atributos <code>name</code> com acento como <code>SRegi&atilde;o</code>, wait expl&iacute;cito em cada intera&ccedil;&atilde;o e troca de aba por polling de <code>window_handles</code> com timeout. Dados reais do SUS &mdash; Produ&ccedil;&atilde;o Ambulatorial, subgrupo 0306 (Hemoterapia), &ldquo;quantidade aprovada&rdquo;, Paran&aacute;.",
+      datasus_lead: "Anos de registros de hemoterapia do SUS, uma consulta lenta por vez. Ent&atilde;o mandei um rob&ocirc;.",
+      p1_detail: "Trabalho de curso na Harve (abril de 2026) com Jackson Beggi e wingCODING &mdash; eu propus usar os dados de banco de sangue e constru&iacute; os m&oacute;dulos de extra&ccedil;&atilde;o e tratamento. Os dados s&atilde;o reais do SUS: Produ&ccedil;&atilde;o Ambulatorial, subgrupo 0306 (Hemoterapia), m&eacute;trica &ldquo;quantidade aprovada&rdquo;, filtrado para o Paran&aacute; &mdash; procedimentos de hemoterapia aprovados no SUS, um indicador relacionado a, mas diferente de, doa&ccedil;&otilde;es de sangue. (O dashboard publicado ainda usa &ldquo;doa&ccedil;&otilde;es&rdquo; &mdash; texto de um colega; uma captura corrigida est&aacute; pendente.) O formul&aacute;rio em si foi a parte dif&iacute;cil &mdash; detalhes no reposit&oacute;rio.",
       p2_detail: "O recorde &eacute; salvo em disco; se faltar um arquivo de arte, o jogo cai para formas simples e continua rodando. C&oacute;digo meu &mdash; os sprites e as telas de menu / vit&oacute;ria / derrota s&atilde;o gerados por IA e sinalizados como tal. Projeto acad&ecirc;mico individual.",
-      p3_detail: "Feito com dois colegas, num fork de <code>rodavio/pibble_express</code>. Minha parte: o m&oacute;dulo de Funcion&aacute;rios e a integra&ccedil;&atilde;o com Entregas, o cadastro por CPF ou CNPJ (form + migration), o dashboard administrativo e a padroniza&ccedil;&atilde;o dos formul&aacute;rios e do logout nos quatro apps.",
-      p4_detail: "Um prot&oacute;tipo com foco em Curitiba: pegar os bueiros que entopem e alagam antes da chuva. Cada ponto monitorado tem seu limite; quando o n&iacute;vel passa, o alarme na tela e o buzzer f&iacute;sico disparam juntos. Feito no ESP32 com um sensor ultrass&ocirc;nico de dist&acirc;ncia como medidor e o Blynk como painel e camada de notifica&ccedil;&atilde;o.",
+      p3_detail: "Projeto acad&ecirc;mico para uma empresa de entregas fict&iacute;cia, feito com dois colegas num fork de <code>rodavio/pibble_express</code>. Minha parte: o m&oacute;dulo de Funcion&aacute;rios e a integra&ccedil;&atilde;o com Entregas, o cadastro por CPF ou CNPJ (form + migration), o dashboard administrativo e a padroniza&ccedil;&atilde;o dos formul&aacute;rios e do logout nos quatro apps.",
+      p4_detail: "Um prot&oacute;tipo com foco em Curitiba. O sensor mede o qu&atilde;o cheio um bueiro est&aacute;; o entupimento &eacute; um fator que pode contribuir para o alagamento de um ponto. Cada ponto tem seu limite; quando o n&iacute;vel passa, o alarme na tela e o buzzer f&iacute;sico disparam juntos. Feito no ESP32 com sensor ultrass&ocirc;nico de dist&acirc;ncia como medidor e o Blynk como painel e camada de notifica&ccedil;&atilde;o. Uma implanta&ccedil;&atilde;o real em bueiros de rua &eacute; trabalho futuro.",
       p5_detail: "Tr&ecirc;s processos modelados de ponta a ponta &mdash; gerenciamento de consultas, controle de estoque e gest&atilde;o de funcion&aacute;rios &mdash; mais subprocessos de cadastro de cliente e pagamento.",
       pm_hint: "abrir &nearr;",
       pm_video: "Ver o v&iacute;deo &nearr;",
@@ -204,7 +209,12 @@
       p3_date: "Projeto em equipe &middot; jun 2026",
       nav_home: "In&iacute;cio",
       home_welcome: "Bem-vindo (a) ao meu portf&oacute;lio &mdash; eu sou",
-      home_role: "Engenheira de Software",
+      home_role: "Estudante de Engenharia de Software",
+      cat_photo: "Fotografia",
+      journey_harve: "Turma do curso na Harve, com os certificados.",
+      p1_sub: "Automa&ccedil;&atilde;o e an&aacute;lise de dados de hemoterapia",
+      ci_borboleta: "Design e m&iacute;dia para um projeto de conscientiza&ccedil;&atilde;o em sa&uacute;de da mulher. Eu fa&ccedil;o as pe&ccedil;as &mdash; layout, tipografia e colagem &mdash; a partir do conte&uacute;do que a equipe passa.",
+      ci_more: "Tamb&eacute;m participo de a&ccedil;&otilde;es ambientais, atividades com crian&ccedil;as e outros voluntariados com o Interact e em Curitiba.",
       home_line: "<em>C&oacute;digo, design &amp; pessoas</em> &mdash; construo onde eles se encontram.",
       id_kicker: "LICEN&Ccedil;A DEV &middot; DESIGN",
       id_since: "DESDE", id_sig: "assinatura", id_sticker_a: "FEITO &Agrave; M&Atilde;O",
@@ -215,7 +225,7 @@
       fan_talk: "no palco", fan_dusk: "hora dourada",
       p4_date: "Acad&ecirc;mico &middot; jun 2026", p5_date: "Projeto em equipe &middot; jun 2026",
       flood_h: "Monitor de lixo em bueiros e alagamentos &mdash; Curitiba",
-      flood_lead: "Bueiro entupido &eacute; o motivo de rua alagada. Isto fica de olho neles.",
+      flood_lead: "Um bueiro entupido pode transformar chuva forte em rua alagada. Isto fica de olho neles.",
       flood_desc: "Um ESP32 com sensor ultrass&ocirc;nico mede o quanto um bueiro encheu de &aacute;gua e detritos e reporta a um painel Blynk &ldquo;Smart City&rdquo;, que registra o n&iacute;vel e dispara um alarme e um buzzer quando o bueiro est&aacute; perto de transbordar.",
       flood_note: "Materiais (fotos, diagrama, telas) est&atilde;o sendo reunidos — ver notas.",
       bpmn_h: "Cl&iacute;nica veterin&aacute;ria — modelagem de processos",
@@ -233,14 +243,14 @@
       p2_desc: "Endless-runner em Python + Pygame. M&aacute;quina de estados feita &agrave; m&atilde;o (menu &rarr; jogo &rarr; vit&oacute;ria/derrota &rarr; menu), pulo com gravidade, obst&aacute;culos que surgem mais r&aacute;pido conforme a pontua&ccedil;&atilde;o sobe, velocidade que acelera a cada 100 pontos at&eacute; um teto, tr&ecirc;s vidas com invencibilidade e piscada ap&oacute;s dano, e um HUD com barra de progresso at&eacute; a meta de 1000 pontos.",
       p3_desc: "App em Django + DRF para gest&atilde;o de entregas: clientes, produtos, funcion&aacute;rios e entregas, login / logout e n&iacute;veis de acesso ADM / FUNC ligados a um <code>User</code> do Django por um <code>OneToOneField</code>. CRUD completo nos quatro recursos, uma API REST em <code>/api/</code> e m&aacute;scaras de entrada no front.",
 
-      journey_h: "A hist&oacute;ria at&eacute; aqui",
-      journey_p1: "Comecei na engenharia de software e fui juntando linguagens para construir. Dados vieram primeiro — limpar, automatizar a parte chata. Depois a web, depois o design, depois uma comunidade.",
-      journey_p2: "Nada disso foi planejado. Cada coisa fez a pr&oacute;xima fazer sentido: um script virou um pipeline, um exerc&iacute;cio de aula virou um projeto em equipe, um grupo de amigos virou um clube.",
+      journey_h: "As frentes",
+      journey_p1: "Sou estudante de Engenharia de Software e construo em algumas frentes ao mesmo tempo, n&atilde;o em linha reta: software e dados, a web, design visual e comunidade.",
+      journey_p2: "Uma alimenta a outra. Um script vira um pipeline; um exerc&iacute;cio de aula vira um projeto em equipe; um grupo de amigos vira um clube. Os cart&otilde;es abaixo s&atilde;o frentes do meu caminho, n&atilde;o uma linha do tempo.",
       journey_todo: "&#9432; Linha do tempo provis&oacute;ria — a expandir com datas reais, o &ldquo;porqu&ecirc;&rdquo; de cada passo e fotos.",
-      j1_t: "2024 &middot; in&iacute;cio", j1_d: "Engenharia de Software na PUCPR.",
+      j1_t: "Engenharia de software", j1_d: "Curso na PUCPR (in&iacute;cio em 2026).",
       j2_t: "Python &amp; dados", j2_d: "Primeiras automa&ccedil;&otilde;es com pandas — dados p&uacute;blicos de sa&uacute;de, planilhas, ETL.",
-      j3_t: "Coffee &amp; Code", j3_d: "Criei e hoje lidero um clube universit&aacute;rio de tecnologia.",
-      j4_t: "Primeiro projeto Django em equipe", j4_d: "Pibble Express — autentica&ccedil;&atilde;o, n&iacute;veis de acesso, um dashboard admin.",
+      j3_t: "Coffee &amp; Code", j3_d: "Criei e hoje lidero um clube universit&aacute;rio de tecnologia, com a equipe.",
+      j4_t: "Web, em equipe", j4_d: "Pibble Express — o m&oacute;dulo de funcion&aacute;rios, n&iacute;veis de acesso, um dashboard admin.",
       j5_t: "Est&aacute;gio em dev", j5_d: "Software em produ&ccedil;&atilde;o, no dia a dia. Os detalhes s&atilde;o propriet&aacute;rios.",
       j6_t: "Design &amp; pessoas", j6_d: "Identidade visual, ilustra&ccedil;&atilde;o, eventos com a Diretoria da Mulher.",
       j7_t: "Longe da tela", j7_d: "Fazer p&atilde;o, cookies e outros experimentos.",
@@ -295,19 +305,19 @@
       pf_photo: "Fotografia",
       pf_kitchen: "Na cozinha",
       pf_community: "Voluntariado &amp; eventos",
-      pg_ink: "Estudo a nanquim <i>Ilustra&ccedil;&atilde;o</i>",
+      pg_ink: "Estudo digital <i>Estudos de personagem</i>",
       pg_pencil: "Estudo a l&aacute;pis <i>Tradicional</i>",
       pg_borboleta: "Campanha de conscientiza&ccedil;&atilde;o <i>Design gr&aacute;fico</i>",
       pg_photo: "Fotografia <i>Fotografia</i>",
-      pg_kitchen: "Na cozinha <i>Fotografia de comida</i>",
+      pg_kitchen: "Feito por mim <i>Na cozinha</i>",
       pg_vol: "Voluntariado &amp; eventos <i>Comunidade</i>",
       cta_behance: "Mais trabalho visual no Behance &rarr;",
 
       community_h: "Comunidade &amp; impacto social",
-      community_lead: "Construir com pessoas — colabora&ccedil;&atilde;o, voluntariado, comunica&ccedil;&atilde;o e eventos.",
+      community_lead: "Construir com pessoas — cada uma destas &eacute; uma fun&ccedil;&atilde;o diferente, num lugar diferente.",
       ph_action: "foto selecionada — imagem pendente",
-      ci_ddm: "Coordenadora de Eventos: organiza&ccedil;&atilde;o de eventos e comunica&ccedil;&atilde;o, e iniciativas de inclus&atilde;o e impacto social.",
-      ci_teia: "Social media: comunica&ccedil;&atilde;o e divulga&ccedil;&atilde;o das a&ccedil;&otilde;es do projeto.",
+      ci_ddm: "Coordenadora de Eventos na Diretoria da Mulher do DCE. Planejo e realizo eventos e sua comunica&ccedil;&atilde;o, e iniciativas de inclus&atilde;o e impacto social.",
+      ci_teia: "Volunt&aacute;ria de social media. Eu escrevo os briefings de conte&uacute;do — o roteiro story a story, o pilar e o objetivo — que a equipe transforma nos posts publicados.",
       ci_vol_h: "Interact &amp; voluntariado",
       ci_vol: "A&ccedil;&otilde;es ambientais, atividades com crian&ccedil;as e outros voluntariados.",
       privacy_note: "As fotos s&atilde;o escolhidas com cuidado — sem rostos de crian&ccedil;as em contexto sens&iacute;vel, sem crach&aacute;s leg&iacute;veis ou dados pessoais.",
@@ -337,6 +347,13 @@
     document.querySelectorAll("[data-i18n]").forEach(function (el) {
       var k = el.getAttribute("data-i18n");
       if (dict[k] != null) el.innerHTML = dict[k];
+    });
+    var _dec = document.createElement("textarea");
+    document.querySelectorAll("[data-i18n-aria]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n-aria");
+      if (dict[k] == null) return;
+      _dec.innerHTML = String(dict[k]).replace(/<[^>]+>/g, "");
+      el.setAttribute("aria-label", _dec.value);
     });
     var btn = document.getElementById("lang");
     if (btn) { btn.textContent = (lang === "pt") ? "EN" : "PT"; }
@@ -386,7 +403,8 @@
       lastFocus = btn;
       var title = btn.getAttribute("data-title") || "";
       titleEl.textContent = title;
-      catEl.textContent = btn.getAttribute("data-cat") || "";
+      var isPt = document.documentElement.lang === "pt-BR";
+      catEl.textContent = (isPt && btn.getAttribute("data-cat-pt")) || btn.getAttribute("data-cat") || "";
       var full = btn.getAttribute("data-full") || "";
       if (imgEl) {
         if (full) { imgEl.src = full; imgEl.alt = title; imgEl.hidden = false; }
@@ -414,7 +432,7 @@
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     }
-    document.querySelectorAll(".art").forEach(function (b) {
+    document.querySelectorAll(".art, .fanpic").forEach(function (b) {
       b.addEventListener("click", function () { open(b); });
     });
     closeBtn.addEventListener("click", close);
@@ -583,9 +601,11 @@
     if (!full) return;
     el.setAttribute("aria-label", full);           /* AT reads the whole heading */
     var chars = Array.prototype.slice.call(full);
-    var hl = -1;                                    /* the first "S" gets the accent */
-    for (var j = 0; j < chars.length; j++) {
-      if (chars[j] === "S" || chars[j] === "s") { hl = j; break; }
+    var hl = full.toLowerCase().indexOf("software");   /* accent the "S" of Software */
+    if (hl < 0) {
+      for (var j = 0; j < chars.length; j++) {
+        if (chars[j] === "S" || chars[j] === "s") { hl = j; break; }
+      }
     }
     if (hl < 0) { hl = chars.length - 1; while (hl > 0 && /\s/.test(chars[hl])) hl--; }
     var token = el._twToken = (el._twToken || 0) + 1;
