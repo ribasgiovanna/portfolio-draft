@@ -462,8 +462,11 @@
     if (!full) return;
     el.setAttribute("aria-label", full);           /* AT reads the whole heading */
     var chars = Array.prototype.slice.call(full);
-    var hl = chars.length - 1;                      /* last non-space char gets the accent */
-    while (hl > 0 && /\s/.test(chars[hl])) hl--;
+    var hl = -1;                                    /* the first "S" gets the accent */
+    for (var j = 0; j < chars.length; j++) {
+      if (chars[j] === "S" || chars[j] === "s") { hl = j; break; }
+    }
+    if (hl < 0) { hl = chars.length - 1; while (hl > 0 && /\s/.test(chars[hl])) hl--; }
     var token = el._twToken = (el._twToken || 0) + 1;
 
     function esc(c) { return c.replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
