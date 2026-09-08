@@ -69,29 +69,60 @@
 <section id="home" class="home" aria-labelledby="home-h">
   <div class="home__card">
     <span class="doodle doodle--code" aria-hidden="true">
-      <svg viewBox="0 0 40 40"><path d="M15 12 L7 20 L15 28 M25 12 L33 20 L25 28 M23 9 L17 31"/></svg>
+      <svg viewBox="0 0 40 40"><path d="M15 11 L5 20 L15 29 M25 11 L35 20 L25 29 M23 7 L17 33"/></svg>
     </span>
-    <span class="doodle doodle--pen" aria-hidden="true">
-      <svg viewBox="0 0 40 40"><path d="M11 29 L26 14 L30 18 L15 33 Z"/><path d="M11 29 L9 35 L15 33"/><path d="M24 16 L28 20"/></svg>
-    </span>
-    <span class="doodle doodle--sp1" aria-hidden="true">&#10022;</span>
     <span class="doodle doodle--cup" aria-hidden="true">
-      <svg viewBox="0 0 40 40"><path d="M9 16 H27 V24 A6 6 0 0 1 21 30 H15 A6 6 0 0 1 9 24 Z"/><path d="M27 18 H31 A3 3 0 0 1 31 24 H27"/><path d="M14 7 Q16 10 14 13 M20 7 Q22 10 20 13"/></svg>
+      <svg viewBox="0 0 40 40"><path d="M7 16 H27 V25 A7 7 0 0 1 20 32 H14 A7 7 0 0 1 7 25 Z"/><path d="M27 18 H32 A4 4 0 0 1 32 25 H27"/><path d="M13 5 Q16 9 13 13 M20 5 Q23 9 20 13"/></svg>
+    </span>
+    <span class="doodle doodle--brush" aria-hidden="true">
+      <svg viewBox="0 0 40 40"><path d="M28 6 C 33 11, 33 15, 24 24 L 16 16 C 25 7, 23 1, 28 6 Z"/><path d="M16 16 L24 24 C 20 30, 12 33, 6 34 C 7 28, 10 20, 16 16 Z"/></svg>
     </span>
     <span class="doodle doodle--cam" aria-hidden="true">
-      <svg viewBox="0 0 40 40"><rect x="7" y="14" width="26" height="19" rx="3"/><circle cx="20" cy="23.5" r="5"/><path d="M15 14 l2-4 h6 l2 4"/></svg>
+      <svg viewBox="0 0 40 40"><rect x="5" y="13" width="30" height="21" rx="4"/><circle cx="20" cy="24" r="6"/><path d="M14 13 l2.5-5 h7 l2.5 5"/><circle cx="30" cy="18" r="1.4"/></svg>
     </span>
+    <span class="doodle doodle--spark" aria-hidden="true">&#10022;</span>
 
     <div class="home__text">
       <p class="home__welcome" data-i18n="home_welcome">Welcome to my portfolio &mdash; I'm a</p>
-      <h1 id="home-h" class="home__role">Software Engineer</h1>
-      <p class="home__sub" data-i18n="home_sub">student at PUCPR &middot; software development intern</p>
-      <p class="home__line" data-i18n="home_line">I make things &mdash; with <em>code, design &amp; people</em>.</p>
+      <h1 id="home-h" class="home__role" data-i18n="home_role">Software Engineer</h1>
+      <p class="home__line" data-i18n="home_line"><em>Code, design &amp; people</em> &mdash; I build where they meet.</p>
     </div>
 
-    <figure class="home__polaroid">
-      <span class="home__photo"><img src="assets/images/profile/portrait.webp" width="619" height="1100" alt="Giovanna Ribas"></span>
-      <figcaption><strong>Giovanna Ribas</strong><span data-i18n="home_pcap">Software Engineer</span></figcaption>
+    <figure class="home__id" aria-label="ID card">
+      <span class="home__clip" aria-hidden="true">
+        <svg viewBox="0 0 64 82" fill="none">
+          <path d="M21 34 L11 9 Q10 4 15 4 L22 4" stroke="#9aa0a8" stroke-width="3.4" stroke-linecap="round"/>
+          <path d="M43 34 L53 9 Q54 4 49 4 L42 4" stroke="#9aa0a8" stroke-width="3.4" stroke-linecap="round"/>
+          <rect x="15" y="32" width="34" height="30" rx="3" fill="#cfd2d8" stroke="#8a8f98" stroke-width="1.6"/>
+          <line x1="15" y1="40" x2="49" y2="40" stroke="#9096a0" stroke-width="1.4"/>
+        </svg>
+      </span>
+
+      <div class="idcard__top">
+        <span class="idcard__photo">
+          <img src="assets/images/profile/id-photo.webp" width="900" height="1200" alt="Giovanna Ribas">
+          <span class="sticker sticker--star" aria-hidden="true">&#10022;</span>
+        </span>
+        <div class="idcard__info">
+          <p class="idcard__kicker" data-i18n="id_kicker">DEV &middot; DESIGN LICENSE</p>
+          <p class="idcard__name">Giovanna Ribas</p>
+          <p class="idcard__role" data-i18n="home_role">Software Engineer</p>
+          <dl class="idcard__fields">
+            <div><dt data-i18n="id_based">BASED IN</dt><dd>Curitiba, BR</dd></div>
+            <div><dt data-i18n="id_since">SINCE</dt><dd>2024</dd></div>
+          </dl>
+        </div>
+      </div>
+
+      <div class="idcard__sig">
+        <span class="idcard__siglabel" data-i18n="id_sig">signature</span>
+        <span class="idcard__signame">Giovanna Ribas</span>
+      </div>
+      <div class="idcard__barcode" aria-hidden="true"></div>
+
+      <span class="sticker sticker--a" aria-hidden="true" data-i18n="id_sticker_a">BUILT BY HAND</span>
+      <span class="sticker sticker--b" aria-hidden="true">&#9749;</span>
+      <span class="sticker sticker--c" aria-hidden="true">PUCPR</span>
     </figure>
   </div>
 </section>

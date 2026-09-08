@@ -196,50 +196,101 @@ p:last-child { margin-bottom: 0; }
   display: grid; grid-template-columns: 1fr auto; gap: clamp(24px, 5vw, 60px);
   align-items: center;
 }
-.home__welcome { font-family: "Caveat", var(--serif); font-size: clamp(1.15rem, 2.4vw, 1.7rem); color: var(--ink-2); margin: 0 0 4px; }
+.home__welcome { font-family: "Caveat", var(--serif); font-size: clamp(1.2rem, 2.4vw, 1.75rem); color: var(--ink-2); margin: 0 0 4px; }
 .home__role {
   font-family: var(--serif); font-weight: 500;
   font-size: clamp(2.5rem, 7vw, 5rem); line-height: 1; letter-spacing: -0.02em;
-  margin: 0;
+  margin: 0 0 18px;
 }
-.home__sub { font: 500 12.5px/1.5 var(--mono); letter-spacing: .04em; color: var(--ink-3); margin: 10px 0 18px; }
-.home__line { font-family: var(--serif); font-weight: 400; font-size: clamp(1.2rem, 2.6vw, 1.7rem); line-height: 1.3; margin: 0 0 24px; max-width: 26ch; }
-.home__line em { font-family: "Caveat", var(--serif); font-style: normal; color: var(--accent); font-size: 1.15em; }
-.home__line { margin-bottom: 0; }
+.home__line { font-family: var(--serif); font-weight: 400; font-size: clamp(1.2rem, 2.6vw, 1.7rem); line-height: 1.3; margin: 0; max-width: 22ch; }
+.home__line em { font-family: "Caveat", var(--serif); font-style: normal; color: var(--accent); font-size: 1.18em; }
 
-.home__polaroid {
-  margin: 0; padding: 12px 12px 14px; background: #fbfaf7;
-  border: 1px solid rgba(0,0,0,.12);
-  box-shadow: 0 20px 40px -20px rgba(20,14,8,.5);
-  transform: rotate(2.2deg);
-  width: clamp(200px, 24vw, 250px);
+/* ---- ID card (replaces the polaroid) ---- */
+.home__id {
+  --card: #f7f4ec;
+  position: relative; margin: 0; isolation: isolate;
+  width: clamp(300px, 34vw, 392px);
+  padding: clamp(16px, 1.6vw, 22px);
+  background: var(--card);
+  border: 1px solid rgba(20,14,8,.14);
+  border-radius: 18px;
+  box-shadow: 0 26px 50px -24px rgba(20,14,8,.5), inset 0 0 0 6px rgba(255,255,255,.5);
+  transform: rotate(1.6deg);
 }
-.home__photo {
-  display: block; aspect-ratio: 4 / 5; background: #f1ece2;
+.home__id::after {   /* faint plastic-sleeve sheen */
+  content: ""; position: absolute; inset: -7px; border-radius: 24px;
+  border: 1px solid rgba(20,14,8,.10);
+  background: linear-gradient(135deg, rgba(255,255,255,.35), rgba(255,255,255,0) 40%);
+  pointer-events: none; z-index: -1;
 }
-.home__photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; display: block; }
-.home__polaroid figcaption { display: flex; flex-direction: column; gap: 1px; margin-top: 10px; text-align: center; }
-.home__polaroid figcaption strong { font-family: var(--serif); font-weight: 500; font-size: .95rem; color: #2a231b; }
-.home__polaroid figcaption span { font: 500 10px/1.3 var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.home__clip {
+  position: absolute; top: -34px; left: 50%; transform: translateX(-50%);
+  width: 52px; height: 66px; filter: drop-shadow(0 5px 5px rgba(20,14,8,.28));
+}
+.home__clip svg { width: 100%; height: 100%; }
 
-.doodle { position: absolute; color: var(--accent); opacity: .8; pointer-events: none; }
-.doodle svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
-.doodle--code { width: 38px; height: 38px; top: 18px; left: 22px; }
-.doodle--cup  { width: 32px; height: 32px; top: 46%; left: 18px; opacity: .7; }
-.doodle--pen  { width: 32px; height: 32px; left: 34px; bottom: 20px; }
-.doodle--cam  { width: 32px; height: 32px; bottom: 16px; left: 44%; opacity: .5; }
-.doodle--sp1 { font-size: 17px; top: 16px; right: 33%; }
+.idcard__top { display: grid; grid-template-columns: 40% 1fr; gap: 14px; align-items: start; }
+.idcard__photo {
+  position: relative; display: block; border-radius: 10px; overflow: visible;
+  background: #ded6c6;
+}
+.idcard__photo img {
+  display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover;
+  border-radius: 10px; border: 3px solid #fff;
+  box-shadow: 0 8px 16px -10px rgba(20,14,8,.5);
+}
+.idcard__kicker { font: 700 9px/1.2 var(--mono); letter-spacing: .16em; color: var(--accent); margin: 2px 0 6px; }
+.idcard__name { font-family: var(--serif); font-weight: 600; font-size: clamp(1.15rem, 2vw, 1.5rem); line-height: 1.05; margin: 0; color: #2a231b; }
+.idcard__role { font: 600 11px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); margin: 4px 0 10px; }
+.idcard__fields { margin: 0; display: grid; gap: 5px; }
+.idcard__fields > div { display: grid; grid-template-columns: 62px 1fr; gap: 8px; align-items: baseline; border-top: 1px dotted rgba(20,14,8,.25); padding-top: 5px; }
+.idcard__fields dt { margin: 0; font: 700 8px/1.4 var(--mono); letter-spacing: .1em; color: var(--ink-3); }
+.idcard__fields dd { margin: 0; font: 500 10px/1.4 var(--mono); color: #2a231b; }
+
+.idcard__sig { margin-top: 14px; padding-top: 8px; border-top: 1px solid rgba(20,14,8,.16); display: flex; align-items: baseline; gap: 10px; }
+.idcard__siglabel { font: 700 8px/1 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: var(--ink-3); }
+.idcard__signame { font-family: "Caveat", cursive; font-size: 1.6rem; line-height: .9; color: #1c1c1c; transform: rotate(-3deg); transform-origin: left; }
+.idcard__barcode {
+  margin-top: 12px; height: 34px; border-radius: 2px;
+  background-image: repeating-linear-gradient(90deg,
+    #1c1c1c 0 2px, transparent 2px 3px, #1c1c1c 3px 4px, transparent 4px 7px,
+    #1c1c1c 7px 10px, transparent 10px 11px, #1c1c1c 11px 12px, transparent 12px 16px);
+}
+
+.sticker {
+  position: absolute; font: 700 9px/1 var(--mono); letter-spacing: .06em;
+  padding: 5px 8px; border-radius: 5px; background: var(--accent); color: #fff;
+  box-shadow: 0 4px 10px -4px rgba(20,14,8,.5); z-index: 2;
+}
+.sticker--star { background: none; box-shadow: none; color: #f2c14e; font-size: 20px; padding: 0;
+  top: -10px; right: -8px; text-shadow: 0 1px 2px rgba(20,14,8,.3); }
+.sticker--a { top: -12px; left: -14px; transform: rotate(-8deg); }
+.sticker--b { bottom: 44px; right: -10px; transform: rotate(9deg); font-size: 15px; padding: 6px 8px; background: #2a231b; }
+.sticker--c { bottom: -12px; left: 28px; transform: rotate(-5deg); background: #2f5aa0; letter-spacing: .14em; }
+
+/* ---- floating "this is Giovanna" marks ---- */
+.doodle { position: absolute; color: var(--accent); opacity: .82; pointer-events: none; }
+.doodle svg { width: 100%; height: 100%; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.doodle--code  { width: 52px; height: 52px; top: -6px; left: -8px; }
+.doodle--cup   { width: 46px; height: 46px; left: -6px; bottom: 4px; opacity: .7; }
+.doodle--brush { width: 44px; height: 44px; top: 2px; right: 40%; opacity: .62; }
+.doodle--cam   { width: 46px; height: 46px; right: 1%; bottom: -2px; opacity: .6; }
+.doodle--spark { font-size: 24px; bottom: 30%; right: 38%; }
 @media (prefers-reduced-motion: no-preference) {
-  .doodle { animation: dfloat 6s ease-in-out infinite; }
-  .doodle--pen { animation-duration: 7.5s; animation-delay: -2s; }
-  .doodle--cup { animation-duration: 8s; animation-delay: -3s; }
-  .doodle--cam { animation-duration: 6.8s; animation-delay: -1.2s; }
-  @keyframes dfloat { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-6px) } }
+  .doodle { animation: dfloat 6.5s ease-in-out infinite; }
+  .doodle--cup   { animation-duration: 8s; animation-delay: -3s; }
+  .doodle--brush { animation-duration: 7.4s; animation-delay: -1.6s; }
+  .doodle--cam   { animation-duration: 6.9s; animation-delay: -2.4s; }
+  @keyframes dfloat { 0%,100% { transform: translateY(0) } 50% { transform: translateY(-7px) } }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 860px) {
   .home__card { grid-template-columns: 1fr; }
-  .home__polaroid { transform: rotate(2deg); justify-self: start; }
+  .home__id { justify-self: start; transform: rotate(1.4deg); margin-top: 22px; }
+  .doodle--brush, .doodle--spark { display: none; }
+}
+@media (max-width: 480px) {
+  .home__id { width: min(100%, 360px); }
   .doodle { display: none; }
 }
 
