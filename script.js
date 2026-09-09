@@ -590,11 +590,7 @@
   /* process notes shared by a whole medium (per-piece data-note overrides) */
   var ART_PROCESS = {
     "Character studies": { en: "Digital studies of pose and expression.", pt: "Estudos de pose e expressão feitos no digital." },
-    "Traditional / pencil": { en: "Graphite figure and portrait studies.", pt: "Estudos de figura e retrato a grafite." },
-    "Graphic design · @projeto.borboleta.menarca": {
-      en: "An awareness piece for Projeto Borboleta Menarca — layout, type and collage from the content the team provides.",
-      pt: "Uma peça de conscientização para o Projeto Borboleta Menarca — layout, tipografia e colagem a partir do conteúdo da equipe."
-    }
+    "Traditional / pencil": { en: "Graphite figure and portrait studies.", pt: "Estudos de figura e retrato a grafite." }
   };
 
   /* ---------- artwork modal ---------- */
