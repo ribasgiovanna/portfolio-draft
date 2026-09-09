@@ -33,6 +33,25 @@
       tab_projects: "Projects", tab_tech: "Technologies", tab_certs: "Certificates",
       p1_cat: "Data &amp; automation",
       tag_reqs: "requirements analysis", tag_uxflows: "user roles", tag_team: "team project",
+      tag_embedded: "embedded C", tag_sens: "sensors",
+      dg_h: "Doggo", dg_cat: "Embedded",
+      dg_date: "Academic project &middot; ESP32 &middot; in progress",
+      dg_sub: "Embedded ESP32 system for pet-shop / kennel automation",
+      dg_lead: "An ESP32 acting as an HTTP server for a pet station &mdash; it tracks water temperature, doses food by weight and switches the water fountain, from a web page and a small REST API.",
+      dg_body:
+        "<h4>The idea</h4>" +
+        "<p>An ESP32 runs as an HTTP server on the local network and hosts its own web page to monitor and control a pet-care station &mdash; a water fountain and a food dispenser.</p>" +
+        "<h4>Hardware</h4>" +
+        "<ul>" +
+        "<li><strong>Sensors</strong> &mdash; a 1&nbsp;kg load cell with an HX711 module for the food weight in the bowl, and a waterproof DS18B20 for the water temperature.</li>" +
+        "<li><strong>Actuators</strong> &mdash; an SG90 servo that opens the dispenser until a target weight is reached, and a 5&nbsp;V relay that switches the water fountain.</li>" +
+        "</ul>" +
+        "<h4>The web interface</h4>" +
+        "<p>The page shows the live weight and water temperature and lets you start a dosing run to a target number of grams or turn the fountain on and off. The same actions are available as a small REST API for other clients.</p>" +
+        "<h4>Reliability</h4>" +
+        "<p>The board reconnects to Wi-Fi on its own; events are stamped with the real date and time from a public time server and written to internal flash memory as <code>[INFO]</code> / <code>[AVISO]</code> / <code>[ERRO]</code> lines, so the log survives a restart.</p>" +
+        "<h4>Current stage</h4>" +
+        "<p>A course project, in the design phase: the technical specification &mdash; protocols, hardware, endpoints and logging &mdash; is in the repository. Firmware in progress.</p>",
       mk_h: "MKpause", mk_cat: "Product",
       mk_date: "Academic team project &middot; PUCPR &middot; in progress",
       mk_sub: "Self-regulation &amp; psychological-support platform",
@@ -280,6 +299,25 @@
       tab_projects: "Projetos", tab_tech: "Tecnologias", tab_certs: "Certificados",
       p1_cat: "Dados &amp; automa&ccedil;&atilde;o",
       tag_reqs: "an&aacute;lise de requisitos", tag_uxflows: "perfis de usu&aacute;rio", tag_team: "projeto em equipe",
+      tag_embedded: "C embarcado", tag_sens: "sensores",
+      dg_h: "Doggo", dg_cat: "Embarcado",
+      dg_date: "Projeto acad&ecirc;mico &middot; ESP32 &middot; em desenvolvimento",
+      dg_sub: "Sistema IoT embarcado em ESP32 para automa&ccedil;&atilde;o de pet shop / canil",
+      dg_lead: "Um ESP32 como servidor HTTP para uma esta&ccedil;&atilde;o de pets &mdash; acompanha a temperatura da &aacute;gua, dosa a ra&ccedil;&atilde;o por peso e liga a fonte, por uma p&aacute;gina web e uma pequena API REST.",
+      dg_body:
+        "<h4>A ideia</h4>" +
+        "<p>Um ESP32 roda como servidor HTTP na rede local e serve a pr&oacute;pria p&aacute;gina web para monitorar e controlar uma esta&ccedil;&atilde;o de cuidado de pets &mdash; uma fonte de &aacute;gua e um dispenser de ra&ccedil;&atilde;o.</p>" +
+        "<h4>Hardware</h4>" +
+        "<ul>" +
+        "<li><strong>Sensores</strong> &mdash; uma c&eacute;lula de carga de 1&nbsp;kg com m&oacute;dulo HX711 para o peso da ra&ccedil;&atilde;o na tigela, e um DS18B20 &agrave; prova d&rsquo;&aacute;gua para a temperatura da &aacute;gua.</li>" +
+        "<li><strong>Atuadores</strong> &mdash; um servo SG90 que abre o dispenser at&eacute; atingir um peso alvo, e um rel&ecirc; de 5&nbsp;V que liga e desliga a fonte de &aacute;gua.</li>" +
+        "</ul>" +
+        "<h4>A interface web</h4>" +
+        "<p>A p&aacute;gina mostra o peso e a temperatura da &aacute;gua em tempo real e permite iniciar uma dosagem at&eacute; um n&uacute;mero de gramas ou ligar/desligar a fonte. As mesmas a&ccedil;&otilde;es ficam dispon&iacute;veis como uma pequena API REST para outros clientes.</p>" +
+        "<h4>Confiabilidade</h4>" +
+        "<p>A placa reconecta ao Wi-Fi sozinha; os eventos s&atilde;o carimbados com data e hora reais de um servidor de tempo p&uacute;blico e gravados na mem&oacute;ria flash interna em linhas <code>[INFO]</code> / <code>[AVISO]</code> / <code>[ERRO]</code>, ent&atilde;o o log sobrevive a uma reinicializa&ccedil;&atilde;o.</p>" +
+        "<h4>Est&aacute;gio atual</h4>" +
+        "<p>Projeto de disciplina, na fase de projeto: a especifica&ccedil;&atilde;o t&eacute;cnica &mdash; protocolos, hardware, endpoints e logging &mdash; est&aacute; no reposit&oacute;rio. Firmware em andamento.</p>",
       mk_h: "MKpause", mk_cat: "Produto",
       mk_date: "Projeto acad&ecirc;mico em equipe &middot; PUCPR &middot; em desenvolvimento",
       mk_sub: "Plataforma de autorregula&ccedil;&atilde;o e acompanhamento psicol&oacute;gico",
