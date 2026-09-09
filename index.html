@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css?v=20260908g">
+<link rel="stylesheet" href="style.css?v=20260908h">
 
 <script type="application/ld+json">
 {
@@ -141,29 +141,26 @@
 
 <!-- ============ SELECTED WORK ============ -->
 <section id="projects" class="stack" aria-labelledby="work-h">
-  <h2 id="work-h" class="sr-only" data-i18n="work_h">Projects</h2>
+  <div class="stack__head">
+    <h2 id="work-h" data-i18n="work_h">Selected work</h2>
+    <p class="stack__intro" data-i18n="work_sub">What I built, how I approached it, and what I learned.</p>
+  </div>
 
   <!-- PROJECT 01 — BLOODY MARY -->
   <article id="datasus" class="panel panel--tint" aria-labelledby="p1-h"
-           data-pm data-pm-repo="https://github.com/ribasgiovanna/datasus" data-pm-img="assets/images/tech/datasus-dashboard.webp"
-           data-pm-alt="Streamlit dashboard over the consolidated DATASUS hemotherapy data — KPIs and a month-by-month comparison chart">
+           data-pm data-pm-repo="https://github.com/ribasgiovanna/datasus">
     <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 01</span>
     <div class="panel__body">
       <div class="panel__text">
-        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p1_date">Team project &middot; Apr 2026</span></p>
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p1_date">Team project &middot; Harve &middot; Apr 2026</span></p>
         <h3 id="p1-h">Bloody Mary</h3>
-        <p class="panel__sub" data-i18n="p1_sub">Hemotherapy data automation &amp; analysis</p>
-        <p class="panel__lead" data-i18n="datasus_lead">Years of public blood-supply data, trapped in a 1990s government form. So I sent a robot in.</p>
-        <p class="panel__more" data-i18n="p1_desc">A Selenium bot drives the DATASUS TabNet form &mdash; every filter, every period &mdash; and reads the result tables with pandas, BeautifulSoup as a fallback. A parallel runner does three workers with staggered starts and checkpointing, consolidates the exports and cleans them; a Streamlit dashboard compares hemotherapy volume across months and years.</p>
+        <p class="panel__sub" data-i18n="p1_sub">SUS hemotherapy data automation &amp; analysis pipeline</p>
+        <p class="panel__lead" data-i18n="datasus_lead">Automating the collection and cleaning of Paran&aacute; hemotherapy records from SUS, with an interactive dashboard on top.</p>
         <p class="tagrow"><span>Python</span><span>Selenium</span><span>pandas</span><span>RPA</span><span>Streamlit</span></p>
         <div class="panel__detail" hidden>
-          <p data-i18n="p1_detail">Course project at Harve (April 2026) with Jackson Beggi and wingCODING &mdash; I proposed using blood-bank data and built the extraction and treatment modules. The hard part was the form itself: selectors by <code>id</code> to get past accented <code>name</code> attributes like <code>SRegi&atilde;o</code>, an explicit wait on every interaction, and tab switching by polling <code>window_handles</code> with a timeout. Real SUS data &mdash; Outpatient Production, subgroup 0306 (Hemotherapy), &ldquo;approved quantity&rdquo;, state of Paran&aacute;.</p>
+          <div class="pm-detail" data-i18n="p1_body"></div>
         </div>
       </div>
-      <figure class="panel__shot">
-        <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
-        <img src="assets/images/tech/datasus-dashboard.webp" width="1600" height="1195" loading="lazy" alt="Streamlit dashboard over the consolidated DATASUS hemotherapy data">
-      </figure>
     </div>
     <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
   </article>
@@ -175,13 +172,13 @@
     <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 02</span>
     <div class="panel__body">
       <div class="panel__text">
-        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p2_date">Individual &middot; academic</span></p>
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p2_date">Individual project &middot; Academic</span></p>
         <h3 id="p2-h">Corrida para a Faculdade</h3>
-        <p class="panel__lead" data-i18n="corrida_lead">A student who&rsquo;s late for class, an endless city, and a state machine written from scratch.</p>
-        <p class="panel__more" data-i18n="p2_desc">Python + Pygame endless-runner. Hand-rolled state machine (menu &rarr; play &rarr; win/lose &rarr; menu), gravity-based jump, obstacles that spawn faster as the score climbs, speed that ramps every 100 points up to a cap, three lives with post-hit invincibility and a blink, and a HUD with a progress bar to the 1000-point goal.</p>
+        <p class="panel__sub" data-i18n="p2_sub">2D runner in Python and Pygame</p>
+        <p class="panel__lead" data-i18n="corrida_lead">A student who&rsquo;s late for class dodges obstacles across the city &mdash; the challenge is to manage three lives and reach the goal before the run ends.</p>
         <p class="tagrow"><span>Python</span><span>Pygame</span><span data-i18n="tag_states">state machine</span></p>
         <div class="panel__detail" hidden>
-          <p data-i18n="p2_detail">High score is persisted to disk; if an art file is missing, the game falls back to plain shapes and keeps running. My own code &mdash; the sprites and the menu / win / lose screens are AI-generated and labelled as such. Individual academic project.</p>
+          <div class="pm-detail" data-i18n="p2_body"></div>
         </div>
       </div>
       <figure class="panel__shot">
@@ -195,72 +192,106 @@
   <!-- PROJECT 03 — PIBBLE EXPRESS -->
   <article id="pibble" class="panel panel--cream" aria-labelledby="p3-h"
            data-pm data-pm-repo="https://github.com/ribasgiovanna/pibble_express" data-pm-img="assets/images/tech/pibble-funcionarios.webp"
-           data-pm-alt="Pibble Express employee registration screen with a CPF/CNPJ field and a list of employees">
+           data-pm-alt="Pibble Express employee registration screen with a list of employees">
     <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 03</span>
     <div class="panel__body">
       <div class="panel__text">
-        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p3_date">Team project &middot; Jun 2026</span></p>
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p3_date">Academic team project &middot; Fictional company &middot; Jun 2026</span></p>
         <h3 id="p3-h">Pibble Express</h3>
-        <p class="panel__lead" data-i18n="pibble_lead">The employees side of a Django delivery system &mdash; auth, access levels, and a form that speaks both CPF and CNPJ.</p>
-        <p class="panel__more" data-i18n="p3_desc">Django + DRF app for delivery management: clients, products, employees and deliveries, login / logout, and ADM / FUNC access levels tied to a Django <code>User</code> through a <code>OneToOneField</code>. Full CRUD on all four resources, a REST API at <code>/api/</code>, and front-end input masks.</p>
+        <p class="panel__sub" data-i18n="p3_sub">Delivery-management web system</p>
+        <p class="panel__lead" data-i18n="pibble_lead">One application to organise clients, products, employees and deliveries in the same system.</p>
         <p class="tagrow"><span>Django</span><span>DRF</span><span data-i18n="tag_auth">authentication</span><span>CRUD</span></p>
         <div class="panel__detail" hidden>
-          <p data-i18n="p3_detail">Built with two teammates on a fork of <code>rodavio/pibble_express</code>. My part: the Employees module and its integration with Deliveries, the CPF-or-CNPJ registration (form + migration), the administrative dashboard, and standardising the forms and the logout across all four apps.</p>
+          <div class="pm-detail" data-i18n="p3_body"></div>
         </div>
       </div>
       <figure class="panel__shot">
         <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
-        <img src="assets/images/tech/pibble-funcionarios.webp" width="1200" height="750" loading="lazy" alt="Pibble Express employee registration screen with a CPF/CNPJ field and a list of employees">
+        <img src="assets/images/tech/pibble-funcionarios.webp" width="1200" height="750" loading="lazy" alt="Pibble Express employee registration screen with a list of employees">
       </figure>
     </div>
     <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
   </article>
 
-  <!-- PROJECT 04 — IoT FLOOD MONITORING -->
+  <!-- PROJECT 04 — MONITOR DE BUEIROS -->
   <article id="flood" class="panel panel--tint" aria-labelledby="p4-h"
-           data-pm data-pm-img="assets/images/tech/iot-dashboard.webp"
+           data-pm
+           data-pm-img="assets/images/tech/iot-circuit.webp"
+           data-pm-alt="Circuit schematic: an ESP32 wired to an HC-SR04 ultrasonic sensor, a potentiometer and a buzzer"
+           data-pm-cap="iot_cap1"
+           data-pm-img2="assets/images/tech/iot-blynk.webp"
+           data-pm-alt2="Blynk console dashboard editor for a ‘Smart City’ template, with water-level gauges and an alarm widget"
+           data-pm-cap2="iot_cap2"
            data-pm-video="https://youtu.be/_Lq13BLEQ2o"
-           data-pm-alt="Blynk ‘Smart City’ dashboard: a water-level gauge, a history chart and an alarm widget">
+           data-pm-video-label="pm_video">
     <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 04</span>
     <div class="panel__body">
       <div class="panel__text">
-        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p4_date">Academic &middot; Jun 2026</span></p>
-        <h3 id="p4-h" data-i18n="flood_h">Storm-drain trash &amp; flooding monitor &mdash; Curitiba</h3>
-        <p class="panel__lead" data-i18n="flood_lead">A clogged storm drain can turn heavy rain into a flooded street. This keeps an eye on them.</p>
-        <p class="panel__more" data-i18n="flood_desc">An ESP32 with an ultrasonic sensor measures how much a storm drain has filled with water and debris, and reports to a Blynk &ldquo;Smart City&rdquo; dashboard that charts the level and fires an alarm and a buzzer when a drain is close to overflowing.</p>
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p4_date">Academic team project &middot; Jun 2026</span></p>
+        <h3 id="p4-h" data-i18n="flood_h">Storm-drain Monitor</h3>
+        <p class="panel__sub" data-i18n="flood_sub">IoT prototype for level monitoring and alerts</p>
+        <p class="panel__lead" data-i18n="flood_lead">A proposal for remote monitoring &mdash; to track levels and flag situations in urban drainage that need attention.</p>
         <p class="tagrow"><span>ESP32</span><span data-i18n="tag_sensors">ultrasonic sensor</span><span>Blynk</span><span data-i18n="tag_alerts">alerts</span></p>
         <div class="panel__detail" hidden>
-          <p data-i18n="p4_detail">A Curitiba-focused prototype: catch the drains that clog and flood before the rain does. Each monitored point has its own threshold; when the level crosses it, the on-screen alarm and the physical buzzer trigger together. Built on the ESP32 with an ultrasonic distance sensor as the gauge and Blynk as the dashboard and notification layer.</p>
+          <div class="pm-detail" data-i18n="p4_body"></div>
         </div>
       </div>
       <figure class="panel__shot">
         <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
-        <img src="assets/images/tech/iot-dashboard.webp" width="1600" height="754" loading="lazy" alt="Blynk &lsquo;Smart City&rsquo; dashboard: a water-level gauge, a history chart and an alarm widget">
+        <img src="assets/images/tech/iot-circuit.webp" width="859" height="770" loading="lazy" alt="Circuit schematic: an ESP32 wired to an HC-SR04 ultrasonic sensor, a potentiometer and a buzzer">
       </figure>
     </div>
     <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
   </article>
 
-  <!-- PROJECT 05 — BPMN VET CLINIC -->
+  <!-- PROJECT 05 — CLÍNICA VETERINÁRIA / BPMN -->
   <article id="bpmn" class="panel panel--dark" aria-labelledby="p5-h"
            data-pm data-pm-img="assets/images/tech/bpmn-vet.webp"
-           data-pm-alt="BPMN diagram of the clinic’s stock-management process, modelled in Bizagi">
+           data-pm-repo="https://drive.google.com/drive/folders/13gd7Sm6Dlr0w9knyCm5XfpoBbCm8UmTl"
+           data-pm-repo-label="bpmn_link"
+           data-pm-alt="BPMN diagram of one of the clinic’s processes, modelled in Bizagi">
     <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 05</span>
     <div class="panel__body">
       <div class="panel__text">
         <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p5_date">Team project &middot; Jun 2026</span></p>
-        <h3 id="p5-h" data-i18n="bpmn_h">Veterinary clinic — process modeling</h3>
-        <p class="panel__lead" data-i18n="bpmn_lead">Mapping how a clinic actually runs, one process at a time.</p>
-        <p class="panel__more" data-i18n="bpmn_desc">BPMN models in Bizagi for a veterinary clinic&rsquo;s core processes &mdash; appointment management, stock control and staff scheduling &mdash; with subprocesses for client registration and payment. Built from the manager&rsquo;s descriptions; the clinic chose not to be named.</p>
+        <h3 id="p5-h" data-i18n="bpmn_h">Veterinary Clinic</h3>
+        <p class="panel__sub" data-i18n="bpmn_sub">Business process modeling in BPMN</p>
+        <p class="panel__lead" data-i18n="bpmn_lead">From the conversation with management to the diagrams: a visual map of a veterinary clinic&rsquo;s processes.</p>
         <p class="tagrow"><span>BPMN</span><span>Bizagi</span><span data-i18n="tag_analysis">process analysis</span></p>
         <div class="panel__detail" hidden>
-          <p data-i18n="p5_detail">Three processes modelled end to end &mdash; appointment management, stock control and staff scheduling &mdash; plus subprocesses for client registration and payment.</p>
+          <div class="pm-detail" data-i18n="p5_body"></div>
           <p class="panel__more--credit" data-i18n="bpmn_role">Five-person team: Ana Beatriz Patussi Reolon, Ana Clara Ernandes Nogueira, Emelize Bonfim Mlot, Giovanna Ribas dos Reis, Ot&aacute;vio Brito Fonseca.</p>
         </div>
       </div>
       <figure class="panel__shot">
         <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
-        <img src="assets/images/tech/bpmn-vet.webp" width="1600" height="1240" loading="lazy" alt="BPMN diagram of the clinic&rsquo;s stock-management process, modelled in Bizagi">
+        <img src="assets/images/tech/bpmn-vet.webp" width="1600" height="1240" loading="lazy" alt="BPMN diagram of one of the clinic&rsquo;s processes, modelled in Bizagi">
+      </figure>
+    </div>
+    <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
+  </article>
+
+  <!-- PROJECT 06 — A CIÊNCIA POR TRÁS DOS SONHOS / FICEM 2024 -->
+  <article id="dreams" class="panel panel--cream" aria-labelledby="p6-h"
+           data-pm data-pm-img="assets/images/tech/dreams-ficem.webp"
+           data-pm-video="https://www.youtube.com/watch?v=Et88Fp6aAzM"
+           data-pm-video-label="dreams_link"
+           data-pm-alt="Still from the FICEM 2024 presentation video, with cut-out portraits of dream researchers">
+    <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 06</span>
+    <div class="panel__body">
+      <div class="panel__text">
+        <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p6_date">School team project &middot; FICEM 2024 &middot; Bom Jesus Centro</span></p>
+        <h3 id="p6-h" data-i18n="dreams_h">The Science Behind Dreams</h3>
+        <p class="panel__sub" data-i18n="dreams_sub">Literature research &amp; science communication</p>
+        <p class="panel__lead" data-i18n="dreams_lead">A literature review of the explanations for dreams and how they relate to sleep, memory and emotion.</p>
+        <p class="tagrow"><span>FICEM 2024</span><span data-i18n="tag_research">research</span><span data-i18n="tag_scicomm">science communication</span></p>
+        <div class="panel__detail" hidden>
+          <div class="pm-detail" data-i18n="p6_body"></div>
+        </div>
+      </div>
+      <figure class="panel__shot">
+        <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
+        <img src="assets/images/tech/dreams-ficem.webp" width="1280" height="720" loading="lazy" alt="Still from the FICEM 2024 presentation video, with cut-out portraits of dream researchers">
       </figure>
     </div>
     <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
@@ -626,7 +657,7 @@
 <div id="pmodal" class="pmodal" hidden>
   <div class="pmodal__box" role="dialog" aria-modal="true" aria-labelledby="pm-title">
     <button id="pm-close" class="pmodal__close" type="button" aria-label="Close">&times;</button>
-    <figure class="pmodal__shot"><img id="pm-img" alt=""></figure>
+    <div id="pm-shots" class="pmodal__shots"></div>
     <div class="pmodal__body">
       <p class="pmodal__meta"><span id="pm-num"></span> <span class="pmodal__sep" aria-hidden="true">&middot;</span> <span id="pm-date"></span></p>
       <h3 id="pm-title"></h3>
@@ -638,6 +669,6 @@
   </div>
 </div>
 
-<script src="script.js?v=20260908g"></script>
+<script src="script.js?v=20260908h"></script>
 </body>
 </html>

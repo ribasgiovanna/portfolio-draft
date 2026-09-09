@@ -27,25 +27,35 @@
       role_5: "Data &amp; automation",
       role_6: "Building with people",
 
-      datasus_lead: "Years of SUS hemotherapy records, one slow query at a time. So I sent a robot in.",
-      p1_detail: "Course project at Harve (April 2026) with Jackson Beggi and wingCODING &mdash; I proposed using blood-bank data and built the extraction and treatment modules. The data is real SUS data: Outpatient Production, subgroup 0306 (Hemotherapy), the &ldquo;approved quantity&rdquo; metric, filtered to Paran&aacute; &mdash; approved hemotherapy procedures recorded in SUS, an indicator related to, but not the same as, blood donations. (The published dashboard still labels it &ldquo;donations&rdquo; &mdash; a teammate&rsquo;s wording; a corrected capture is pending.) The form itself was the hard part &mdash; details in the repo.",
-      p2_detail: "High score is persisted to disk; if an art file is missing, the game falls back to plain shapes and keeps running. My own code &mdash; the sprites and the menu / win / lose screens are AI-generated and labelled as such. Individual academic project.",
-      p3_detail: "Academic project for a fictional delivery company, built with two teammates on a fork of <code>rodavio/pibble_express</code>. My part: the Employees module and its integration with Deliveries, the CPF-or-CNPJ registration (form + migration), the administrative dashboard, and standardising the forms and the logout across all four apps.",
-      p4_detail: "A Curitiba-focused prototype. The sensor measures how full a drain is; a clog is one factor that can contribute to a point flooding. Each monitored point has its own threshold; when the level crosses it, the on-screen alarm and the physical buzzer trigger together. Built on the ESP32 with an ultrasonic distance sensor as the gauge and Blynk as the dashboard and notification layer. What a real deployment in street drains would need is future work.",
-      p5_detail: "Three processes modelled end to end &mdash; appointment management, stock control and staff scheduling &mdash; plus subprocesses for client registration and payment.",
+      datasus_lead: "Automating the collection and cleaning of Paran&aacute; hemotherapy records from SUS, with an interactive dashboard on top.",
       pm_hint: "open &nearr;",
       pm_video: "Watch the demo &nearr;",
-      corrida_lead: "A student who&rsquo;s late for class, an endless city, and a state machine written from scratch.",
-      pibble_lead: "The employees side of a Django delivery system &mdash; auth, access levels, and a form that speaks both CPF and CNPJ.",
-      p1_date: "Team project &middot; Apr 2026",
-      p2_date: "Individual &middot; academic",
-      p3_date: "Team project &middot; Jun 2026",
+      pm_zoom: "Open full image in a new tab",
+      corrida_lead: "A student who&rsquo;s late for class dodges obstacles across the city &mdash; the challenge is to manage three lives and reach the goal before the run ends.",
+      pibble_lead: "One application to organise clients, products, employees and deliveries in the same system.",
+      p1_date: "Team project &middot; Harve &middot; Apr 2026",
+      p2_date: "Individual project &middot; Academic",
+      p3_date: "Academic team project &middot; Fictional company &middot; Jun 2026",
       nav_home: "Home",
       home_welcome: "Welcome to my portfolio &mdash; I'm a",
       home_role: "Software Engineering Student",
       cat_photo: "Photography",
       journey_harve: "Python course cohort at Harve, with certificates.",
-      p1_sub: "Hemotherapy data automation &amp; analysis",
+      p1_sub: "SUS hemotherapy data automation &amp; analysis pipeline",
+      p2_sub: "2D runner in Python and Pygame",
+      p3_sub: "Delivery-management web system",
+      flood_sub: "IoT prototype for level monitoring and alerts",
+      bpmn_sub: "Business process modeling in BPMN",
+      dreams_h: "The Science Behind Dreams",
+      dreams_sub: "Literature research &amp; science communication",
+      dreams_lead: "A literature review of the explanations for dreams and how they relate to sleep, memory and emotion.",
+      dreams_link: "Watch the FICEM presentation &nearr;",
+      p6_date: "School team project &middot; FICEM 2024 &middot; Bom Jesus Centro",
+      bpmn_link: "View process manual and diagrams &nearr;",
+      work_sub: "What I built, how I approached it, and what I learned.",
+      iot_cap1: "Circuit schematic: ESP32 with an HC-SR04 ultrasonic sensor and a buzzer.",
+      iot_cap2: "Blynk dashboard setup, with indicators and an alert widget (edit mode).",
+      tag_research: "research", tag_scicomm: "science communication",
       ci_borboleta: "Design and media for a women&rsquo;s-health awareness project. I design the awareness pieces &mdash; layout, type and collage &mdash; from the content the team provides.",
       ci_more: "I also join environmental actions, activities with children and other volunteering with Interact and around Curitiba.",
       home_line: "<em>Code, design &amp; people</em> &mdash; I build where they meet.",
@@ -56,30 +66,100 @@
       ph_portrait: "portrait &mdash; image pending",
       about_kicker: "About",
       fan_talk: "on stage", fan_dusk: "golden hour",
-      p4_date: "Academic &middot; Jun 2026", p5_date: "Team project &middot; Jun 2026",
-      flood_h: "Storm-drain trash &amp; flooding monitor &mdash; Curitiba",
-      flood_lead: "A clogged storm drain can turn heavy rain into a flooded street. This keeps an eye on them.",
-      flood_desc: "An ESP32 with an ultrasonic sensor measures how much a storm drain has filled with water and debris, and reports to a Blynk &ldquo;Smart City&rdquo; dashboard that charts the level and fires an alarm and a buzzer when a drain is close to overflowing.",
-      flood_note: "Materials (photos, diagram, screens) are being gathered — see notes.",
-      bpmn_h: "Veterinary clinic — process modeling",
-      bpmn_lead: "Mapping how a clinic actually runs, one process at a time.",
-      bpmn_desc: "BPMN models in Bizagi for a veterinary clinic&rsquo;s core processes &mdash; appointment management, stock control and staff scheduling &mdash; with subprocesses for client registration and payment. Built from the manager&rsquo;s descriptions; the clinic chose not to be named.",
-      bpmn_note: "Diagrams are being exported — see notes.",
+      p4_date: "Academic team project &middot; Jun 2026", p5_date: "Team project &middot; Jun 2026",
+      flood_h: "Storm-drain Monitor",
+      flood_lead: "A proposal for remote monitoring &mdash; to track levels and flag situations in urban drainage that need attention.",
+      bpmn_h: "Veterinary Clinic",
+      bpmn_lead: "From the conversation with management to the diagrams: a visual map of a veterinary clinic&rsquo;s processes.",
       tag_sensors: "ultrasonic sensor", tag_web: "web", tag_alerts: "alerts",
       bpmn_role: "Five-person team: Ana Beatriz Patussi Reolon, Ana Clara Ernandes Nogueira, Emelize Bonfim Mlot, Giovanna Ribas dos Reis, Ot&aacute;vio Brito Fonseca.",
       tag_analysis: "process analysis", tag_diagrams: "diagrams",
-      ph_flood: "hardware &amp; web dashboard — image pending",
-      ph_bpmn: "BPMN diagram — image pending",
       stack_more: "For more projects, visit my GitHub &rarr;",
 
-      p1_desc: "A Selenium bot drives the DATASUS TabNet form &mdash; every filter, every period &mdash; and reads the result tables with pandas, BeautifulSoup as a fallback. A parallel runner does three workers with staggered starts and checkpointing, consolidates the exports and cleans them; a Streamlit dashboard compares hemotherapy volume across months and years.",
-      p2_desc: "Python + Pygame endless-runner. Hand-rolled state machine (menu &rarr; play &rarr; win/lose &rarr; menu), gravity-based jump, obstacles that spawn faster as the score climbs, speed that ramps every 100 points up to a cap, three lives with post-hit invincibility and a blink, and a HUD with a progress bar to the 1000-point goal.",
-      p3_desc: "Django + DRF app for delivery management: clients, products, employees and deliveries, login / logout, and ADM / FUNC access levels tied to a Django <code>User</code> through a <code>OneToOneField</code>. Full CRUD on all four resources, a REST API at <code>/api/</code>, and front-end input masks.",
+      p1_body:
+        "<h4>The challenge</h4>" +
+        "<p>Querying different periods on DATASUS TabNet means repeating the same steps through the form and stitching the results back together. The goal was to automate that work and organise the data so periods could be compared over time.</p>" +
+        "<h4>The solution</h4>" +
+        "<p>A Python pipeline that queries the SUS Outpatient Production system, pulls hemotherapy records for Paran&aacute;, cleans the files and shows the result in a dashboard.</p>" +
+        "<ul>" +
+        "<li><strong>Automated extraction</strong> &mdash; Selenium drives the form and pandas reads the result tables, with BeautifulSoup as a parsing fallback.</li>" +
+        "<li><strong>Parallel queries</strong> &mdash; up to three processes, with the first tasks started in a staggered way.</li>" +
+        "<li><strong>Resumable collection</strong> &mdash; existing files are checked per period, so a re-run doesn&rsquo;t download them again.</li>" +
+        "<li><strong>Cleaning &amp; visualisation</strong> &mdash; totals rows and empty fields removed, column names standardised, and a Streamlit dashboard for month-by-month and year-by-year comparison.</li>" +
+        "</ul>" +
+        "<h4>My contribution</h4>" +
+        "<p>I proposed the topic and the automation approach, and was responsible for the architecture and for the extraction and data-treatment modules. This was integrated with my teammates&rsquo; work on orchestration, parallel execution and the dashboard (Jackson Beggi and wingCODING).</p>" +
+        "<h4>Result &amp; evidence</h4>" +
+        "<p>The repository holds the per-period extraction, the batch processing, the file treatment and the dashboard. The metric shown is the approved quantity of hemotherapy procedures recorded in SUS for the range queried &mdash; an indicator related to, but not the same as, blood donations.</p>",
+
+      p2_body:
+        "<h4>Overview</h4>" +
+        "<p>A 2D game in Python and Pygame, with obstacles, ramping difficulty and a win condition at 1,000 points.</p>" +
+        "<h4>How I built it</h4>" +
+        "<ul>" +
+        "<li><strong>Game states</strong> &mdash; the flow between menu, play and a win/lose ending, written by hand.</li>" +
+        "<li><strong>Movement &amp; collisions</strong> &mdash; a gravity-based jump and a short invincibility window after taking a hit.</li>" +
+        "<li><strong>Ramping difficulty</strong> &mdash; speed rises every 100 points up to a cap, and obstacles spawn closer together as the score climbs. An endless-runner feel, but with a finish line.</li>" +
+        "<li><strong>Running without art</strong> &mdash; if a visual asset is missing, the game falls back to simple shapes and keeps working.</li>" +
+        "<li><strong>Feedback &amp; high score</strong> &mdash; a HUD shows lives, score and progress to the goal; the best score is saved locally.</li>" +
+        "</ul>" +
+        "<h4>My contribution &amp; assets</h4>" +
+        "<p>I wrote the code and the game logic. The visual assets were generated with the help of ChatGPT and integrated into the project.</p>",
+
+      p3_body:
+        "<h4>Overview</h4>" +
+        "<p>Built as a team, a Django application that represents the operation of a fictional logistics company. It brings together registrations, authentication, an admin dashboard and an API built with Django REST Framework.</p>" +
+        "<h4>Project structure</h4>" +
+        "<ul>" +
+        "<li><strong>Integrated modules</strong> &mdash; clients, products, employees and deliveries.</li>" +
+        "<li><strong>Users &amp; profiles</strong> &mdash; each employee is linked to a login account, with an administrative and an operational profile.</li>" +
+        "<li><strong>API</strong> &mdash; routes for the four core resources, grouped under <code>/api/</code>.</li>" +
+        "<li><strong>Interface</strong> &mdash; forms, input masks and a dashboard with operational information.</li>" +
+        "</ul>" +
+        "<h4>My contribution</h4>" +
+        "<p>I built the employees module and its integration with deliveries. I also built the admin dashboard, worked on the input masks and the visual standardisation of the forms, and organised the logout flow between areas of the system.</p>" +
+        "<h4>Evidence</h4>" +
+        "<p>The repository holds the code, the documentation and captures of the dashboard and the employees module. Built with two teammates on a fork of <code>rodavio/pibble_express</code>.</p>",
+
+      p4_body:
+        "<h4>The challenge</h4>" +
+        "<p>A blocked storm drain can contribute to a street flooding. This project explores how sensors and a remote dashboard could support keeping an eye on those conditions.</p>" +
+        "<h4>The technical proposal</h4>" +
+        "<p>Built as a team: a prototype with an ESP32, an ultrasonic sensor and a Blynk integration to represent the monitoring and its alerts.</p>" +
+        "<ul>" +
+        "<li><strong>Distance reading</strong> &mdash; the ultrasonic sensor (HC-SR04) gives a distance measurement that can be read as a level from a reference set during assembly.</li>" +
+        "<li><strong>Remote view</strong> &mdash; a Blynk dashboard collects the indicators for the prototype&rsquo;s values.</li>" +
+        "<li><strong>Signalling</strong> &mdash; the project foresees a buzzer and digital indicators to flag when a configured threshold is crossed.</li>" +
+        "</ul>" +
+        "<h4>Evidence of the work</h4>" +
+        "<p>The circuit schematic and the dashboard-setup capture show how the components and the indicators are organised &mdash; a schematic and an interface capture, not photos of a physical build or of an installation in a real drain. What a real street deployment would need &mdash; scale, field performance, preventive effectiveness &mdash; is future work.</p>",
+
+      p5_body:
+        "<h4>The context</h4>" +
+        "<p>As a team, we analysed the processes of a real veterinary clinic, keeping it unnamed. The goal was to understand how the work actually happens, record responsibilities and make the flows clearer for analysis.</p>" +
+        "<h4>What we produced</h4>" +
+        "<ul>" +
+        "<li><strong>Three core processes</strong> &mdash; appointment management, stock control and staff management.</li>" +
+        "<li><strong>Subprocesses</strong> &mdash; routines such as client registration and checkout/payment, detailed out.</li>" +
+        "<li><strong>Responsibilities &amp; decisions</strong> &mdash; activities laid out in responsibility lanes, with decision points and the hand-off of work between people.</li>" +
+        "<li><strong>Documentation</strong> &mdash; BPMN diagrams in Bizagi Modeler, gathered into the process manual.</li>" +
+        "</ul>" +
+        "<h4>My contribution</h4>" +
+        "<p>I ran interviews with the clinic&rsquo;s management to gather the routines and the business rules, and worked on turning that into BPMN diagrams &mdash; organising activities, events, decisions and responsibilities.</p>" +
+        "<h4>Result &amp; evidence</h4>" +
+        "<p>The work produced documentation of the processes studied, which can serve as a basis for discussing improvement opportunities.</p>",
+
+      p6_body:
+        "<h4>The work</h4>" +
+        "<p>I took part in a team project that gathered and discussed different theories about dreams. The extended abstract presents historical and contemporary perspectives and acknowledges that open questions about the topic remain. It is literature research and synthesis &mdash; not experiments, clinical trials or original findings by the team.</p>" +
+        "<h4>My part</h4>" +
+        "<p>I am a co-author of the work with Gabriela Mayer and Rafaela Rosseto, supervised by Corn&eacute;lio Schwambach.</p>" +
+        "<h4>Materials</h4>" +
+        "<p>The project has an extended abstract and a video presentation linked to FICEM 2024 (BJ Cient&iacute;fico channel).</p>",
 
       journey_h: "The threads",
       journey_p1: "I'm a software engineering student, and I build across a few areas at once rather than in a straight line: software and data, the web, visual design, and community.",
       journey_p2: "They feed each other. A script becomes a pipeline; a class exercise becomes a team project; a group of friends becomes a club. The cards below are areas of my path, not a strict timeline.",
-      journey_todo: "&#9432; Placeholder timeline — to be expanded with real dates, the &ldquo;why&rdquo; behind each step, and photos.",
       j1_t: "Software engineering", j1_d: "Studying at PUCPR (started 2026).",
       j2_t: "Python &amp; data", j2_d: "First automations with pandas — public health data, spreadsheets, ETL.",
       j3_t: "Coffee &amp; Code", j3_d: "Founded and now lead a student tech club, with the team.",
@@ -90,45 +170,14 @@
 
       work_h: "Selected work",
       work_intro: "Software, data, a game, a community. Different languages for the same habit — making things.",
-      f_all: "All", f_code: "Code", f_design: "Design", f_people: "People", f_play: "Play",
-      wk_datasus: "RPA + pandas + a dashboard for public health data",
-      wk_game: "a small 2D game in Python / Pygame",
-      wk_pibble: "Django delivery system — team project",
-      wk_coffee: "a student tech club I started and lead",
-      wk_creative_t: "Creative gallery", wk_creative: "illustration, image manipulation, experiments",
-      ph_identity: "identity &amp; posters — image pending",
 
-      case_featured: "Featured technical case",
-      datasus_cap: "Streamlit dashboard over the consolidated data.",
-      fl_processed: "processed data",
-      lbl_context: "Context", lbl_built: "What we built", lbl_role: "My role",
-      datasus_context: "Hemotherapy figures for the state of Paraná live in the DATASUS TabNet — a slow public interface, one query and one export at a time.",
-      datasus_built: "A robot (Selenium) that runs the queries and reads the result tables, a pandas layer that cleans and consolidates every period, and a Streamlit dashboard to compare volume across months and years. Final project for a Python course, with two teammates.",
-      datasus_role: "I proposed using the blood-bank data and worked on the extraction and treatment modules. Teammates: Jackson Beggi and wingCODING (RPA orchestration and dashboard).",
       cta_source: "View project on GitHub &rarr;",
-
-      case_game: "Game — individual project",
-      corrida_cap: "Start screen. Art is AI-generated (noted below).",
-      corrida_p1: "A 2D endless-runner: a student is late for class and has to dodge the city. Reach 1000 points to pass; lose three lives and it's over.",
-      corrida_p2: "Written in Python and Pygame — a clean state machine (menu / play / end), jump physics with gravity, random obstacles, difficulty that ramps with the score, lives with temporary invincibility, a HUD and a saved high score.",
-      corrida_note: "The code is my own work. The visual assets are AI-generated and shown transparently.",
       tag_states: "state machine",
-
-      case_team: "Web — team project",
-      pibble_p: "A Django delivery-management system: authentication, ADM/FUNC access levels, CRUD for clients, products, employees and deliveries, a REST API and an integrated frontend. Built with two teammates.",
-      pibble_role_h: "My contribution",
-      pibble_r1: "Employees module and its integration with Deliveries",
-      pibble_r2: "Registration accepting CPF or CNPJ (form + migration)",
-      pibble_r3: "Administrative dashboard",
-      pibble_r4: "Form standardization and interface adjustments",
       tag_auth: "authentication",
 
       coffee_why: "A university tech club I started and actively build, with the team.",
       coffee_p1: "It exists to give students a lower-barrier, hands-on place to learn, build projects together and share what they know — outside the pressure of a graded room.",
       coffee_p2: "I lead it where design and technology meet: the visual identity, the materials, how sessions are run, and how people are brought in.",
-      ph_logo: "logo &amp; identity — image pending",
-      ph_poster: "poster / session — image pending",
-      ph_social: "social piece — image pending",
 
       creative_h: "Playground",
       creative_intro: "Everything I make away from a code editor &mdash; digital art, ink drawing, graphic design, photography, things I bake, and volunteering and events. Tap any piece to see it larger.",
@@ -148,11 +197,8 @@
 
       community_h: "Community &amp; social impact",
       community_lead: "Building with people — each of these is a different role, in a different place.",
-      ph_action: "selected photo — image pending",
       ci_ddm: "Events Coordinator at the students&rsquo; union women&rsquo;s board. I plan and run events and their communication, and initiatives around inclusion and social impact.",
       ci_teia: "Social media volunteer. I write the content briefings — the story-by-story script, the pillar and the goal — that the team turns into the published posts.",
-      ci_vol_h: "Interact &amp; volunteer work",
-      ci_vol: "Environmental actions, activities with children and other volunteer work.",
       privacy_note: "Photos are selected with care — no children's faces in sensitive contexts, no legible badges or personal data.",
 
       currently_h: "Currently",
@@ -160,10 +206,6 @@
       cur_p: "Working on the development and maintenance of production software across frontend, backend, APIs and databases — implementing features, investigating bugs and integrating layers of existing systems.",
       cur_note: "Due to the proprietary nature of the systems I work on, source code and internal materials are not publicly available.",
       cur_study_h: "Study", cur_more_h: "More projects", cur_allrepos: "All repositories &rarr;",
-
-      beyond_h: "Beyond the screen",
-      beyond_lead: "Things I like making away from a keyboard — mostly baking, some photography.",
-      ph_food: "bread — image pending", ph_photo: "photography — image pending",
 
       contact_h: "Contact",
       contact_line: "Open to build things with good people.",
@@ -194,25 +236,35 @@
       role_5: "Dados &amp; automa&ccedil;&atilde;o",
       role_6: "Construir com pessoas",
 
-      datasus_lead: "Anos de registros de hemoterapia do SUS, uma consulta lenta por vez. Ent&atilde;o mandei um rob&ocirc;.",
-      p1_detail: "Trabalho de curso na Harve (abril de 2026) com Jackson Beggi e wingCODING &mdash; eu propus usar os dados de banco de sangue e constru&iacute; os m&oacute;dulos de extra&ccedil;&atilde;o e tratamento. Os dados s&atilde;o reais do SUS: Produ&ccedil;&atilde;o Ambulatorial, subgrupo 0306 (Hemoterapia), m&eacute;trica &ldquo;quantidade aprovada&rdquo;, filtrado para o Paran&aacute; &mdash; procedimentos de hemoterapia aprovados no SUS, um indicador relacionado a, mas diferente de, doa&ccedil;&otilde;es de sangue. (O dashboard publicado ainda usa &ldquo;doa&ccedil;&otilde;es&rdquo; &mdash; texto de um colega; uma captura corrigida est&aacute; pendente.) O formul&aacute;rio em si foi a parte dif&iacute;cil &mdash; detalhes no reposit&oacute;rio.",
-      p2_detail: "O recorde &eacute; salvo em disco; se faltar um arquivo de arte, o jogo cai para formas simples e continua rodando. C&oacute;digo meu &mdash; os sprites e as telas de menu / vit&oacute;ria / derrota s&atilde;o gerados por IA e sinalizados como tal. Projeto acad&ecirc;mico individual.",
-      p3_detail: "Projeto acad&ecirc;mico para uma empresa de entregas fict&iacute;cia, feito com dois colegas num fork de <code>rodavio/pibble_express</code>. Minha parte: o m&oacute;dulo de Funcion&aacute;rios e a integra&ccedil;&atilde;o com Entregas, o cadastro por CPF ou CNPJ (form + migration), o dashboard administrativo e a padroniza&ccedil;&atilde;o dos formul&aacute;rios e do logout nos quatro apps.",
-      p4_detail: "Um prot&oacute;tipo com foco em Curitiba. O sensor mede o qu&atilde;o cheio um bueiro est&aacute;; o entupimento &eacute; um fator que pode contribuir para o alagamento de um ponto. Cada ponto tem seu limite; quando o n&iacute;vel passa, o alarme na tela e o buzzer f&iacute;sico disparam juntos. Feito no ESP32 com sensor ultrass&ocirc;nico de dist&acirc;ncia como medidor e o Blynk como painel e camada de notifica&ccedil;&atilde;o. Uma implanta&ccedil;&atilde;o real em bueiros de rua &eacute; trabalho futuro.",
-      p5_detail: "Tr&ecirc;s processos modelados de ponta a ponta &mdash; gerenciamento de consultas, controle de estoque e gest&atilde;o de funcion&aacute;rios &mdash; mais subprocessos de cadastro de cliente e pagamento.",
+      datasus_lead: "Automa&ccedil;&atilde;o da coleta e do tratamento de registros de hemoterapia do Paran&aacute;, com visualiza&ccedil;&atilde;o em um painel interativo.",
       pm_hint: "abrir &nearr;",
       pm_video: "Ver o v&iacute;deo &nearr;",
-      corrida_lead: "Um estudante atrasado para a aula, uma cidade infinita e uma m&aacute;quina de estados feita do zero.",
-      pibble_lead: "O lado de funcion&aacute;rios de um sistema de entregas em Django &mdash; autentica&ccedil;&atilde;o, n&iacute;veis de acesso e um cadastro que aceita CPF e CNPJ.",
-      p1_date: "Projeto em equipe &middot; abr 2026",
-      p2_date: "Individual &middot; acad&ecirc;mico",
-      p3_date: "Projeto em equipe &middot; jun 2026",
+      pm_zoom: "Abrir imagem completa em nova aba",
+      corrida_lead: "Um estudante atrasado enfrenta obst&aacute;culos pela cidade &mdash; o desafio &eacute; administrar as tr&ecirc;s vidas e chegar &agrave; meta antes de perder a partida.",
+      pibble_lead: "Uma aplica&ccedil;&atilde;o para organizar clientes, produtos, funcion&aacute;rios e entregas em um mesmo sistema.",
+      p1_date: "Projeto em equipe &middot; Harve &middot; abr 2026",
+      p2_date: "Projeto individual &middot; acad&ecirc;mico",
+      p3_date: "Projeto acad&ecirc;mico em equipe &middot; Empresa fict&iacute;cia &middot; jun 2026",
       nav_home: "In&iacute;cio",
       home_welcome: "Bem-vindo (a) ao meu portf&oacute;lio &mdash; eu sou",
       home_role: "Estudante de Engenharia de Software",
       cat_photo: "Fotografia",
       journey_harve: "Turma do curso na Harve, com os certificados.",
-      p1_sub: "Automa&ccedil;&atilde;o e an&aacute;lise de dados de hemoterapia",
+      p1_sub: "Pipeline de automa&ccedil;&atilde;o e an&aacute;lise de dados de hemoterapia do SUS",
+      p2_sub: "Runner 2D em Python e Pygame",
+      p3_sub: "Sistema web de gest&atilde;o de entregas",
+      flood_sub: "Prot&oacute;tipo IoT de monitoramento de n&iacute;vel e alertas",
+      bpmn_sub: "Modelagem de processos de neg&oacute;cio em BPMN",
+      dreams_h: "A ci&ecirc;ncia por tr&aacute;s dos sonhos",
+      dreams_sub: "Pesquisa bibliogr&aacute;fica e comunica&ccedil;&atilde;o cient&iacute;fica",
+      dreams_lead: "Uma investiga&ccedil;&atilde;o bibliogr&aacute;fica sobre as explica&ccedil;&otilde;es para os sonhos e suas rela&ccedil;&otilde;es com sono, mem&oacute;ria e emo&ccedil;&otilde;es.",
+      dreams_link: "Ver apresenta&ccedil;&atilde;o da FICEM &nearr;",
+      p6_date: "Trabalho escolar em equipe &middot; FICEM 2024 &middot; Bom Jesus Centro",
+      bpmn_link: "Ver manual e diagramas &nearr;",
+      work_sub: "O que constru&iacute;, como pensei e o que aprendi.",
+      iot_cap1: "Esquema do circuito com ESP32, sensor ultrass&ocirc;nico e buzzer.",
+      iot_cap2: "Configura&ccedil;&atilde;o do painel no Blynk, com indicadores e sinaliza&ccedil;&atilde;o de alerta (modo de edi&ccedil;&atilde;o).",
+      tag_research: "pesquisa", tag_scicomm: "comunica&ccedil;&atilde;o cient&iacute;fica",
       ci_borboleta: "Design e m&iacute;dia para um projeto de conscientiza&ccedil;&atilde;o em sa&uacute;de da mulher. Eu fa&ccedil;o as pe&ccedil;as &mdash; layout, tipografia e colagem &mdash; a partir do conte&uacute;do que a equipe passa.",
       ci_more: "Tamb&eacute;m participo de a&ccedil;&otilde;es ambientais, atividades com crian&ccedil;as e outros voluntariados com o Interact e em Curitiba.",
       home_line: "<em>C&oacute;digo, design &amp; pessoas</em> &mdash; construo onde eles se encontram.",
@@ -223,30 +275,100 @@
       ph_portrait: "retrato &mdash; imagem pendente",
       about_kicker: "Sobre",
       fan_talk: "no palco", fan_dusk: "hora dourada",
-      p4_date: "Acad&ecirc;mico &middot; jun 2026", p5_date: "Projeto em equipe &middot; jun 2026",
-      flood_h: "Monitor de lixo em bueiros e alagamentos &mdash; Curitiba",
-      flood_lead: "Um bueiro entupido pode transformar chuva forte em rua alagada. Isto fica de olho neles.",
-      flood_desc: "Um ESP32 com sensor ultrass&ocirc;nico mede o quanto um bueiro encheu de &aacute;gua e detritos e reporta a um painel Blynk &ldquo;Smart City&rdquo;, que registra o n&iacute;vel e dispara um alarme e um buzzer quando o bueiro est&aacute; perto de transbordar.",
-      flood_note: "Materiais (fotos, diagrama, telas) est&atilde;o sendo reunidos — ver notas.",
-      bpmn_h: "Cl&iacute;nica veterin&aacute;ria — modelagem de processos",
-      bpmn_lead: "Mapear como uma cl&iacute;nica funciona de verdade, um processo por vez.",
-      bpmn_desc: "Modelos BPMN no Bizagi para os processos centrais de uma cl&iacute;nica veterin&aacute;ria &mdash; gerenciamento de consultas, controle de estoque e gest&atilde;o de funcion&aacute;rios &mdash; com subprocessos de cadastro de cliente e pagamento. Feito a partir das descri&ccedil;&otilde;es do gestor; a cl&iacute;nica optou por n&atilde;o se identificar.",
-      bpmn_note: "Diagramas est&atilde;o sendo exportados — ver notas.",
+      p4_date: "Projeto acad&ecirc;mico em equipe &middot; jun 2026", p5_date: "Projeto em equipe &middot; jun 2026",
+      flood_h: "Monitor de Bueiros",
+      flood_lead: "Uma proposta de monitoramento remoto para acompanhar n&iacute;veis e sinalizar situa&ccedil;&otilde;es que precisam de aten&ccedil;&atilde;o na drenagem urbana.",
+      bpmn_h: "Cl&iacute;nica Veterin&aacute;ria",
+      bpmn_lead: "Da conversa com a gest&atilde;o aos diagramas: organiza&ccedil;&atilde;o visual dos processos de uma cl&iacute;nica veterin&aacute;ria.",
       tag_sensors: "sensor ultrass&ocirc;nico", tag_web: "web", tag_alerts: "alertas",
       bpmn_role: "Equipe de cinco: Ana Beatriz Patussi Reolon, Ana Clara Ernandes Nogueira, Emelize Bonfim Mlot, Giovanna Ribas dos Reis, Ot&aacute;vio Brito Fonseca.",
       tag_analysis: "an&aacute;lise de processos", tag_diagrams: "diagramas",
-      ph_flood: "hardware &amp; painel web — imagem pendente",
-      ph_bpmn: "diagrama BPMN — imagem pendente",
       stack_more: "Para mais projetos, visite o meu GitHub &rarr;",
 
-      p1_desc: "Um rob&ocirc; Selenium opera o formul&aacute;rio do DATASUS TabNet &mdash; cada filtro, cada per&iacute;odo &mdash; e l&ecirc; as tabelas com pandas, BeautifulSoup como fallback. Um runner paralelo roda tr&ecirc;s workers com in&iacute;cio escalonado e checkpoint, consolida as exporta&ccedil;&otilde;es e faz a limpeza; um dashboard em Streamlit compara o volume de hemoterapia entre meses e anos.",
-      p2_desc: "Endless-runner em Python + Pygame. M&aacute;quina de estados feita &agrave; m&atilde;o (menu &rarr; jogo &rarr; vit&oacute;ria/derrota &rarr; menu), pulo com gravidade, obst&aacute;culos que surgem mais r&aacute;pido conforme a pontua&ccedil;&atilde;o sobe, velocidade que acelera a cada 100 pontos at&eacute; um teto, tr&ecirc;s vidas com invencibilidade e piscada ap&oacute;s dano, e um HUD com barra de progresso at&eacute; a meta de 1000 pontos.",
-      p3_desc: "App em Django + DRF para gest&atilde;o de entregas: clientes, produtos, funcion&aacute;rios e entregas, login / logout e n&iacute;veis de acesso ADM / FUNC ligados a um <code>User</code> do Django por um <code>OneToOneField</code>. CRUD completo nos quatro recursos, uma API REST em <code>/api/</code> e m&aacute;scaras de entrada no front.",
+      p1_body:
+        "<h4>O desafio</h4>" +
+        "<p>Consultar diferentes per&iacute;odos no DATASUS TabNet exige repetir etapas em formul&aacute;rios e reunir os resultados. O desafio foi automatizar esse trabalho e organizar os dados para compara&ccedil;&atilde;o ao longo do tempo.</p>" +
+        "<h4>A solu&ccedil;&atilde;o</h4>" +
+        "<p>Um fluxo em Python que consulta a Produ&ccedil;&atilde;o Ambulatorial do SUS, extrai registros de hemoterapia do Paran&aacute;, trata os arquivos e apresenta os resultados em um dashboard.</p>" +
+        "<ul>" +
+        "<li><strong>Extra&ccedil;&atilde;o automatizada</strong> &mdash; navega&ccedil;&atilde;o com Selenium e leitura das tabelas com pandas, usando BeautifulSoup como alternativa de leitura do HTML.</li>" +
+        "<li><strong>Consultas em paralelo</strong> &mdash; execu&ccedil;&atilde;o com at&eacute; tr&ecirc;s processos e in&iacute;cio escalonado das primeiras tarefas.</li>" +
+        "<li><strong>Retomada da coleta</strong> &mdash; verifica&ccedil;&atilde;o dos arquivos j&aacute; existentes por per&iacute;odo, para evitar repetir downloads ao executar de novo.</li>" +
+        "<li><strong>Tratamento e visualiza&ccedil;&atilde;o</strong> &mdash; remo&ccedil;&atilde;o de linhas de totaliza&ccedil;&atilde;o e campos vazios, padroniza&ccedil;&atilde;o de nomes de colunas e dashboard em Streamlit para compara&ccedil;&otilde;es mensais e anuais.</li>" +
+        "</ul>" +
+        "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
+        "<p>Propus o tema e a solu&ccedil;&atilde;o de automa&ccedil;&atilde;o e fui respons&aacute;vel pela arquitetura e pelos m&oacute;dulos de extra&ccedil;&atilde;o e tratamento dos dados. O trabalho foi integrado &agrave;s entregas dos colegas em orquestra&ccedil;&atilde;o, execu&ccedil;&atilde;o paralela e dashboard (Jackson Beggi e wingCODING).</p>" +
+        "<h4>Resultado e evid&ecirc;ncias</h4>" +
+        "<p>O reposit&oacute;rio re&uacute;ne a extra&ccedil;&atilde;o por per&iacute;odo, o processamento em lote, o tratamento dos arquivos e o painel. A m&eacute;trica apresentada &eacute; a quantidade aprovada de procedimentos de hemoterapia registrados no SUS, no recorte consultado &mdash; um indicador relacionado a, mas diferente de, doa&ccedil;&otilde;es de sangue.</p>",
+
+      p2_body:
+        "<h4>Vis&atilde;o geral</h4>" +
+        "<p>Um jogo 2D em Python e Pygame, com obst&aacute;culos, dificuldade progressiva e uma condi&ccedil;&atilde;o de vit&oacute;ria ao alcan&ccedil;ar 1.000 pontos.</p>" +
+        "<h4>Como constru&iacute;</h4>" +
+        "<ul>" +
+        "<li><strong>Estados do jogo</strong> &mdash; o fluxo entre menu, partida e encerramento por vit&oacute;ria ou derrota, escrito &agrave; m&atilde;o.</li>" +
+        "<li><strong>Movimento e colis&otilde;es</strong> &mdash; pulo com gravidade e um per&iacute;odo de invencibilidade ap&oacute;s sofrer dano.</li>" +
+        "<li><strong>Dificuldade progressiva</strong> &mdash; a velocidade aumenta a cada 100 pontos, at&eacute; um limite, e o intervalo entre obst&aacute;culos diminui com a pontua&ccedil;&atilde;o. Um estilo endless runner, mas com meta de vit&oacute;ria.</li>" +
+        "<li><strong>Continuidade sem imagens</strong> &mdash; quando um recurso visual n&atilde;o &eacute; encontrado, o jogo usa formas simples para continuar funcionando.</li>" +
+        "<li><strong>Feedback e recordes</strong> &mdash; a interface mostra vidas, pontua&ccedil;&atilde;o e progresso at&eacute; a meta; o recorde fica salvo localmente.</li>" +
+        "</ul>" +
+        "<h4>Minha contribui&ccedil;&atilde;o e recursos visuais</h4>" +
+        "<p>Desenvolvi o c&oacute;digo e a l&oacute;gica do jogo. Os recursos visuais foram gerados com aux&iacute;lio do ChatGPT e integrados ao projeto.</p>",
+
+      p3_body:
+        "<h4>Vis&atilde;o geral</h4>" +
+        "<p>Em equipe, desenvolvemos uma aplica&ccedil;&atilde;o em Django para representar a opera&ccedil;&atilde;o de uma empresa fict&iacute;cia de log&iacute;stica. O sistema re&uacute;ne cadastros, autentica&ccedil;&atilde;o, um painel administrativo e uma API com Django REST Framework.</p>" +
+        "<h4>Estrutura do projeto</h4>" +
+        "<ul>" +
+        "<li><strong>M&oacute;dulos integrados</strong> &mdash; clientes, produtos, funcion&aacute;rios e entregas.</li>" +
+        "<li><strong>Usu&aacute;rios e perfis</strong> &mdash; associa&ccedil;&atilde;o entre o funcion&aacute;rio e a conta de acesso, com perfis administrativo e operacional.</li>" +
+        "<li><strong>API</strong> &mdash; rotas para os quatro recursos centrais, reunidas em <code>/api/</code>.</li>" +
+        "<li><strong>Interface</strong> &mdash; formul&aacute;rios, m&aacute;scaras de entrada e painel com informa&ccedil;&otilde;es da opera&ccedil;&atilde;o.</li>" +
+        "</ul>" +
+        "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
+        "<p>Desenvolvi o m&oacute;dulo de funcion&aacute;rios e sua integra&ccedil;&atilde;o com entregas. Tamb&eacute;m constru&iacute; o painel administrativo, trabalhei nas m&aacute;scaras de entrada e na padroniza&ccedil;&atilde;o visual dos formul&aacute;rios e organizei o fluxo de logout entre as &aacute;reas do sistema.</p>" +
+        "<h4>Evid&ecirc;ncias</h4>" +
+        "<p>O reposit&oacute;rio re&uacute;ne o c&oacute;digo, a documenta&ccedil;&atilde;o e capturas do painel e do m&oacute;dulo de funcion&aacute;rios. Feito com dois colegas num fork de <code>rodavio/pibble_express</code>.</p>",
+
+      p4_body:
+        "<h4>O desafio</h4>" +
+        "<p>Um bueiro obstru&iacute;do pode contribuir para o alagamento de uma via. O projeto explora como sensores e visualiza&ccedil;&atilde;o remota podem apoiar o acompanhamento dessas condi&ccedil;&otilde;es.</p>" +
+        "<h4>A proposta t&eacute;cnica</h4>" +
+        "<p>Feito em equipe: um prot&oacute;tipo com ESP32, sensor ultrass&ocirc;nico e integra&ccedil;&atilde;o ao Blynk para representar o monitoramento e seus alertas.</p>" +
+        "<ul>" +
+        "<li><strong>Leitura de dist&acirc;ncia</strong> &mdash; o sensor ultrass&ocirc;nico (HC-SR04) fornece uma medida que pode ser interpretada como n&iacute;vel a partir de uma refer&ecirc;ncia definida na montagem.</li>" +
+        "<li><strong>Visualiza&ccedil;&atilde;o remota</strong> &mdash; o painel Blynk re&uacute;ne indicadores para acompanhar os valores do prot&oacute;tipo.</li>" +
+        "<li><strong>Sinaliza&ccedil;&atilde;o</strong> &mdash; o projeto prev&ecirc; um buzzer e indicadores digitais para comunicar a ultrapassagem de um limite configurado.</li>" +
+        "</ul>" +
+        "<h4>Evid&ecirc;ncias do desenvolvimento</h4>" +
+        "<p>O esquema do circuito e a captura de configura&ccedil;&atilde;o do painel mostram a organiza&ccedil;&atilde;o dos componentes e dos indicadores &mdash; um esquema e uma captura de interface, n&atilde;o fotos de uma montagem f&iacute;sica ou de instala&ccedil;&atilde;o em um bueiro real. Uma implanta&ccedil;&atilde;o real na rua &mdash; escala, desempenho em campo, efic&aacute;cia preventiva &mdash; &eacute; trabalho futuro.</p>",
+
+      p5_body:
+        "<h4>O contexto</h4>" +
+        "<p>Em equipe, analisamos os processos de uma cl&iacute;nica veterin&aacute;ria real, preservando sua identifica&ccedil;&atilde;o. O objetivo foi compreender como as atividades acontecem, registrar responsabilidades e tornar os fluxos mais claros para an&aacute;lise.</p>" +
+        "<h4>O que desenvolvemos</h4>" +
+        "<ul>" +
+        "<li><strong>Tr&ecirc;s processos centrais</strong> &mdash; gerenciamento de consultas, controle de estoque e gest&atilde;o de pessoas.</li>" +
+        "<li><strong>Subprocessos</strong> &mdash; detalhamento de rotinas como cadastro de clientes e checkout/pagamento.</li>" +
+        "<li><strong>Responsabilidades e decis&otilde;es</strong> &mdash; atividades representadas por raias de responsabilidades, com pontos de decis&atilde;o e passagem do trabalho entre respons&aacute;veis.</li>" +
+        "<li><strong>Documenta&ccedil;&atilde;o</strong> &mdash; diagramas em BPMN no Bizagi Modeler, reunidos no manual do processo.</li>" +
+        "</ul>" +
+        "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
+        "<p>Realizei entrevistas com a gest&atilde;o para levantar as rotinas e as regras do neg&oacute;cio e trabalhei na transforma&ccedil;&atilde;o dessas informa&ccedil;&otilde;es em diagramas BPMN &mdash; organizando atividades, eventos, decis&otilde;es e responsabilidades.</p>" +
+        "<h4>Resultado e evid&ecirc;ncias</h4>" +
+        "<p>O trabalho resultou na documenta&ccedil;&atilde;o dos processos estudados, que pode servir de base para discutir oportunidades de melhoria.</p>",
+
+      p6_body:
+        "<h4>O trabalho</h4>" +
+        "<p>Participei de um trabalho em equipe que reuniu e discutiu diferentes teorias sobre os sonhos. O resumo expandido apresenta perspectivas hist&oacute;ricas e contempor&acirc;neas e reconhece que ainda existem quest&otilde;es em aberto sobre o tema. &Eacute; pesquisa bibliogr&aacute;fica e s&iacute;ntese &mdash; n&atilde;o experimentos, ensaios cl&iacute;nicos ou descobertas originais da equipe.</p>" +
+        "<h4>Minha participa&ccedil;&atilde;o</h4>" +
+        "<p>Sou coautora do trabalho com Gabriela Mayer e Rafaela Rosseto, sob orienta&ccedil;&atilde;o de Corn&eacute;lio Schwambach.</p>" +
+        "<h4>Materiais</h4>" +
+        "<p>O projeto tem um resumo expandido e uma apresenta&ccedil;&atilde;o em v&iacute;deo vinculada &agrave; FICEM 2024 (canal BJ Cient&iacute;fico).</p>",
 
       journey_h: "As frentes",
       journey_p1: "Sou estudante de Engenharia de Software e construo em algumas frentes ao mesmo tempo, n&atilde;o em linha reta: software e dados, a web, design visual e comunidade.",
       journey_p2: "Uma alimenta a outra. Um script vira um pipeline; um exerc&iacute;cio de aula vira um projeto em equipe; um grupo de amigos vira um clube. Os cart&otilde;es abaixo s&atilde;o frentes do meu caminho, n&atilde;o uma linha do tempo.",
-      journey_todo: "&#9432; Linha do tempo provis&oacute;ria — a expandir com datas reais, o &ldquo;porqu&ecirc;&rdquo; de cada passo e fotos.",
       j1_t: "Engenharia de software", j1_d: "Curso na PUCPR (in&iacute;cio em 2026).",
       j2_t: "Python &amp; dados", j2_d: "Primeiras automa&ccedil;&otilde;es com pandas — dados p&uacute;blicos de sa&uacute;de, planilhas, ETL.",
       j3_t: "Coffee &amp; Code", j3_d: "Criei e hoje lidero um clube universit&aacute;rio de tecnologia, com a equipe.",
@@ -255,47 +377,16 @@
       j6_t: "Design &amp; pessoas", j6_d: "Identidade visual, ilustra&ccedil;&atilde;o, eventos com a Diretoria da Mulher.",
       j7_t: "Longe da tela", j7_d: "Fazer p&atilde;o, cookies e outros experimentos.",
 
-      work_h: "Trabalhos selecionados",
+      work_h: "Projetos selecionados",
       work_intro: "Software, dados, um jogo, uma comunidade. Linguagens diferentes para o mesmo h&aacute;bito — fazer coisas.",
-      f_all: "Tudo", f_code: "C&oacute;digo", f_design: "Design", f_people: "Pessoas", f_play: "Jogo",
-      wk_datasus: "RPA + pandas + um dashboard para dados p&uacute;blicos de sa&uacute;de",
-      wk_game: "um joguinho 2D em Python / Pygame",
-      wk_pibble: "sistema de entregas em Django — projeto em equipe",
-      wk_coffee: "um clube universit&aacute;rio de tecnologia que criei e lidero",
-      wk_creative_t: "Galeria criativa", wk_creative: "ilustra&ccedil;&atilde;o, manipula&ccedil;&atilde;o de imagem, experimentos",
-      ph_identity: "identidade &amp; p&ocirc;steres — imagem pendente",
 
-      case_featured: "Caso t&eacute;cnico em destaque",
-      datasus_cap: "Dashboard em Streamlit sobre os dados consolidados.",
-      fl_processed: "dados tratados",
-      lbl_context: "Contexto", lbl_built: "O que constru&iacute;mos", lbl_role: "Meu papel",
-      datasus_context: "Os n&uacute;meros de hemoterapia do Paran&aacute; ficam no TabNet do DATASUS — uma interface p&uacute;blica lenta, uma consulta e um export por vez.",
-      datasus_built: "Um rob&ocirc; (Selenium) que roda as consultas e l&ecirc; as tabelas de resultado, uma camada em pandas que limpa e consolida cada per&iacute;odo, e um dashboard em Streamlit para comparar o volume entre meses e anos. Trabalho final de um curso de Python, com dois colegas.",
-      datasus_role: "Sugeri usar os dados de banco de sangue e trabalhei nos m&oacute;dulos de extra&ccedil;&atilde;o e tratamento. Colegas: Jackson Beggi e wingCODING (orquestra&ccedil;&atilde;o da RPA e dashboard).",
       cta_source: "Ver projeto no GitHub &rarr;",
-
-      case_game: "Jogo — projeto individual",
-      corrida_cap: "Tela inicial. A arte &eacute; gerada por IA (nota abaixo).",
-      corrida_p1: "Um endless-runner 2D: o estudante est&aacute; atrasado para a aula e precisa desviar da cidade. Chegue a 1000 pontos para passar; perca tr&ecirc;s vidas e acabou.",
-      corrida_p2: "Feito em Python e Pygame — m&aacute;quina de estados limpa (menu / jogo / fim), f&iacute;sica de pulo com gravidade, obst&aacute;culos aleat&oacute;rios, dificuldade que sobe com a pontua&ccedil;&atilde;o, vidas com invencibilidade tempor&aacute;ria, um HUD e recorde salvo.",
-      corrida_note: "O c&oacute;digo &eacute; de autoria pr&oacute;pria. Os assets visuais s&atilde;o gerados por IA e mostrados com transpar&ecirc;ncia.",
       tag_states: "m&aacute;quina de estados",
-
-      case_team: "Web — projeto em equipe",
-      pibble_p: "Um sistema de gest&atilde;o de entregas em Django: autentica&ccedil;&atilde;o, n&iacute;veis de acesso ADM/FUNC, CRUD de clientes, produtos, funcion&aacute;rios e entregas, uma API REST e frontend integrado. Feito com dois colegas.",
-      pibble_role_h: "Minha contribui&ccedil;&atilde;o",
-      pibble_r1: "M&oacute;dulo de Funcion&aacute;rios e sua integra&ccedil;&atilde;o com Entregas",
-      pibble_r2: "Cadastro aceitando CPF ou CNPJ (formul&aacute;rio + migra&ccedil;&atilde;o)",
-      pibble_r3: "Dashboard administrativo",
-      pibble_r4: "Padroniza&ccedil;&atilde;o de formul&aacute;rios e ajustes de interface",
       tag_auth: "autentica&ccedil;&atilde;o",
 
       coffee_why: "Um clube universit&aacute;rio de tecnologia que criei e construo ativamente, com a equipe.",
       coffee_p1: "Existe para dar aos estudantes um espa&ccedil;o com menos barreira e mais pr&aacute;tica para aprender, construir projetos juntos e trocar o que sabem — fora da press&atilde;o da sala de aula.",
       coffee_p2: "Lidero onde design e tecnologia se encontram: a identidade visual, os materiais, como os encontros acontecem e como as pessoas s&atilde;o convidadas.",
-      ph_logo: "logo &amp; identidade — imagem pendente",
-      ph_poster: "p&ocirc;ster / encontro — imagem pendente",
-      ph_social: "pe&ccedil;a de social — imagem pendente",
 
       creative_h: "Playground",
       creative_intro: "Tudo o que fa&ccedil;o longe do editor de c&oacute;digo &mdash; arte digital, desenho a nanquim, design gr&aacute;fico, fotografia, o que ando assando, e voluntariados e eventos. Toque em qualquer pe&ccedil;a para ver maior.",
@@ -315,11 +406,8 @@
 
       community_h: "Comunidade &amp; impacto social",
       community_lead: "Construir com pessoas — cada uma destas &eacute; uma fun&ccedil;&atilde;o diferente, num lugar diferente.",
-      ph_action: "foto selecionada — imagem pendente",
       ci_ddm: "Coordenadora de Eventos na Diretoria da Mulher do DCE. Planejo e realizo eventos e sua comunica&ccedil;&atilde;o, e iniciativas de inclus&atilde;o e impacto social.",
       ci_teia: "Volunt&aacute;ria de social media. Eu escrevo os briefings de conte&uacute;do — o roteiro story a story, o pilar e o objetivo — que a equipe transforma nos posts publicados.",
-      ci_vol_h: "Interact &amp; voluntariado",
-      ci_vol: "A&ccedil;&otilde;es ambientais, atividades com crian&ccedil;as e outros voluntariados.",
       privacy_note: "As fotos s&atilde;o escolhidas com cuidado — sem rostos de crian&ccedil;as em contexto sens&iacute;vel, sem crach&aacute;s leg&iacute;veis ou dados pessoais.",
 
       currently_h: "Atualmente",
@@ -327,10 +415,6 @@
       cur_p: "Atuo no desenvolvimento e na manuten&ccedil;&atilde;o de software em produ&ccedil;&atilde;o, entre frontend, backend, APIs e bancos de dados — implementa&ccedil;&atilde;o de funcionalidades, investiga&ccedil;&atilde;o de bugs e integra&ccedil;&atilde;o de camadas de sistemas existentes.",
       cur_note: "Por serem sistemas propriet&aacute;rios, o c&oacute;digo-fonte e os materiais internos n&atilde;o est&atilde;o dispon&iacute;veis publicamente.",
       cur_study_h: "Estudo", cur_more_h: "Mais projetos", cur_allrepos: "Todos os reposit&oacute;rios &rarr;",
-
-      beyond_h: "Al&eacute;m da tela",
-      beyond_lead: "Coisas que gosto de fazer longe do teclado — principalmente confeitaria, um pouco de fotografia.",
-      ph_food: "p&atilde;o — imagem pendente", ph_photo: "fotografia — imagem pendente",
 
       contact_h: "Contato",
       contact_line: "Aberta a construir coisas com gente boa.",
@@ -446,7 +530,7 @@
     if (!modal || !panels.length) return;
     var box = modal.querySelector(".pmodal__box");
     var closeBtn = document.getElementById("pm-close");
-    var elImg = document.getElementById("pm-img");
+    var elShots = document.getElementById("pm-shots");
     var elNum = document.getElementById("pm-num");
     var elDate = document.getElementById("pm-date");
     var elTitle = document.getElementById("pm-title");
@@ -463,11 +547,37 @@
 
     function txt(node, sel) { var n = node.querySelector(sel); return n ? n.textContent.trim() : ""; }
 
+    function addShot(src, alt, capKey) {
+      if (!src) return;
+      var fig = document.createElement("figure");
+      fig.className = "pmodal__shot";
+      var im = document.createElement("img");
+      im.src = src; im.alt = alt || "";
+      im.tabIndex = 0; im.setAttribute("role", "button");
+      im.setAttribute("aria-label", t("pm_zoom", "Open full image in a new tab"));
+      function full() { window.open(src, "_blank", "noopener"); }
+      im.addEventListener("click", full);
+      im.addEventListener("keydown", function (e) {
+        if (e.key === "Enter" || e.key === " ") { e.preventDefault(); full(); }
+      });
+      fig.appendChild(im);
+      if (capKey) {
+        var fc = document.createElement("figcaption");
+        fc.innerHTML = t(capKey, capKey);
+        fig.appendChild(fc);
+      }
+      elShots.appendChild(fig);
+    }
+
     function open(panel) {
       lastFocus = document.activeElement;
-      var img = panel.getAttribute("data-pm-img") || (panel.querySelector(".panel__shot img") || {}).src || "";
-      elImg.src = img;
-      elImg.alt = panel.getAttribute("data-pm-alt") || txt(panel, "h3");
+
+      elShots.innerHTML = "";
+      var img1 = panel.getAttribute("data-pm-img") || (panel.querySelector(".panel__shot img") || {}).src || "";
+      addShot(img1, panel.getAttribute("data-pm-alt") || txt(panel, "h3"), panel.getAttribute("data-pm-cap"));
+      var img2 = panel.getAttribute("data-pm-img2");
+      if (img2) addShot(img2, panel.getAttribute("data-pm-alt2") || "", panel.getAttribute("data-pm-cap2"));
+
       elNum.textContent = txt(panel, ".panel__tab").replace(/^[^A-Za-z0-9]+/, "");
       elDate.textContent = txt(panel, ".panel__date");
       elTitle.textContent = txt(panel, "h3");
@@ -475,14 +585,14 @@
 
       elDesc.innerHTML = "";
       var more = panel.querySelector(".panel__body .panel__text > .panel__more");
-      if (more) { var p = document.createElement("p"); p.innerHTML = more.innerHTML; elDesc.appendChild(p); }
+      if (more) { var mp = document.createElement("p"); mp.innerHTML = more.innerHTML; elDesc.appendChild(mp); }
       var detail = panel.querySelector(".panel__detail");
       if (detail) {
         Array.prototype.forEach.call(detail.children, function (c) {
-          var p = document.createElement("p");
-          p.className = c.className;
-          p.innerHTML = c.innerHTML;
-          elDesc.appendChild(p);
+          var el = document.createElement(c.tagName);
+          el.className = c.className;
+          el.innerHTML = c.innerHTML;
+          elDesc.appendChild(el);
         });
       }
 
@@ -494,14 +604,14 @@
       if (repo) {
         var a = document.createElement("a");
         a.className = "cta"; a.href = repo; a.target = "_blank"; a.rel = "noopener noreferrer";
-        a.innerHTML = t("cta_source", "View project on GitHub &rarr;");
+        a.innerHTML = t(panel.getAttribute("data-pm-repo-label") || "cta_source", "View project on GitHub &rarr;");
         elLinks.appendChild(a);
       }
       var vid = panel.getAttribute("data-pm-video");
       if (vid) {
         var v = document.createElement("a");
         v.className = "cta"; v.href = vid; v.target = "_blank"; v.rel = "noopener noreferrer";
-        v.innerHTML = t("pm_video", "Watch the demo &nearr;");
+        v.innerHTML = t(panel.getAttribute("data-pm-video-label") || "pm_video", "Watch the demo &nearr;");
         elLinks.appendChild(v);
       }
 
