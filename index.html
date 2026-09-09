@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css?v=20260908m">
+<link rel="stylesheet" href="style.css?v=20260908p">
 
 <script type="application/ld+json">
 {
@@ -140,174 +140,177 @@
   </div>
 </section>
 
-<!-- ============ FEATURED WORK — tabbed folder ============ -->
+<!-- ============ FEATURED WORK — stacked folders ============ -->
 <section id="projects" class="folders" aria-labelledby="work-h">
   <h2 class="section-label folders__label"><span aria-hidden="true">&#8212;</span> <span id="work-h" data-i18n="work_h">Featured projects</span></h2>
 
   <div class="folders__set">
-    <div class="folders__tabs" role="tablist" aria-label="Projects, technologies and certificates">
-      <button class="ftab is-on" type="button" role="tab" id="ft-projects" aria-selected="true" aria-controls="fp-projects" data-i18n="tab_projects">Projects</button>
-      <button class="ftab" type="button" role="tab" id="ft-tech" aria-selected="false" tabindex="-1" aria-controls="fp-tech" data-i18n="tab_tech">Technologies</button>
-      <button class="ftab" type="button" role="tab" id="ft-certs" aria-selected="false" tabindex="-1" aria-controls="fp-certs" data-i18n="tab_certs">Certificates</button>
-    </div>
-
-    <div class="folders__body">
+    <div class="folders__stack" role="tablist" aria-label="Projects, technologies and certificates">
 
       <!-- ===== PROJETOS ===== -->
-      <div class="fpanel" id="fp-projects" role="tabpanel" aria-labelledby="ft-projects" tabindex="0">
-        <div class="pgrid">
+      <div class="folder is-front" id="folder-projects" style="--tab-x:0">
+        <button class="folder__tab" type="button" role="tab" id="ft-projects" aria-selected="true" aria-controls="fb-projects" data-i18n="tab_projects">Projects</button>
+        <div class="folder__body" id="fb-projects" role="tabpanel" aria-labelledby="ft-projects" tabindex="0">
+          <ul class="plist">
 
-          <!-- FEATURED — BLOODY MARY -->
-          <article id="datasus" class="pcard panel--tint pcard--feature" aria-labelledby="p1-h"
-                   data-pm data-pm-repo="https://github.com/ribasgiovanna/datasus"
-                   data-pm-img="assets/images/tech/datasus-dashboard.webp"
-                   data-pm-alt="Streamlit dashboard built over the consolidated SUS hemotherapy data for Paraná">
-            <div class="pcard__main">
-              <div class="pcard__text">
-                <p class="pcard__num"><span class="panel__spark" aria-hidden="true">&#10022;</span> <span data-i18n="pm_project">Project</span> 01</p>
-                <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p1_date">Team project &middot; Harve &middot; Apr 2026</span></p>
-                <h3 id="p1-h">Bloody Mary</h3>
-                <p class="panel__sub" data-i18n="p1_sub">SUS hemotherapy data automation &amp; analysis pipeline</p>
-                <p class="panel__lead" data-i18n="datasus_lead">Automating the collection and cleaning of Paran&aacute; hemotherapy records from SUS, with an interactive dashboard on top.</p>
+            <li><div class="prow" id="datasus" aria-labelledby="p1-h"
+                     data-pm data-pm-repo="https://github.com/ribasgiovanna/datasus"
+                     data-pm-img="assets/images/tech/datasus-dashboard.webp"
+                     data-pm-alt="Streamlit dashboard built over the consolidated SUS hemotherapy data for Paraná">
+              <span class="prow__num">01</span>
+              <img class="prow__thumb" src="assets/images/tech/datasus-dashboard.webp" alt="" loading="lazy">
+              <h3 id="p1-h">Bloody Mary</h3>
+              <span class="prow__cat" data-i18n="p1_cat">Data &amp; automation</span>
+              <div class="prow__data" hidden>
+                <p class="panel__date"><span data-i18n="p1_date">Team project &middot; Harve &middot; Apr 2026</span></p>
+                <p class="panel__sub" hidden data-i18n="p1_sub">SUS hemotherapy data automation &amp; analysis pipeline</p>
+                <p class="panel__lead" hidden data-i18n="datasus_lead">Automating the collection and cleaning of Paran&aacute; hemotherapy records from SUS, with an interactive dashboard on top.</p>
                 <p class="tagrow"><span>Python</span><span>Selenium</span><span>pandas</span><span>RPA</span><span>Streamlit</span></p>
                 <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p1_body"></div></div>
               </div>
-              <figure class="panel__shot pcard__shot">
-                <span class="tape tape--tl" aria-hidden="true"></span><span class="tape tape--tr" aria-hidden="true"></span>
-                <img src="assets/images/tech/datasus-dashboard.webp" width="1600" height="1195" loading="lazy" alt="Streamlit dashboard built over the consolidated SUS hemotherapy data for Paraná">
-              </figure>
-            </div>
-            <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
-          </article>
+            </div></li>
 
-          <!-- CORRIDA PARA A FACULDADE -->
-          <article id="corrida" class="pcard panel--dark" aria-labelledby="p2-h"
-                   data-pm data-pm-repo="https://github.com/ribasgiovanna/jogo-atrasado-para-a-faculdade" data-pm-img="assets/images/tech/game-play.webp"
-                   data-pm-alt="Corrida para a Faculdade in play: the student running through a pixel-art street, HUD with score, high score and lives, a traffic cone ahead">
-            <figure class="pcard__thumb"><img src="assets/images/tech/game-play.webp" width="1600" height="1202" loading="lazy" alt="Corrida para a Faculdade in play: a student running through a pixel-art street with a HUD"></figure>
-            <p class="pcard__num"><span class="panel__spark" aria-hidden="true">&#10022;</span> <span data-i18n="pm_project">Project</span> 02</p>
-            <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p2_date">Individual project &middot; Academic</span></p>
-            <h3 id="p2-h">Corrida para a Faculdade</h3>
-            <p class="panel__sub" data-i18n="p2_sub">2D runner in Python and Pygame</p>
-            <p class="panel__lead" data-i18n="corrida_lead">A student who&rsquo;s late for class dodges obstacles across the city &mdash; the challenge is to manage three lives and reach the goal before the run ends.</p>
-            <p class="tagrow"><span>Python</span><span>Pygame</span><span data-i18n="tag_states">state machine</span></p>
-            <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p2_body"></div></div>
-            <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
-          </article>
+            <li><div class="prow" id="corrida" aria-labelledby="p2-h"
+                     data-pm data-pm-repo="https://github.com/ribasgiovanna/jogo-atrasado-para-a-faculdade"
+                     data-pm-img="assets/images/tech/game-play.webp"
+                     data-pm-alt="Corrida para a Faculdade in play: the student running through a pixel-art street, HUD with score, high score and lives, a traffic cone ahead">
+              <span class="prow__num">02</span>
+              <img class="prow__thumb" src="assets/images/tech/game-play.webp" alt="" loading="lazy">
+              <h3 id="p2-h">Corrida para a Faculdade</h3>
+              <span class="prow__cat">Pygame</span>
+              <div class="prow__data" hidden>
+                <p class="panel__date"><span data-i18n="p2_date">Individual project &middot; Academic</span></p>
+                <p class="panel__sub" hidden data-i18n="p2_sub">2D runner in Python and Pygame</p>
+                <p class="panel__lead" hidden data-i18n="corrida_lead">A student who&rsquo;s late for class dodges obstacles across the city &mdash; the challenge is to manage three lives and reach the goal before the run ends.</p>
+                <p class="tagrow"><span>Python</span><span>Pygame</span><span data-i18n="tag_states">state machine</span></p>
+                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p2_body"></div></div>
+              </div>
+            </div></li>
 
-          <!-- PIBBLE EXPRESS -->
-          <article id="pibble" class="pcard panel--cream" aria-labelledby="p3-h"
-                   data-pm data-pm-repo="https://github.com/ribasgiovanna/pibble_express" data-pm-img="assets/images/tech/pibble-funcionarios.webp"
-                   data-pm-alt="Pibble Express employee registration screen with a list of employees">
-            <figure class="pcard__thumb"><img src="assets/images/tech/pibble-funcionarios.webp" width="1200" height="750" loading="lazy" alt="Pibble Express employee registration screen"></figure>
-            <p class="pcard__num"><span class="panel__spark" aria-hidden="true">&#10022;</span> <span data-i18n="pm_project">Project</span> 03</p>
-            <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p3_date">Academic team project &middot; Jun 2026</span></p>
-            <h3 id="p3-h">Pibble Express</h3>
-            <p class="panel__sub" data-i18n="p3_sub">Delivery-management web system</p>
-            <p class="panel__lead" data-i18n="pibble_lead">One application to organise clients, products, employees and deliveries in the same system.</p>
-            <p class="tagrow"><span>Django</span><span>DRF</span><span data-i18n="tag_auth">authentication</span><span>CRUD</span></p>
-            <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p3_body"></div></div>
-            <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
-          </article>
+            <li><div class="prow" id="pibble" aria-labelledby="p3-h"
+                     data-pm data-pm-repo="https://github.com/ribasgiovanna/pibble_express"
+                     data-pm-img="assets/images/tech/pibble-funcionarios.webp"
+                     data-pm-alt="Pibble Express employee registration screen with a list of employees">
+              <span class="prow__num">03</span>
+              <img class="prow__thumb" src="assets/images/tech/pibble-funcionarios.webp" alt="" loading="lazy">
+              <h3 id="p3-h">Pibble Express</h3>
+              <span class="prow__cat">Django</span>
+              <div class="prow__data" hidden>
+                <p class="panel__date"><span data-i18n="p3_date">Academic team project &middot; Jun 2026</span></p>
+                <p class="panel__sub" hidden data-i18n="p3_sub">Delivery-management web system</p>
+                <p class="panel__lead" hidden data-i18n="pibble_lead">One application to organise clients, products, employees and deliveries in the same system.</p>
+                <p class="tagrow"><span>Django</span><span>DRF</span><span data-i18n="tag_auth">authentication</span><span>CRUD</span></p>
+                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p3_body"></div></div>
+              </div>
+            </div></li>
 
-          <!-- MONITOR DE BUEIROS -->
-          <article id="flood" class="pcard panel--tint" aria-labelledby="p4-h"
-                   data-pm
-                   data-pm-img="assets/images/tech/iot-circuit.webp"
-                   data-pm-alt="Circuit schematic: an ESP32 wired to an HC-SR04 ultrasonic sensor, a potentiometer and a buzzer"
-                   data-pm-cap="iot_cap1"
-                   data-pm-img2="assets/images/tech/iot-blynk.webp"
-                   data-pm-alt2="Blynk console dashboard editor for a ‘Smart City’ template, with water-level gauges and an alarm widget"
-                   data-pm-cap2="iot_cap2"
-                   data-pm-video="https://youtu.be/_Lq13BLEQ2o"
-                   data-pm-video-label="pm_video">
-            <figure class="pcard__thumb"><img src="assets/images/tech/iot-circuit.webp" width="859" height="770" loading="lazy" alt="Circuit schematic: an ESP32 with an ultrasonic sensor and a buzzer"></figure>
-            <p class="pcard__num"><span class="panel__spark" aria-hidden="true">&#10022;</span> <span data-i18n="pm_project">Project</span> 04</p>
-            <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p4_date">Academic team project &middot; Jun 2026</span></p>
-            <h3 id="p4-h" data-i18n="flood_h">Storm-drain Monitor</h3>
-            <p class="panel__sub" data-i18n="flood_sub">IoT prototype for level monitoring and alerts</p>
-            <p class="panel__lead" data-i18n="flood_lead">A proposal for remote monitoring &mdash; to track levels and flag situations in urban drainage that need attention.</p>
-            <p class="tagrow"><span>ESP32</span><span data-i18n="tag_sensors">ultrasonic sensor</span><span>Blynk</span><span data-i18n="tag_alerts">alerts</span></p>
-            <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p4_body"></div></div>
-            <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
-          </article>
+            <li><div class="prow" id="flood" aria-labelledby="p4-h"
+                     data-pm
+                     data-pm-img="assets/images/tech/iot-circuit.webp"
+                     data-pm-alt="Circuit schematic: an ESP32 wired to an HC-SR04 ultrasonic sensor, a potentiometer and a buzzer"
+                     data-pm-cap="iot_cap1"
+                     data-pm-img2="assets/images/tech/iot-blynk.webp"
+                     data-pm-alt2="Blynk console dashboard editor for a ‘Smart City’ template, with water-level gauges and an alarm widget"
+                     data-pm-cap2="iot_cap2"
+                     data-pm-video="https://youtu.be/_Lq13BLEQ2o"
+                     data-pm-video-label="pm_video">
+              <span class="prow__num">04</span>
+              <img class="prow__thumb" src="assets/images/tech/iot-circuit.webp" alt="" loading="lazy">
+              <h3 id="p4-h" data-i18n="flood_h">Storm-drain Monitor</h3>
+              <span class="prow__cat">IoT</span>
+              <div class="prow__data" hidden>
+                <p class="panel__date"><span data-i18n="p4_date">Academic team project &middot; Jun 2026</span></p>
+                <p class="panel__sub" hidden data-i18n="flood_sub">IoT prototype for level monitoring and alerts</p>
+                <p class="panel__lead" hidden data-i18n="flood_lead">A proposal for remote monitoring &mdash; to track levels and flag situations in urban drainage that need attention.</p>
+                <p class="tagrow"><span>ESP32</span><span data-i18n="tag_sensors">ultrasonic sensor</span><span>Blynk</span><span data-i18n="tag_alerts">alerts</span></p>
+                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p4_body"></div></div>
+              </div>
+            </div></li>
 
-          <!-- CLÍNICA VETERINÁRIA / BPMN -->
-          <article id="bpmn" class="pcard panel--dark" aria-labelledby="p5-h"
-                   data-pm data-pm-img="assets/images/tech/bpmn-vet.webp"
-                   data-pm-repo="https://drive.google.com/file/d/1vz2DTqKIOmveiAA17f5Lz_a-c5_N7zTZ/view?usp=sharing"
-                   data-pm-repo-label="bpmn_link"
-                   data-pm-alt="BPMN diagram of one of the clinic’s processes, modelled in Bizagi">
-            <figure class="pcard__thumb"><img src="assets/images/tech/bpmn-vet.webp" width="1600" height="1240" loading="lazy" alt="A BPMN diagram of one of the clinic's processes, modelled in Bizagi"></figure>
-            <p class="pcard__num"><span class="panel__spark" aria-hidden="true">&#10022;</span> <span data-i18n="pm_project">Project</span> 05</p>
-            <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p5_date">Team project &middot; Jun 2026</span></p>
-            <h3 id="p5-h" data-i18n="bpmn_h">Veterinary Clinic</h3>
-            <p class="panel__sub" data-i18n="bpmn_sub">Business process modeling in BPMN</p>
-            <p class="panel__lead" data-i18n="bpmn_lead">From the conversation with management to the diagrams: a visual map of a veterinary clinic&rsquo;s processes.</p>
-            <p class="tagrow"><span>BPMN</span><span>Bizagi</span><span data-i18n="tag_analysis">process analysis</span></p>
-            <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p5_body"></div></div>
-            <span class="panel__open" aria-hidden="true" data-i18n="pm_hint">open &nearr;</span>
-          </article>
+            <li><div class="prow" id="bpmn" aria-labelledby="p5-h"
+                     data-pm data-pm-img="assets/images/tech/bpmn-vet.webp"
+                     data-pm-repo="https://drive.google.com/file/d/1vz2DTqKIOmveiAA17f5Lz_a-c5_N7zTZ/view?usp=sharing"
+                     data-pm-repo-label="bpmn_link"
+                     data-pm-alt="BPMN diagram of one of the clinic’s processes, modelled in Bizagi">
+              <span class="prow__num">05</span>
+              <img class="prow__thumb" src="assets/images/tech/bpmn-vet.webp" alt="" loading="lazy">
+              <h3 id="p5-h" data-i18n="bpmn_h">Veterinary Clinic</h3>
+              <span class="prow__cat">BPMN</span>
+              <div class="prow__data" hidden>
+                <p class="panel__date"><span data-i18n="p5_date">Team project &middot; Jun 2026</span></p>
+                <p class="panel__sub" hidden data-i18n="bpmn_sub">Business process modeling in BPMN</p>
+                <p class="panel__lead" hidden data-i18n="bpmn_lead">From the conversation with management to the diagrams: a visual map of a veterinary clinic&rsquo;s processes.</p>
+                <p class="tagrow"><span>BPMN</span><span>Bizagi</span><span data-i18n="tag_analysis">process analysis</span></p>
+                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p5_body"></div></div>
+              </div>
+            </div></li>
 
+          </ul>
+          <p class="stack__more"><a class="cta" href="https://github.com/ribasgiovanna?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="stack_more">For more projects, visit my GitHub &rarr;</a></p>
         </div>
-        <p class="stack__more"><a class="cta" href="https://github.com/ribasgiovanna?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="stack_more">For more projects, visit my GitHub &rarr;</a></p>
       </div>
 
       <!-- ===== TECNOLOGIAS ===== -->
-      <div class="fpanel" id="fp-tech" role="tabpanel" aria-labelledby="ft-tech" tabindex="0" hidden>
-        <p class="fpanel__lead" data-i18n="tech_lead">Tools and languages I use across software, data and design.</p>
-        <div class="techgrid">
-          <div class="techcard panel--cream">
-            <h3 data-i18n="tech_lang_h">Languages</h3>
-            <p class="tagrow"><span>Python</span><span>HTML</span><span>CSS</span></p>
-          </div>
-          <div class="techcard panel--tint">
-            <h3 data-i18n="tech_data_h">Automation &amp; data</h3>
-            <p class="tagrow"><span>Selenium</span><span>BeautifulSoup</span><span>pandas</span><span>Regex</span><span>XlsxWriter</span><span>Streamlit</span></p>
-          </div>
-          <div class="techcard panel--cream">
-            <h3 data-i18n="tech_web_h">Web &amp; version control</h3>
-            <p class="tagrow"><span>Django</span><span>Django REST</span><span>Git &amp; GitHub</span></p>
-          </div>
-          <div class="techcard panel--tint">
-            <h3 data-i18n="tech_design_h">Design</h3>
-            <p class="tagrow"><span>Procreate</span><span>Affinity</span><span>Photoshop</span><span>Canva</span></p>
-          </div>
-          <div class="techcard panel--cream">
-            <h3 data-i18n="tech_method_h">Ways of working</h3>
-            <p class="tagrow"><span>Scrum</span><span>Kanban</span><span data-i18n="tech_pm">project management</span></p>
-          </div>
-          <div class="techcard panel--tint">
-            <h3 data-i18n="tech_spoken_h">Spoken languages</h3>
-            <p class="tagrow"><span data-i18n="tech_pt">Portuguese &mdash; native</span><span data-i18n="tech_en">English &mdash; fluent</span><span data-i18n="tech_fr">French &mdash; basic</span></p>
+      <div class="folder is-back" id="folder-tech" style="--tab-x:1; --depth:1">
+        <button class="folder__tab" type="button" role="tab" id="ft-tech" aria-selected="false" tabindex="-1" aria-controls="fb-tech" data-i18n="tab_tech">Technologies</button>
+        <div class="folder__body" id="fb-tech" role="tabpanel" aria-labelledby="ft-tech" tabindex="0" hidden>
+          <p class="fpanel__lead" data-i18n="tech_lead">An organised view of the tools and languages I work with.</p>
+          <div class="techgrid">
+            <div class="techcard">
+              <h3 data-i18n="tech_da_h">Data &amp; automation</h3>
+              <p class="tagrow"><span>Python</span><span>pandas</span><span>Selenium</span><span>BeautifulSoup</span><span>Streamlit</span><span>SQL</span><span>PostgreSQL</span></p>
+            </div>
+            <div class="techcard">
+              <h3 data-i18n="tech_dw_h">Web development</h3>
+              <p class="tagrow"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>Django</span><span>DRF</span></p>
+            </div>
+            <div class="techcard">
+              <h3 data-i18n="tech_cv_h">Visual creation</h3>
+              <p class="tagrow"><span>Affinity</span><span>Procreate</span><span>Photoshop</span><span>Blender</span><span>Canva</span></p>
+            </div>
+            <div class="techcard">
+              <h3 data-i18n="tech_tools_h">Work tools</h3>
+              <p class="tagrow"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Bizagi</span><span>SSMS</span><span>PowerShell</span></p>
+            </div>
+            <div class="techcard">
+              <h3 data-i18n="tech_method_h">Ways of working</h3>
+              <p class="tagrow"><span>Scrum</span><span>Kanban</span><span data-i18n="tech_pm">project management</span></p>
+            </div>
+            <div class="techcard">
+              <h3 data-i18n="tech_spoken_h">Spoken languages</h3>
+              <p class="tagrow"><span data-i18n="tech_pt">Portuguese &mdash; native</span><span data-i18n="tech_en">English &mdash; fluent</span><span data-i18n="tech_fr">French &mdash; basic</span></p>
+            </div>
           </div>
         </div>
       </div>
 
       <!-- ===== CERTIFICADOS ===== -->
-      <div class="fpanel" id="fp-certs" role="tabpanel" aria-labelledby="ft-certs" tabindex="0" hidden>
-        <div class="certlist">
-          <article class="certcard panel--cream">
-            <div class="certcard__text">
-              <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> 2026&ndash;2029</p>
-              <h3 data-i18n="cert_degree_h">Software Engineering</h3>
-              <p data-i18n="cert_degree_d">B.Sc. in progress at PUCPR, Curitiba.</p>
-            </div>
-          </article>
-          <article class="certcard panel--tint">
-            <div class="certcard__text">
-              <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> 2026</p>
-              <h3 data-i18n="cert_harve_h">Python Programming</h3>
-              <p data-i18n="cert_harve_d">Course at Escola Harve, Curitiba &mdash; Jan&ndash;Apr 2026.</p>
-            </div>
-          </article>
-          <article class="certcard panel--cream">
-            <div class="certcard__text">
-              <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> 2024</p>
-              <h3 data-i18n="cert_ficem_h">Scientific research &mdash; FICEM</h3>
-              <p data-i18n="cert_ficem_d">Science-fair research project at Col&eacute;gio Bom Jesus.</p>
-            </div>
-          </article>
+      <div class="folder is-back" id="folder-certs" style="--tab-x:2; --depth:2">
+        <button class="folder__tab" type="button" role="tab" id="ft-certs" aria-selected="false" tabindex="-1" aria-controls="fb-certs" data-i18n="tab_certs">Certificates</button>
+        <div class="folder__body" id="fb-certs" role="tabpanel" aria-labelledby="ft-certs" tabindex="0" hidden>
+          <div class="certlist">
+            <article class="certcard">
+              <div class="certcard__text">
+                <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> 2026&ndash;2029</p>
+                <h3 data-i18n="cert_degree_h">Software Engineering</h3>
+                <p data-i18n="cert_degree_d">B.Sc. in progress at PUCPR, Curitiba.</p>
+              </div>
+            </article>
+            <article class="certcard">
+              <div class="certcard__text">
+                <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> 2026</p>
+                <h3 data-i18n="cert_harve_h">Python Programming</h3>
+                <p data-i18n="cert_harve_d">Course at Escola Harve, Curitiba &mdash; Jan&ndash;Apr 2026.</p>
+              </div>
+            </article>
+            <article class="certcard">
+              <div class="certcard__text">
+                <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> 2024</p>
+                <h3 data-i18n="cert_ficem_h">Scientific research &mdash; FICEM</h3>
+                <p data-i18n="cert_ficem_d">Science-fair research project at Col&eacute;gio Bom Jesus.</p>
+              </div>
+            </article>
+          </div>
         </div>
       </div>
 
@@ -678,6 +681,7 @@
     <div class="pmodal__head">
       <p class="pmodal__meta"><span id="pm-date"></span></p>
       <h3 id="pm-title"></h3>
+      <p class="pmodal__sub" id="pm-sub" hidden></p>
       <p class="pmodal__lead" id="pm-lead"></p>
     </div>
     <div id="pm-shots" class="pmodal__shots"></div>
@@ -689,6 +693,6 @@
   </div>
 </div>
 
-<script src="script.js?v=20260908m"></script>
+<script src="script.js?v=20260908p"></script>
 </body>
 </html>

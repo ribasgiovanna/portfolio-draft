@@ -31,9 +31,10 @@
       pm_hint: "open &nearr;",
       pm_project: "Project",
       tab_projects: "Projects", tab_tech: "Technologies", tab_certs: "Certificates",
-      tech_lead: "Tools and languages I use across software, data and design.",
-      tech_lang_h: "Languages", tech_data_h: "Automation &amp; data", tech_web_h: "Web &amp; version control",
-      tech_design_h: "Design", tech_method_h: "Ways of working", tech_spoken_h: "Spoken languages",
+      p1_cat: "Data &amp; automation",
+      tech_lead: "An organised view of the tools and languages I work with.",
+      tech_da_h: "Data &amp; automation", tech_dw_h: "Web development", tech_cv_h: "Visual creation", tech_tools_h: "Work tools",
+      tech_method_h: "Ways of working", tech_spoken_h: "Spoken languages",
       tech_pm: "project management",
       tech_pt: "Portuguese &mdash; native", tech_en: "English &mdash; fluent", tech_fr: "French &mdash; basic",
       cert_degree_h: "Software Engineering", cert_degree_d: "B.Sc. in progress at PUCPR, Curitiba.",
@@ -256,9 +257,10 @@
       pm_hint: "abrir &nearr;",
       pm_project: "Projeto",
       tab_projects: "Projetos", tab_tech: "Tecnologias", tab_certs: "Certificados",
-      tech_lead: "Ferramentas e linguagens que uso entre software, dados e design.",
-      tech_lang_h: "Linguagens", tech_data_h: "Automa&ccedil;&atilde;o &amp; dados", tech_web_h: "Web &amp; versionamento",
-      tech_design_h: "Design", tech_method_h: "M&eacute;todos de trabalho", tech_spoken_h: "Idiomas",
+      p1_cat: "Dados &amp; automa&ccedil;&atilde;o",
+      tech_lead: "Uma vis&atilde;o organizada das ferramentas e linguagens com que trabalho.",
+      tech_da_h: "Dados &amp; automa&ccedil;&atilde;o", tech_dw_h: "Desenvolvimento web", tech_cv_h: "Cria&ccedil;&atilde;o visual", tech_tools_h: "Ferramentas de trabalho",
+      tech_method_h: "M&eacute;todos de trabalho", tech_spoken_h: "Idiomas",
       tech_pm: "gest&atilde;o de projetos",
       tech_pt: "Portugu&ecirc;s &mdash; nativo", tech_en: "Ingl&ecirc;s &mdash; fluente", tech_fr: "Franc&ecirc;s &mdash; b&aacute;sico",
       cert_degree_h: "Engenharia de Software", cert_degree_d: "Bacharelado em curso na PUCPR, Curitiba.",
@@ -555,25 +557,36 @@
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   }
 
-  /* ---------- tabbed folder (Projects / Technologies / Certificates) ---------- */
+  /* ---------- stacked folders (Projects / Technologies / Certificates) ---------- */
   function initFolders() {
-    var tablist = document.querySelector(".folders__tabs");
-    if (!tablist) return;
-    var tabs = [].slice.call(tablist.querySelectorAll(".ftab"));
-    if (!tabs.length) return;
-    function select(tab, focus) {
-      tabs.forEach(function (t) {
-        var on = t === tab;
-        t.classList.toggle("is-on", on);
-        t.setAttribute("aria-selected", on ? "true" : "false");
-        t.tabIndex = on ? 0 : -1;
-        var panel = document.getElementById(t.getAttribute("aria-controls"));
-        if (panel) panel.hidden = !on;
+    var stack = document.querySelector(".folders__stack");
+    if (!stack) return;
+    var folders = [].slice.call(stack.querySelectorAll(".folder"));
+    if (!folders.length) return;
+    var tabs = folders.map(function (f) { return f.querySelector(".folder__tab"); });
+
+    function select(idx, focus) {
+      var back = 0;
+      folders.forEach(function (f, i) {
+        var on = i === idx;
+        f.classList.toggle("is-front", on);
+        f.classList.toggle("is-back", !on);
+        f.setAttribute("aria-hidden", on ? "false" : "true");
+        if (!on) { f.style.setProperty("--depth", ++back); }
+        var body = f.querySelector(".folder__body");
+        if (body) body.hidden = !on;
+        var tab = tabs[i];
+        if (tab) {
+          tab.setAttribute("aria-selected", on ? "true" : "false");
+          tab.tabIndex = on ? 0 : -1;
+        }
       });
-      if (focus) tab.focus();
+      if (focus && tabs[idx]) tabs[idx].focus();
     }
+
     tabs.forEach(function (tab, i) {
-      tab.addEventListener("click", function () { select(tab); });
+      if (!tab) return;
+      tab.addEventListener("click", function () { select(i); });
       tab.addEventListener("keydown", function (e) {
         var n = null;
         if (e.key === "ArrowRight" || e.key === "ArrowDown") n = (i + 1) % tabs.length;
@@ -582,9 +595,10 @@
         else if (e.key === "End") n = tabs.length - 1;
         if (n === null) return;
         e.preventDefault();
-        select(tabs[n], true);
+        select(n, true);
       });
     });
+    select(0);
   }
 
   /* ---------- project detail modal ---------- */
@@ -597,6 +611,7 @@
     var elShots = document.getElementById("pm-shots");
     var elDate = document.getElementById("pm-date");
     var elTitle = document.getElementById("pm-title");
+    var elSub = document.getElementById("pm-sub");
     var elLead = document.getElementById("pm-lead");
     var elDesc = document.getElementById("pm-desc");
     var elTags = document.getElementById("pm-tags");
@@ -643,6 +658,7 @@
 
       elDate.textContent = txt(panel, ".panel__date");
       elTitle.textContent = txt(panel, "h3");
+      if (elSub) { var sub = txt(panel, ".panel__sub"); elSub.textContent = sub; elSub.hidden = !sub; }
       elLead.textContent = txt(panel, ".panel__lead");
 
       elDesc.innerHTML = "";
