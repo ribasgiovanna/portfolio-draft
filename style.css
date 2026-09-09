@@ -655,9 +655,24 @@ p:last-child { margin-bottom: 0; }
 .folder {
   --fold-x: clamp(10px, 1.6vw, 20px);
   --fold-y: 15px;
+  --folder-bg: var(--panel);
+  --folder-line: var(--line);
+  --folder-fg: var(--ink);
   background: var(--folder-bg); color: var(--folder-fg);
   border: 1px solid var(--folder-line); border-radius: 4px 16px 16px 16px;
   transition: translate .42s cubic-bezier(.2, .8, .2, 1), rotate .42s, scale .42s, filter .42s, box-shadow .42s;
+}
+#folder-projects {
+  --folder-bg: color-mix(in srgb, var(--accent) 8%, var(--panel));
+  --folder-line: color-mix(in srgb, var(--accent) 24%, var(--line));
+}
+#folder-tech {
+  --folder-bg: color-mix(in srgb, #d8a13a 9%, var(--panel));
+  --folder-line: color-mix(in srgb, #d8a13a 26%, var(--line));
+}
+#folder-certs {
+  --folder-bg: color-mix(in srgb, #2f5aa0 8%, var(--panel));
+  --folder-line: color-mix(in srgb, #2f5aa0 24%, var(--line));
 }
 .folder.is-front {
   position: relative; z-index: 5;
@@ -718,6 +733,11 @@ p:last-child { margin-bottom: 0; }
   width: 46px; height: 46px; object-fit: cover; border-radius: 9px;
   border: 1px solid color-mix(in srgb, var(--folder-fg) 16%, transparent); background: #fbfaf7;
 }
+.prow__thumb--ph {
+  display: grid; place-items: center; background: color-mix(in srgb, var(--folder-fg) 8%, transparent);
+  color: color-mix(in srgb, var(--folder-fg) 52%, transparent);
+}
+.prow__thumb--ph svg { width: 20px; height: 20px; fill: currentColor; }
 .prow h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.05rem, 2.1vw, 1.32rem); line-height: 1.15; margin: 0; letter-spacing: -.005em; }
 .prow__cat { font: 500 10.5px/1.3 var(--mono); letter-spacing: .06em; text-transform: uppercase; color: var(--accent); text-align: right; white-space: nowrap; }
 
@@ -732,6 +752,17 @@ p:last-child { margin-bottom: 0; }
 .techcard h3 { font: 600 11px/1.3 var(--mono); letter-spacing: .12em; text-transform: uppercase; color: color-mix(in srgb, var(--folder-fg) 68%, transparent); margin: 0 0 .8em; }
 .techcard .tagrow { margin: 0; }
 .techcard .tagrow span { border-color: color-mix(in srgb, currentColor 24%, transparent); color: inherit; opacity: .88; }
+.tagrow--tk { gap: 8px; }
+.tk {
+  display: inline-flex; align-items: center; gap: 7px;
+  font: 500 12px/1 var(--mono); letter-spacing: .02em;
+  padding: 6px 10px 6px 8px;
+  border: 1px solid color-mix(in srgb, var(--folder-fg) 20%, transparent);
+  border-radius: 8px; color: inherit; background: color-mix(in srgb, var(--folder-fg) 4%, transparent);
+}
+.tk i { font-size: 15px; line-height: 1; flex: none; }
+.tk i:not(.colored) { color: color-mix(in srgb, var(--folder-fg) 78%, transparent); }
+.tk svg { width: 15px; height: 15px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; opacity: .72; }
 
 /* certificates */
 .certlist { display: grid; gap: clamp(14px, 2.4vw, 22px); }

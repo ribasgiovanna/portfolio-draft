@@ -32,6 +32,25 @@
       pm_project: "Project",
       tab_projects: "Projects", tab_tech: "Technologies", tab_certs: "Certificates",
       p1_cat: "Data &amp; automation",
+      tag_reqs: "requirements analysis", tag_uxflows: "user roles", tag_team: "team project",
+      mk_h: "MKpause", mk_cat: "Product",
+      mk_date: "Academic team project &middot; PUCPR &middot; in progress",
+      mk_sub: "Self-regulation &amp; psychological-support platform",
+      mk_lead: "A platform to support the emotional self-regulation of adolescents at school &mdash; mood tracking, guided activities and a channel to ask for help.",
+      mk_body:
+        "<h4>The context</h4>" +
+        "<p>Adolescents at school don&rsquo;t always have a clear path to ask for help or to keep track of how they&rsquo;re feeling. MKpause proposes a tool that supports self-regulation and connects the student, the teacher and the psychologist &mdash; each seeing only what their role allows.</p>" +
+        "<h4>The proposal</h4>" +
+        "<ul>" +
+        "<li><strong>Self-regulation</strong> &mdash; activities, games and videos the student uses on their own.</li>" +
+        "<li><strong>Mood logging</strong> &mdash; how the student feels before and after each session, with date, time, level and duration.</li>" +
+        "<li><strong>Asking for help</strong> &mdash; an alert to leave the classroom and a help request to a school professional.</li>" +
+        "<li><strong>Follow-up</strong> &mdash; teachers and psychologists review history, mood and notes, each within their own permissions.</li>" +
+        "</ul>" +
+        "<h4>Roles</h4>" +
+        "<p>Four roles with their own rules: student, psychologist, teacher / school psychologist, and administrator.</p>" +
+        "<h4>Current stage</h4>" +
+        "<p>A team project, in the analysis phase: a vision document, user roles and functional requirements per role. No public demo yet.</p>",
       tech_lead: "An organised view of the tools and languages I work with.",
       tech_da_h: "Data &amp; automation", tech_dw_h: "Web development", tech_cv_h: "Visual creation", tech_tools_h: "Work tools",
       tech_method_h: "Ways of working", tech_spoken_h: "Spoken languages",
@@ -258,6 +277,25 @@
       pm_project: "Projeto",
       tab_projects: "Projetos", tab_tech: "Tecnologias", tab_certs: "Certificados",
       p1_cat: "Dados &amp; automa&ccedil;&atilde;o",
+      tag_reqs: "an&aacute;lise de requisitos", tag_uxflows: "perfis de usu&aacute;rio", tag_team: "projeto em equipe",
+      mk_h: "MKpause", mk_cat: "Produto",
+      mk_date: "Projeto acad&ecirc;mico em equipe &middot; PUCPR &middot; em desenvolvimento",
+      mk_sub: "Plataforma de autorregula&ccedil;&atilde;o e acompanhamento psicol&oacute;gico",
+      mk_lead: "Uma plataforma para apoiar a autorregula&ccedil;&atilde;o emocional de adolescentes na escola &mdash; registro de humor, atividades guiadas e um canal para pedir ajuda.",
+      mk_body:
+        "<h4>O contexto</h4>" +
+        "<p>Adolescentes no ambiente escolar nem sempre t&ecirc;m um caminho claro para pedir ajuda ou para acompanhar o pr&oacute;prio estado emocional. O MKpause prop&otilde;e uma ferramenta que apoia a autorregula&ccedil;&atilde;o e liga aluno, professor e psic&oacute;logo &mdash; respeitando o que cada perfil pode ver.</p>" +
+        "<h4>A proposta</h4>" +
+        "<ul>" +
+        "<li><strong>Autorregula&ccedil;&atilde;o</strong> &mdash; atividades, jogos e v&iacute;deos que o aluno acessa por conta pr&oacute;pria.</li>" +
+        "<li><strong>Registro de humor</strong> &mdash; o estado emocional antes e depois de cada sess&atilde;o, com data, hor&aacute;rio, n&iacute;vel e dura&ccedil;&atilde;o.</li>" +
+        "<li><strong>Pedir ajuda</strong> &mdash; um alerta para sair da sala e uma solicita&ccedil;&atilde;o de aux&iacute;lio a um profissional da escola.</li>" +
+        "<li><strong>Acompanhamento</strong> &mdash; professor e psic&oacute;logo consultam hist&oacute;rico, humor e observa&ccedil;&otilde;es, cada um dentro das suas permiss&otilde;es.</li>" +
+        "</ul>" +
+        "<h4>Perfis</h4>" +
+        "<p>Quatro perfis com regras pr&oacute;prias: aluno, psic&oacute;logo, professor / psic&oacute;logo escolar e administrador.</p>" +
+        "<h4>Est&aacute;gio atual</h4>" +
+        "<p>Projeto em equipe, na fase de an&aacute;lise: documento de vis&atilde;o, perfis de usu&aacute;rio e requisitos funcionais por perfil. Ainda n&atilde;o h&aacute; demonstra&ccedil;&atilde;o p&uacute;blica.</p>",
       tech_lead: "Uma vis&atilde;o organizada das ferramentas e linguagens com que trabalho.",
       tech_da_h: "Dados &amp; automa&ccedil;&atilde;o", tech_dw_h: "Desenvolvimento web", tech_cv_h: "Cria&ccedil;&atilde;o visual", tech_tools_h: "Ferramentas de trabalho",
       tech_method_h: "M&eacute;todos de trabalho", tech_spoken_h: "Idiomas",
