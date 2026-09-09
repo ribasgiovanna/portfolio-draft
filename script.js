@@ -52,7 +52,7 @@
         "<h4>My contribution</h4>" +
         "<p>I came up with the project&rsquo;s name and work on its development, together with the team.</p>" +
         "<h4>Current stage</h4>" +
-        "<p>A team project, in the analysis phase: a vision document, user roles and functional requirements per role. No public demo yet.</p>",
+        "<p>The analysis phase &mdash; a vision document, user roles and functional requirements per role &mdash; is gathered in the repository. Implementation hasn&rsquo;t started yet.</p>",
       tech_lead: "An organised view of the tools and languages I work with.",
       tech_da_h: "Data &amp; automation", tech_dw_h: "Web development", tech_cv_h: "Visual creation", tech_tools_h: "Work tools",
       tech_method_h: "Ways of working", tech_spoken_h: "Spoken languages",
@@ -299,7 +299,7 @@
         "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
         "<p>Criei o nome do projeto e atuo no seu desenvolvimento, junto com a equipe.</p>" +
         "<h4>Est&aacute;gio atual</h4>" +
-        "<p>Projeto em equipe, na fase de an&aacute;lise: documento de vis&atilde;o, perfis de usu&aacute;rio e requisitos funcionais por perfil. Ainda n&atilde;o h&aacute; demonstra&ccedil;&atilde;o p&uacute;blica.</p>",
+        "<p>A fase de an&aacute;lise &mdash; documento de vis&atilde;o, perfis de usu&aacute;rio e requisitos funcionais por perfil &mdash; est&aacute; reunida no reposit&oacute;rio. A implementa&ccedil;&atilde;o ainda n&atilde;o come&ccedil;ou.</p>",
       tech_lead: "Uma vis&atilde;o organizada das ferramentas e linguagens com que trabalho.",
       tech_da_h: "Dados &amp; automa&ccedil;&atilde;o", tech_dw_h: "Desenvolvimento web", tech_cv_h: "Cria&ccedil;&atilde;o visual", tech_tools_h: "Ferramentas de trabalho",
       tech_method_h: "M&eacute;todos de trabalho", tech_spoken_h: "Idiomas",
