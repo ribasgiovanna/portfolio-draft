@@ -29,6 +29,7 @@
 
       datasus_lead: "Automating the collection and cleaning of Paran&aacute; hemotherapy records from SUS, with an interactive dashboard on top.",
       pm_hint: "open &nearr;",
+      pm_project: "Project",
       pm_video: "Watch the demo &nearr;",
       pm_zoom: "Open full image in a new tab",
       corrida_lead: "A student who&rsquo;s late for class dodges obstacles across the city &mdash; the challenge is to manage three lives and reach the goal before the run ends.",
@@ -84,13 +85,13 @@
         "<li><strong>Cleaning &amp; visualisation</strong> &mdash; totals rows and empty fields removed, column names standardised, and a Streamlit dashboard for month-by-month and year-by-year comparison.</li>" +
         "</ul>" +
         "<h4>My contribution</h4>" +
-        "<p>I proposed the topic and the automation approach, and was responsible for the architecture and for the extraction and data-treatment modules. This was integrated with my teammates&rsquo; work on orchestration, parallel execution and the dashboard (Jackson Beggi and wingCODING).</p>" +
+        "<p>I proposed the topic and the automation approach, and was responsible for the architecture and for the extraction and data-treatment modules. This was integrated with the rest of the team&rsquo;s work on orchestration, parallel execution and the dashboard.</p>" +
         "<h4>Decisions &amp; process</h4>" +
-        "<p>Selecting form fields by <code>id</code> rather than by <code>name</code>, because the TabNet inputs carry accented names like <code>SRegi&atilde;o</code>; an explicit wait before every interaction, since the server responds slowly and unevenly; switching browser tabs by polling <code>window_handles</code> with a timeout instead of assuming a fixed order.</p>" +
+        "<p>Identifying each form field by a stable marker, because the TabNet&rsquo;s internal labels are accented and change from page to page; waiting for the page to respond before every step, since the server is slow and uneven; and detecting when a new browser tab has opened, instead of assuming it always opens in the same order.</p>" +
         "<h4>Result &amp; evidence</h4>" +
         "<p>The repository holds the per-period extraction, the batch processing, the file treatment and the dashboard. The metric shown is the approved quantity of hemotherapy procedures recorded in SUS for the range queried &mdash; an indicator related to, but not the same as, blood donations.</p>" +
         "<h4>What I learned</h4>" +
-        "<p>The pipeline is built to be re-run: it skips periods already downloaded, so an interrupted collection picks up where it stopped. Extending it to other TabNet datasets would mostly mean new field mappings. <em>(This note is drafted from the repository &mdash; adjust it with your own recollection.)</em></p>",
+        "<p>The pipeline is built to be re-run: it skips periods already downloaded, so an interrupted collection picks up where it stopped. Extending it to other TabNet datasets would mostly mean mapping new fields.</p>",
 
       p2_body:
         "<h4>Overview</h4>" +
@@ -108,7 +109,7 @@
         "<h4>Decisions &amp; process</h4>" +
         "<p>A hand-written state machine instead of a framework, to keep the whole loop visible; difficulty tuned by two knobs &mdash; speed rising every 100 points up to a cap, and the gap between obstacles shrinking with the score; a fallback to plain shapes when an art file is missing, so a broken asset never stops the game.</p>" +
         "<h4>What I learned</h4>" +
-        "<p>Keeping the states explicit made the win/lose conditions and the HUD easy to reason about; the same structure would carry a second level or a pause screen with little change. <em>(This note is drafted &mdash; adjust it with your own recollection.)</em></p>",
+        "<p>Keeping the states explicit made the win/lose conditions and the HUD easy to reason about; the same structure would carry a second level or a pause screen with little change.</p>",
 
       p3_body:
         "<h4>Overview</h4>" +
@@ -127,7 +128,7 @@
         "<h4>Evidence</h4>" +
         "<p>The repository holds the code, the documentation and captures of the dashboard and the employees module. Built with two teammates on a fork of <code>rodavio/pibble_express</code>.</p>" +
         "<h4>What I learned</h4>" +
-        "<p>Working on a shared fork with two teammates meant agreeing on conventions early &mdash; field names, where validation lives, how the apps talk to each other. <em>(This note is drafted &mdash; adjust it with your own recollection.)</em></p>",
+        "<p>Working on a shared fork with two teammates meant agreeing on conventions early &mdash; field names, where validation lives, how the apps talk to each other.</p>",
 
       p4_body:
         "<h4>The challenge</h4>" +
@@ -161,7 +162,7 @@
         "<h4>Result &amp; evidence</h4>" +
         "<p>The work produced documentation of the processes studied, which can serve as a basis for discussing improvement opportunities.</p>" +
         "<h4>What I learned</h4>" +
-        "<p>The value was in the documentation itself: a shared picture the clinic can use to spot where a process could be simplified. <em>(This note is drafted &mdash; adjust it with your own recollection.)</em></p>",
+        "<p>The value was in the documentation itself: a shared picture the clinic can use to spot where a process could be simplified.</p>",
 
       journey_h: "The threads",
       journey_p1: "I'm a software engineering student, and I build across a few areas at once rather than in a straight line: software and data, the web, visual design, and community.",
@@ -244,6 +245,7 @@
 
       datasus_lead: "Automa&ccedil;&atilde;o da coleta e do tratamento de registros de hemoterapia do Paran&aacute;, com visualiza&ccedil;&atilde;o em um painel interativo.",
       pm_hint: "abrir &nearr;",
+      pm_project: "Projeto",
       pm_video: "Ver o v&iacute;deo &nearr;",
       pm_zoom: "Abrir imagem completa em nova aba",
       corrida_lead: "Um estudante atrasado enfrenta obst&aacute;culos pela cidade &mdash; o desafio &eacute; administrar as tr&ecirc;s vidas e chegar &agrave; meta antes de perder a partida.",
@@ -299,13 +301,13 @@
         "<li><strong>Tratamento e visualiza&ccedil;&atilde;o</strong> &mdash; remo&ccedil;&atilde;o de linhas de totaliza&ccedil;&atilde;o e campos vazios, padroniza&ccedil;&atilde;o de nomes de colunas e dashboard em Streamlit para compara&ccedil;&otilde;es mensais e anuais.</li>" +
         "</ul>" +
         "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
-        "<p>Propus o tema e a solu&ccedil;&atilde;o de automa&ccedil;&atilde;o e fui respons&aacute;vel pela arquitetura e pelos m&oacute;dulos de extra&ccedil;&atilde;o e tratamento dos dados. O trabalho foi integrado &agrave;s entregas dos colegas em orquestra&ccedil;&atilde;o, execu&ccedil;&atilde;o paralela e dashboard (Jackson Beggi e wingCODING).</p>" +
+        "<p>Propus o tema e a solu&ccedil;&atilde;o de automa&ccedil;&atilde;o e fui respons&aacute;vel pela arquitetura e pelos m&oacute;dulos de extra&ccedil;&atilde;o e tratamento dos dados. O trabalho foi integrado &agrave;s entregas do restante da equipe em orquestra&ccedil;&atilde;o, execu&ccedil;&atilde;o paralela e dashboard.</p>" +
         "<h4>Decis&otilde;es e processo</h4>" +
-        "<p>Selecionar os campos do formul&aacute;rio por <code>id</code> e n&atilde;o por <code>name</code>, porque os inputs do TabNet t&ecirc;m nomes acentuados como <code>SRegi&atilde;o</code>; uma espera expl&iacute;cita antes de cada intera&ccedil;&atilde;o, j&aacute; que o servidor responde de forma lenta e irregular; troca de abas do navegador verificando <code>window_handles</code> com timeout, em vez de assumir uma ordem fixa.</p>" +
+        "<p>Identificar cada campo do formul&aacute;rio por um marcador est&aacute;vel, porque os r&oacute;tulos internos do TabNet v&ecirc;m com acento e mudam de p&aacute;gina para p&aacute;gina; esperar a p&aacute;gina responder antes de cada passo, j&aacute; que o servidor &eacute; lento e irregular; e detectar quando uma nova aba do navegador abriu, em vez de assumir que ela abre sempre na mesma ordem.</p>" +
         "<h4>Resultado e evid&ecirc;ncias</h4>" +
         "<p>O reposit&oacute;rio re&uacute;ne a extra&ccedil;&atilde;o por per&iacute;odo, o processamento em lote, o tratamento dos arquivos e o painel. A m&eacute;trica apresentada &eacute; a quantidade aprovada de procedimentos de hemoterapia registrados no SUS, no recorte consultado &mdash; um indicador relacionado a, mas diferente de, doa&ccedil;&otilde;es de sangue.</p>" +
         "<h4>O que aprendi</h4>" +
-        "<p>O fluxo foi feito para ser reexecutado: pula os per&iacute;odos j&aacute; baixados, ent&atilde;o uma coleta interrompida continua de onde parou. Estend&ecirc;-lo a outras bases do TabNet seria, no essencial, mapear novos campos. <em>(Esta nota foi rascunhada a partir do reposit&oacute;rio &mdash; ajuste com a sua mem&oacute;ria.)</em></p>",
+        "<p>O fluxo foi feito para ser reexecutado: pula os per&iacute;odos j&aacute; baixados, ent&atilde;o uma coleta interrompida continua de onde parou. Estend&ecirc;-lo a outras bases do TabNet seria, no essencial, mapear novos campos.</p>",
 
       p2_body:
         "<h4>Vis&atilde;o geral</h4>" +
@@ -323,7 +325,7 @@
         "<h4>Decis&otilde;es e processo</h4>" +
         "<p>Uma m&aacute;quina de estados escrita &agrave; m&atilde;o em vez de um framework, para manter todo o loop &agrave; vista; a dificuldade ajustada por dois par&acirc;metros &mdash; a velocidade subindo a cada 100 pontos at&eacute; um teto e o intervalo entre obst&aacute;culos diminuindo com a pontua&ccedil;&atilde;o; uma queda para formas simples quando falta um arquivo de arte, para que um asset quebrado nunca trave o jogo.</p>" +
         "<h4>O que aprendi</h4>" +
-        "<p>Manter os estados expl&iacute;citos deixou as condi&ccedil;&otilde;es de vit&oacute;ria/derrota e o HUD f&aacute;ceis de acompanhar; a mesma estrutura levaria um segundo n&iacute;vel ou uma tela de pausa com pouca mudan&ccedil;a. <em>(Esta nota foi rascunhada &mdash; ajuste com a sua mem&oacute;ria.)</em></p>",
+        "<p>Manter os estados expl&iacute;citos deixou as condi&ccedil;&otilde;es de vit&oacute;ria/derrota e o HUD f&aacute;ceis de acompanhar; a mesma estrutura levaria um segundo n&iacute;vel ou uma tela de pausa com pouca mudan&ccedil;a.</p>",
 
       p3_body:
         "<h4>Vis&atilde;o geral</h4>" +
@@ -342,7 +344,7 @@
         "<h4>Evid&ecirc;ncias</h4>" +
         "<p>O reposit&oacute;rio re&uacute;ne o c&oacute;digo, a documenta&ccedil;&atilde;o e capturas do painel e do m&oacute;dulo de funcion&aacute;rios. Feito com dois colegas num fork de <code>rodavio/pibble_express</code>.</p>" +
         "<h4>O que aprendi</h4>" +
-        "<p>Trabalhar num fork compartilhado com dois colegas exigiu combinar conven&ccedil;&otilde;es cedo &mdash; nomes de campos, onde fica a valida&ccedil;&atilde;o, como os apps conversam entre si. <em>(Esta nota foi rascunhada &mdash; ajuste com a sua mem&oacute;ria.)</em></p>",
+        "<p>Trabalhar num fork compartilhado com dois colegas exigiu combinar conven&ccedil;&otilde;es cedo &mdash; nomes de campos, onde fica a valida&ccedil;&atilde;o, como os apps conversam entre si.</p>",
 
       p4_body:
         "<h4>O desafio</h4>" +
@@ -376,7 +378,7 @@
         "<h4>Resultado e evid&ecirc;ncias</h4>" +
         "<p>O trabalho resultou na documenta&ccedil;&atilde;o dos processos estudados, que pode servir de base para discutir oportunidades de melhoria.</p>" +
         "<h4>O que aprendi</h4>" +
-        "<p>O valor esteve na pr&oacute;pria documenta&ccedil;&atilde;o: uma vis&atilde;o comum que a cl&iacute;nica pode usar para enxergar onde um processo poderia ser simplificado. <em>(Esta nota foi rascunhada &mdash; ajuste com a sua mem&oacute;ria.)</em></p>",
+        "<p>O valor esteve na pr&oacute;pria documenta&ccedil;&atilde;o: uma vis&atilde;o comum que a cl&iacute;nica pode usar para enxergar onde um processo poderia ser simplificado.</p>",
 
       journey_h: "As frentes",
       journey_p1: "Sou estudante de Engenharia de Software e construo em algumas frentes ao mesmo tempo, n&atilde;o em linha reta: software e dados, a web, design visual e comunidade.",
@@ -543,7 +545,6 @@
     var box = modal.querySelector(".pmodal__box");
     var closeBtn = document.getElementById("pm-close");
     var elShots = document.getElementById("pm-shots");
-    var elNum = document.getElementById("pm-num");
     var elDate = document.getElementById("pm-date");
     var elTitle = document.getElementById("pm-title");
     var elLead = document.getElementById("pm-lead");
@@ -590,7 +591,6 @@
       var img2 = panel.getAttribute("data-pm-img2");
       if (img2) addShot(img2, panel.getAttribute("data-pm-alt2") || "", panel.getAttribute("data-pm-cap2"));
 
-      elNum.textContent = txt(panel, ".panel__tab").replace(/^[^A-Za-z0-9]+/, "");
       elDate.textContent = txt(panel, ".panel__date");
       elTitle.textContent = txt(panel, "h3");
       elLead.textContent = txt(panel, ".panel__lead");

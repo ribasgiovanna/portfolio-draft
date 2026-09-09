@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css?v=20260908i">
+<link rel="stylesheet" href="style.css?v=20260908j">
 
 <script type="application/ld+json">
 {
@@ -144,7 +144,6 @@
 <section id="projects" class="stack" aria-labelledby="work-h">
   <div class="stack__head">
     <h2 class="section-label"><span aria-hidden="true">&#8212;</span> <span id="work-h" data-i18n="work_h">Selected work</span></h2>
-    <p class="stack__intro" data-i18n="work_sub">What I built, how I approached it, and what I learned.</p>
   </div>
 
   <!-- PROJECT 01 — BLOODY MARY -->
@@ -152,7 +151,7 @@
            data-pm data-pm-repo="https://github.com/ribasgiovanna/datasus"
            data-pm-img="assets/images/tech/datasus-dashboard.webp"
            data-pm-alt="Streamlit dashboard built over the consolidated SUS hemotherapy data for Paraná">
-    <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 01</span>
+    <span class="panel__tab"><span class="panel__spark">&#10022;</span> <span data-i18n="pm_project">Project</span> 01</span>
     <div class="panel__body">
       <div class="panel__text">
         <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p1_date">Team project &middot; Harve &middot; Apr 2026</span></p>
@@ -176,7 +175,7 @@
   <article id="corrida" class="panel panel--dark" aria-labelledby="p2-h"
            data-pm data-pm-repo="https://github.com/ribasgiovanna/jogo-atrasado-para-a-faculdade" data-pm-img="assets/images/tech/game-play.webp"
            data-pm-alt="Corrida para a Faculdade in play: the student running through a pixel-art street, HUD with score, high score and lives, a traffic cone ahead">
-    <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 02</span>
+    <span class="panel__tab"><span class="panel__spark">&#10022;</span> <span data-i18n="pm_project">Project</span> 02</span>
     <div class="panel__body">
       <div class="panel__text">
         <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p2_date">Individual project &middot; Academic</span></p>
@@ -200,7 +199,7 @@
   <article id="pibble" class="panel panel--cream" aria-labelledby="p3-h"
            data-pm data-pm-repo="https://github.com/ribasgiovanna/pibble_express" data-pm-img="assets/images/tech/pibble-funcionarios.webp"
            data-pm-alt="Pibble Express employee registration screen with a list of employees">
-    <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 03</span>
+    <span class="panel__tab"><span class="panel__spark">&#10022;</span> <span data-i18n="pm_project">Project</span> 03</span>
     <div class="panel__body">
       <div class="panel__text">
         <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p3_date">Academic team project &middot; Fictional company &middot; Jun 2026</span></p>
@@ -231,7 +230,7 @@
            data-pm-cap2="iot_cap2"
            data-pm-video="https://youtu.be/_Lq13BLEQ2o"
            data-pm-video-label="pm_video">
-    <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 04</span>
+    <span class="panel__tab"><span class="panel__spark">&#10022;</span> <span data-i18n="pm_project">Project</span> 04</span>
     <div class="panel__body">
       <div class="panel__text">
         <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p4_date">Academic team project &middot; Jun 2026</span></p>
@@ -257,7 +256,7 @@
            data-pm-repo="https://drive.google.com/drive/folders/13gd7Sm6Dlr0w9knyCm5XfpoBbCm8UmTl"
            data-pm-repo-label="bpmn_link"
            data-pm-alt="BPMN diagram of one of the clinic’s processes, modelled in Bizagi">
-    <span class="panel__tab"><span class="panel__spark">&#10022;</span> PROJECT 05</span>
+    <span class="panel__tab"><span class="panel__spark">&#10022;</span> <span data-i18n="pm_project">Project</span> 05</span>
     <div class="panel__body">
       <div class="panel__text">
         <p class="panel__date"><span class="panel__dot" aria-hidden="true"></span> <span data-i18n="p5_date">Team project &middot; Jun 2026</span></p>
@@ -641,11 +640,13 @@
 <div id="pmodal" class="pmodal" hidden>
   <div class="pmodal__box" role="dialog" aria-modal="true" aria-labelledby="pm-title">
     <button id="pm-close" class="pmodal__close" type="button" aria-label="Close">&times;</button>
-    <div id="pm-shots" class="pmodal__shots"></div>
-    <div class="pmodal__body">
-      <p class="pmodal__meta"><span id="pm-num"></span> <span class="pmodal__sep" aria-hidden="true">&middot;</span> <span id="pm-date"></span></p>
+    <div class="pmodal__head">
+      <p class="pmodal__meta"><span id="pm-date"></span></p>
       <h3 id="pm-title"></h3>
       <p class="pmodal__lead" id="pm-lead"></p>
+    </div>
+    <div id="pm-shots" class="pmodal__shots"></div>
+    <div class="pmodal__body">
       <div class="pmodal__desc" id="pm-desc"></div>
       <p class="tagrow" id="pm-tags"></p>
       <p class="pmodal__links" id="pm-links"></p>
@@ -653,6 +654,6 @@
   </div>
 </div>
 
-<script src="script.js?v=20260908i"></script>
+<script src="script.js?v=20260908j"></script>
 </body>
 </html>
