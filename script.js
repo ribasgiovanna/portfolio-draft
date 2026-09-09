@@ -36,7 +36,7 @@
       pibble_lead: "One application to organise clients, products, employees and deliveries in the same system.",
       p1_date: "Team project &middot; Harve &middot; Apr 2026",
       p2_date: "Individual project &middot; Academic &middot; Jun 2026",
-      p3_date: "Academic team project &middot; Fictional company &middot; Jun 2026",
+      p3_date: "Academic team project &middot; Jun 2026",
       nav_home: "Home",
       home_welcome: "Welcome to my portfolio &mdash; I'm a",
       home_role: "Software Engineering Student",
@@ -118,17 +118,17 @@
         "<ul>" +
         "<li><strong>Integrated modules</strong> &mdash; clients, products, employees and deliveries.</li>" +
         "<li><strong>Users &amp; profiles</strong> &mdash; each employee is linked to a login account, with an administrative and an operational profile.</li>" +
-        "<li><strong>API</strong> &mdash; routes for the four core resources, grouped under <code>/api/</code>.</li>" +
+        "<li><strong>API</strong> &mdash; a REST API that exposes the four core resources for integration.</li>" +
         "<li><strong>Interface</strong> &mdash; forms, input masks and a dashboard with operational information.</li>" +
         "</ul>" +
         "<h4>My contribution</h4>" +
         "<p>I built the employees module and its integration with deliveries. I also built the admin dashboard, worked on the input masks and the visual standardisation of the forms, and organised the logout flow between areas of the system.</p>" +
         "<h4>Decisions &amp; process</h4>" +
-        "<p>Linking each employee to a login account through a one-to-one relation, with an administrative and an operational profile; standardising the four apps&rsquo; forms and the logout flow so the system behaves the same everywhere; input masks on the client side for the registration fields.</p>" +
+        "<p>Linking each employee to a login account through a one-to-one relation, with an administrative and an operational profile; standardising the four modules&rsquo; forms and the logout flow so the system behaves the same everywhere; input masks on the client side for the registration fields.</p>" +
         "<h4>Evidence</h4>" +
-        "<p>The repository holds the code, the documentation and captures of the dashboard and the employees module. Built with two teammates on a fork of <code>rodavio/pibble_express</code>.</p>" +
+        "<p>The repository holds the code, the documentation and captures of the dashboard and the employees module.</p>" +
         "<h4>What I learned</h4>" +
-        "<p>Working on a shared fork with two teammates meant agreeing on conventions early &mdash; field names, where validation lives, how the apps talk to each other.</p>",
+        "<p>Working in a shared codebase with the team meant agreeing on conventions early &mdash; field names, where validation lives, how the modules talk to each other.</p>",
 
       p4_body:
         "<h4>The challenge</h4>" +
@@ -175,14 +175,14 @@
       j6_t: "Design &amp; people", j6_d: "Visual identity, illustration, events with Diretoria da Mulher.",
       j7_t: "Off the screen", j7_d: "Baking bread, cookies and other experiments.",
 
-      work_h: "Selected work",
+      work_h: "Featured projects",
       work_intro: "Software, data, a game, a community. Different languages for the same habit — making things.",
 
       cta_source: "View project on GitHub &rarr;",
       tag_states: "state machine",
       tag_auth: "authentication",
 
-      coffee_why: "A university tech club I started and actively build, with the team.",
+      coffee_why: "A university tech club I started and run with a team of friends from college.",
       coffee_p1: "It exists to give students a lower-barrier, hands-on place to learn, build projects together and share what they know — outside the pressure of a graded room.",
       coffee_p2: "I lead it where design and technology meet: the visual identity, the materials, how sessions are run, and how people are brought in.",
 
@@ -252,7 +252,7 @@
       pibble_lead: "Uma aplica&ccedil;&atilde;o para organizar clientes, produtos, funcion&aacute;rios e entregas em um mesmo sistema.",
       p1_date: "Projeto em equipe &middot; Harve &middot; abr 2026",
       p2_date: "Projeto individual &middot; acad&ecirc;mico &middot; jun 2026",
-      p3_date: "Projeto acad&ecirc;mico em equipe &middot; Empresa fict&iacute;cia &middot; jun 2026",
+      p3_date: "Projeto acad&ecirc;mico em equipe &middot; jun 2026",
       nav_home: "In&iacute;cio",
       home_welcome: "Bem-vindo (a) ao meu portf&oacute;lio &mdash; eu sou",
       home_role: "Estudante de Engenharia de Software",
@@ -334,17 +334,17 @@
         "<ul>" +
         "<li><strong>M&oacute;dulos integrados</strong> &mdash; clientes, produtos, funcion&aacute;rios e entregas.</li>" +
         "<li><strong>Usu&aacute;rios e perfis</strong> &mdash; associa&ccedil;&atilde;o entre o funcion&aacute;rio e a conta de acesso, com perfis administrativo e operacional.</li>" +
-        "<li><strong>API</strong> &mdash; rotas para os quatro recursos centrais, reunidas em <code>/api/</code>.</li>" +
+        "<li><strong>API</strong> &mdash; uma API REST que exp&otilde;e os quatro recursos centrais para integra&ccedil;&atilde;o.</li>" +
         "<li><strong>Interface</strong> &mdash; formul&aacute;rios, m&aacute;scaras de entrada e painel com informa&ccedil;&otilde;es da opera&ccedil;&atilde;o.</li>" +
         "</ul>" +
         "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
         "<p>Desenvolvi o m&oacute;dulo de funcion&aacute;rios e sua integra&ccedil;&atilde;o com entregas. Tamb&eacute;m constru&iacute; o painel administrativo, trabalhei nas m&aacute;scaras de entrada e na padroniza&ccedil;&atilde;o visual dos formul&aacute;rios e organizei o fluxo de logout entre as &aacute;reas do sistema.</p>" +
         "<h4>Decis&otilde;es e processo</h4>" +
-        "<p>Ligar cada funcion&aacute;rio a uma conta de acesso por uma rela&ccedil;&atilde;o um-para-um, com um perfil administrativo e um operacional; padronizar os formul&aacute;rios dos quatro apps e o fluxo de logout para o sistema se comportar igual em todo lugar; m&aacute;scaras de entrada no cliente para os campos de cadastro.</p>" +
+        "<p>Ligar cada funcion&aacute;rio a uma conta de acesso por uma rela&ccedil;&atilde;o um-para-um, com um perfil administrativo e um operacional; padronizar os formul&aacute;rios dos quatro m&oacute;dulos e o fluxo de logout para o sistema se comportar igual em todo lugar; m&aacute;scaras de entrada no cliente para os campos de cadastro.</p>" +
         "<h4>Evid&ecirc;ncias</h4>" +
-        "<p>O reposit&oacute;rio re&uacute;ne o c&oacute;digo, a documenta&ccedil;&atilde;o e capturas do painel e do m&oacute;dulo de funcion&aacute;rios. Feito com dois colegas num fork de <code>rodavio/pibble_express</code>.</p>" +
+        "<p>O reposit&oacute;rio re&uacute;ne o c&oacute;digo, a documenta&ccedil;&atilde;o e capturas do painel e do m&oacute;dulo de funcion&aacute;rios.</p>" +
         "<h4>O que aprendi</h4>" +
-        "<p>Trabalhar num fork compartilhado com dois colegas exigiu combinar conven&ccedil;&otilde;es cedo &mdash; nomes de campos, onde fica a valida&ccedil;&atilde;o, como os apps conversam entre si.</p>",
+        "<p>Trabalhar numa base de c&oacute;digo compartilhada com a equipe exigiu combinar conven&ccedil;&otilde;es cedo &mdash; nomes de campos, onde fica a valida&ccedil;&atilde;o, como os m&oacute;dulos conversam entre si.</p>",
 
       p4_body:
         "<h4>O desafio</h4>" +
@@ -391,14 +391,14 @@
       j6_t: "Design &amp; pessoas", j6_d: "Identidade visual, ilustra&ccedil;&atilde;o, eventos com a Diretoria da Mulher.",
       j7_t: "Longe da tela", j7_d: "Fazer p&atilde;o, cookies e outros experimentos.",
 
-      work_h: "Projetos selecionados",
+      work_h: "Projetos em destaque",
       work_intro: "Software, dados, um jogo, uma comunidade. Linguagens diferentes para o mesmo h&aacute;bito — fazer coisas.",
 
       cta_source: "Ver projeto no GitHub &rarr;",
       tag_states: "m&aacute;quina de estados",
       tag_auth: "autentica&ccedil;&atilde;o",
 
-      coffee_why: "Um clube universit&aacute;rio de tecnologia que criei e construo ativamente, com a equipe.",
+      coffee_why: "Um clube universit&aacute;rio de tecnologia que criei e toco com uma equipe de amigos da faculdade.",
       coffee_p1: "Existe para dar aos estudantes um espa&ccedil;o com menos barreira e mais pr&aacute;tica para aprender, construir projetos juntos e trocar o que sabem — fora da press&atilde;o da sala de aula.",
       coffee_p2: "Lidero onde design e tecnologia se encontram: a identidade visual, os materiais, como os encontros acontecem e como as pessoas s&atilde;o convidadas.",
 
