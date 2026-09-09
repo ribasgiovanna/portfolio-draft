@@ -237,8 +237,8 @@
       coffee_p2: "I lead it where design and technology meet: the visual identity, the materials, how sessions are run, and how people are brought in.",
 
       creative_h: "Playground",
-      creative_intro: "Everything I make away from a code editor &mdash; digital art, ink drawing, graphic design, photography, things I bake, and volunteering and events. Scroll sideways to browse; open any piece to see it larger, with its technique and process.",
-      gal_prev: "Scroll the gallery left", gal_next: "Scroll the gallery right", gal_grid: "Creative pieces &mdash; scroll sideways to browse",
+      creative_intro: "Everything I make away from a code editor &mdash; digital art, ink drawing, graphic design, photography, things I bake, and volunteering and events. It scrolls on its own; hover to pause, or pick a category to explore just that one. Open any piece for the larger image, its technique and process.",
+      gal_grid: "Creative pieces, auto-scrolling by category", gal_pause: "Pause the gallery",
       pf_all: "All",
       pf_digital: "Digital art",
       pf_illustration: "Illustration",
@@ -504,8 +504,8 @@
       coffee_p2: "Lidero onde design e tecnologia se encontram: a identidade visual, os materiais, como os encontros acontecem e como as pessoas s&atilde;o convidadas.",
 
       creative_h: "Playground",
-      creative_intro: "Tudo o que fa&ccedil;o longe do editor de c&oacute;digo &mdash; arte digital, desenho a nanquim, design gr&aacute;fico, fotografia, o que ando assando, e voluntariados e eventos. Deslize para o lado para navegar; abra qualquer pe&ccedil;a para ver maior, com t&eacute;cnica e processo.",
-      gal_prev: "Rolar a galeria para a esquerda", gal_next: "Rolar a galeria para a direita", gal_grid: "Pe&ccedil;as criativas &mdash; deslize para o lado para navegar",
+      creative_intro: "Tudo o que fa&ccedil;o longe do editor de c&oacute;digo &mdash; arte digital, desenho a nanquim, design gr&aacute;fico, fotografia, o que ando assando, e voluntariados e eventos. Ele corre sozinho; passe o mouse para pausar, ou escolha uma categoria para ver s&oacute; ela. Abra qualquer pe&ccedil;a para ver a imagem maior, a t&eacute;cnica e o processo.",
+      gal_grid: "Pe&ccedil;as criativas, com rolagem autom&aacute;tica por categoria", gal_pause: "Pausar a galeria",
       pf_all: "Todos",
       pf_digital: "Arte digital",
       pf_illustration: "Ilustra&ccedil;&atilde;o",
@@ -584,7 +584,7 @@
   }
   function initFilters() {
     bindFilterGroup(".filters:not(.gallery__filters)", ".work__grid .wk");
-    bindFilterGroup(".gallery__filters", ".gallery__grid .art");
+    /* the playground gallery filters are handled inside initGallery() */
   }
 
   /* process notes shared by a whole medium (per-piece data-note overrides) */
@@ -651,8 +651,10 @@
         else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
       }
     }
-    document.querySelectorAll(".art, .fanpic").forEach(function (b) {
-      b.addEventListener("click", function () { open(b); });
+    /* delegated so cloned gallery items (for the auto-scroll loop) work too */
+    document.addEventListener("click", function (e) {
+      var b = e.target.closest && e.target.closest(".art, .fanpic");
+      if (b) open(b);
     });
     closeBtn.addEventListener("click", close);
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
@@ -835,43 +837,116 @@
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   }
 
-  /* ---------- horizontal playground gallery: arrows + swipe ---------- */
+  /* ---------- playground gallery: auto-scrolling one-row flow ----------
+     Flows right-to-left on its own, ordered by category. Pauses on hover /
+     focus / while the modal is open. Clicking a category locks the flow to
+     that category (loops it); 'All' or re-clicking the chip returns to the
+     full flow. The chip for the category currently passing lights up. */
   function initGallery() {
-    var grid = document.getElementById("gallery-grid");
-    if (!grid) return;
-    var prev = document.querySelector(".gallery__nav--prev");
-    var next = document.querySelector(".gallery__nav--next");
+    var scroller = document.querySelector(".gallery__scroller");
+    var track = document.getElementById("gallery-track");
+    if (!scroller || !track) return;
+    var chips = [].slice.call(document.querySelectorAll(".gallery__filters .chip"));
+    var pauseBtn = scroller.querySelector(".gallery__pause");
+    var modal = document.getElementById("modal");
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-    [].slice.call(grid.querySelectorAll(".art")).forEach(function (a, i) {
-      a.style.setProperty("--gi", i % 14);
+    /* duplicate the whole set once, for a seamless loop */
+    [].slice.call(track.children).forEach(function (el) {
+      var c = el.cloneNode(true);
+      c.setAttribute("aria-hidden", "true");
+      c.setAttribute("tabindex", "-1");
+      c.setAttribute("data-clone", "1");
+      track.appendChild(c);
     });
 
-    function step() { return Math.max(220, Math.round(grid.clientWidth * 0.78)); }
-    function update() {
-      if (!prev || !next) return;
-      var max = grid.scrollWidth - grid.clientWidth - 4;
-      prev.disabled = grid.scrollLeft <= 4;
-      next.disabled = grid.scrollLeft >= max || max <= 0;
-    }
-    if (prev) prev.addEventListener("click", function () { grid.scrollBy({ left: -step(), behavior: "smooth" }); });
-    if (next) next.addEventListener("click", function () { grid.scrollBy({ left: step(), behavior: "smooth" }); });
-    grid.addEventListener("scroll", update, { passive: true });
-    window.addEventListener("resize", update);
+    var SPEED = 46;                 /* px / second */
+    var x = 0, half = 1, layout = [];
+    var mode = "all", filterKind = null;
+    var hoverPaused = false, focusPaused = false, userPaused = false;
 
-    document.querySelectorAll(".gallery__filters .chip").forEach(function (c) {
-      c.addEventListener("click", function () {
-        grid.scrollTo({ left: 0, behavior: "smooth" });
-        setTimeout(update, 80);
+    function measure() {
+      half = (track.scrollWidth / 2) || 1;
+      layout = [].slice.call(track.querySelectorAll(".art")).filter(function (a) {
+        return !a.hidden && a.offsetLeft < half - 1;
+      }).map(function (a) {
+        return { kind: a.getAttribute("data-kind"), left: a.offsetLeft };
+      });
+    }
+
+    function applyFilter(kind) {
+      filterKind = kind || null;
+      mode = filterKind ? "filter" : "all";
+      [].slice.call(track.querySelectorAll(".art")).forEach(function (a) {
+        a.hidden = !!filterKind && a.getAttribute("data-kind") !== filterKind;
+      });
+      chips.forEach(function (c) {
+        var f = c.getAttribute("data-filter");
+        var on = filterKind ? f === filterKind : f === "all";
+        c.classList.toggle("is-on", on);
+        c.setAttribute("aria-pressed", on ? "true" : "false");
+        if (filterKind) c.classList.remove("is-current");
+      });
+      x = 0; track.style.transform = "translateX(0px)";
+      requestAnimationFrame(measure);
+    }
+
+    function currentKind() {
+      if (!layout.length) return null;
+      var ref = ((-x) + scroller.clientWidth * 0.16) % half;
+      if (ref < 0) ref += half;
+      var k = layout[0].kind;
+      for (var i = 0; i < layout.length && layout[i].left <= ref; i++) k = layout[i].kind;
+      return k;
+    }
+    function markCurrent() {
+      if (mode !== "all") return;
+      var cur = currentKind();
+      chips.forEach(function (c) {
+        c.classList.toggle("is-current", !!cur && c.getAttribute("data-filter") === cur);
+      });
+    }
+
+    chips.forEach(function (chip) {
+      chip.addEventListener("click", function () {
+        var f = chip.getAttribute("data-filter");
+        if (f === "all" || (mode === "filter" && f === filterKind)) applyFilter(null);
+        else applyFilter(f);
       });
     });
-    // arrow keys when the strip itself has focus
-    grid.addEventListener("keydown", function (e) {
-      if (e.key === "ArrowRight") { e.preventDefault(); grid.scrollBy({ left: step(), behavior: "smooth" }); }
-      else if (e.key === "ArrowLeft") { e.preventDefault(); grid.scrollBy({ left: -step(), behavior: "smooth" }); }
+
+    scroller.addEventListener("mouseenter", function () { hoverPaused = true; });
+    scroller.addEventListener("mouseleave", function () { hoverPaused = false; });
+    scroller.addEventListener("focusin", function () { focusPaused = true; });
+    scroller.addEventListener("focusout", function (e) {
+      if (!scroller.contains(e.relatedTarget)) focusPaused = false;
+    });
+    if (pauseBtn) pauseBtn.addEventListener("click", function () {
+      userPaused = !userPaused;
+      pauseBtn.setAttribute("aria-pressed", userPaused ? "true" : "false");
+      pauseBtn.classList.toggle("is-paused", userPaused);
+      pauseBtn.textContent = userPaused ? "▶" : "‖";
     });
 
-    update();
-    window.addEventListener("load", update);
+    applyFilter(null);
+    window.addEventListener("resize", function () { requestAnimationFrame(measure); });
+    window.addEventListener("load", function () { requestAnimationFrame(measure); });
+
+    if (reduce) { scroller.classList.add("gallery__scroller--manual"); return; }
+
+    var last = 0, frame = 0;
+    (function tick(ts) {
+      if (!last) last = ts;
+      var dt = Math.min(0.05, (ts - last) / 1000); last = ts;
+      var paused = hoverPaused || focusPaused || userPaused || (modal && !modal.hidden);
+      if (!paused && half > scroller.clientWidth) {
+        x -= SPEED * dt;
+        if (x <= -half) x += half;
+        track.style.transform = "translateX(" + x.toFixed(2) + "px)";
+      }
+      if ((frame++ % 6) === 0) markCurrent();
+      requestAnimationFrame(tick);
+    })(0);
   }
 
   /* ---------- about photo fan: one photo -> pop -> fan open ---------- */
