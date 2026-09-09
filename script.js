@@ -34,8 +34,8 @@
       p1_cat: "Data &amp; automation",
       tag_reqs: "requirements analysis", tag_uxflows: "user roles", tag_team: "team project",
       tag_embedded: "embedded C", tag_sens: "sensors",
-      dg_h: "Doggo", dg_cat: "Embedded",
-      dg_date: "Academic project &middot; ESP32 &middot; in progress",
+      dg_h: "Doggo", dg_cat: "IoT",
+      dg_date: "Academic team project &middot; ESP32 &middot; in progress",
       dg_sub: "Embedded ESP32 system for pet-shop / kennel automation",
       dg_lead: "An ESP32 acting as an HTTP server for a pet station &mdash; it tracks water temperature, doses food by weight and switches the water fountain, from a web page and a small REST API.",
       dg_body:
@@ -300,8 +300,8 @@
       p1_cat: "Dados &amp; automa&ccedil;&atilde;o",
       tag_reqs: "an&aacute;lise de requisitos", tag_uxflows: "perfis de usu&aacute;rio", tag_team: "projeto em equipe",
       tag_embedded: "C embarcado", tag_sens: "sensores",
-      dg_h: "Doggo", dg_cat: "Embarcado",
-      dg_date: "Projeto acad&ecirc;mico &middot; ESP32 &middot; em desenvolvimento",
+      dg_h: "Doggo", dg_cat: "IoT",
+      dg_date: "Projeto acad&ecirc;mico em equipe &middot; ESP32 &middot; em desenvolvimento",
       dg_sub: "Sistema IoT embarcado em ESP32 para automa&ccedil;&atilde;o de pet shop / canil",
       dg_lead: "Um ESP32 como servidor HTTP para uma esta&ccedil;&atilde;o de pets &mdash; acompanha a temperatura da &aacute;gua, dosa a ra&ccedil;&atilde;o por peso e liga a fonte, por uma p&aacute;gina web e uma pequena API REST.",
       dg_body:
