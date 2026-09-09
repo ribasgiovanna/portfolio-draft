@@ -215,6 +215,11 @@
         "<p>The value was in the documentation itself: a shared picture the clinic can use to spot where a process could be simplified.</p>",
 
       journey_h: "The threads",
+      story_h: "The path", now_h: "Now",
+      story_p1: "I came to software from making things I could see. Illustration, graphic design and photography first; then freelance work on visual identities, logos and editorial pieces. Baking and small visual studies still sit alongside the rest.",
+      story_p2: "In 2024 I co-authored a school science-fair project on the science of dreams (FICEM) &mdash; I proposed the topic and put together the presentation and the video. In early 2026 I took a Python course at Escola Harve: my first structured programming, and what led into the degree.",
+      story_p3: "Later in 2026 I started Software Engineering at PUCPR. Since then the path has widened: a software-development internship on production systems, team projects across data automation, the web, a game, process modelling and IoT, and founding Coffee &amp; Code &mdash; a student tech club I run with friends from the course.",
+      story_p4: "What I want to keep building is work where code, design and people meet: software that&rsquo;s genuinely useful, made with care, in teams that hold room for both the technical and the human side.",
       journey_p1: "I'm a software engineering student, and I build across a few areas at once rather than in a straight line: software and data, the web, visual design, and community.",
       journey_p2: "They feed each other. A script becomes a pipeline; a class exercise becomes a team project; a group of friends becomes a club. The cards below are areas of my path, not a strict timeline.",
       j1_t: "Software engineering", j1_d: "Studying at PUCPR (started 2026).",
@@ -237,7 +242,7 @@
       coffee_p2: "I lead it where design and technology meet: the visual identity, the materials, how sessions are run, and how people are brought in.",
 
       creative_h: "Playground",
-      creative_intro: "Everything I make away from a code editor &mdash; digital art, ink drawing, graphic design, photography, things I bake, and volunteering and events. It scrolls on its own; hover to pause, or pick a category to explore just that one. Open any piece for the larger image, its technique and process.",
+      creative_intro: "What I make away from a code editor &mdash; posters, illustration, my own photography, baking and visual studies. The strip scrolls on its own; hover to pause. Open a piece for the larger image and its context.",
       gal_grid: "Creative pieces, auto-scrolling by category", gal_pause: "Pause the gallery",
       pf_all: "All",
       pf_digital: "Digital art",
@@ -482,6 +487,11 @@
         "<p>O valor esteve na pr&oacute;pria documenta&ccedil;&atilde;o: uma vis&atilde;o comum que a cl&iacute;nica pode usar para enxergar onde um processo poderia ser simplificado.</p>",
 
       journey_h: "As frentes",
+      story_h: "O caminho", now_h: "Agora",
+      story_p1: "Cheguei ao software fazendo coisas que eu podia ver. Primeiro ilustra&ccedil;&atilde;o, design gr&aacute;fico e fotografia; depois trabalho como freelancer em identidades visuais, logos e pe&ccedil;as editoriais. Confeitaria e pequenos estudos visuais seguem ao lado do resto.",
+      story_p2: "Em 2024 fui coautora de um trabalho para a feira cient&iacute;fica sobre a ci&ecirc;ncia dos sonhos (FICEM) &mdash; propus o tema e montei a apresenta&ccedil;&atilde;o e o v&iacute;deo. No in&iacute;cio de 2026 fiz um curso de Python na Escola Harve: minha primeira programa&ccedil;&atilde;o estruturada, e o que me levou &agrave; gradua&ccedil;&atilde;o.",
+      story_p3: "Ainda em 2026 comecei Engenharia de Software na PUCPR. Desde ent&atilde;o o caminho foi se ampliando: um est&aacute;gio de desenvolvimento de software em sistemas de produ&ccedil;&atilde;o, projetos em equipe entre automa&ccedil;&atilde;o de dados, web, um jogo, modelagem de processos e IoT, e a cria&ccedil;&atilde;o do Coffee &amp; Code &mdash; um clube universit&aacute;rio de tecnologia que toco com amigos do curso.",
+      story_p4: "O que eu quero continuar construindo &eacute; trabalho onde c&oacute;digo, design e pessoas se encontram: software realmente &uacute;til, feito com cuidado, em equipes que d&atilde;o espa&ccedil;o para o lado t&eacute;cnico e o humano.",
       journey_p1: "Sou estudante de Engenharia de Software e construo em algumas frentes ao mesmo tempo, n&atilde;o em linha reta: software e dados, a web, design visual e comunidade.",
       journey_p2: "Uma alimenta a outra. Um script vira um pipeline; um exerc&iacute;cio de aula vira um projeto em equipe; um grupo de amigos vira um clube. Os cart&otilde;es abaixo s&atilde;o frentes do meu caminho, n&atilde;o uma linha do tempo.",
       j1_t: "Engenharia de software", j1_d: "Curso na PUCPR (in&iacute;cio em 2026).",
@@ -504,7 +514,7 @@
       coffee_p2: "Lidero onde design e tecnologia se encontram: a identidade visual, os materiais, como os encontros acontecem e como as pessoas s&atilde;o convidadas.",
 
       creative_h: "Playground",
-      creative_intro: "Tudo o que fa&ccedil;o longe do editor de c&oacute;digo &mdash; arte digital, desenho a nanquim, design gr&aacute;fico, fotografia, o que ando assando, e voluntariados e eventos. Ele corre sozinho; passe o mouse para pausar, ou escolha uma categoria para ver s&oacute; ela. Abra qualquer pe&ccedil;a para ver a imagem maior, a t&eacute;cnica e o processo.",
+      creative_intro: "O que fa&ccedil;o longe do editor de c&oacute;digo &mdash; p&ocirc;steres, ilustra&ccedil;&atilde;o, fotografia autoral, confeitaria e estudos visuais. A faixa corre sozinha; passe o mouse para pausar. Abra uma pe&ccedil;a para ver a imagem maior e o contexto.",
       gal_grid: "Pe&ccedil;as criativas, com rolagem autom&aacute;tica por categoria", gal_pause: "Pausar a galeria",
       pf_all: "Todos",
       pf_digital: "Arte digital",
