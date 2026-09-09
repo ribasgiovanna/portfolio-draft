@@ -860,7 +860,7 @@
       track.appendChild(c);
     });
 
-    var SPEED = 46;                 /* px / second */
+    var SPEED = 72;                 /* px / second */
     var x = 0, half = 1, layout = [];
     var mode = "all", filterKind = null;
     var hoverPaused = false, focusPaused = false, userPaused = false;
@@ -893,7 +893,7 @@
 
     function currentKind() {
       if (!layout.length) return null;
-      var ref = ((-x) + scroller.clientWidth * 0.16) % half;
+      var ref = ((-x) + scroller.clientWidth * 0.42) % half;
       if (ref < 0) ref += half;
       var k = layout[0].kind;
       for (var i = 0; i < layout.length && layout[i].left <= ref; i++) k = layout[i].kind;

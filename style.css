@@ -829,11 +829,18 @@ p:last-child { margin-bottom: 0; }
   font: 500 12px/1 var(--mono); letter-spacing: .04em;
   padding: 8px 13px; border: 1px solid var(--line); border-radius: 999px;
   background: var(--paper); color: var(--ink-2); cursor: pointer;
-  transition: border-color .2s ease, color .2s ease, background .2s ease;
+  transition: background .38s ease, border-color .38s ease, color .38s ease, transform .25s ease;
 }
-.chip:hover, .chip.is-current { border-color: var(--accent); color: var(--accent); }
-.chip.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); }
-.chip.is-on.is-current { border-color: var(--ink); color: var(--paper); }
+.chip:hover { border-color: var(--accent); color: var(--accent); }
+/* the auto-scroll flow is currently passing this category */
+.chip.is-current {
+  background: color-mix(in srgb, var(--accent) 15%, var(--paper));
+  border-color: color-mix(in srgb, var(--accent) 45%, var(--line));
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+/* user-locked category */
+.chip.is-on { background: var(--ink); color: var(--paper); border-color: var(--ink); transform: none; }
 
 /* auto-scrolling one-row gallery — flows on its own, hover / focus to pause, click a category to lock it */
 .gallery__scroller {
