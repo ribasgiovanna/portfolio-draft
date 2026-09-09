@@ -30,6 +30,15 @@
       datasus_lead: "Automating the collection and cleaning of Paran&aacute; hemotherapy records from SUS, with an interactive dashboard on top.",
       pm_hint: "open &nearr;",
       pm_project: "Project",
+      tab_projects: "Projects", tab_tech: "Technologies", tab_certs: "Certificates",
+      tech_lead: "Tools and languages I use across software, data and design.",
+      tech_lang_h: "Languages", tech_data_h: "Automation &amp; data", tech_web_h: "Web &amp; version control",
+      tech_design_h: "Design", tech_method_h: "Ways of working", tech_spoken_h: "Spoken languages",
+      tech_pm: "project management",
+      tech_pt: "Portuguese &mdash; native", tech_en: "English &mdash; fluent", tech_fr: "French &mdash; basic",
+      cert_degree_h: "Software Engineering", cert_degree_d: "B.Sc. in progress at PUCPR, Curitiba.",
+      cert_harve_h: "Python Programming", cert_harve_d: "Course at Escola Harve, Curitiba &mdash; Jan&ndash;Apr 2026.",
+      cert_ficem_h: "Scientific research &mdash; FICEM", cert_ficem_d: "Science-fair research project at Col&eacute;gio Bom Jesus.",
       pm_video: "Watch the demo &nearr;",
       pm_zoom: "Open full image in a new tab",
       corrida_lead: "A student who&rsquo;s late for class dodges obstacles across the city &mdash; the challenge is to manage three lives and reach the goal before the run ends.",
@@ -246,6 +255,15 @@
       datasus_lead: "Automa&ccedil;&atilde;o da coleta e do tratamento de registros de hemoterapia do Paran&aacute;, com visualiza&ccedil;&atilde;o em um painel interativo.",
       pm_hint: "abrir &nearr;",
       pm_project: "Projeto",
+      tab_projects: "Projetos", tab_tech: "Tecnologias", tab_certs: "Certificados",
+      tech_lead: "Ferramentas e linguagens que uso entre software, dados e design.",
+      tech_lang_h: "Linguagens", tech_data_h: "Automa&ccedil;&atilde;o &amp; dados", tech_web_h: "Web &amp; versionamento",
+      tech_design_h: "Design", tech_method_h: "M&eacute;todos de trabalho", tech_spoken_h: "Idiomas",
+      tech_pm: "gest&atilde;o de projetos",
+      tech_pt: "Portugu&ecirc;s &mdash; nativo", tech_en: "Ingl&ecirc;s &mdash; fluente", tech_fr: "Franc&ecirc;s &mdash; b&aacute;sico",
+      cert_degree_h: "Engenharia de Software", cert_degree_d: "Bacharelado em curso na PUCPR, Curitiba.",
+      cert_harve_h: "Programa&ccedil;&atilde;o em Python", cert_harve_d: "Curso na Escola Harve, Curitiba &mdash; jan&ndash;abr 2026.",
+      cert_ficem_h: "Inicia&ccedil;&atilde;o cient&iacute;fica &mdash; FICEM", cert_ficem_d: "Projeto de pesquisa para a feira cient&iacute;fica no Col&eacute;gio Bom Jesus.",
       pm_video: "Ver o v&iacute;deo &nearr;",
       pm_zoom: "Abrir imagem completa em nova aba",
       corrida_lead: "Um estudante atrasado enfrenta obst&aacute;culos pela cidade &mdash; o desafio &eacute; administrar as tr&ecirc;s vidas e chegar &agrave; meta antes de perder a partida.",
@@ -537,10 +555,42 @@
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   }
 
+  /* ---------- tabbed folder (Projects / Technologies / Certificates) ---------- */
+  function initFolders() {
+    var tablist = document.querySelector(".folders__tabs");
+    if (!tablist) return;
+    var tabs = [].slice.call(tablist.querySelectorAll(".ftab"));
+    if (!tabs.length) return;
+    function select(tab, focus) {
+      tabs.forEach(function (t) {
+        var on = t === tab;
+        t.classList.toggle("is-on", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        t.tabIndex = on ? 0 : -1;
+        var panel = document.getElementById(t.getAttribute("aria-controls"));
+        if (panel) panel.hidden = !on;
+      });
+      if (focus) tab.focus();
+    }
+    tabs.forEach(function (tab, i) {
+      tab.addEventListener("click", function () { select(tab); });
+      tab.addEventListener("keydown", function (e) {
+        var n = null;
+        if (e.key === "ArrowRight" || e.key === "ArrowDown") n = (i + 1) % tabs.length;
+        else if (e.key === "ArrowLeft" || e.key === "ArrowUp") n = (i - 1 + tabs.length) % tabs.length;
+        else if (e.key === "Home") n = 0;
+        else if (e.key === "End") n = tabs.length - 1;
+        if (n === null) return;
+        e.preventDefault();
+        select(tabs[n], true);
+      });
+    });
+  }
+
   /* ---------- project detail modal ---------- */
   function initProjectModal() {
     var modal = document.getElementById("pmodal");
-    var panels = document.querySelectorAll(".panel[data-pm]");
+    var panels = document.querySelectorAll("[data-pm]");
     if (!modal || !panels.length) return;
     var box = modal.querySelector(".pmodal__box");
     var closeBtn = document.getElementById("pm-close");
@@ -775,6 +825,7 @@
     });
 
     initFilters();
+    initFolders();
     initModal();
     initProjectModal();
     initReveal();
