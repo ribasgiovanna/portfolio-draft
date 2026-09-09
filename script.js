@@ -8,7 +8,7 @@
   var I18N = {
     en: {
       skip: "Skip to content",
-      nav_about: "About", nav_work: "Projects", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Currently", nav_contact: "Contact",
+      nav_about: "About", nav_work: "Projects", nav_playground: "Playground", nav_cv: "CV", nav_cv_aria: "CV (PDF, opens Google Drive)", nav_currently: "Currently", nav_contact: "Contact",
 
       hi: "Hi, my name is",
       say: "I build things — with code, design &amp; people",
@@ -34,7 +34,7 @@
       corrida_lead: "A student who&rsquo;s late for class dodges obstacles across the city &mdash; the challenge is to manage three lives and reach the goal before the run ends.",
       pibble_lead: "One application to organise clients, products, employees and deliveries in the same system.",
       p1_date: "Team project &middot; Harve &middot; Apr 2026",
-      p2_date: "Individual project &middot; Academic",
+      p2_date: "Individual project &middot; Academic &middot; Jun 2026",
       p3_date: "Academic team project &middot; Fictional company &middot; Jun 2026",
       nav_home: "Home",
       home_welcome: "Welcome to my portfolio &mdash; I'm a",
@@ -46,16 +46,12 @@
       p3_sub: "Delivery-management web system",
       flood_sub: "IoT prototype for level monitoring and alerts",
       bpmn_sub: "Business process modeling in BPMN",
-      dreams_h: "The Science Behind Dreams",
-      dreams_sub: "Literature research &amp; science communication",
-      dreams_lead: "A literature review of the explanations for dreams and how they relate to sleep, memory and emotion.",
-      dreams_link: "Watch the FICEM presentation &nearr;",
-      p6_date: "School team project &middot; FICEM 2024 &middot; Bom Jesus Centro",
       bpmn_link: "View process manual and diagrams &nearr;",
       work_sub: "What I built, how I approached it, and what I learned.",
-      iot_cap1: "Circuit schematic: ESP32 with an HC-SR04 ultrasonic sensor and a buzzer.",
+      coffee_ig: "@coffeecodepucpr &nearr;",
+      iot_cap1: "Circuit built in a simulator: ESP32 with an HC-SR04 ultrasonic sensor and a buzzer.",
       iot_cap2: "Blynk dashboard setup, with indicators and an alert widget (edit mode).",
-      tag_research: "research", tag_scicomm: "science communication",
+      j8_t: "Science research", j8_d: "FICEM 2024 &mdash; co-authored a review on the science of dreams; I proposed the topic and made the presentation and video.",
       ci_borboleta: "Design and media for a women&rsquo;s-health awareness project. I design the awareness pieces &mdash; layout, type and collage &mdash; from the content the team provides.",
       ci_more: "I also join environmental actions, activities with children and other volunteering with Interact and around Curitiba.",
       home_line: "<em>Code, design &amp; people</em> &mdash; I build where they meet.",
@@ -89,8 +85,12 @@
         "</ul>" +
         "<h4>My contribution</h4>" +
         "<p>I proposed the topic and the automation approach, and was responsible for the architecture and for the extraction and data-treatment modules. This was integrated with my teammates&rsquo; work on orchestration, parallel execution and the dashboard (Jackson Beggi and wingCODING).</p>" +
+        "<h4>Decisions &amp; process</h4>" +
+        "<p>Selecting form fields by <code>id</code> rather than by <code>name</code>, because the TabNet inputs carry accented names like <code>SRegi&atilde;o</code>; an explicit wait before every interaction, since the server responds slowly and unevenly; switching browser tabs by polling <code>window_handles</code> with a timeout instead of assuming a fixed order.</p>" +
         "<h4>Result &amp; evidence</h4>" +
-        "<p>The repository holds the per-period extraction, the batch processing, the file treatment and the dashboard. The metric shown is the approved quantity of hemotherapy procedures recorded in SUS for the range queried &mdash; an indicator related to, but not the same as, blood donations.</p>",
+        "<p>The repository holds the per-period extraction, the batch processing, the file treatment and the dashboard. The metric shown is the approved quantity of hemotherapy procedures recorded in SUS for the range queried &mdash; an indicator related to, but not the same as, blood donations.</p>" +
+        "<h4>What I learned</h4>" +
+        "<p>The pipeline is built to be re-run: it skips periods already downloaded, so an interrupted collection picks up where it stopped. Extending it to other TabNet datasets would mostly mean new field mappings. <em>(This note is drafted from the repository &mdash; adjust it with your own recollection.)</em></p>",
 
       p2_body:
         "<h4>Overview</h4>" +
@@ -104,7 +104,11 @@
         "<li><strong>Feedback &amp; high score</strong> &mdash; a HUD shows lives, score and progress to the goal; the best score is saved locally.</li>" +
         "</ul>" +
         "<h4>My contribution &amp; assets</h4>" +
-        "<p>I wrote the code and the game logic. The visual assets were generated with the help of ChatGPT and integrated into the project.</p>",
+        "<p>I wrote the code and the game logic. The visual assets were generated with the help of ChatGPT and integrated into the project.</p>" +
+        "<h4>Decisions &amp; process</h4>" +
+        "<p>A hand-written state machine instead of a framework, to keep the whole loop visible; difficulty tuned by two knobs &mdash; speed rising every 100 points up to a cap, and the gap between obstacles shrinking with the score; a fallback to plain shapes when an art file is missing, so a broken asset never stops the game.</p>" +
+        "<h4>What I learned</h4>" +
+        "<p>Keeping the states explicit made the win/lose conditions and the HUD easy to reason about; the same structure would carry a second level or a pause screen with little change. <em>(This note is drafted &mdash; adjust it with your own recollection.)</em></p>",
 
       p3_body:
         "<h4>Overview</h4>" +
@@ -118,21 +122,27 @@
         "</ul>" +
         "<h4>My contribution</h4>" +
         "<p>I built the employees module and its integration with deliveries. I also built the admin dashboard, worked on the input masks and the visual standardisation of the forms, and organised the logout flow between areas of the system.</p>" +
+        "<h4>Decisions &amp; process</h4>" +
+        "<p>Linking each employee to a login account through a one-to-one relation, with an administrative and an operational profile; standardising the four apps&rsquo; forms and the logout flow so the system behaves the same everywhere; input masks on the client side for the registration fields.</p>" +
         "<h4>Evidence</h4>" +
-        "<p>The repository holds the code, the documentation and captures of the dashboard and the employees module. Built with two teammates on a fork of <code>rodavio/pibble_express</code>.</p>",
+        "<p>The repository holds the code, the documentation and captures of the dashboard and the employees module. Built with two teammates on a fork of <code>rodavio/pibble_express</code>.</p>" +
+        "<h4>What I learned</h4>" +
+        "<p>Working on a shared fork with two teammates meant agreeing on conventions early &mdash; field names, where validation lives, how the apps talk to each other. <em>(This note is drafted &mdash; adjust it with your own recollection.)</em></p>",
 
       p4_body:
         "<h4>The challenge</h4>" +
         "<p>A blocked storm drain can contribute to a street flooding. This project explores how sensors and a remote dashboard could support keeping an eye on those conditions.</p>" +
         "<h4>The technical proposal</h4>" +
-        "<p>Built as a team: a prototype with an ESP32, an ultrasonic sensor and a Blynk integration to represent the monitoring and its alerts.</p>" +
+        "<p>Built as a team and developed entirely in simulation: an ESP32 with an ultrasonic sensor wired in a circuit simulator, and a Blynk dashboard to represent the monitoring and its alerts. Nothing was assembled or deployed physically.</p>" +
         "<ul>" +
-        "<li><strong>Distance reading</strong> &mdash; the ultrasonic sensor (HC-SR04) gives a distance measurement that can be read as a level from a reference set during assembly.</li>" +
-        "<li><strong>Remote view</strong> &mdash; a Blynk dashboard collects the indicators for the prototype&rsquo;s values.</li>" +
+        "<li><strong>Distance reading</strong> &mdash; an ultrasonic sensor (HC-SR04) gives a distance measurement that stands in for a level, against a reference set in the model.</li>" +
+        "<li><strong>Remote view</strong> &mdash; a Blynk dashboard collects the indicators for the simulated values.</li>" +
         "<li><strong>Signalling</strong> &mdash; the project foresees a buzzer and digital indicators to flag when a configured threshold is crossed.</li>" +
         "</ul>" +
+        "<h4>Decisions &amp; process</h4>" +
+        "<p>Using an ultrasonic distance reading as a proxy for how full a drain is, rather than trying to measure flow or volume; one configurable threshold per monitored point; keeping the whole thing in simulation to test the logic and the dashboard before any hardware.</p>" +
         "<h4>Evidence of the work</h4>" +
-        "<p>The circuit schematic and the dashboard-setup capture show how the components and the indicators are organised &mdash; a schematic and an interface capture, not photos of a physical build or of an installation in a real drain. What a real street deployment would need &mdash; scale, field performance, preventive effectiveness &mdash; is future work.</p>",
+        "<p>A circuit schematic and a capture of the Blynk dashboard in edit mode &mdash; a model and an interface, not photos of a physical build. A real street deployment &mdash; enclosure, power, calibration, scale &mdash; would be a separate stage.</p>",
 
       p5_body:
         "<h4>The context</h4>" +
@@ -146,16 +156,12 @@
         "</ul>" +
         "<h4>My contribution</h4>" +
         "<p>I ran interviews with the clinic&rsquo;s management to gather the routines and the business rules, and worked on turning that into BPMN diagrams &mdash; organising activities, events, decisions and responsibilities.</p>" +
+        "<h4>Decisions &amp; process</h4>" +
+        "<p>Choosing three core processes to model end to end &mdash; appointments, stock and staff &mdash; with client registration and payment broken out as subprocesses; laying activities in responsibility lanes so each step has a clear owner and the hand-offs are visible; building from the interviews rather than assumptions.</p>" +
         "<h4>Result &amp; evidence</h4>" +
-        "<p>The work produced documentation of the processes studied, which can serve as a basis for discussing improvement opportunities.</p>",
-
-      p6_body:
-        "<h4>The work</h4>" +
-        "<p>I took part in a team project that gathered and discussed different theories about dreams. The extended abstract presents historical and contemporary perspectives and acknowledges that open questions about the topic remain. It is literature research and synthesis &mdash; not experiments, clinical trials or original findings by the team.</p>" +
-        "<h4>My part</h4>" +
-        "<p>I am a co-author of the work with Gabriela Mayer and Rafaela Rosseto, supervised by Corn&eacute;lio Schwambach.</p>" +
-        "<h4>Materials</h4>" +
-        "<p>The project has an extended abstract and a video presentation linked to FICEM 2024 (BJ Cient&iacute;fico channel).</p>",
+        "<p>The work produced documentation of the processes studied, which can serve as a basis for discussing improvement opportunities.</p>" +
+        "<h4>What I learned</h4>" +
+        "<p>The value was in the documentation itself: a shared picture the clinic can use to spot where a process could be simplified. <em>(This note is drafted &mdash; adjust it with your own recollection.)</em></p>",
 
       journey_h: "The threads",
       journey_p1: "I'm a software engineering student, and I build across a few areas at once rather than in a straight line: software and data, the web, visual design, and community.",
@@ -217,7 +223,7 @@
 
     pt: {
       skip: "Pular para o conte&uacute;do",
-      nav_about: "Sobre", nav_work: "Projetos", nav_playground: "Playground", nav_cv: "CV", nav_currently: "Atualmente", nav_contact: "Contato",
+      nav_about: "Sobre", nav_work: "Projetos", nav_playground: "Playground", nav_cv: "CV", nav_cv_aria: "CV (PDF, abre no Google Drive)", nav_currently: "Atualmente", nav_contact: "Contato",
 
       hi: "Oi, meu nome &eacute;",
       say: "eu construo coisas — com c&oacute;digo, design &amp; pessoas",
@@ -243,7 +249,7 @@
       corrida_lead: "Um estudante atrasado enfrenta obst&aacute;culos pela cidade &mdash; o desafio &eacute; administrar as tr&ecirc;s vidas e chegar &agrave; meta antes de perder a partida.",
       pibble_lead: "Uma aplica&ccedil;&atilde;o para organizar clientes, produtos, funcion&aacute;rios e entregas em um mesmo sistema.",
       p1_date: "Projeto em equipe &middot; Harve &middot; abr 2026",
-      p2_date: "Projeto individual &middot; acad&ecirc;mico",
+      p2_date: "Projeto individual &middot; acad&ecirc;mico &middot; jun 2026",
       p3_date: "Projeto acad&ecirc;mico em equipe &middot; Empresa fict&iacute;cia &middot; jun 2026",
       nav_home: "In&iacute;cio",
       home_welcome: "Bem-vindo (a) ao meu portf&oacute;lio &mdash; eu sou",
@@ -255,16 +261,12 @@
       p3_sub: "Sistema web de gest&atilde;o de entregas",
       flood_sub: "Prot&oacute;tipo IoT de monitoramento de n&iacute;vel e alertas",
       bpmn_sub: "Modelagem de processos de neg&oacute;cio em BPMN",
-      dreams_h: "A ci&ecirc;ncia por tr&aacute;s dos sonhos",
-      dreams_sub: "Pesquisa bibliogr&aacute;fica e comunica&ccedil;&atilde;o cient&iacute;fica",
-      dreams_lead: "Uma investiga&ccedil;&atilde;o bibliogr&aacute;fica sobre as explica&ccedil;&otilde;es para os sonhos e suas rela&ccedil;&otilde;es com sono, mem&oacute;ria e emo&ccedil;&otilde;es.",
-      dreams_link: "Ver apresenta&ccedil;&atilde;o da FICEM &nearr;",
-      p6_date: "Trabalho escolar em equipe &middot; FICEM 2024 &middot; Bom Jesus Centro",
       bpmn_link: "Ver manual e diagramas &nearr;",
       work_sub: "O que constru&iacute;, como pensei e o que aprendi.",
-      iot_cap1: "Esquema do circuito com ESP32, sensor ultrass&ocirc;nico e buzzer.",
+      coffee_ig: "@coffeecodepucpr &nearr;",
+      iot_cap1: "Circuito montado em simulador: ESP32 com sensor ultrass&ocirc;nico HC-SR04 e buzzer.",
       iot_cap2: "Configura&ccedil;&atilde;o do painel no Blynk, com indicadores e sinaliza&ccedil;&atilde;o de alerta (modo de edi&ccedil;&atilde;o).",
-      tag_research: "pesquisa", tag_scicomm: "comunica&ccedil;&atilde;o cient&iacute;fica",
+      j8_t: "Pesquisa cient&iacute;fica", j8_d: "FICEM 2024 &mdash; coautora de uma revis&atilde;o sobre a ci&ecirc;ncia dos sonhos; propus o tema e fiz a apresenta&ccedil;&atilde;o e o v&iacute;deo.",
       ci_borboleta: "Design e m&iacute;dia para um projeto de conscientiza&ccedil;&atilde;o em sa&uacute;de da mulher. Eu fa&ccedil;o as pe&ccedil;as &mdash; layout, tipografia e colagem &mdash; a partir do conte&uacute;do que a equipe passa.",
       ci_more: "Tamb&eacute;m participo de a&ccedil;&otilde;es ambientais, atividades com crian&ccedil;as e outros voluntariados com o Interact e em Curitiba.",
       home_line: "<em>C&oacute;digo, design &amp; pessoas</em> &mdash; construo onde eles se encontram.",
@@ -298,8 +300,12 @@
         "</ul>" +
         "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
         "<p>Propus o tema e a solu&ccedil;&atilde;o de automa&ccedil;&atilde;o e fui respons&aacute;vel pela arquitetura e pelos m&oacute;dulos de extra&ccedil;&atilde;o e tratamento dos dados. O trabalho foi integrado &agrave;s entregas dos colegas em orquestra&ccedil;&atilde;o, execu&ccedil;&atilde;o paralela e dashboard (Jackson Beggi e wingCODING).</p>" +
+        "<h4>Decis&otilde;es e processo</h4>" +
+        "<p>Selecionar os campos do formul&aacute;rio por <code>id</code> e n&atilde;o por <code>name</code>, porque os inputs do TabNet t&ecirc;m nomes acentuados como <code>SRegi&atilde;o</code>; uma espera expl&iacute;cita antes de cada intera&ccedil;&atilde;o, j&aacute; que o servidor responde de forma lenta e irregular; troca de abas do navegador verificando <code>window_handles</code> com timeout, em vez de assumir uma ordem fixa.</p>" +
         "<h4>Resultado e evid&ecirc;ncias</h4>" +
-        "<p>O reposit&oacute;rio re&uacute;ne a extra&ccedil;&atilde;o por per&iacute;odo, o processamento em lote, o tratamento dos arquivos e o painel. A m&eacute;trica apresentada &eacute; a quantidade aprovada de procedimentos de hemoterapia registrados no SUS, no recorte consultado &mdash; um indicador relacionado a, mas diferente de, doa&ccedil;&otilde;es de sangue.</p>",
+        "<p>O reposit&oacute;rio re&uacute;ne a extra&ccedil;&atilde;o por per&iacute;odo, o processamento em lote, o tratamento dos arquivos e o painel. A m&eacute;trica apresentada &eacute; a quantidade aprovada de procedimentos de hemoterapia registrados no SUS, no recorte consultado &mdash; um indicador relacionado a, mas diferente de, doa&ccedil;&otilde;es de sangue.</p>" +
+        "<h4>O que aprendi</h4>" +
+        "<p>O fluxo foi feito para ser reexecutado: pula os per&iacute;odos j&aacute; baixados, ent&atilde;o uma coleta interrompida continua de onde parou. Estend&ecirc;-lo a outras bases do TabNet seria, no essencial, mapear novos campos. <em>(Esta nota foi rascunhada a partir do reposit&oacute;rio &mdash; ajuste com a sua mem&oacute;ria.)</em></p>",
 
       p2_body:
         "<h4>Vis&atilde;o geral</h4>" +
@@ -313,7 +319,11 @@
         "<li><strong>Feedback e recordes</strong> &mdash; a interface mostra vidas, pontua&ccedil;&atilde;o e progresso at&eacute; a meta; o recorde fica salvo localmente.</li>" +
         "</ul>" +
         "<h4>Minha contribui&ccedil;&atilde;o e recursos visuais</h4>" +
-        "<p>Desenvolvi o c&oacute;digo e a l&oacute;gica do jogo. Os recursos visuais foram gerados com aux&iacute;lio do ChatGPT e integrados ao projeto.</p>",
+        "<p>Desenvolvi o c&oacute;digo e a l&oacute;gica do jogo. Os recursos visuais foram gerados com aux&iacute;lio do ChatGPT e integrados ao projeto.</p>" +
+        "<h4>Decis&otilde;es e processo</h4>" +
+        "<p>Uma m&aacute;quina de estados escrita &agrave; m&atilde;o em vez de um framework, para manter todo o loop &agrave; vista; a dificuldade ajustada por dois par&acirc;metros &mdash; a velocidade subindo a cada 100 pontos at&eacute; um teto e o intervalo entre obst&aacute;culos diminuindo com a pontua&ccedil;&atilde;o; uma queda para formas simples quando falta um arquivo de arte, para que um asset quebrado nunca trave o jogo.</p>" +
+        "<h4>O que aprendi</h4>" +
+        "<p>Manter os estados expl&iacute;citos deixou as condi&ccedil;&otilde;es de vit&oacute;ria/derrota e o HUD f&aacute;ceis de acompanhar; a mesma estrutura levaria um segundo n&iacute;vel ou uma tela de pausa com pouca mudan&ccedil;a. <em>(Esta nota foi rascunhada &mdash; ajuste com a sua mem&oacute;ria.)</em></p>",
 
       p3_body:
         "<h4>Vis&atilde;o geral</h4>" +
@@ -327,21 +337,27 @@
         "</ul>" +
         "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
         "<p>Desenvolvi o m&oacute;dulo de funcion&aacute;rios e sua integra&ccedil;&atilde;o com entregas. Tamb&eacute;m constru&iacute; o painel administrativo, trabalhei nas m&aacute;scaras de entrada e na padroniza&ccedil;&atilde;o visual dos formul&aacute;rios e organizei o fluxo de logout entre as &aacute;reas do sistema.</p>" +
+        "<h4>Decis&otilde;es e processo</h4>" +
+        "<p>Ligar cada funcion&aacute;rio a uma conta de acesso por uma rela&ccedil;&atilde;o um-para-um, com um perfil administrativo e um operacional; padronizar os formul&aacute;rios dos quatro apps e o fluxo de logout para o sistema se comportar igual em todo lugar; m&aacute;scaras de entrada no cliente para os campos de cadastro.</p>" +
         "<h4>Evid&ecirc;ncias</h4>" +
-        "<p>O reposit&oacute;rio re&uacute;ne o c&oacute;digo, a documenta&ccedil;&atilde;o e capturas do painel e do m&oacute;dulo de funcion&aacute;rios. Feito com dois colegas num fork de <code>rodavio/pibble_express</code>.</p>",
+        "<p>O reposit&oacute;rio re&uacute;ne o c&oacute;digo, a documenta&ccedil;&atilde;o e capturas do painel e do m&oacute;dulo de funcion&aacute;rios. Feito com dois colegas num fork de <code>rodavio/pibble_express</code>.</p>" +
+        "<h4>O que aprendi</h4>" +
+        "<p>Trabalhar num fork compartilhado com dois colegas exigiu combinar conven&ccedil;&otilde;es cedo &mdash; nomes de campos, onde fica a valida&ccedil;&atilde;o, como os apps conversam entre si. <em>(Esta nota foi rascunhada &mdash; ajuste com a sua mem&oacute;ria.)</em></p>",
 
       p4_body:
         "<h4>O desafio</h4>" +
         "<p>Um bueiro obstru&iacute;do pode contribuir para o alagamento de uma via. O projeto explora como sensores e visualiza&ccedil;&atilde;o remota podem apoiar o acompanhamento dessas condi&ccedil;&otilde;es.</p>" +
         "<h4>A proposta t&eacute;cnica</h4>" +
-        "<p>Feito em equipe: um prot&oacute;tipo com ESP32, sensor ultrass&ocirc;nico e integra&ccedil;&atilde;o ao Blynk para representar o monitoramento e seus alertas.</p>" +
+        "<p>Feito em equipe e desenvolvido inteiramente em simula&ccedil;&atilde;o: um ESP32 com sensor ultrass&ocirc;nico montado em um simulador de circuito e um painel Blynk para representar o monitoramento e seus alertas. Nada foi montado ou instalado fisicamente.</p>" +
         "<ul>" +
-        "<li><strong>Leitura de dist&acirc;ncia</strong> &mdash; o sensor ultrass&ocirc;nico (HC-SR04) fornece uma medida que pode ser interpretada como n&iacute;vel a partir de uma refer&ecirc;ncia definida na montagem.</li>" +
-        "<li><strong>Visualiza&ccedil;&atilde;o remota</strong> &mdash; o painel Blynk re&uacute;ne indicadores para acompanhar os valores do prot&oacute;tipo.</li>" +
+        "<li><strong>Leitura de dist&acirc;ncia</strong> &mdash; um sensor ultrass&ocirc;nico (HC-SR04) fornece uma medida de dist&acirc;ncia que faz as vezes de n&iacute;vel, a partir de uma refer&ecirc;ncia definida no modelo.</li>" +
+        "<li><strong>Visualiza&ccedil;&atilde;o remota</strong> &mdash; um painel Blynk re&uacute;ne os indicadores dos valores simulados.</li>" +
         "<li><strong>Sinaliza&ccedil;&atilde;o</strong> &mdash; o projeto prev&ecirc; um buzzer e indicadores digitais para comunicar a ultrapassagem de um limite configurado.</li>" +
         "</ul>" +
+        "<h4>Decis&otilde;es e processo</h4>" +
+        "<p>Usar a leitura ultrass&ocirc;nica de dist&acirc;ncia como indicador de qu&atilde;o cheio um bueiro est&aacute;, em vez de tentar medir vaz&atilde;o ou volume; um limite configur&aacute;vel por ponto monitorado; manter tudo em simula&ccedil;&atilde;o para testar a l&oacute;gica e o painel antes de qualquer hardware.</p>" +
         "<h4>Evid&ecirc;ncias do desenvolvimento</h4>" +
-        "<p>O esquema do circuito e a captura de configura&ccedil;&atilde;o do painel mostram a organiza&ccedil;&atilde;o dos componentes e dos indicadores &mdash; um esquema e uma captura de interface, n&atilde;o fotos de uma montagem f&iacute;sica ou de instala&ccedil;&atilde;o em um bueiro real. Uma implanta&ccedil;&atilde;o real na rua &mdash; escala, desempenho em campo, efic&aacute;cia preventiva &mdash; &eacute; trabalho futuro.</p>",
+        "<p>Um esquema de circuito e uma captura do painel Blynk em modo de edi&ccedil;&atilde;o &mdash; um modelo e uma interface, n&atilde;o fotos de uma montagem f&iacute;sica. Uma implanta&ccedil;&atilde;o real na rua &mdash; case, alimenta&ccedil;&atilde;o, calibra&ccedil;&atilde;o, escala &mdash; seria uma etapa &agrave; parte.</p>",
 
       p5_body:
         "<h4>O contexto</h4>" +
@@ -355,16 +371,12 @@
         "</ul>" +
         "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
         "<p>Realizei entrevistas com a gest&atilde;o para levantar as rotinas e as regras do neg&oacute;cio e trabalhei na transforma&ccedil;&atilde;o dessas informa&ccedil;&otilde;es em diagramas BPMN &mdash; organizando atividades, eventos, decis&otilde;es e responsabilidades.</p>" +
+        "<h4>Decis&otilde;es e processo</h4>" +
+        "<p>Escolher tr&ecirc;s processos centrais para modelar de ponta a ponta &mdash; consultas, estoque e pessoas &mdash; com cadastro de cliente e pagamento separados como subprocessos; dispor as atividades em raias de responsabilidades para cada passo ter um respons&aacute;vel claro e as passagens ficarem vis&iacute;veis; construir a partir das entrevistas, e n&atilde;o de suposi&ccedil;&otilde;es.</p>" +
         "<h4>Resultado e evid&ecirc;ncias</h4>" +
-        "<p>O trabalho resultou na documenta&ccedil;&atilde;o dos processos estudados, que pode servir de base para discutir oportunidades de melhoria.</p>",
-
-      p6_body:
-        "<h4>O trabalho</h4>" +
-        "<p>Participei de um trabalho em equipe que reuniu e discutiu diferentes teorias sobre os sonhos. O resumo expandido apresenta perspectivas hist&oacute;ricas e contempor&acirc;neas e reconhece que ainda existem quest&otilde;es em aberto sobre o tema. &Eacute; pesquisa bibliogr&aacute;fica e s&iacute;ntese &mdash; n&atilde;o experimentos, ensaios cl&iacute;nicos ou descobertas originais da equipe.</p>" +
-        "<h4>Minha participa&ccedil;&atilde;o</h4>" +
-        "<p>Sou coautora do trabalho com Gabriela Mayer e Rafaela Rosseto, sob orienta&ccedil;&atilde;o de Corn&eacute;lio Schwambach.</p>" +
-        "<h4>Materiais</h4>" +
-        "<p>O projeto tem um resumo expandido e uma apresenta&ccedil;&atilde;o em v&iacute;deo vinculada &agrave; FICEM 2024 (canal BJ Cient&iacute;fico).</p>",
+        "<p>O trabalho resultou na documenta&ccedil;&atilde;o dos processos estudados, que pode servir de base para discutir oportunidades de melhoria.</p>" +
+        "<h4>O que aprendi</h4>" +
+        "<p>O valor esteve na pr&oacute;pria documenta&ccedil;&atilde;o: uma vis&atilde;o comum que a cl&iacute;nica pode usar para enxergar onde um processo poderia ser simplificado. <em>(Esta nota foi rascunhada &mdash; ajuste com a sua mem&oacute;ria.)</em></p>",
 
       journey_h: "As frentes",
       journey_p1: "Sou estudante de Engenharia de Software e construo em algumas frentes ao mesmo tempo, n&atilde;o em linha reta: software e dados, a web, design visual e comunidade.",
