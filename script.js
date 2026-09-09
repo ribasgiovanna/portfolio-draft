@@ -49,6 +49,8 @@
         "</ul>" +
         "<h4>Roles</h4>" +
         "<p>Four roles with their own rules: student, psychologist, teacher / school psychologist, and administrator.</p>" +
+        "<h4>My contribution</h4>" +
+        "<p>I came up with the project&rsquo;s name and work on its development, together with the team.</p>" +
         "<h4>Current stage</h4>" +
         "<p>A team project, in the analysis phase: a vision document, user roles and functional requirements per role. No public demo yet.</p>",
       tech_lead: "An organised view of the tools and languages I work with.",
@@ -294,6 +296,8 @@
         "</ul>" +
         "<h4>Perfis</h4>" +
         "<p>Quatro perfis com regras pr&oacute;prias: aluno, psic&oacute;logo, professor / psic&oacute;logo escolar e administrador.</p>" +
+        "<h4>Minha contribui&ccedil;&atilde;o</h4>" +
+        "<p>Criei o nome do projeto e atuo no seu desenvolvimento, junto com a equipe.</p>" +
         "<h4>Est&aacute;gio atual</h4>" +
         "<p>Projeto em equipe, na fase de an&aacute;lise: documento de vis&atilde;o, perfis de usu&aacute;rio e requisitos funcionais por perfil. Ainda n&atilde;o h&aacute; demonstra&ccedil;&atilde;o p&uacute;blica.</p>",
       tech_lead: "Uma vis&atilde;o organizada das ferramentas e linguagens com que trabalho.",
