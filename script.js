@@ -237,7 +237,8 @@
       coffee_p2: "I lead it where design and technology meet: the visual identity, the materials, how sessions are run, and how people are brought in.",
 
       creative_h: "Playground",
-      creative_intro: "Everything I make away from a code editor &mdash; digital art, ink drawing, graphic design, photography, things I bake, and volunteering and events. Tap any piece to see it larger.",
+      creative_intro: "Everything I make away from a code editor &mdash; digital art, ink drawing, graphic design, photography, things I bake, and volunteering and events. Scroll sideways to browse; open any piece to see it larger, with its technique and process.",
+      gal_prev: "Scroll the gallery left", gal_next: "Scroll the gallery right", gal_grid: "Creative pieces &mdash; scroll sideways to browse",
       pf_all: "All",
       pf_digital: "Digital art",
       pf_illustration: "Illustration",
@@ -503,7 +504,8 @@
       coffee_p2: "Lidero onde design e tecnologia se encontram: a identidade visual, os materiais, como os encontros acontecem e como as pessoas s&atilde;o convidadas.",
 
       creative_h: "Playground",
-      creative_intro: "Tudo o que fa&ccedil;o longe do editor de c&oacute;digo &mdash; arte digital, desenho a nanquim, design gr&aacute;fico, fotografia, o que ando assando, e voluntariados e eventos. Toque em qualquer pe&ccedil;a para ver maior.",
+      creative_intro: "Tudo o que fa&ccedil;o longe do editor de c&oacute;digo &mdash; arte digital, desenho a nanquim, design gr&aacute;fico, fotografia, o que ando assando, e voluntariados e eventos. Deslize para o lado para navegar; abra qualquer pe&ccedil;a para ver maior, com t&eacute;cnica e processo.",
+      gal_prev: "Rolar a galeria para a esquerda", gal_next: "Rolar a galeria para a direita", gal_grid: "Pe&ccedil;as criativas &mdash; deslize para o lado para navegar",
       pf_all: "Todos",
       pf_digital: "Arte digital",
       pf_illustration: "Ilustra&ccedil;&atilde;o",
@@ -585,6 +587,16 @@
     bindFilterGroup(".gallery__filters", ".gallery__grid .art");
   }
 
+  /* process notes shared by a whole medium (per-piece data-note overrides) */
+  var ART_PROCESS = {
+    "Character studies": { en: "Digital studies of pose and expression.", pt: "Estudos de pose e expressão feitos no digital." },
+    "Traditional / pencil": { en: "Graphite figure and portrait studies.", pt: "Estudos de figura e retrato a grafite." },
+    "Graphic design · @projeto.borboleta.menarca": {
+      en: "An awareness piece for Projeto Borboleta Menarca — layout, type and collage from the content the team provides.",
+      pt: "Uma peça de conscientização para o Projeto Borboleta Menarca — layout, tipografia e colagem a partir do conteúdo da equipe."
+    }
+  };
+
   /* ---------- artwork modal ---------- */
   function initModal() {
     var modal = document.getElementById("modal");
@@ -593,6 +605,7 @@
     var closeBtn = document.getElementById("modal-close");
     var titleEl = document.getElementById("modal-title");
     var catEl = document.getElementById("modal-cat");
+    var noteEl = document.getElementById("modal-note");
     var phEl = document.getElementById("modal-ph");
     var imgEl = document.getElementById("modal-img");
     var lastFocus = null;
@@ -602,7 +615,15 @@
       var title = btn.getAttribute("data-title") || "";
       titleEl.textContent = title;
       var isPt = document.documentElement.lang === "pt-BR";
-      catEl.textContent = (isPt && btn.getAttribute("data-cat-pt")) || btn.getAttribute("data-cat") || "";
+      var cat = (isPt && btn.getAttribute("data-cat-pt")) || btn.getAttribute("data-cat") || "";
+      catEl.textContent = cat;
+      if (noteEl) {
+        var lang = isPt ? "pt" : "en";
+        var note = (isPt && btn.getAttribute("data-note-pt")) || btn.getAttribute("data-note") ||
+                   (ART_PROCESS[btn.getAttribute("data-cat")] && ART_PROCESS[btn.getAttribute("data-cat")][lang]) || "";
+        noteEl.textContent = note;
+        noteEl.hidden = !note;
+      }
       var full = btn.getAttribute("data-full") || "";
       if (imgEl) {
         if (full) { imgEl.src = full; imgEl.alt = title; imgEl.hidden = false; }
@@ -814,32 +835,43 @@
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   }
 
-  /* ---------- staggered reveal for the playground grid ---------- */
-  function initReveal() {
-    var grid = document.querySelector(".gallery__grid");
-    if (!grid || !("IntersectionObserver" in window)) return;
-    var tiles = [].slice.call(grid.querySelectorAll(".art"));
-    if (!tiles.length) return;
-    grid.classList.add("reveal");
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (!en.isIntersecting) return;
-        var t = en.target;
-        t.style.transitionDelay = (t._revIdx % 3) * 80 + "ms";
-        t.classList.add("is-in");
-        io.unobserve(t);
-      });
-    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.06 });
-    tiles.forEach(function (t, i) { t._revIdx = i; io.observe(t); });
-    // safety net: never leave a tile stuck invisible
-    window.addEventListener("load", function () {
-      setTimeout(function () {
-        tiles.forEach(function (t) {
-          var r = t.getBoundingClientRect();
-          if (r.top < window.innerHeight && r.bottom > 0) { t.classList.add("is-in"); io.unobserve(t); }
-        });
-      }, 400);
+  /* ---------- horizontal playground gallery: arrows + swipe ---------- */
+  function initGallery() {
+    var grid = document.getElementById("gallery-grid");
+    if (!grid) return;
+    var prev = document.querySelector(".gallery__nav--prev");
+    var next = document.querySelector(".gallery__nav--next");
+
+    [].slice.call(grid.querySelectorAll(".art")).forEach(function (a, i) {
+      a.style.setProperty("--gi", i % 14);
     });
+
+    function step() { return Math.max(220, Math.round(grid.clientWidth * 0.78)); }
+    function update() {
+      if (!prev || !next) return;
+      var max = grid.scrollWidth - grid.clientWidth - 4;
+      prev.disabled = grid.scrollLeft <= 4;
+      next.disabled = grid.scrollLeft >= max || max <= 0;
+    }
+    if (prev) prev.addEventListener("click", function () { grid.scrollBy({ left: -step(), behavior: "smooth" }); });
+    if (next) next.addEventListener("click", function () { grid.scrollBy({ left: step(), behavior: "smooth" }); });
+    grid.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+
+    document.querySelectorAll(".gallery__filters .chip").forEach(function (c) {
+      c.addEventListener("click", function () {
+        grid.scrollTo({ left: 0, behavior: "smooth" });
+        setTimeout(update, 80);
+      });
+    });
+    // arrow keys when the strip itself has focus
+    grid.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowRight") { e.preventDefault(); grid.scrollBy({ left: step(), behavior: "smooth" }); }
+      else if (e.key === "ArrowLeft") { e.preventDefault(); grid.scrollBy({ left: -step(), behavior: "smooth" }); }
+    });
+
+    update();
+    window.addEventListener("load", update);
   }
 
   /* ---------- about photo fan: one photo -> pop -> fan open ---------- */
@@ -924,7 +956,7 @@
     initFolders();
     initModal();
     initProjectModal();
-    initReveal();
+    initGallery();
     initAboutFan();
   });
 })();
