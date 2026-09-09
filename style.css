@@ -737,6 +737,9 @@ p:last-child { margin-bottom: 0; }
 .ci--rev .ci__shot { order: 2; }
 .ci__shot { margin: 0; border: 1px solid var(--line); border-radius: 12px; overflow: hidden; background: var(--panel); box-shadow: 0 18px 34px -22px rgba(24,16,8,.45); }
 .ci__shot img { display: block; width: 100%; height: auto; max-height: clamp(280px, 42vh, 440px); object-fit: cover; object-position: 50% 30%; }
+/* posters / full designs: show the whole image, no crop */
+.ci--poster .ci__shot { background: var(--panel); }
+.ci--poster .ci__shot img { max-height: min(72vh, 620px); object-fit: contain; }
 .ci__text h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.15rem, 2vw, 1.4rem); margin: 0 0 .35em; }
 .ci__text p { max-width: 44ch; }
 .community__more { font-family: var(--serif); font-size: 1rem; color: var(--ink-2); margin: 2em 0 0; }
