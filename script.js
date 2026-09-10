@@ -107,8 +107,8 @@
       iot_cap1: "Circuit built in a simulator: ESP32 with an HC-SR04 ultrasonic sensor and a buzzer.",
       iot_cap2: "Blynk dashboard setup, with indicators and an alert widget (edit mode).",
       j8_t: "Science research", j8_d: "FICEM 2024 &mdash; co-authored a review on the science of dreams; I proposed the topic and made the presentation and video.",
-      ci_borboleta: "Design and media for a women&rsquo;s-health awareness project. I design the awareness pieces &mdash; layout, type and collage &mdash; from the content the team provides.",
-      ci_more: "I also join environmental actions, activities with children and other volunteering with Interact and around Curitiba.",
+      ci_borboleta: "Design &amp; visual communication for a project on menstrual dignity and intimate health as a human-rights issue (Apr 2026&ndash;present). I create visual identity and awareness pieces that translate health concepts into approachable visuals for kids, teens and the community.",
+      ci_more: "I also planned and ran community projects with the Interact Club (Aug&ndash;Nov 2024), and joined environmental actions and activities with children around Curitiba.",
       home_line: "<em>Code, design &amp; people</em> &mdash; I build where they meet.",
       id_kicker: "DEV &middot; DESIGN LICENSE",
       id_since: "SINCE", id_sig: "signature", id_sticker_a: "BUILT BY HAND",
@@ -264,8 +264,8 @@
 
       community_h: "Community &amp; social impact",
       community_lead: "Building with people — each of these is a different role, in a different place.",
-      ci_ddm: "Events Coordinator at the students&rsquo; union women&rsquo;s board. I plan and run events and their communication, and initiatives around inclusion and social impact.",
-      ci_teia: "Social media volunteer. I write the content briefings — the story-by-story script, the pillar and the goal — that the team turns into the published posts.",
+      ci_ddm: "Events Coordinator at the students&rsquo; union women&rsquo;s board (Mar 2026&ndash;present). I plan and run events and talks on inclusion and women&rsquo;s participation on campus &mdash; including organising the first &ldquo;Literatura com Elas&rdquo; gathering and the &ldquo;Vozes Femininas&rdquo; project.",
+      ci_teia: "Social media strategist (Aug 2026&ndash;present). I build the editorial calendar, write the content briefings and track campaign performance to grow the institution&rsquo;s reach.",
       privacy_note: "Photos are selected with care — no children's faces in sensitive contexts, no legible badges or personal data.",
 
       currently_h: "Currently",
@@ -383,8 +383,8 @@
       iot_cap1: "Circuito montado em simulador: ESP32 com sensor ultrass&ocirc;nico HC-SR04 e buzzer.",
       iot_cap2: "Configura&ccedil;&atilde;o do painel no Blynk, com indicadores e sinaliza&ccedil;&atilde;o de alerta (modo de edi&ccedil;&atilde;o).",
       j8_t: "Pesquisa cient&iacute;fica", j8_d: "FICEM 2024 &mdash; coautora de uma revis&atilde;o sobre a ci&ecirc;ncia dos sonhos; propus o tema e fiz a apresenta&ccedil;&atilde;o e o v&iacute;deo.",
-      ci_borboleta: "Design e m&iacute;dia para um projeto de conscientiza&ccedil;&atilde;o em sa&uacute;de da mulher. Eu fa&ccedil;o as pe&ccedil;as &mdash; layout, tipografia e colagem &mdash; a partir do conte&uacute;do que a equipe passa.",
-      ci_more: "Tamb&eacute;m participo de a&ccedil;&otilde;es ambientais, atividades com crian&ccedil;as e outros voluntariados com o Interact e em Curitiba.",
+      ci_borboleta: "Design e comunica&ccedil;&atilde;o visual para um projeto sobre dignidade menstrual e sa&uacute;de &iacute;ntima como pauta de direitos humanos (abr 2026&ndash;atual). Crio identidade visual e pe&ccedil;as de conscientiza&ccedil;&atilde;o que traduzem conceitos de sa&uacute;de em linguagem visual acess&iacute;vel para crian&ccedil;as, adolescentes e a comunidade.",
+      ci_more: "Tamb&eacute;m planejei e conduzi projetos comunit&aacute;rios com o Interact Club (ago&ndash;nov 2024), al&eacute;m de a&ccedil;&otilde;es ambientais e atividades com crian&ccedil;as em Curitiba.",
       home_line: "<em>C&oacute;digo, design &amp; pessoas</em> &mdash; construo onde eles se encontram.",
       id_kicker: "LICEN&Ccedil;A DEV &middot; DESIGN",
       id_since: "DESDE", id_sig: "assinatura", id_sticker_a: "FEITO &Agrave; M&Atilde;O",
@@ -540,8 +540,8 @@
 
       community_h: "Comunidade &amp; impacto social",
       community_lead: "Construir com pessoas — cada uma destas &eacute; uma fun&ccedil;&atilde;o diferente, num lugar diferente.",
-      ci_ddm: "Coordenadora de Eventos na Diretoria da Mulher do DCE. Planejo e realizo eventos e sua comunica&ccedil;&atilde;o, e iniciativas de inclus&atilde;o e impacto social.",
-      ci_teia: "Volunt&aacute;ria de social media. Eu escrevo os briefings de conte&uacute;do — o roteiro story a story, o pilar e o objetivo — que a equipe transforma nos posts publicados.",
+      ci_ddm: "Coordenadora de Eventos na Diretoria da Mulher do DCE (mar 2026&ndash;atual). Planejo e conduzo eventos e palestras sobre inclus&atilde;o e participa&ccedil;&atilde;o das mulheres no ambiente acad&ecirc;mico &mdash; incluindo a organiza&ccedil;&atilde;o do 1&ordm; encontro &ldquo;Literatura com Elas&rdquo; e do projeto &ldquo;Vozes Femininas&rdquo;.",
+      ci_teia: "Estrategista de m&iacute;dias sociais (ago 2026&ndash;atual). Monto o cronograma editorial, escrevo os briefings de conte&uacute;do e acompanho o desempenho das campanhas para ampliar o alcance da institui&ccedil;&atilde;o.",
       privacy_note: "As fotos s&atilde;o escolhidas com cuidado — sem rostos de crian&ccedil;as em contexto sens&iacute;vel, sem crach&aacute;s leg&iacute;veis ou dados pessoais.",
 
       currently_h: "Atualmente",
