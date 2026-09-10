@@ -244,6 +244,7 @@
       coffee_why: "A university tech club I started and run with a team of friends from college.",
       coffee_p1: "It exists to give students a lower-barrier, hands-on place to learn, build projects together and share what they know — outside the pressure of a graded room.",
       coffee_p2: "I lead it where design and technology meet: the visual identity, the materials, how sessions are run, and how people are brought in.",
+      coffee_p3: "We meet twice a week — Wednesdays 8–9:30pm and Saturdays 10–11:30am — working through study guides I write for the group, on topics like mathematical logic and requirements engineering.",
 
       creative_h: "Playground",
       creative_intro: "What I make away from a code editor &mdash; posters, illustration, my own photography, baking and visual studies. The strip scrolls on its own; hover to pause. Open a piece for the larger image and its context.",
@@ -520,6 +521,7 @@
       coffee_why: "Um clube universit&aacute;rio de tecnologia que criei e toco com uma equipe de amigos da faculdade.",
       coffee_p1: "Existe para dar aos estudantes um espa&ccedil;o com menos barreira e mais pr&aacute;tica para aprender, construir projetos juntos e trocar o que sabem — fora da press&atilde;o da sala de aula.",
       coffee_p2: "Lidero onde design e tecnologia se encontram: a identidade visual, os materiais, como os encontros acontecem e como as pessoas s&atilde;o convidadas.",
+      coffee_p3: "Nos encontramos duas vezes por semana — quartas-feiras das 20h &agrave;s 21h30 e s&aacute;bados das 10h &agrave;s 11h30 — estudando com apostilas que eu escrevo para o grupo, sobre temas como l&oacute;gica matem&aacute;tica e engenharia de requisitos.",
 
       creative_h: "Playground",
       creative_intro: "O que fa&ccedil;o longe do editor de c&oacute;digo &mdash; p&ocirc;steres, ilustra&ccedil;&atilde;o, fotografia autoral, confeitaria e estudos visuais. A faixa corre sozinha; passe o mouse para pausar. Abra uma pe&ccedil;a para ver a imagem maior e o contexto.",
