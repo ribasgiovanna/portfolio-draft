@@ -28,7 +28,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 
-<link rel="stylesheet" href="style.css?v=20260910g">
+<link rel="stylesheet" href="style.css?v=20260911a">
 
 <script type="application/ld+json">
 {
@@ -147,11 +147,26 @@
   <h2 class="section-label folders__label"><span aria-hidden="true">&#8212;</span> <span id="work-h" data-i18n="work_h">Featured projects</span></h2>
 
   <div class="folders__set">
+    <div class="folders__deco" aria-hidden="true">
+      <span class="deco__clip deco__clip--a"><svg viewBox="0 0 72 88" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 46 C 20 30 16 16 18 11 C 19 7 24 7 25 11 C 27 20 30 34 33 44" stroke="#9aa0a8" stroke-width="4.2" stroke-linecap="round"/><path d="M47 46 C 52 30 56 16 54 11 C 53 7 48 7 47 11 C 45 20 42 34 39 44" stroke="#9aa0a8" stroke-width="4.2" stroke-linecap="round"/></svg></span>
+      <figure class="deco__polaroid deco__polaroid--a"><img src="assets/images/tech/datasus-dashboard.webp" alt=""></figure>
+      <span class="deco__clip deco__clip--b"><svg viewBox="0 0 72 88" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 46 C 20 30 16 16 18 11 C 19 7 24 7 25 11 C 27 20 30 34 33 44" stroke="#9aa0a8" stroke-width="4.2" stroke-linecap="round"/><path d="M47 46 C 52 30 56 16 54 11 C 53 7 48 7 47 11 C 45 20 42 34 39 44" stroke="#9aa0a8" stroke-width="4.2" stroke-linecap="round"/></svg></span>
+      <figure class="deco__polaroid deco__polaroid--b"><img src="assets/images/tech/game-play.webp" alt=""></figure>
+      <span class="deco__stamp" data-i18n="id_sticker_a">BUILT BY HAND</span>
+    </div>
     <div class="folders__stack" role="tablist" aria-label="Projects, technologies and certificates">
 
       <!-- ===== PROJETOS ===== -->
       <div class="folder is-front" id="folder-projects" style="--tab-x:0">
         <button class="folder__tab" type="button" role="tab" id="ft-projects" aria-selected="true" aria-controls="fb-projects" data-i18n="tab_projects">Projects</button>
+        <div class="folder__cover" hidden>
+          <span class="folder__stamp" aria-hidden="true">GR<small data-i18n="tab_projects">Projects</small></span>
+          <h3 data-i18n="cover_projects_title">Selected work</h3>
+          <p class="folder__cover-meta" data-i18n="cover_projects_meta">Data &middot; Web &middot; Games &middot; IoT</p>
+          <p class="folder__cover-lead" data-i18n="cover_projects_lead">Team and solo projects across the stack, from automation to interface.</p>
+          <button type="button" class="folder__open" data-open="projects" data-i18n="cover_projects_cta">Explore projects &rarr;</button>
+          <span class="folder__count" data-count-label="cover_projects_count"></span>
+        </div>
         <div class="folder__body" id="fb-projects" role="tabpanel" aria-labelledby="ft-projects" tabindex="0">
           <ul class="plist">
 
@@ -250,7 +265,7 @@
             <li><div class="prow" id="mkpause" aria-labelledby="p6-h"
                      data-pm data-pm-repo="https://github.com/ribasgiovanna/mkpause" data-pm-alt="">
               <span class="prow__num">06</span>
-              <span class="prow__thumb prow__thumb--ph" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="6" y="5" width="4.2" height="14" rx="1.4"/><rect x="13.8" y="5" width="4.2" height="14" rx="1.4"/></svg></span>
+              <span class="prow__thumb prow__thumb--ph" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="7.2" cy="7.5" rx="2.4" ry="3.4"/><ellipse cx="16.8" cy="7.5" rx="2.4" ry="3.4"/><ellipse cx="12" cy="14" rx="7" ry="5.6"/><circle cx="9.6" cy="13.4" r=".85" fill="var(--folder-bg)"/><circle cx="14.4" cy="13.4" r=".85" fill="var(--folder-bg)"/><ellipse cx="12" cy="15.6" rx="1" ry=".7" fill="var(--folder-bg)"/></svg></span>
               <h3 id="p6-h" data-i18n="mk_h">MKpause</h3>
               <span class="prow__cat" data-i18n="mk_cat">Product</span>
               <div class="prow__data" hidden>
@@ -285,6 +300,14 @@
       <!-- ===== TECNOLOGIAS ===== -->
       <div class="folder is-back" id="folder-tech" style="--tab-x:1; --depth:1">
         <button class="folder__tab" type="button" role="tab" id="ft-tech" aria-selected="false" tabindex="-1" aria-controls="fb-tech" data-i18n="tab_tech">Technologies</button>
+        <div class="folder__cover" hidden>
+          <span class="folder__stamp" aria-hidden="true">GR<small data-i18n="tab_tech">Technologies</small></span>
+          <h3 data-i18n="cover_tech_title">Toolbox</h3>
+          <p class="folder__cover-meta" data-i18n="cover_tech_meta">Code &middot; data &middot; creation</p>
+          <p class="folder__cover-lead" data-i18n="cover_tech_lead">The languages and tools I reach for, grouped by what I use them for.</p>
+          <button type="button" class="folder__open" data-open="tech" data-i18n="cover_tech_cta">See the tools &rarr;</button>
+          <span class="folder__count" data-count-label="cover_tech_count"></span>
+        </div>
         <div class="folder__body" id="fb-tech" role="tabpanel" aria-labelledby="ft-tech" tabindex="0" hidden>
           <p class="fpanel__lead" data-i18n="tech_lead">An organised view of the tools and languages I work with.</p>
           <div class="techgrid">
@@ -347,6 +370,14 @@
       <!-- ===== CERTIFICADOS ===== -->
       <div class="folder is-back" id="folder-certs" style="--tab-x:2; --depth:2">
         <button class="folder__tab" type="button" role="tab" id="ft-certs" aria-selected="false" tabindex="-1" aria-controls="fb-certs" data-i18n="tab_certs">Certificates</button>
+        <div class="folder__cover" hidden>
+          <span class="folder__stamp" aria-hidden="true">GR<small data-i18n="tab_certs">Certificates</small></span>
+          <h3 data-i18n="cover_certs_title">Learning, on record</h3>
+          <p class="folder__cover-meta" data-i18n="cover_certs_meta">Courses &middot; education &middot; participations</p>
+          <p class="folder__cover-lead" data-i18n="cover_certs_lead">Courses, formal education and things I showed up for.</p>
+          <button type="button" class="folder__open" data-open="certs" data-i18n="cover_certs_cta">Flip through records &rarr;</button>
+          <span class="folder__count" data-count-label="cover_certs_count"></span>
+        </div>
         <div class="folder__body" id="fb-certs" role="tabpanel" aria-labelledby="ft-certs" tabindex="0" hidden>
           <div class="certlist" id="certlist">
             <div class="certpage" data-page="0">
@@ -397,6 +428,21 @@
         </div>
       </div>
 
+    </div>
+  </div>
+
+  <div class="freader" id="folder-reader" hidden>
+    <div class="freader__box" role="dialog" aria-modal="true">
+      <div class="freader__top">
+        <button type="button" class="freader__return" id="freader-return"><span aria-hidden="true">&larr;</span> <span data-i18n="reader_return">Save to the folder</span></button>
+        <span class="freader__label" id="freader-label"></span>
+      </div>
+      <div class="freader__sheet" id="freader-sheet"></div>
+      <div class="freader__pager">
+        <button type="button" class="freader__nav" id="freader-prev" data-i18n-aria="pg_prev" aria-label="Previous">&larr;</button>
+        <span class="freader__status" id="freader-status" aria-live="polite"></span>
+        <button type="button" class="freader__nav" id="freader-next" data-i18n-aria="pg_next" aria-label="Next">&rarr;</button>
+      </div>
     </div>
   </div>
 </section>
@@ -557,7 +603,7 @@
       <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
     </button>
     <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-01.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/trad-01.webp" alt="Pencil hand studies by Giovanna Ribas" loading="lazy" width="978" height="1300"></span>
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-01.webp" alt="Pencil hand studies by Giovanna Ribas" loading="lazy" width="1000" height="1449"></span>
       <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
     </button>
     <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-04.webp">
@@ -730,6 +776,6 @@
   </div>
 </div>
 
-<script src="script.js?v=20260910g"></script>
+<script src="script.js?v=20260911a"></script>
 </body>
 </html>

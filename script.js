@@ -32,6 +32,24 @@
       pm_hint: "open &nearr;",
       pm_project: "Project",
       tab_projects: "Projects", tab_tech: "Technologies", tab_certs: "Certificates",
+      cover_projects_title: "Selected work",
+      cover_projects_meta: "Data &middot; Web &middot; Games &middot; IoT",
+      cover_projects_lead: "Team and solo projects across the stack, from automation to interface.",
+      cover_projects_cta: "Explore projects &rarr;",
+      cover_projects_count: "projects",
+      cover_tech_title: "Toolbox",
+      cover_tech_meta: "Code &middot; data &middot; creation",
+      cover_tech_lead: "The languages and tools I reach for, grouped by what I use them for.",
+      cover_tech_cta: "See the tools &rarr;",
+      cover_tech_count: "groups",
+      cover_certs_title: "Learning, on record",
+      cover_certs_meta: "Courses &middot; education &middot; participations",
+      cover_certs_lead: "Courses, formal education and things I showed up for.",
+      cover_certs_cta: "Flip through records &rarr;",
+      cover_certs_count: "records",
+      reader_return: "Save to the folder",
+      reader_more: "See more &rarr;",
+      reader_tech_kind: "Tools",
       p1_cat: "Data &amp; automation",
       tag_reqs: "requirements analysis", tag_uxflows: "user roles", tag_team: "team project",
       tag_embedded: "embedded C", tag_sens: "sensors",
@@ -311,6 +329,24 @@
       pm_hint: "abrir &nearr;",
       pm_project: "Projeto",
       tab_projects: "Projetos", tab_tech: "Tecnologias", tab_certs: "Certificados",
+      cover_projects_title: "Trabalhos selecionados",
+      cover_projects_meta: "Dados &middot; Web &middot; Jogos &middot; IoT",
+      cover_projects_lead: "Projetos em equipe e individuais, da automa&ccedil;&atilde;o &agrave; interface.",
+      cover_projects_cta: "Explorar projetos &rarr;",
+      cover_projects_count: "projetos",
+      cover_tech_title: "Caixa de ferramentas",
+      cover_tech_meta: "C&oacute;digo &middot; dados &middot; cria&ccedil;&atilde;o",
+      cover_tech_lead: "As linguagens e ferramentas que uso, agrupadas pelo que resolvem.",
+      cover_tech_cta: "Ver ferramentas &rarr;",
+      cover_tech_count: "grupos",
+      cover_certs_title: "Aprender, registrar",
+      cover_certs_meta: "Cursos &middot; forma&ccedil;&atilde;o &middot; participa&ccedil;&otilde;es",
+      cover_certs_lead: "Cursos, forma&ccedil;&atilde;o e participa&ccedil;&otilde;es que marquei presen&ccedil;a.",
+      cover_certs_cta: "Folhear registros &rarr;",
+      cover_certs_count: "registros",
+      reader_return: "Guardar na pasta",
+      reader_more: "Ver mais &rarr;",
+      reader_tech_kind: "Ferramentas",
       p1_cat: "Dados &amp; automa&ccedil;&atilde;o",
       tag_reqs: "an&aacute;lise de requisitos", tag_uxflows: "perfis de usu&aacute;rio", tag_team: "projeto em equipe",
       tag_embedded: "C embarcado", tag_sens: "sensores",
@@ -680,6 +716,27 @@
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
   }
 
+  /* ---------- folder cover counts (e.g. "07 projects") ---------- */
+  function updateFolderCounts() {
+    var lang = document.documentElement.lang === "pt-BR" ? "pt" : "en";
+    var dict = I18N[lang] || I18N.en;
+    var countMap = {
+      "folder-projects": "#fb-projects .prow",
+      "folder-tech": "#fb-tech .techcard",
+      "folder-certs": "#fb-certs .certcard"
+    };
+    var _dec = document.createElement("textarea");
+    document.querySelectorAll(".folder__count[data-count-label]").forEach(function (el) {
+      var folder = el.closest(".folder");
+      var sel = folder && countMap[folder.id];
+      var n = sel ? document.querySelectorAll(sel).length : 0;
+      var key = el.getAttribute("data-count-label");
+      var label = dict[key] || key;
+      _dec.innerHTML = String(label).replace(/<[^>]+>/g, "");
+      el.textContent = (n < 10 ? "0" + n : String(n)) + " " + _dec.value;
+    });
+  }
+
   /* ---------- stacked folders (Projects / Technologies / Certificates) ---------- */
   function initFolders() {
     var stack = document.querySelector(".folders__stack");
@@ -697,7 +754,13 @@
         f.setAttribute("aria-hidden", on ? "false" : "true");
         if (!on) { f.style.setProperty("--depth", ++back); }
         var body = f.querySelector(".folder__body");
-        if (body) body.hidden = !on;
+        var cover = f.querySelector(".folder__cover");
+        if (cover) {
+          cover.hidden = !on;
+          if (body) body.hidden = true;   /* cover replaces the inline body once JS is active */
+        } else if (body) {
+          body.hidden = !on;
+        }
         var tab = tabs[i];
         if (tab) {
           tab.setAttribute("aria-selected", on ? "true" : "false");
@@ -722,6 +785,7 @@
       });
     });
     select(0);
+    updateFolderCounts();
   }
 
   /* ---------- certificate pager (keeps the folder compact) ---------- */
@@ -877,6 +941,235 @@
     });
     closeBtn.addEventListener("click", close);
     modal.addEventListener("click", function (e) { if (e.target === modal) close(); });
+    return { open: open };
+  }
+
+  /* ---------- fullscreen folder reader — folders open into a paginated,
+     one-item-at-a-time "sheet" view. Content is cloned straight from the
+     existing DOM (project rows / tech cards / cert cards) so it keeps its
+     data-i18n bindings and never drifts from the inline fallback markup. */
+  function initFolderReader(openProjectModal) {
+    var reader = document.getElementById("folder-reader");
+    if (!reader) return;
+    var box = reader.querySelector(".freader__box");
+    var sheet = document.getElementById("freader-sheet");
+    var labelEl = document.getElementById("freader-label");
+    var statusEl = document.getElementById("freader-status");
+    var prevBtn = document.getElementById("freader-prev");
+    var nextBtn = document.getElementById("freader-next");
+    var returnBtn = document.getElementById("freader-return");
+    var openButtons = document.querySelectorAll(".folder__open[data-open]");
+    if (!openButtons.length) return;
+
+    var i18n = (typeof I18N !== "undefined") ? I18N : null;
+    function t(key, fallback) {
+      var lang = document.documentElement.lang === "pt-BR" ? "pt" : "en";
+      return (i18n && i18n[lang] && i18n[lang][key]) || fallback || "";
+    }
+
+    function cloneVisible(el, extraClass) {
+      if (!el) return null;
+      var c = el.cloneNode(true);
+      c.removeAttribute("hidden");
+      if (extraClass) c.classList.add(extraClass);
+      return c;
+    }
+
+    function renderProject(panel) {
+      var layout = document.createElement("div");
+      layout.className = "freader__layout";
+
+      var thumbImg = panel.querySelector("img.prow__thumb");
+      var thumbPh = panel.querySelector(".prow__thumb--ph");
+      if (thumbImg) {
+        var fig = document.createElement("figure");
+        fig.className = "freader__shot";
+        var im = thumbImg.cloneNode(true);
+        im.removeAttribute("loading");
+        fig.appendChild(im);
+        layout.appendChild(fig);
+      } else if (thumbPh) {
+        var mark = document.createElement("div");
+        mark.className = "freader__mark";
+        mark.setAttribute("aria-hidden", "true");
+        mark.appendChild(thumbPh.cloneNode(true));
+        layout.appendChild(mark);
+      }
+
+      var copy = document.createElement("div");
+      copy.className = "freader__copy";
+
+      var cat = panel.querySelector(".prow__cat");
+      if (cat) {
+        var kindP = document.createElement("p");
+        kindP.className = "freader__kind";
+        kindP.appendChild(cat.cloneNode(true));
+        copy.appendChild(kindP);
+      }
+      var h3src = panel.querySelector("h3");
+      if (h3src) {
+        var h3 = h3src.cloneNode(true);
+        h3.removeAttribute("id");
+        copy.appendChild(h3);
+      }
+      var data = panel.querySelector(".prow__data");
+      if (data) {
+        var dateEl = cloneVisible(data.querySelector(".panel__date"), "freader__meta");
+        if (dateEl) copy.appendChild(dateEl);
+        var leadEl = cloneVisible(data.querySelector(".panel__lead"), "freader__lead");
+        if (leadEl) copy.appendChild(leadEl);
+        var tagsEl = cloneVisible(data.querySelector(".tagrow"));
+        if (tagsEl) copy.appendChild(tagsEl);
+      }
+
+      var linksWrap = document.createElement("p");
+      linksWrap.className = "freader__links";
+      var pmDetail = data && data.querySelector(".pm-detail");
+      var hasExtra = !!(panel.hasAttribute("data-pm-img2") || panel.hasAttribute("data-pm-video") ||
+        (pmDetail && pmDetail.textContent.trim()));
+      if (hasExtra && openProjectModal) {
+        var moreBtn = document.createElement("button");
+        moreBtn.type = "button";
+        moreBtn.className = "cta freader__more";
+        moreBtn.setAttribute("data-i18n", "reader_more");
+        moreBtn.innerHTML = t("reader_more", "See more &rarr;");
+        moreBtn.addEventListener("click", function () { openProjectModal(panel); });
+        linksWrap.appendChild(moreBtn);
+      }
+      var repo = panel.getAttribute("data-pm-repo");
+      if (repo) {
+        var a = document.createElement("a");
+        a.className = "cta"; a.href = repo; a.target = "_blank"; a.rel = "noopener noreferrer";
+        var repoKey = panel.getAttribute("data-pm-repo-label") || "cta_source";
+        a.setAttribute("data-i18n", repoKey);
+        a.innerHTML = t(repoKey, "View project on GitHub &rarr;");
+        linksWrap.appendChild(a);
+      }
+      if (linksWrap.children.length) copy.appendChild(linksWrap);
+
+      layout.appendChild(copy);
+      return layout;
+    }
+
+    function renderTech(card) {
+      var layout = document.createElement("div");
+      layout.className = "freader__layout freader__layout--solo";
+      var copy = document.createElement("div");
+      copy.className = "freader__copy";
+
+      var kindP = document.createElement("p");
+      kindP.className = "freader__kind";
+      kindP.setAttribute("data-i18n", "reader_tech_kind");
+      kindP.innerHTML = t("reader_tech_kind", "Tools");
+      copy.appendChild(kindP);
+
+      var h3src = card.querySelector("h3");
+      if (h3src) copy.appendChild(h3src.cloneNode(true));
+
+      var tagrow = card.querySelector(".tagrow");
+      if (tagrow) {
+        var tags = tagrow.cloneNode(true);
+        tags.classList.add("freader__tags--lg");
+        copy.appendChild(tags);
+      }
+      layout.appendChild(copy);
+      return layout;
+    }
+
+    function renderCert(card) {
+      var layout = document.createElement("div");
+      layout.className = "freader__layout freader__layout--solo";
+      var copy = document.createElement("div");
+      copy.className = "freader__copy";
+
+      var dateEl = card.querySelector(".certcard__date");
+      if (dateEl) {
+        var meta = dateEl.cloneNode(true);
+        meta.classList.add("freader__meta");
+        copy.appendChild(meta);
+      }
+      var h3src = card.querySelector("h3");
+      if (h3src) copy.appendChild(h3src.cloneNode(true));
+
+      var ps = card.querySelectorAll("p");
+      var desc = ps.length > 1 ? ps[ps.length - 1] : null;
+      if (desc) {
+        var leadEl = desc.cloneNode(true);
+        leadEl.classList.add("freader__lead");
+        copy.appendChild(leadEl);
+      }
+      layout.appendChild(copy);
+      return layout;
+    }
+
+    var TYPES = {
+      projects: { selector: "#fb-projects .prow[data-pm]", labelKey: "tab_projects", render: renderProject },
+      tech: { selector: "#fb-tech .techcard", labelKey: "tab_tech", render: renderTech },
+      certs: { selector: "#fb-certs .certcard", labelKey: "tab_certs", render: renderCert }
+    };
+    var state = { type: null, items: [], index: 0, opener: null };
+
+    function renderPage() {
+      var def = TYPES[state.type];
+      var item = state.items[state.index];
+      sheet.innerHTML = "";
+      if (item && def) sheet.appendChild(def.render(item));
+      if (statusEl) {
+        var n = state.index + 1, total = state.items.length;
+        statusEl.textContent = (n < 10 ? "0" + n : n) + " / " + (total < 10 ? "0" + total : total);
+      }
+      if (prevBtn) prevBtn.disabled = state.index === 0;
+      if (nextBtn) nextBtn.disabled = state.index === state.items.length - 1;
+      box.scrollTop = 0;
+    }
+
+    function open(type, opener) {
+      var def = TYPES[type];
+      if (!def) return;
+      state.type = type;
+      state.items = [].slice.call(document.querySelectorAll(def.selector));
+      state.index = 0;
+      state.opener = opener || null;
+      if (!state.items.length) return;
+
+      if (labelEl) {
+        labelEl.setAttribute("data-i18n", def.labelKey);
+        labelEl.innerHTML = t(def.labelKey, type);
+      }
+      renderPage();
+      reader.hidden = false;
+      document.body.style.overflow = "hidden";
+      document.addEventListener("keydown", onKey);
+      if (returnBtn) returnBtn.focus();
+    }
+    function close() {
+      reader.hidden = true;
+      document.body.style.overflow = "";
+      document.removeEventListener("keydown", onKey);
+      if (state.opener && state.opener.focus) state.opener.focus();
+    }
+    function goPrev() { if (state.index > 0) { state.index--; renderPage(); } }
+    function goNext() { if (state.index < state.items.length - 1) { state.index++; renderPage(); } }
+    function onKey(e) {
+      if (e.key === "Escape") { close(); return; }
+      if (e.key === "ArrowLeft") { goPrev(); return; }
+      if (e.key === "ArrowRight") { goNext(); return; }
+      if (e.key === "Tab") {
+        var f = box.querySelectorAll("button, a[href]");
+        if (!f.length) return;
+        var first = f[0], last = f[f.length - 1];
+        if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+        else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    }
+
+    openButtons.forEach(function (btn) {
+      btn.addEventListener("click", function () { open(btn.getAttribute("data-open"), btn); });
+    });
+    if (returnBtn) returnBtn.addEventListener("click", close);
+    if (prevBtn) prevBtn.addEventListener("click", goPrev);
+    if (nextBtn) nextBtn.addEventListener("click", goNext);
+    reader.addEventListener("click", function (e) { if (e.target === reader) close(); });
   }
 
   /* ---------- playground gallery: auto-scrolling one-row flow ----------
@@ -1067,13 +1360,15 @@
     if (btn) btn.addEventListener("click", function () {
       applyLang(document.documentElement.lang === "pt-BR" ? "en" : "pt");
       typeRole();
+      updateFolderCounts();
     });
 
     initFilters();
     initFolders();
     initCertPager();
     initModal();
-    initProjectModal();
+    var pm = initProjectModal();
+    initFolderReader(pm && pm.open);
     initGallery();
     initAboutFan();
   });
