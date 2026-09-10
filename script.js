@@ -17,6 +17,7 @@
 
       id_name: "NAME", id_based: "BASED IN", id_exp: "EXPERIENCE", id_exp_v: "Software Development Intern",
       id_edu: "EDUCATION",
+      id_edu_v: "Software Engineering student, PUCPR",
       id_builds: "BUILDS",
       id_builds_v: "software · interfaces · systems · communities · visual identities",
 
@@ -92,8 +93,9 @@
       p2_date: "Individual project &middot; Academic &middot; Jun 2026",
       p3_date: "Academic team project &middot; Jun 2026",
       nav_home: "Home",
-      home_welcome: "Welcome to my portfolio &mdash; I'm a",
-      home_role: "Software Engineering Student",
+      pg_prev: "Previous page", pg_next: "Next page",
+      home_welcome: "Welcome to my portfolio",
+      home_role: "Software development, design &amp; creation",
       cat_photo: "Photography",
       journey_harve: "Python course cohort at Harve, with certificates.",
       p1_sub: "SUS hemotherapy data automation &amp; analysis pipeline",
@@ -294,6 +296,7 @@
 
       id_name: "NOME", id_based: "BASE", id_exp: "EXPERI&Ecirc;NCIA", id_exp_v: "Estagi&aacute;ria de Desenvolvimento de Software",
       id_edu: "FORMA&Ccedil;&Atilde;O",
+      id_edu_v: "Estudante de Engenharia de Software, PUCPR",
       id_builds: "CONSTR&Oacute;I",
       id_builds_v: "software · interfaces · sistemas · comunidades · identidades visuais",
 
@@ -369,8 +372,9 @@
       p2_date: "Projeto individual &middot; acad&ecirc;mico &middot; jun 2026",
       p3_date: "Projeto acad&ecirc;mico em equipe &middot; jun 2026",
       nav_home: "In&iacute;cio",
-      home_welcome: "Bem-vindo (a) ao meu portf&oacute;lio &mdash; eu sou",
-      home_role: "Estudante de Engenharia de Software",
+      pg_prev: "P&aacute;gina anterior", pg_next: "Pr&oacute;xima p&aacute;gina",
+      home_welcome: "Bem-vindo (a) ao meu portf&oacute;lio",
+      home_role: "Desenvolvimento de software, design e cria&ccedil;&atilde;o",
       cat_photo: "Fotografia",
       journey_harve: "Turma do curso na Harve, com os certificados.",
       p1_sub: "Pipeline de automa&ccedil;&atilde;o e an&aacute;lise de dados de hemoterapia do SUS",
@@ -720,6 +724,28 @@
     select(0);
   }
 
+  /* ---------- certificate pager (keeps the folder compact) ---------- */
+  function initCertPager() {
+    var list = document.getElementById("certlist");
+    if (!list) return;
+    var pages = [].slice.call(list.querySelectorAll(".certpage"));
+    if (pages.length < 2) return;
+    var prevBtn = document.getElementById("cert-prev");
+    var nextBtn = document.getElementById("cert-next");
+    var status = document.getElementById("cert-status");
+    var i = 0;
+
+    function render() {
+      pages.forEach(function (p, idx) { p.hidden = idx !== i; });
+      if (status) status.textContent = (i + 1) + " / " + pages.length;
+      if (prevBtn) prevBtn.disabled = i === 0;
+      if (nextBtn) nextBtn.disabled = i === pages.length - 1;
+    }
+    if (prevBtn) prevBtn.addEventListener("click", function () { if (i > 0) { i--; render(); } });
+    if (nextBtn) nextBtn.addEventListener("click", function () { if (i < pages.length - 1) { i++; render(); } });
+    render();
+  }
+
   /* ---------- project detail modal ---------- */
   function initProjectModal() {
     var modal = document.getElementById("pmodal");
@@ -986,7 +1012,7 @@
 
   /* ---------- typewriter for the Home role heading ---------- */
   function typeRole() {
-    var el = document.getElementById("home-h");
+    var el = document.getElementById("home-role");
     if (!el) return;
     var full = (el.textContent || "").trim();
     if (!full) return;
@@ -1045,6 +1071,7 @@
 
     initFilters();
     initFolders();
+    initCertPager();
     initModal();
     initProjectModal();
     initGallery();

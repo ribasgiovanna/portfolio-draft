@@ -197,10 +197,16 @@ p:last-child { margin-bottom: 0; }
   align-items: center;
 }
 .home__welcome { font-family: "Caveat", var(--serif); font-size: clamp(1.2rem, 2.4vw, 1.7rem); color: var(--ink-2); margin: 0 0 4px; }
-.home__role {
+.home__name {
   font-family: var(--serif); font-weight: 500;
-  font-size: clamp(1.95rem, 4.8vw, 3.4rem); line-height: 1.05; letter-spacing: -0.02em;
-  margin: 0 0 16px; min-height: 2.7em;   /* reserve ~2 lines so typing doesn't shove the page */
+  font-size: clamp(1.9rem, 4.6vw, 3.1rem); line-height: 1.05; letter-spacing: -0.02em;
+  margin: 0 0 10px;
+}
+.home__role {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(1.3rem, 2.9vw, 1.9rem); line-height: 1.25; letter-spacing: -0.01em;
+  color: var(--ink-2);
+  margin: 0 0 16px; min-height: 2.6em;   /* reserve ~2 lines so typing doesn't shove the page */
 }
 .home__role-hl { color: var(--accent); }
 .home__caret {
@@ -791,16 +797,31 @@ p:last-child { margin-bottom: 0; }
 .tk i:not(.colored) { color: color-mix(in srgb, var(--folder-fg) 78%, transparent); }
 .tk svg { width: 15px; height: 15px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; opacity: .72; }
 
-/* certificates */
-.certlist { display: grid; gap: clamp(14px, 2.4vw, 22px); }
+/* certificates — compact fiches, paginated so the folder stays a folder shape */
+.certlist { display: block; }
+.certpage {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: clamp(10px, 1.8vw, 16px); align-content: start;
+}
+.certpage[hidden] { display: none; }
 .certcard {
   background: color-mix(in srgb, var(--folder-fg) 5%, transparent);
-  border: 1px solid color-mix(in srgb, var(--folder-fg) 16%, transparent); border-radius: 14px;
-  padding: clamp(18px, 2.4vw, 26px) clamp(18px, 2.6vw, 30px);
+  border: 1px solid color-mix(in srgb, var(--folder-fg) 16%, transparent); border-radius: 12px;
+  padding: clamp(13px, 1.6vw, 17px) clamp(14px, 1.8vw, 18px);
 }
-.certcard__text h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.3rem, 2.6vw, 1.7rem); margin: .1em 0 .25em; }
-.certcard__text p { margin: 0; color: color-mix(in srgb, var(--folder-fg) 80%, transparent); font-size: .95rem; }
-.certcard .panel__date { margin: 0; }
+.certcard h3 { font-family: var(--serif); font-weight: 500; font-size: clamp(1.02rem, 1.6vw, 1.18rem); line-height: 1.2; margin: .1em 0 .2em; }
+.certcard p { margin: 0; color: color-mix(in srgb, var(--folder-fg) 80%, transparent); font-size: .82rem; line-height: 1.35; }
+.certcard__date { margin: 0 0 .3em !important; font-size: .78rem; color: color-mix(in srgb, var(--folder-fg) 55%, transparent); }
+.certpager { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: clamp(16px, 2.4vw, 22px); }
+.certpager__btn {
+  display: grid; place-items: center; width: 34px; height: 34px;
+  border-radius: 999px; border: 1px solid color-mix(in srgb, var(--folder-fg) 24%, transparent);
+  background: transparent; color: var(--folder-fg); cursor: pointer; font-size: 16px;
+  transition: background .16s ease, opacity .16s ease;
+}
+.certpager__btn:hover:not(:disabled) { background: color-mix(in srgb, var(--folder-fg) 8%, transparent); }
+.certpager__btn:disabled { opacity: .32; cursor: default; }
+.certpager__status { font: 600 11px/1 var(--mono); letter-spacing: .1em; color: color-mix(in srgb, var(--folder-fg) 60%, transparent); min-width: 3.4em; text-align: center; }
 
 @media (max-width: 640px) {
   .folder__tab { left: calc(10px + var(--tab-x, 0) * clamp(104px, 30vw, 130px)); padding: 0 14px; letter-spacing: .08em; }
