@@ -25,10 +25,11 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 
-<link rel="stylesheet" href="style.css?v=20260911a">
+<link rel="stylesheet" href="style.css?v=20260914f">
+<link rel="stylesheet" href="gr-archive.css?v=20260911d">
 
 <script type="application/ld+json">
 {
@@ -54,9 +55,10 @@
 <header class="nav">
   <nav class="nav__pill" aria-label="Sections">
     <a href="#home" aria-label="Home" data-i18n-aria="nav_home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11 12 4l8 7"/><path d="M6 10v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1v-9"/></svg><span data-i18n="nav_home">Home</span></a>
-    <a href="#projects" aria-label="Projects" data-i18n-aria="nav_work"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span data-i18n="nav_work">Projects</span></a>
-    <a href="#playground" aria-label="Playground" data-i18n-aria="nav_playground"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg><span data-i18n="nav_playground">Playground</span></a>
+    <a href="#projects" aria-label="Archive" data-i18n-aria="nav_work"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7a2 2 0 0 1 2-2h4l2 2h6a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg><span data-i18n="nav_work">Archive</span></a>
     <a href="#about" aria-label="About" data-i18n-aria="nav_about"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c1 1.2 2.2 1.8 3.5 1.8s2.5-.6 3.5-1.8"/><circle cx="9" cy="10" r="1"/><circle cx="15" cy="10" r="1"/></svg><span data-i18n="nav_about">About</span></a>
+    <a href="#playground" aria-label="Outside the IDE" data-i18n-aria="nav_playground"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="8.5" cy="9.5" r="1.6"/><path d="M4 18l5-5 4 4 3-3 4 4"/></svg><span data-i18n="nav_playground">Outside the IDE</span></a>
+    <a href="#contact" aria-label="Contact" data-i18n-aria="nav_contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg><span data-i18n="nav_contact">Contact</span></a>
     <a class="nav__cv" href="https://drive.google.com/file/d/17u5eo3X4X2JJlH4IX0aNVKZ8QrqiSuIT/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="CV (PDF)" data-i18n-aria="nav_cv"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/></svg><span data-i18n="nav_cv">CV</span></a>
   </nav>
   <button id="lang" class="nav__lang" type="button">PT</button>
@@ -144,328 +146,98 @@
 
 <!-- ============ FEATURED WORK — stacked folders ============ -->
 <section id="projects" class="folders" aria-labelledby="work-h">
-  <h2 class="section-label folders__label"><span aria-hidden="true">&#8212;</span> <span id="work-h" data-i18n="work_h">Featured projects</span></h2>
+  <h2 class="section-label folders__label"><span aria-hidden="true">&#8212;</span> <span id="work-h" data-i18n="work_h">Archive</span></h2>
 
   <div class="folders__set">
-    <div class="folders__deco" aria-hidden="true">
-      <span class="deco__clip deco__clip--a"><svg viewBox="0 0 72 88" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 46 C 20 30 16 16 18 11 C 19 7 24 7 25 11 C 27 20 30 34 33 44" stroke="#9aa0a8" stroke-width="4.2" stroke-linecap="round"/><path d="M47 46 C 52 30 56 16 54 11 C 53 7 48 7 47 11 C 45 20 42 34 39 44" stroke="#9aa0a8" stroke-width="4.2" stroke-linecap="round"/></svg></span>
-      <figure class="deco__polaroid deco__polaroid--a"><img src="assets/images/tech/datasus-dashboard.webp" alt=""></figure>
-      <span class="deco__clip deco__clip--b"><svg viewBox="0 0 72 88" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25 46 C 20 30 16 16 18 11 C 19 7 24 7 25 11 C 27 20 30 34 33 44" stroke="#9aa0a8" stroke-width="4.2" stroke-linecap="round"/><path d="M47 46 C 52 30 56 16 54 11 C 53 7 48 7 47 11 C 45 20 42 34 39 44" stroke="#9aa0a8" stroke-width="4.2" stroke-linecap="round"/></svg></span>
-      <figure class="deco__polaroid deco__polaroid--b"><img src="assets/images/tech/game-play.webp" alt=""></figure>
-      <span class="deco__stamp" data-i18n="id_sticker_a">BUILT BY HAND</span>
-    </div>
-    <div class="folders__stack" role="tablist" aria-label="Projects, technologies and certificates">
-
-      <!-- ===== PROJETOS ===== -->
-      <div class="folder is-front" id="folder-projects" style="--tab-x:0">
-        <button class="folder__tab" type="button" role="tab" id="ft-projects" aria-selected="true" aria-controls="fb-projects" data-i18n="tab_projects">Projects</button>
-        <div class="folder__cover" hidden>
-          <span class="folder__stamp" aria-hidden="true">GR<small data-i18n="tab_projects">Projects</small></span>
-          <h3 data-i18n="cover_projects_title">Selected work</h3>
-          <p class="folder__cover-meta" data-i18n="cover_projects_meta">Data &middot; Web &middot; Games &middot; IoT</p>
-          <p class="folder__cover-lead" data-i18n="cover_projects_lead">Team and solo projects across the stack, from automation to interface.</p>
-          <button type="button" class="folder__open" data-open="projects" data-i18n="cover_projects_cta">Explore projects &rarr;</button>
-          <span class="folder__count" data-count-label="cover_projects_count"></span>
-        </div>
-        <div class="folder__body" id="fb-projects" role="tabpanel" aria-labelledby="ft-projects" tabindex="0">
-          <ul class="plist">
-
-            <li><div class="prow" id="datasus" aria-labelledby="p1-h"
-                     data-pm data-pm-repo="https://github.com/ribasgiovanna/datasus"
-                     data-pm-img="assets/images/tech/datasus-dashboard.webp"
-                     data-pm-alt="Streamlit dashboard built over the consolidated SUS hemotherapy data for Paraná">
-              <span class="prow__num">01</span>
-              <img class="prow__thumb" src="assets/images/tech/datasus-dashboard.webp" alt="" loading="lazy">
-              <h3 id="p1-h">Bloody Mary</h3>
-              <span class="prow__cat" data-i18n="p1_cat">Data &amp; automation</span>
-              <div class="prow__data" hidden>
-                <p class="panel__date"><span data-i18n="p1_date">Team project &middot; Harve &middot; Apr 2026</span></p>
-                <p class="panel__sub" hidden data-i18n="p1_sub">SUS hemotherapy data automation &amp; analysis pipeline</p>
-                <p class="panel__lead" hidden data-i18n="datasus_lead">Automating the collection and cleaning of Paran&aacute; hemotherapy records from SUS, with an interactive dashboard on top.</p>
-                <p class="tagrow"><span>Python</span><span>Selenium</span><span>pandas</span><span>RPA</span><span>Streamlit</span></p>
-                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p1_body"></div></div>
-              </div>
-            </div></li>
-
-            <li><div class="prow" id="corrida" aria-labelledby="p2-h"
-                     data-pm data-pm-repo="https://github.com/ribasgiovanna/jogo-atrasado-para-a-faculdade"
-                     data-pm-img="assets/images/tech/game-play.webp"
-                     data-pm-alt="Corrida para a Faculdade in play: the student running through a pixel-art street, HUD with score, high score and lives, a traffic cone ahead">
-              <span class="prow__num">02</span>
-              <img class="prow__thumb" src="assets/images/tech/game-play.webp" alt="" loading="lazy">
-              <h3 id="p2-h">Corrida para a Faculdade</h3>
-              <span class="prow__cat">Pygame</span>
-              <div class="prow__data" hidden>
-                <p class="panel__date"><span data-i18n="p2_date">Individual project &middot; Academic</span></p>
-                <p class="panel__sub" hidden data-i18n="p2_sub">2D runner in Python and Pygame</p>
-                <p class="panel__lead" hidden data-i18n="corrida_lead">A student who&rsquo;s late for class dodges obstacles across the city &mdash; the challenge is to manage three lives and reach the goal before the run ends.</p>
-                <p class="tagrow"><span>Python</span><span>Pygame</span><span data-i18n="tag_states">state machine</span></p>
-                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p2_body"></div></div>
-              </div>
-            </div></li>
-
-            <li><div class="prow" id="pibble" aria-labelledby="p3-h"
-                     data-pm data-pm-repo="https://github.com/ribasgiovanna/pibble_express"
-                     data-pm-img="assets/images/tech/pibble-funcionarios.webp"
-                     data-pm-alt="Pibble Express employee registration screen with a list of employees">
-              <span class="prow__num">03</span>
-              <img class="prow__thumb" src="assets/images/tech/pibble-funcionarios.webp" alt="" loading="lazy">
-              <h3 id="p3-h">Pibble Express</h3>
-              <span class="prow__cat">Django</span>
-              <div class="prow__data" hidden>
-                <p class="panel__date"><span data-i18n="p3_date">Academic team project &middot; Jun 2026</span></p>
-                <p class="panel__sub" hidden data-i18n="p3_sub">Delivery-management web system</p>
-                <p class="panel__lead" hidden data-i18n="pibble_lead">One application to organise clients, products, employees and deliveries in the same system.</p>
-                <p class="tagrow"><span>Django</span><span>DRF</span><span data-i18n="tag_auth">authentication</span><span>CRUD</span></p>
-                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p3_body"></div></div>
-              </div>
-            </div></li>
-
-            <li><div class="prow" id="flood" aria-labelledby="p4-h"
-                     data-pm
-                     data-pm-img="assets/images/tech/iot-circuit.webp"
-                     data-pm-alt="Circuit schematic: an ESP32 wired to an HC-SR04 ultrasonic sensor, a potentiometer and a buzzer"
-                     data-pm-cap="iot_cap1"
-                     data-pm-img2="assets/images/tech/iot-blynk.webp"
-                     data-pm-alt2="Blynk console dashboard editor for a ‘Smart City’ template, with water-level gauges and an alarm widget"
-                     data-pm-cap2="iot_cap2"
-                     data-pm-video="https://youtu.be/_Lq13BLEQ2o"
-                     data-pm-video-label="pm_video">
-              <span class="prow__num">04</span>
-              <img class="prow__thumb" src="assets/images/tech/iot-circuit.webp" alt="" loading="lazy">
-              <h3 id="p4-h" data-i18n="flood_h">Storm-drain Monitor</h3>
-              <span class="prow__cat">IoT</span>
-              <div class="prow__data" hidden>
-                <p class="panel__date"><span data-i18n="p4_date">Academic team project &middot; Jun 2026</span></p>
-                <p class="panel__sub" hidden data-i18n="flood_sub">IoT prototype for level monitoring and alerts</p>
-                <p class="panel__lead" hidden data-i18n="flood_lead">A proposal for remote monitoring &mdash; to track levels and flag situations in urban drainage that need attention.</p>
-                <p class="tagrow"><span>ESP32</span><span data-i18n="tag_sensors">ultrasonic sensor</span><span>Blynk</span><span data-i18n="tag_alerts">alerts</span></p>
-                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p4_body"></div></div>
-              </div>
-            </div></li>
-
-            <li><div class="prow" id="bpmn" aria-labelledby="p5-h"
-                     data-pm data-pm-img="assets/images/tech/bpmn-vet.webp"
-                     data-pm-repo="https://drive.google.com/file/d/1vz2DTqKIOmveiAA17f5Lz_a-c5_N7zTZ/view?usp=sharing"
-                     data-pm-repo-label="bpmn_link"
-                     data-pm-alt="BPMN diagram of one of the clinic’s processes, modelled in Bizagi">
-              <span class="prow__num">05</span>
-              <img class="prow__thumb" src="assets/images/tech/bpmn-vet.webp" alt="" loading="lazy">
-              <h3 id="p5-h" data-i18n="bpmn_h">Veterinary Clinic</h3>
-              <span class="prow__cat">BPMN</span>
-              <div class="prow__data" hidden>
-                <p class="panel__date"><span data-i18n="p5_date">Team project &middot; Jun 2026</span></p>
-                <p class="panel__sub" hidden data-i18n="bpmn_sub">Business process modeling in BPMN</p>
-                <p class="panel__lead" hidden data-i18n="bpmn_lead">From the conversation with management to the diagrams: a visual map of a veterinary clinic&rsquo;s processes.</p>
-                <p class="tagrow"><span>BPMN</span><span>Bizagi</span><span data-i18n="tag_analysis">process analysis</span></p>
-                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="p5_body"></div></div>
-              </div>
-            </div></li>
-
-            <li><div class="prow" id="mkpause" aria-labelledby="p6-h"
-                     data-pm data-pm-repo="https://github.com/ribasgiovanna/mkpause" data-pm-alt="">
-              <span class="prow__num">06</span>
-              <span class="prow__thumb prow__thumb--ph" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="7.2" cy="7.5" rx="2.4" ry="3.4"/><ellipse cx="16.8" cy="7.5" rx="2.4" ry="3.4"/><ellipse cx="12" cy="14" rx="7" ry="5.6"/><circle cx="9.6" cy="13.4" r=".85" fill="var(--folder-bg)"/><circle cx="14.4" cy="13.4" r=".85" fill="var(--folder-bg)"/><ellipse cx="12" cy="15.6" rx="1" ry=".7" fill="var(--folder-bg)"/></svg></span>
-              <h3 id="p6-h" data-i18n="mk_h">MKpause</h3>
-              <span class="prow__cat" data-i18n="mk_cat">Product</span>
-              <div class="prow__data" hidden>
-                <p class="panel__date"><span data-i18n="mk_date">Academic team project &middot; PUCPR &middot; in progress</span></p>
-                <p class="panel__sub" data-i18n="mk_sub">Self-regulation &amp; psychological-support platform</p>
-                <p class="panel__lead" data-i18n="mk_lead">A platform to support the emotional self-regulation of adolescents at school &mdash; mood tracking, guided activities and a channel to ask for help.</p>
-                <p class="tagrow"><span data-i18n="tag_reqs">requirements analysis</span><span data-i18n="tag_uxflows">user roles</span><span data-i18n="tag_team">team project</span></p>
-                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="mk_body"></div></div>
-              </div>
-            </div></li>
-
-            <li><div class="prow" id="doggo" aria-labelledby="p7-h"
-                     data-pm data-pm-repo="https://github.com/liz-whs/Doggo" data-pm-alt="">
-              <span class="prow__num">07</span>
-              <span class="prow__thumb prow__thumb--ph" aria-hidden="true"><svg viewBox="0 0 24 24"><ellipse cx="7" cy="8" rx="2.1" ry="2.7"/><ellipse cx="12" cy="6.4" rx="2.1" ry="2.8"/><ellipse cx="17" cy="8" rx="2.1" ry="2.7"/><path d="M12 11c-3 0-5 2.2-5 4.6C7 18 9 19 12 19s5-1 5-3.4C17 13.2 15 11 12 11z"/></svg></span>
-              <h3 id="p7-h" data-i18n="dg_h">Doggo</h3>
-              <span class="prow__cat" data-i18n="dg_cat">IoT</span>
-              <div class="prow__data" hidden>
-                <p class="panel__date"><span data-i18n="dg_date">Academic project &middot; ESP32 &middot; in progress</span></p>
-                <p class="panel__sub" data-i18n="dg_sub">Embedded ESP32 system for pet-shop / kennel automation</p>
-                <p class="panel__lead" data-i18n="dg_lead">An ESP32 acting as an HTTP server for a pet station &mdash; it tracks water temperature, doses food by weight and switches the water fountain, from a web page and a small REST API.</p>
-                <p class="tagrow"><span>ESP32</span><span data-i18n="tag_embedded">embedded C</span><span>HTTP</span><span data-i18n="tag_sens">sensors</span></p>
-                <div class="panel__detail" hidden><div class="pm-detail" data-i18n="dg_body"></div></div>
-              </div>
-            </div></li>
-
-          </ul>
-          <p class="stack__more"><a class="cta" href="https://github.com/ribasgiovanna?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="stack_more">For more projects, visit my GitHub &rarr;</a></p>
-        </div>
+    <div id="gr-archive">
+      <div class="gr-grain" aria-hidden="true"></div>
+      <div class="gr-masthead">
+        <span class="gr-owner" aria-hidden="true"></span>
+        <span class="gr-edition" data-i18n="folders_edition">working archive</span>
       </div>
-
-      <!-- ===== TECNOLOGIAS ===== -->
-      <div class="folder is-back" id="folder-tech" style="--tab-x:1; --depth:1">
-        <button class="folder__tab" type="button" role="tab" id="ft-tech" aria-selected="false" tabindex="-1" aria-controls="fb-tech" data-i18n="tab_tech">Technologies</button>
-        <div class="folder__cover" hidden>
-          <span class="folder__stamp" aria-hidden="true">GR<small data-i18n="tab_tech">Technologies</small></span>
-          <h3 data-i18n="cover_tech_title">Toolbox</h3>
-          <p class="folder__cover-meta" data-i18n="cover_tech_meta">Code &middot; data &middot; creation</p>
-          <p class="folder__cover-lead" data-i18n="cover_tech_lead">The languages and tools I reach for, grouped by what I use them for.</p>
-          <button type="button" class="folder__open" data-open="tech" data-i18n="cover_tech_cta">See the tools &rarr;</button>
-          <span class="folder__count" data-count-label="cover_tech_count"></span>
-        </div>
-        <div class="folder__body" id="fb-tech" role="tabpanel" aria-labelledby="ft-tech" tabindex="0" hidden>
-          <p class="fpanel__lead" data-i18n="tech_lead">An organised view of the tools and languages I work with.</p>
-          <div class="techgrid">
-            <div class="techcard">
-              <h3 data-i18n="tech_da_h">Data &amp; automation</h3>
-              <p class="tagrow tagrow--tk">
-                <span class="tk"><i class="devicon-python-plain colored" aria-hidden="true"></i>Python</span>
-                <span class="tk"><i class="devicon-pandas-plain" aria-hidden="true"></i>pandas</span>
-                <span class="tk"><i class="devicon-selenium-original colored" aria-hidden="true"></i>Selenium</span>
-                <span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 11h16a8 8 0 0 1-16 0z"/><path d="M9 7c0-1.4 1-1.8 1-3M13 7c0-1.4 1-1.8 1-3"/></svg>BeautifulSoup</span>
-                <span class="tk"><i class="devicon-streamlit-plain colored" aria-hidden="true"></i>Streamlit</span>
-                <span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6"/><path d="M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/></svg>SQL</span>
-                <span class="tk"><i class="devicon-postgresql-plain colored" aria-hidden="true"></i>PostgreSQL</span>
-              </p>
-            </div>
-            <div class="techcard">
-              <h3 data-i18n="tech_dw_h">Web development</h3>
-              <p class="tagrow tagrow--tk">
-                <span class="tk"><i class="devicon-html5-plain colored" aria-hidden="true"></i>HTML</span>
-                <span class="tk"><i class="devicon-css3-plain colored" aria-hidden="true"></i>CSS</span>
-                <span class="tk"><i class="devicon-javascript-plain colored" aria-hidden="true"></i>JavaScript</span>
-                <span class="tk"><i class="devicon-typescript-plain colored" aria-hidden="true"></i>TypeScript</span>
-                <span class="tk"><i class="devicon-django-plain" aria-hidden="true"></i>Django</span>
-                <span class="tk"><i class="devicon-djangorest-plain colored" aria-hidden="true"></i>DRF</span>
-              </p>
-            </div>
-            <div class="techcard">
-              <h3 data-i18n="tech_cv_h">Visual creation</h3>
-              <p class="tagrow tagrow--tk">
-                <span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M9 16 12.5 8 17 16z"/></svg>Affinity</span>
-                <span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20c3.2 0 4.2-2.2 4.2-4.2l8-8a2.1 2.1 0 0 0-3-3l-8 8C3.2 12.6 2 13.8 2 17c1.5 1.5 2 3 2 3z"/></svg>Procreate</span>
-                <span class="tk"><i class="devicon-photoshop-plain colored" aria-hidden="true"></i>Photoshop</span>
-                <span class="tk"><i class="devicon-blender-original colored" aria-hidden="true"></i>Blender</span>
-                <span class="tk"><i class="devicon-canva-original colored" aria-hidden="true"></i>Canva</span>
-              </p>
-            </div>
-            <div class="techcard">
-              <h3 data-i18n="tech_tools_h">Work tools</h3>
-              <p class="tagrow tagrow--tk">
-                <span class="tk"><i class="devicon-git-plain colored" aria-hidden="true"></i>Git</span>
-                <span class="tk"><i class="devicon-github-original" aria-hidden="true"></i>GitHub</span>
-                <span class="tk"><i class="devicon-vscode-plain colored" aria-hidden="true"></i>VS Code</span>
-                <span class="tk"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="5" cy="12" r="2.6"/><rect x="10" y="8.6" width="8" height="6.8" rx="1.6"/><path d="M7.6 12H10"/></svg>Bizagi</span>
-                <span class="tk"><i class="devicon-microsoftsqlserver-plain colored" aria-hidden="true"></i>SSMS</span>
-                <span class="tk"><i class="devicon-powershell-plain colored" aria-hidden="true"></i>PowerShell</span>
-              </p>
-            </div>
-            <div class="techcard">
-              <h3 data-i18n="tech_method_h">Ways of working</h3>
-              <p class="tagrow"><span>Scrum</span><span>Kanban</span><span data-i18n="tech_pm">project management</span></p>
-            </div>
-            <div class="techcard">
-              <h3 data-i18n="tech_spoken_h">Spoken languages</h3>
-              <p class="tagrow"><span data-i18n="tech_pt">Portuguese &mdash; native</span><span data-i18n="tech_en">English &mdash; fluent</span><span data-i18n="tech_fr">French &mdash; basic</span></p>
+      <div class="gr-stage" data-i18n-aria="gr_stage_aria" aria-label="Archive of projects, technologies and certificates">
+        <section class="gr-folder gr-folder--projects" data-folder="projects" data-depth="0" data-i18n-aria="gr_folder_projects_aria" aria-label="Projects folder">
+          <div class="gr-back" aria-hidden="true"></div>
+          <button class="gr-tab" type="button" aria-pressed="true" aria-controls="gr-project-cover" data-i18n="tab_projects">Projects</button>
+          <figure class="gr-peek gr-peek--diagram" aria-hidden="true"><img data-asset="bpmn" alt=""><figcaption data-i18n="peek_projects_diagram_cap">from flow to solution</figcaption></figure>
+          <figure class="gr-peek" aria-hidden="true"><img data-asset="game" alt=""><figcaption data-i18n="peek_projects_cap">Corrida para a Faculdade</figcaption><span class="gr-paperclip"></span></figure>
+          <div class="gr-pocket">
+            <div class="gr-cover" id="gr-project-cover">
+              <h2 data-i18n="cover_projects_title">Projects<br><em>&amp; process.</em></h2>
+              <p class="gr-cover-meta" data-i18n="cover_projects_meta">AUTOMATION &middot; WEB &middot; GAMES &middot; IoT</p>
+              <div class="gr-stamp" aria-hidden="true"><div class="gr-stamp-inner"><span class="gr-monogram">GR</span><small data-i18n="gr_stamp_projects">CURITIBA<br>BRAZIL</small></div></div>
+              <button class="gr-open" type="button" data-open="projects"><span data-i18n="cover_projects_cta">Explore projects</span> <span aria-hidden="true">&#8599;</span></button>
+              <span class="gr-count" data-i18n="cover_projects_count">07 projects</span>
             </div>
           </div>
-        </div>
-      </div>
-
-      <!-- ===== CERTIFICADOS ===== -->
-      <div class="folder is-back" id="folder-certs" style="--tab-x:2; --depth:2">
-        <button class="folder__tab" type="button" role="tab" id="ft-certs" aria-selected="false" tabindex="-1" aria-controls="fb-certs" data-i18n="tab_certs">Certificates</button>
-        <div class="folder__cover" hidden>
-          <span class="folder__stamp" aria-hidden="true">GR<small data-i18n="tab_certs">Certificates</small></span>
-          <h3 data-i18n="cover_certs_title">Learning, on record</h3>
-          <p class="folder__cover-meta" data-i18n="cover_certs_meta">Courses &middot; education &middot; participations</p>
-          <p class="folder__cover-lead" data-i18n="cover_certs_lead">Courses, formal education and things I showed up for.</p>
-          <button type="button" class="folder__open" data-open="certs" data-i18n="cover_certs_cta">Flip through records &rarr;</button>
-          <span class="folder__count" data-count-label="cover_certs_count"></span>
-        </div>
-        <div class="folder__body" id="fb-certs" role="tabpanel" aria-labelledby="ft-certs" tabindex="0" hidden>
-          <div class="certlist" id="certlist">
-            <div class="certpage" data-page="0">
-              <article class="certcard">
-                <p class="certcard__date"><span class="panel__dot" aria-hidden="true"></span> 2026&ndash;2029</p>
-                <h3 data-i18n="cert_degree_h">Software Engineering</h3>
-                <p data-i18n="cert_degree_d">B.Sc. in progress at PUCPR, Curitiba.</p>
-              </article>
-              <article class="certcard">
-                <p class="certcard__date"><span class="panel__dot" aria-hidden="true"></span> 2026</p>
-                <h3 data-i18n="cert_dio_h">Data Engineering &amp; ML Fundamentals</h3>
-                <p data-i18n="cert_dio_d">Course at DIO &mdash; Mar 2026.</p>
-              </article>
-              <article class="certcard">
-                <p class="certcard__date"><span class="panel__dot" aria-hidden="true"></span> 2026</p>
-                <h3 data-i18n="cert_hotmilk_h">Problem Solving with AI &mdash; talk</h3>
-                <p data-i18n="cert_hotmilk_d">HOTMILK, PUCPR Innovation Ecosystem &mdash; Mar 2026.</p>
-              </article>
-              <article class="certcard">
-                <p class="certcard__date"><span class="panel__dot" aria-hidden="true"></span> 2026</p>
-                <h3 data-i18n="cert_harve_h">Python Programming</h3>
-                <p data-i18n="cert_harve_d">Course at Escola Harve, Curitiba &mdash; Jan&ndash;Apr 2026.</p>
-              </article>
-            </div>
-            <div class="certpage" data-page="1" hidden>
-              <article class="certcard">
-                <p class="certcard__date"><span class="panel__dot" aria-hidden="true"></span> 2024</p>
-                <h3 data-i18n="cert_ficem_h">Scientific research &mdash; FICEM</h3>
-                <p data-i18n="cert_ficem_d">Science-fair research project at Col&eacute;gio Bom Jesus.</p>
-              </article>
-              <article class="certcard">
-                <p class="certcard__date"><span class="panel__dot" aria-hidden="true"></span> 2024</p>
-                <h3 data-i18n="cert_vgc_h">English Immersion &mdash; Winter Camp</h3>
-                <p data-i18n="cert_vgc_d">VGC International College, Canada &mdash; Jan 2024.</p>
-              </article>
-              <article class="certcard">
-                <p class="certcard__date"><span class="panel__dot" aria-hidden="true"></span> 2023</p>
-                <h3 data-i18n="cert_met_h">MET &mdash; Michigan English Test</h3>
-                <p data-i18n="cert_met_d">Michigan Language Assessment &mdash; Feb 2023.</p>
-              </article>
+        </section>
+        <section class="gr-folder gr-folder--tech" data-folder="tech" data-depth="1" data-i18n-aria="gr_folder_tech_aria" aria-label="Technologies folder">
+          <div class="gr-back" aria-hidden="true"></div>
+          <button class="gr-tab" type="button" aria-pressed="false" aria-controls="gr-tech-cover" data-i18n="tab_tech">Technologies</button>
+          <div class="gr-note" aria-hidden="true">Python<br>Django<br>Affinity</div>
+          <figure class="gr-peek gr-peek--art" aria-hidden="true"><img data-asset="art" alt=""><figcaption data-i18n="peek_tech_cap">WHAT REMAINS</figcaption><span class="gr-paperclip"></span></figure>
+          <div class="gr-pocket">
+            <div class="gr-cover" id="gr-tech-cover" inert>
+              <h2 data-i18n="cover_tech_title">My<br><em>toolkit.</em></h2>
+              <p class="gr-cover-meta" data-i18n="cover_tech_meta">FROM CODE TO COMPOSITION</p>
+              <div class="gr-stamp" aria-hidden="true"><div class="gr-stamp-inner"><span class="gr-monogram">&amp;</span><small data-i18n="gr_stamp_tech">CODE<br>CREATION</small></div></div>
+              <button class="gr-open" type="button" data-open="tech"><span data-i18n="cover_tech_cta">See the tools</span> <span aria-hidden="true">&#8599;</span></button>
+              <span class="gr-count" data-i18n="cover_tech_count">05 groups</span>
             </div>
           </div>
-          <div class="certpager">
-            <button type="button" class="certpager__btn" id="cert-prev" aria-label="Previous" data-i18n-aria="pg_prev">&larr;</button>
-            <span class="certpager__status" id="cert-status" aria-live="polite">1 / 2</span>
-            <button type="button" class="certpager__btn" id="cert-next" aria-label="Next" data-i18n-aria="pg_next">&rarr;</button>
+        </section>
+        <section class="gr-folder gr-folder--certs" data-folder="certs" data-depth="2" data-i18n-aria="gr_folder_certs_aria" aria-label="Certificates and education folder">
+          <div class="gr-back" aria-hidden="true"></div>
+          <button class="gr-tab" type="button" aria-pressed="false" aria-controls="gr-cert-cover" data-i18n="tab_certs">Certificates</button>
+          <figure class="gr-peek gr-peek--harve" aria-hidden="true"><img data-asset="harve" alt=""><figcaption data-i18n="peek_certs_cap">Python at Harve &middot; 2026</figcaption><span class="gr-paperclip"></span></figure>
+          <div class="gr-pocket">
+            <div class="gr-cover" id="gr-cert-cover" inert>
+              <h2 data-i18n="cover_certs_title">Learning,<br><em>on record.</em></h2>
+              <p class="gr-cover-meta" data-i18n="cover_certs_meta">COURSES &middot; EDUCATION &middot; PARTICIPATION</p>
+              <div class="gr-rubber" aria-hidden="true" data-i18n="cover_certs_rubber">IN CONSTANT<span>progress</span></div>
+              <button class="gr-open" type="button" data-open="certs"><span data-i18n="cover_certs_cta">Flip through records</span> <span aria-hidden="true">&#8599;</span></button>
+              <span class="gr-count" data-i18n="cover_certs_count">08 records</span>
+            </div>
           </div>
-        </div>
+        </section>
+        <section class="gr-reader" hidden data-i18n-aria="gr_reader_aria" aria-label="Folder contents">
+          <div class="gr-reader-top">
+            <button class="gr-return" type="button" data-i18n="reader_return">&larr; Save to the folder</button>
+            <span class="gr-reader-label"></span>
+          </div>
+          <div class="gr-sheet"></div>
+          <div class="gr-pager">
+            <button class="gr-page-button" data-page="prev" type="button" data-i18n="gr_pager_prev">&larr; Previous</button>
+            <span class="gr-page-number"></span>
+            <button class="gr-page-button" data-page="next" type="button" data-i18n="gr_pager_next">Next &rarr;</button>
+          </div>
+        </section>
       </div>
-
+      <div class="gr-bottom"><span data-i18n="folders_bottom_hint">Choose a tab to explore.</span><span class="gr-signature">Giovana</span></div>
+      <span class="gr-sr" aria-live="polite" data-announcement></span>
     </div>
-  </div>
-
-  <div class="freader" id="folder-reader" hidden>
-    <div class="freader__box" role="dialog" aria-modal="true">
-      <div class="freader__top">
-        <button type="button" class="freader__return" id="freader-return"><span aria-hidden="true">&larr;</span> <span data-i18n="reader_return">Save to the folder</span></button>
-        <span class="freader__label" id="freader-label"></span>
-      </div>
-      <div class="freader__sheet" id="freader-sheet"></div>
-      <div class="freader__pager">
-        <button type="button" class="freader__nav" id="freader-prev" data-i18n-aria="pg_prev" aria-label="Previous">&larr;</button>
-        <span class="freader__status" id="freader-status" aria-live="polite"></span>
-        <button type="button" class="freader__nav" id="freader-next" data-i18n-aria="pg_next" aria-label="Next">&rarr;</button>
-      </div>
-    </div>
+    <script type="application/json" id="gr-archive-assets">{"game":"assets/images/tech/game-play.webp","pibble":"assets/images/tech/pibble-funcionarios.webp","iot":"assets/images/tech/iot-dashboard.webp","bpmn":"assets/images/tech/bpmn-vet.webp","art":"assets/images/playground/photography/photo-02.webp","harve":"assets/images/about/harve.webp","cert_ficem":"assets/images/certs/cert-ficem.webp","cert_vgc":"assets/images/certs/cert-vgc.webp","cert_scrum":"assets/images/certs/cert-scrum.webp","cert_dio":"assets/images/certs/cert-dio.webp","cert_hotmilk":"assets/images/certs/cert-hotmilk.webp","cert_met":"assets/images/certs/cert-met.webp"}</script>
   </div>
 </section>
 
+
 <!-- ============ COFFEE & CODE ============ -->
 <section id="coffee" class="coffee" aria-labelledby="coffee-h">
-  <p class="section-label section-label--onDark"><span>01</span> <span id="coffee-h">Coffee &amp; Code</span></p>
+  <p class="section-label section-label--onDark"><span aria-hidden="true">&#8212;</span> <span id="coffee-h">Coffee &amp; Code</span></p>
   <div class="coffee__grid">
     <div class="coffee__lead">
       <p class="coffee__why" data-i18n="coffee_why">A university tech club I started and run with a team of friends from college.</p>
-      <p data-i18n="coffee_p1">It exists to give students a lower-barrier, hands-on place to learn, build projects together and share what they know — outside the pressure of a graded room.</p>
-      <p data-i18n="coffee_p2">I lead it where design and technology meet: the visual identity, the materials, how sessions are run, and how people are brought in.</p>
-      <p data-i18n="coffee_p3">We meet twice a week &mdash; Wednesdays 8&ndash;9:30pm and Saturdays 10&ndash;11:30am &mdash; working through study guides I write for the group, on topics like mathematical logic and requirements engineering.</p>
+      <p data-i18n="coffee_p1">I created Coffee &amp; Code out of a want to have, in college, a space to study technology with other people, share doubts and put ideas into practice. I invited friends from the course to build the club with me, and together we&rsquo;re making that idea happen.</p>
+      <p data-i18n="coffee_p2">The idea is that each participant can learn at their own pace and fit the club around their own routine.</p>
+      <p data-i18n="coffee_p3">Beyond presiding over the club, I&rsquo;m directly involved in building it: I develop the visual identity, prepare the study materials, and work with the team on organising and spreading the word. Writing those materials also makes me go back to the content, look for examples, and think about how to explain what I&rsquo;m learning.</p>
     </div>
     <div class="coffee__media">
-      <a class="cmedia cmedia--round" href="https://www.instagram.com/coffeecodepucpr" target="_blank" rel="noopener noreferrer" aria-label="Coffee &amp; Code on Instagram (@coffeecodepucpr)">
-        <img src="assets/images/coffee-code/logo.webp" width="757" height="826" loading="lazy" alt="Coffee &amp; Code mark: a steaming mug labelled 418">
+      <a class="cmedia cmedia--poster" href="https://www.instagram.com/coffeecodepucpr" target="_blank" rel="noopener noreferrer" aria-label="Coffee &amp; Code on Instagram (@coffeecodepucpr)">
+        <img src="assets/images/coffee-code/poster.webp" width="900" height="1273" loading="lazy" alt="Coffee &amp; Code poster, designed by Giovanna Ribas &mdash; weekly meetings, Wednesdays 8&ndash;9:30pm and Saturdays 10&ndash;11:30am">
         <span class="cmedia__tag" data-i18n="coffee_ig">@coffeecodepucpr &nearr;</span>
       </a>
-      <figure class="cmedia cmedia--poster">
-        <img src="assets/images/coffee-code/poster.webp" width="900" height="1273" loading="lazy" alt="Coffee &amp; Code poster, designed by Giovanna Ribas &mdash; weekly meetings, Wednesdays 8&ndash;9:30pm and Saturdays 10&ndash;11:30am">
-      </figure>
     </div>
+    <p class="coffee__proposal" data-i18n="coffee_proposal">I want Coffee &amp; Code to be a place where people don&rsquo;t feel afraid to get it wrong, and find company to try again.</p>
   </div>
 </section>
 
@@ -481,21 +253,14 @@
       <span class="fanpic__bubble" data-i18n="fan_talk">on stage</span>
       <img src="assets/images/about/talk.webp" width="1100" height="729" loading="lazy" alt="Giovanna Ribas with a microphone at a sticky-note wall during a workshop">
     </button>
-    <button type="button" class="fanpic" data-title="With flowers" data-cat="With flowers" data-cat-pt="Com flores" data-full="assets/images/about/bouquet.webp">
-      <img src="assets/images/about/bouquet.webp" width="894" height="1100" loading="lazy" alt="Giovanna Ribas holding a bouquet">
-    </button>
     <button type="button" class="fanpic" data-title="Giovanna Ribas" data-cat="Me" data-cat-pt="Eu" data-full="assets/images/about/portrait.webp">
       <img src="assets/images/about/portrait.webp" width="619" height="1100" loading="lazy" alt="Giovanna Ribas">
     </button>
-    <button type="button" class="fanpic" data-title="Diretoria da Mulher — PUCPR" data-cat="The Diretoria da Mulher team — PUCPR" data-cat-pt="A equipe da Diretoria da Mulher — PUCPR" data-full="assets/images/about/team.webp">
-      <img src="assets/images/about/team.webp" width="825" height="1100" loading="lazy" alt="Giovanna Ribas with the Diretoria da Mulher team at PUCPR">
+    <button type="button" class="fanpic" data-title="With flowers" data-cat="With flowers" data-cat-pt="Com flores" data-full="assets/images/about/bouquet.webp">
+      <img src="assets/images/about/bouquet.webp" width="894" height="1100" loading="lazy" alt="Giovanna Ribas holding a bouquet">
     </button>
     <button type="button" class="fanpic" data-title="Winter trip" data-cat="On a winter trip" data-cat-pt="Numa viagem de inverno" data-full="assets/images/about/snow.webp">
       <img src="assets/images/about/snow.webp" width="825" height="1100" loading="lazy" alt="Giovanna Ribas next to a snowman on a winter trip">
-    </button>
-    <button type="button" class="fanpic" data-title="Golden hour" data-cat="Golden hour — a photo I took" data-cat-pt="Hora dourada — uma foto minha" data-full="assets/images/about/dusk.webp">
-      <span class="fanpic__bubble fanpic__bubble--r" data-i18n="fan_dusk">golden hour</span>
-      <img src="assets/images/about/dusk.webp" width="825" height="1100" loading="lazy" alt="Beach at sunset — photograph by Giovanna Ribas">
     </button>
   </div>
 
@@ -504,177 +269,299 @@
     <p class="about__say" data-i18n="say">she builds things — with code, design &amp; people</p>
   </div>
 
+  <div class="traits" role="group" data-i18n-aria="traits_aria" aria-label="Personal traits — click the front card to see the next one">
+    <button type="button" class="trait" data-depth="0">
+      <span class="trait__name" data-i18n="trait1_name">Curious</span>
+      <span class="trait__evidence" data-i18n="trait1_evidence">Research on the science of dreams (FICEM)</span>
+    </button>
+    <button type="button" class="trait" data-depth="1">
+      <span class="trait__name" data-i18n="trait2_name">Creative</span>
+      <span class="trait__evidence" data-i18n="trait2_evidence">Illustrations and visual compositions</span>
+    </button>
+    <button type="button" class="trait" data-depth="2">
+      <span class="trait__name" data-i18n="trait3_name">Hands-on</span>
+      <span class="trait__evidence" data-i18n="trait3_evidence">Building Coffee &amp; Code</span>
+    </button>
+    <button type="button" class="trait" data-depth="3">
+      <span class="trait__name" data-i18n="trait4_name">Collaborative</span>
+      <span class="trait__evidence" data-i18n="trait4_evidence">Team projects and community work</span>
+    </button>
+  </div>
+
   <div class="about__story">
-    <p class="section-label"><span aria-hidden="true">&#8212;</span> <span data-i18n="story_h">The path</span></p>
-    <p data-i18n="story_p1">I came to software from making things I could see. Illustration, graphic design and photography first; then freelance work on visual identities, logos and editorial pieces. Baking and small visual studies still sit alongside the rest.</p>
-    <p data-i18n="story_p2">In 2024 I co-authored a school science-fair project on the science of dreams (FICEM) &mdash; I proposed the topic and put together the presentation and the video. In early 2026 I took a Python course at Escola Harve: my first structured programming, and what led into the degree.</p>
-    <p data-i18n="story_p3">Later in 2026 I started Software Engineering at PUCPR. Since then the path has widened: a software-development internship on production systems, team projects across data automation, the web, a game, process modelling and IoT, and founding Coffee &amp; Code &mdash; a student tech club I run with friends from the course.</p>
-    <p data-i18n="story_p4">What I want to keep building is work where code, design and people meet: software that&rsquo;s genuinely useful, made with care, in teams that hold room for both the technical and the human side.</p>
-    <figure class="journey__photo">
-      <img src="assets/images/about/harve.webp" width="1321" height="820" loading="lazy" alt="Giovanna Ribas with the Python course cohort at Harve, holding certificates">
-      <figcaption data-i18n="journey_harve">Python course cohort at Harve, with certificates.</figcaption>
-    </figure>
+    <div class="story-line-overlay" aria-hidden="true">
+      <svg class="story-line-svg" preserveAspectRatio="none"><path class="story-line-path"/></svg>
+      <img class="story-sticker" data-point="0" src="assets/images/about/stickers/sticker-sketchbook.webp" alt="" width="465" height="480">
+      <img class="story-sticker" data-point="1" src="assets/images/about/stickers/sticker-ctrlz.webp" alt="" width="480" height="301">
+      <img class="story-sticker story-sticker--lg" data-point="2" src="assets/images/about/stickers/sticker-designer.webp" alt="" width="480" height="173">
+      <img class="story-sticker" data-point="3" src="assets/images/about/stickers/sticker-locking-in.webp" alt="" width="384" height="480">
+      <img class="story-sticker" data-point="4" src="assets/images/about/stickers/sticker-mug-418.webp" alt="" width="411" height="437">
+    </div>
+    <div class="story-beats">
+      <p class="story-beat story-beat--l" data-i18n="story_p1">I&rsquo;ve had an ease with the digital world since I was little &mdash; I liked exploring programs, discovering tools and experimenting with what I could do with them. In 2020, that interest found a direction: I dove into illustration. I consumed references, published my drawings, and thought about working in concept art for games. Drawing took up a big part of my interests and my plans.</p>
+      <p class="story-beat story-beat--r" data-i18n="story_p2">Over time, the pressure to improve started changing my relationship with drawing. I pushed myself so hard that I lost the will to do the very thing I loved most. I set my illustration accounts aside and started drawing only every so often, with months between one piece and the next.</p>
+      <p class="story-beat story-beat--l" data-i18n="story_p3">Little by little, I found room to create in graphic and digital design, mostly in the presentations I made for school projects. I liked organising ideas and thinking about how to communicate them visually. In 2024, that showed up in FICEM: I proposed researching the science of dreams, co-authored the project, and put together the presentation and the video.</p>
+      <p class="story-beat story-beat--r" data-i18n="story_p4">While I was exploring that creative side, another drive stayed with me. I was bothered by the friction I ran into in the software I used, and kept thinking about how it could be fixed. I wanted to be able to work on how things function too &mdash; to understand the technical side and build solutions for the problems I ran into as a user.</p>
+      <p class="story-beat story-beat--l" data-i18n="story_p5">In 2025 I had my first contact with programming, through Java. The following year, I continued that learning with Python at Escola de Tecnologia Harve and started Software Engineering at PUCPR. The drive to solve the problems I ran into as a user became part of my education. Today, I&rsquo;m learning to build the solutions that used to stay just an idea, bringing with me the attention to form and communication that I developed through drawing and design.</p>
+    </div>
   </div>
 
   <div class="about__now">
-    <p class="section-label"><span aria-hidden="true">&#8212;</span> <span data-i18n="now_h">Now</span></p>
-    <h3 data-i18n="cur_role">Software Development Intern</h3>
-    <p data-i18n="cur_p">Working on the development and maintenance of production software across frontend, backend, APIs and databases — implementing features, investigating bugs and integrating layers of existing systems.</p>
-    <p class="note" data-i18n="cur_note">Due to the proprietary nature of the systems I work on, source code and internal materials are not publicly available.</p>
-    <p class="about__now-line"><span data-i18n="cur_study_h">Study</span> &mdash; Software Engineering @ PUCPR</p>
-    <p class="about__now-line"><span data-i18n="cur_more_h">More projects</span> &mdash;
-      <a href="https://github.com/ribasgiovanna/automacao-dados-saude" target="_blank" rel="noopener noreferrer">Health Data Automation</a> &middot;
-      <a href="https://github.com/ribasgiovanna/netflix-dados" target="_blank" rel="noopener noreferrer">Netflix Data Pipeline</a> &middot;
-      <a href="https://github.com/ribasgiovanna/Curitibars" target="_blank" rel="noopener noreferrer">Curitibars</a> &middot;
-      <a href="https://github.com/ribasgiovanna?tab=repositories" target="_blank" rel="noopener noreferrer" data-i18n="cur_allrepos">All repositories &rarr;</a></p>
+    <p class="section-label"><span aria-hidden="true">&#8212;</span> <span data-i18n="edu_h">Academic education</span></p>
+    <div class="xp">
+      <h3 data-i18n="edu1_role">Software Engineering</h3>
+      <p class="xp__meta"><span data-i18n="edu1_company">PUCPR</span> &middot; <span data-i18n="edu1_period">Since 2026</span></p>
+    </div>
+  </div>
+
+  <div class="about__now">
+    <p class="section-label"><span aria-hidden="true">&#8212;</span> <span data-i18n="now_h">Professional experience</span></p>
+    <div class="xp">
+      <h3 data-i18n="xp1_role">Software Development Intern</h3>
+      <p class="xp__meta"><span data-i18n="xp1_company">Condo Consult &mdash; Garantidora de Condom&iacute;nios</span> &middot; <span data-i18n="xp1_period">Since Apr 2026</span></p>
+      <p class="xp__topics-label" data-i18n="xp_topics_h">Responsibilities:</p>
+      <ul class="xp__list">
+        <li data-i18n="xp1_t1">Backend in Python/FastAPI</li>
+        <li data-i18n="xp1_t2">Frontend in Next.js/TypeScript</li>
+        <li data-i18n="xp1_t3">APIs</li>
+        <li data-i18n="xp1_t4">ETL pipelines</li>
+        <li data-i18n="xp1_t5">Automation</li>
+        <li data-i18n="xp1_t6">Data across SQL Server, PostgreSQL and MongoDB</li>
+      </ul>
+    </div>
+    <div class="xp">
+      <h3 data-i18n="xp2_role">Freelance Software Engineer</h3>
+      <p class="xp__meta"><span data-i18n="xp2_company">Azevedo e Surkamp</span> &middot; <span data-i18n="xp2_period">Since Jul 2026</span></p>
+      <p class="xp__topics-label" data-i18n="xp_topics_h">Responsibilities:</p>
+      <ul class="xp__list">
+        <li data-i18n="xp2_t1">Frontend and visual components</li>
+        <li data-i18n="xp2_t2">Technical support for the backend developer</li>
+        <li data-i18n="xp2_t3">Maintenance of the company&rsquo;s internal system</li>
+      </ul>
+    </div>
+    <p class="note" data-i18n="cur_note">Source code and internal materials from both aren&rsquo;t publicly available, for confidentiality reasons.</p>
   </div>
 </section>
 
 <!-- ============ PLAYGROUND ============ -->
 <section id="playground" class="gallery" aria-labelledby="creative-h">
-  <p class="section-label"><span>02</span> <span id="creative-h" data-i18n="creative_h">Playground</span></p>
-  <p class="gallery__intro" data-i18n="creative_intro">My collection of creations &mdash; everything I make away from a code editor: digital art, ink drawing, graphic design, photography and things I bake. The strip scrolls on its own; hover to pause. Open a piece for the larger image and its context.</p>
+  <p class="section-label"><span aria-hidden="true">&#8212;</span> <span id="creative-h" data-i18n="creative_h">Outside the IDE</span></p>
+  <p class="gallery__intro" data-i18n="creative_intro">My collection of creations &mdash; everything I make away from a code editor: digital art, ink drawing, graphic design, photography and things I bake. Drag the strip or use the arrows to look through it. Open a piece for the larger image and its context.</p>
 
   <div class="filters gallery__filters" role="group" aria-label="Filter creative work">
     <button class="chip is-on" type="button" data-filter="all" aria-pressed="true" data-i18n="pf_all">All</button>
-    <button class="chip" type="button" data-filter="digital" aria-pressed="false" data-i18n="pf_digital">Digital art</button>
-    <button class="chip" type="button" data-filter="illustration" aria-pressed="false" data-i18n="pf_illustration">Illustration</button>
+    <button class="chip" type="button" data-filter="design" aria-pressed="false" data-i18n="pf_design">Graphic design</button>
+    <button class="chip" type="button" data-filter="illustration" aria-pressed="false" data-i18n="pf_illustration">Digital illustration</button>
+    <button class="chip" type="button" data-filter="traditional" aria-pressed="false" data-i18n="pf_traditional">Traditional drawing</button>
     <button class="chip" type="button" data-filter="photo" aria-pressed="false" data-i18n="pf_photo">Photography</button>
     <button class="chip" type="button" data-filter="kitchen" aria-pressed="false" data-i18n="pf_kitchen">In the kitchen</button>
   </div>
 
-  <div class="gallery__scroller" role="region" aria-label="Creative pieces, auto-scrolling" data-i18n-aria="gal_grid">
-    <div class="gallery__viewport">
+  <div class="gallery__scroller" role="region" aria-label="Creative pieces" data-i18n-aria="gal_grid">
+    <div class="gallery__viewport" tabindex="0">
     <div class="gallery__track" id="gallery-track">
-    <button class="art" type="button" data-kind="digital" data-title="REACHING" data-cat="Digital art" data-full="assets/images/playground/design/reaching.webp">
-      <span class="art__frame"><img src="assets/images/playground/design/reaching.webp" alt="Digital artwork &lsquo;Reaching&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+    <!-- curated lead-in: one piece per category so the first view shows the range -->
+    <button class="art" type="button" data-kind="design" data-title="REACHING" data-cat="Digital art" data-full="assets/images/playground/design/reaching.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/reaching.webp" alt="Digital artwork &lsquo;Reaching&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
       <span class="art__cap">REACHING <i>Digital art</i></span>
     </button>
-    <button class="art" type="button" data-kind="digital" data-title="WHAT REMAINS" data-cat="Digital art" data-full="assets/images/playground/design/what-remains.webp">
-      <span class="art__frame"><img src="assets/images/playground/design/what-remains.webp" alt="Digital artwork &lsquo;What Remains&rsquo; by Giovanna Ribas" loading="lazy" width="1056" height="1489"></span>
+    <button class="art" type="button" data-kind="traditional" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-01.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-01.webp" alt="Pencil hand studies by Giovanna Ribas" width="1000" height="1449"></span>
+      <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
+    </button>
+    <button class="art" type="button" data-kind="photo" data-title="Sunset" data-cat="Photography" data-full="assets/images/playground/photography/photo-01.webp">
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-01.webp" alt="Photograph by Giovanna Ribas" width="1125" height="1500"></span>
+      <span class="art__cap">Sunset <i data-i18n="cat_photo">Photography</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Zucchini gnocchi" data-cat="In the kitchen" data-full="assets/images/playground/food/food-01.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-01.webp" alt="Zucchini gnocchi made by Giovanna Ribas" width="1000" height="1500"></span>
+      <span class="art__cap">Zucchini gnocchi <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <!-- rest of the catalog, grouped by category -->
+    <button class="art" type="button" data-kind="design" data-title="WHAT REMAINS" data-cat="Digital art" data-full="assets/images/playground/design/what-remains.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/what-remains.webp" alt="Digital artwork &lsquo;What Remains&rsquo; by Giovanna Ribas" width="1056" height="1489"></span>
       <span class="art__cap">WHAT REMAINS <i>Digital art</i></span>
     </button>
-    <button class="art" type="button" data-kind="digital" data-title="MOMENTS" data-cat="Digital art" data-full="assets/images/playground/design/moments.webp">
-      <span class="art__frame"><img src="assets/images/playground/design/moments.webp" alt="Digital artwork &lsquo;Moments&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+    <button class="art" type="button" data-kind="design" data-title="MOMENTS" data-cat="Digital art" data-full="assets/images/playground/design/moments.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/moments.webp" alt="Digital artwork &lsquo;Moments&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
       <span class="art__cap">MOMENTS <i>Digital art</i></span>
     </button>
-    <button class="art" type="button" data-kind="digital" data-title="MY LOVE 2.0" data-cat="Digital art" data-full="assets/images/playground/design/my-love.webp">
-      <span class="art__frame"><img src="assets/images/playground/design/my-love.webp" alt="Digital artwork &lsquo;My Love 2.0&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+    <button class="art" type="button" data-kind="design" data-title="MY LOVE 2.0" data-cat="Digital art" data-full="assets/images/playground/design/my-love.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/my-love.webp" alt="Digital artwork &lsquo;My Love 2.0&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
       <span class="art__cap">MY LOVE 2.0 <i>Digital art</i></span>
     </button>
-    <button class="art" type="button" data-kind="digital" data-title="9TO5" data-cat="Graphic design" data-full="assets/images/playground/design/nine-to-five.webp">
-      <span class="art__frame"><img src="assets/images/playground/design/nine-to-five.webp" alt="Graphic design piece &lsquo;9to5&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+    <button class="art" type="button" data-kind="design" data-title="9TO5" data-cat="Graphic design" data-full="assets/images/playground/design/nine-to-five.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/nine-to-five.webp" alt="Graphic design piece &lsquo;9to5&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
       <span class="art__cap">9TO5 <i>Graphic design</i></span>
     </button>
-    <button class="art" type="button" data-kind="digital" data-title="TIME IS TICKING" data-cat="Graphic design" data-full="assets/images/playground/design/time-is-ticking.webp">
-      <span class="art__frame"><img src="assets/images/playground/design/time-is-ticking.webp" alt="Graphic design piece &lsquo;Time is Ticking&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+    <button class="art" type="button" data-kind="design" data-title="TIME IS TICKING" data-cat="Graphic design" data-full="assets/images/playground/design/time-is-ticking.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/time-is-ticking.webp" alt="Graphic design piece &lsquo;Time is Ticking&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
       <span class="art__cap">TIME IS TICKING <i>Graphic design</i></span>
     </button>
-    <button class="art" type="button" data-kind="digital" data-title="RUN" data-cat="Digital art" data-full="assets/images/playground/design/run.webp">
-      <span class="art__frame"><img src="assets/images/playground/design/run.webp" alt="Digital artwork &lsquo;Run&rsquo; by Giovanna Ribas" loading="lazy" width="1080" height="1350"></span>
+    <button class="art" type="button" data-kind="design" data-title="RUN" data-cat="Digital art" data-full="assets/images/playground/design/run.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/run.webp" alt="Digital artwork &lsquo;Run&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
       <span class="art__cap">RUN <i>Digital art</i></span>
     </button>
-    <button class="art" type="button" data-kind="digital" data-title="WHO ARE YOU" data-cat="Digital art" data-full="assets/images/playground/design/who-are-you.webp">
-      <span class="art__frame"><img src="assets/images/playground/design/who-are-you.webp" alt="Digital artwork &lsquo;Who Are You&rsquo; by Giovanna Ribas" loading="lazy" width="736" height="563"></span>
+    <button class="art" type="button" data-kind="design" data-title="WHO ARE YOU" data-cat="Digital art" data-full="assets/images/playground/design/who-are-you.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/who-are-you.webp" alt="Digital artwork &lsquo;Who Are You&rsquo; by Giovanna Ribas" width="736" height="563"></span>
       <span class="art__cap">WHO ARE YOU <i>Digital art</i></span>
     </button>
+    <button class="art" type="button" data-kind="design" data-title="FLASHGIRL" data-cat="Graphic design" data-full="assets/images/playground/design/flashgirl.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/flashgirl.webp" alt="Graphic design piece &lsquo;Flashgirl&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
+      <span class="art__cap">FLASHGIRL <i>Graphic design</i></span>
+    </button>
+    <button class="art" type="button" data-kind="design" data-title="BARK" data-cat="Graphic design" data-full="assets/images/playground/design/barkdog.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/barkdog.webp" alt="Graphic design piece &lsquo;Bark&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
+      <span class="art__cap">BARK <i>Graphic design</i></span>
+    </button>
+    <button class="art" type="button" data-kind="design" data-title="CHILDHOOD HAUL" data-cat="Graphic design" data-full="assets/images/playground/design/childhoodhaul.webp">
+      <span class="art__frame"><img src="assets/images/playground/design/childhoodhaul.webp" alt="Graphic design piece &lsquo;Childhood Haul&rsquo; by Giovanna Ribas" width="1080" height="1350"></span>
+      <span class="art__cap">CHILDHOOD HAUL <i>Graphic design</i></span>
+    </button>
     <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-01.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-01.webp" alt="Digital character study by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-01.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
       <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
     </button>
     <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-02.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-02.webp" alt="Digital character study by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-02.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
       <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
     </button>
     <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-03.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-03.webp" alt="Digital character study by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-03.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
       <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
     </button>
     <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-05.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-05.webp" alt="Digital character study by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-05.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
       <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
     </button>
     <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-06.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-06.webp" alt="Digital character study by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-06.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
       <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
     </button>
     <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-07.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-07.webp" alt="Digital character study by Giovanna Ribas" loading="lazy" width="1080" height="1080"></span>
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-07.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
       <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
     </button>
-    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-01.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/trad-01.webp" alt="Pencil hand studies by Giovanna Ribas" loading="lazy" width="1000" height="1449"></span>
+    <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-08.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-08.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-09.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-09.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
+    </button>
+    <button class="art" type="button" data-kind="illustration" data-title="Digital study" data-cat="Character studies" data-full="assets/images/playground/illustration/sketch-10.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/sketch-10.webp" alt="Digital character study by Giovanna Ribas" width="1080" height="1080"></span>
+      <span class="art__cap" data-i18n="pg_ink">Digital study <i>Character studies</i></span>
+    </button>
+    <button class="art" type="button" data-kind="traditional" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-04.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-04.webp" alt="Pencil figure study by Giovanna Ribas" width="1300" height="1060"></span>
       <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
     </button>
-    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-04.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/trad-04.webp" alt="Pencil figure study by Giovanna Ribas" loading="lazy" width="1300" height="1060"></span>
+    <button class="art" type="button" data-kind="traditional" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-02.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-02.webp" alt="Pencil portrait studies by Giovanna Ribas" width="941" height="1300"></span>
       <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
     </button>
-    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-02.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/trad-02.webp" alt="Pencil portrait studies by Giovanna Ribas" loading="lazy" width="941" height="1300"></span>
+    <button class="art" type="button" data-kind="traditional" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-06.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-06.webp" alt="Pencil character studies by Giovanna Ribas" width="1202" height="1300"></span>
       <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
     </button>
-    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-06.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/trad-06.webp" alt="Pencil character studies by Giovanna Ribas" loading="lazy" width="1202" height="1300"></span>
+    <button class="art" type="button" data-kind="traditional" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-05.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-05.webp" alt="Pencil character studies by Giovanna Ribas" width="893" height="1300"></span>
       <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
     </button>
-    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-05.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/trad-05.webp" alt="Pencil character studies by Giovanna Ribas" loading="lazy" width="893" height="1300"></span>
+    <button class="art" type="button" data-kind="traditional" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-03.webp">
+      <span class="art__frame"><img src="assets/images/playground/illustration/trad-03.webp" alt="Pencil study by Giovanna Ribas" width="516" height="1300"></span>
       <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
-    </button>
-    <button class="art" type="button" data-kind="illustration" data-title="Pencil study" data-cat="Traditional / pencil" data-full="assets/images/playground/illustration/trad-03.webp">
-      <span class="art__frame"><img src="assets/images/playground/illustration/trad-03.webp" alt="Pencil study by Giovanna Ribas" loading="lazy" width="516" height="1300"></span>
-      <span class="art__cap" data-i18n="pg_pencil">Pencil study <i>Traditional</i></span>
-    </button>
-
-    <button class="art" type="button" data-kind="photo" data-title="Sunset" data-cat="Photography" data-full="assets/images/playground/photography/photo-01.webp">
-      <span class="art__frame"><img src="assets/images/playground/photography/photo-01.webp" alt="Photograph by Giovanna Ribas" loading="lazy" width="1125" height="1500"></span>
-      <span class="art__cap">Sunset <i data-i18n="cat_photo">Photography</i></span>
     </button>
     <button class="art" type="button" data-kind="photo" data-title="City light" data-cat="Photography" data-full="assets/images/playground/photography/photo-02.webp">
-      <span class="art__frame"><img src="assets/images/playground/photography/photo-02.webp" alt="Skyscrapers and sun flare — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1000"></span>
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-02.webp" alt="Skyscrapers and sun flare — photograph by Giovanna Ribas" width="1500" height="1000"></span>
       <span class="art__cap">City light <i data-i18n="cat_photo">Photography</i></span>
     </button>
     <button class="art" type="button" data-kind="photo" data-title="Nave" data-cat="Photography" data-full="assets/images/playground/photography/photo-03.webp">
-      <span class="art__frame"><img src="assets/images/playground/photography/photo-03.webp" alt="Cathedral interior with a rose window — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1000"></span>
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-03.webp" alt="Cathedral interior with a rose window — photograph by Giovanna Ribas" width="1500" height="1000"></span>
       <span class="art__cap">Cathedral nave <i data-i18n="cat_photo">Photography</i></span>
     </button>
     <button class="art" type="button" data-kind="photo" data-title="Times Square" data-cat="Photography" data-full="assets/images/playground/photography/photo-04.webp">
-      <span class="art__frame"><img src="assets/images/playground/photography/photo-04.webp" alt="Times Square at dusk — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1000"></span>
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-04.webp" alt="Times Square at dusk — photograph by Giovanna Ribas" width="1500" height="1000"></span>
       <span class="art__cap">Times Square <i data-i18n="cat_photo">Photography</i></span>
     </button>
     <button class="art" type="button" data-kind="photo" data-title="Pietà" data-cat="Photography" data-full="assets/images/playground/photography/photo-06.webp">
-      <span class="art__frame"><img src="assets/images/playground/photography/photo-06.webp" alt="A Piet&agrave; sculpture in a gothic niche — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1120"></span>
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-06.webp" alt="A Piet&agrave; sculpture in a gothic niche — photograph by Giovanna Ribas" width="1500" height="1120"></span>
       <span class="art__cap">Pietà <i data-i18n="cat_photo">Photography</i></span>
     </button>
     <button class="art" type="button" data-kind="photo" data-title="Sandhill" data-cat="Photography" data-full="assets/images/playground/photography/photo-05.webp">
-      <span class="art__frame"><img src="assets/images/playground/photography/photo-05.webp" alt="A sandhill crane in golden light — photograph by Giovanna Ribas" loading="lazy" width="1500" height="1496"></span>
+      <span class="art__frame"><img src="assets/images/playground/photography/photo-05.webp" alt="A sandhill crane in golden light — photograph by Giovanna Ribas" width="1500" height="1496"></span>
       <span class="art__cap">Sandhill crane <i data-i18n="cat_photo">Photography</i></span>
     </button>
-
-    <button class="art" type="button" data-kind="kitchen" data-title="Baked by me" data-cat="In the kitchen" data-full="assets/images/playground/food/food-01.webp">
-      <span class="art__frame"><img src="assets/images/playground/food/food-01.webp" alt="Bread or a bake made by Giovanna Ribas" loading="lazy" width="1000" height="1500"></span>
-      <span class="art__cap" data-i18n="pg_kitchen">Baked by me <i>In the kitchen</i></span>
+    <button class="art" type="button" data-kind="kitchen" data-title="Pot roast" data-cat="In the kitchen" data-full="assets/images/playground/food/food-02.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-02.webp" alt="Pot roast made by Giovanna Ribas" width="1050" height="1500"></span>
+      <span class="art__cap">Pot roast <i data-i18n="cat_kitchen">In the kitchen</i></span>
     </button>
-    <button class="art" type="button" data-kind="kitchen" data-title="Baked by me" data-cat="In the kitchen" data-full="assets/images/playground/food/food-02.webp">
-      <span class="art__frame"><img src="assets/images/playground/food/food-02.webp" alt="Bread or a bake made by Giovanna Ribas" loading="lazy" width="1050" height="1500"></span>
-      <span class="art__cap" data-i18n="pg_kitchen">Baked by me <i>In the kitchen</i></span>
+    <button class="art" type="button" data-kind="kitchen" data-title="Challah bread" data-cat="In the kitchen" data-full="assets/images/playground/food/food-03.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-03.webp" alt="Challah bread made by Giovanna Ribas" width="1500" height="1000"></span>
+      <span class="art__cap">Challah bread <i data-i18n="cat_kitchen">In the kitchen</i></span>
     </button>
-    <button class="art" type="button" data-kind="kitchen" data-title="Baked by me" data-cat="In the kitchen" data-full="assets/images/playground/food/food-03.webp">
-      <span class="art__frame"><img src="assets/images/playground/food/food-03.webp" alt="Bread or a bake made by Giovanna Ribas" loading="lazy" width="1500" height="1000"></span>
-      <span class="art__cap" data-i18n="pg_kitchen">Baked by me <i>In the kitchen</i></span>
+    <button class="art" type="button" data-kind="kitchen" data-title="Chocolate caramel tart" data-cat="In the kitchen" data-full="assets/images/playground/food/food-04.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-04.webp" alt="Chocolate caramel tart made by Giovanna Ribas" width="1185" height="1500"></span>
+      <span class="art__cap">Chocolate caramel tart <i data-i18n="cat_kitchen">In the kitchen</i></span>
     </button>
-    <button class="art" type="button" data-kind="kitchen" data-title="Baked by me" data-cat="In the kitchen" data-full="assets/images/playground/food/food-04.webp">
-      <span class="art__frame"><img src="assets/images/playground/food/food-04.webp" alt="Bread or a bake made by Giovanna Ribas" loading="lazy" width="1185" height="1500"></span>
-      <span class="art__cap" data-i18n="pg_kitchen">Baked by me <i>In the kitchen</i></span>
+    <button class="art" type="button" data-kind="kitchen" data-title="Focaccia" data-cat="In the kitchen" data-full="assets/images/playground/food/food-05.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-05.webp" alt="Focaccia made by Giovanna Ribas" width="844" height="1500"></span>
+      <span class="art__cap">Focaccia <i data-i18n="cat_kitchen">In the kitchen</i></span>
     </button>
-    <button class="art" type="button" data-kind="kitchen" data-title="Baked by me" data-cat="In the kitchen" data-full="assets/images/playground/food/food-05.webp">
-      <span class="art__frame"><img src="assets/images/playground/food/food-05.webp" alt="Bread or a bake made by Giovanna Ribas" loading="lazy" width="844" height="1500"></span>
-      <span class="art__cap" data-i18n="pg_kitchen">Baked by me <i>In the kitchen</i></span>
+    <button class="art" type="button" data-kind="kitchen" data-title="Pita bread" data-cat="In the kitchen" data-full="assets/images/playground/food/food-06.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-06.webp" alt="Pita bread made by Giovanna Ribas" width="1179" height="1462"></span>
+      <span class="art__cap">Pita bread <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Carrot cake" data-cat="In the kitchen" data-full="assets/images/playground/food/food-07.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-07.webp" alt="Carrot cake made by Giovanna Ribas" width="1441" height="1500"></span>
+      <span class="art__cap">Carrot cake <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Creamy chicken pie" data-cat="In the kitchen" data-full="assets/images/playground/food/food-08.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-08.webp" alt="Creamy chicken pie made by Giovanna Ribas" width="1125" height="1500"></span>
+      <span class="art__cap">Creamy chicken pie <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Ciabatta" data-cat="In the kitchen" data-full="assets/images/playground/food/food-09.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-09.webp" alt="Ciabatta made by Giovanna Ribas" width="844" height="1500"></span>
+      <span class="art__cap">Ciabatta <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Rye loaves" data-cat="In the kitchen" data-full="assets/images/playground/food/food-10.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-10.webp" alt="Rye loaves made by Giovanna Ribas" width="1096" height="1500"></span>
+      <span class="art__cap">Rye loaves <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Rosemary steak" data-cat="In the kitchen" data-full="assets/images/playground/food/food-11.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-11.webp" alt="Rosemary steak made by Giovanna Ribas" width="1500" height="1056"></span>
+      <span class="art__cap">Rosemary steak <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Cookies" data-cat="In the kitchen" data-full="assets/images/playground/food/food-12.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-12.webp" alt="Cookies made by Giovanna Ribas" width="1125" height="1500"></span>
+      <span class="art__cap">Cookies <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Rigatoni" data-cat="In the kitchen" data-full="assets/images/playground/food/food-13.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-13.webp" alt="Rigatoni made by Giovanna Ribas" width="1500" height="985"></span>
+      <span class="art__cap">Rigatoni <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Olive baguette" data-cat="In the kitchen" data-full="assets/images/playground/food/food-14.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-14.webp" alt="Olive baguette made by Giovanna Ribas" width="1500" height="1032"></span>
+      <span class="art__cap">Olive baguette <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Hot chocolate cake" data-cat="In the kitchen" data-full="assets/images/playground/food/food-15.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-15.webp" alt="Hot chocolate cake made by Giovanna Ribas" width="1373" height="1500"></span>
+      <span class="art__cap">Hot chocolate cake <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Orange cake" data-cat="In the kitchen" data-full="assets/images/playground/food/food-16.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-16.webp" alt="Orange cake made by Giovanna Ribas" width="1125" height="1500"></span>
+      <span class="art__cap">Orange cake <i data-i18n="cat_kitchen">In the kitchen</i></span>
+    </button>
+    <button class="art" type="button" data-kind="kitchen" data-title="Bagels" data-cat="In the kitchen" data-full="assets/images/playground/food/food-17.webp">
+      <span class="art__frame"><img src="assets/images/playground/food/food-17.webp" alt="Bagels made by Giovanna Ribas" width="844" height="1500"></span>
+      <span class="art__cap">Bagels <i data-i18n="cat_kitchen">In the kitchen</i></span>
     </button>
     </div>
     </div>
-    <button class="gallery__pause" type="button" aria-label="Pause the gallery" aria-pressed="false" data-i18n-aria="gal_pause">&#8214;</button>
+    <button class="gallery__nav gallery__nav--prev" type="button" aria-label="Scroll left" data-i18n-aria="gal_prev">&larr;</button>
+    <button class="gallery__nav gallery__nav--next" type="button" aria-label="Scroll right" data-i18n-aria="gal_next">&rarr;</button>
   </div>
 
   <p><a class="cta" href="https://www.behance.net/ribestudio" target="_blank" rel="noopener noreferrer" data-i18n="cta_behance">More visual work on Behance &rarr;</a></p>
@@ -684,42 +571,190 @@
 
 <!-- ============ COMMUNITY ============ -->
 <section id="community" class="community" aria-labelledby="community-h">
-  <p class="section-label"><span>03</span> <span id="community-h" data-i18n="community_h">Community &amp; social impact</span></p>
+  <p class="section-label"><span aria-hidden="true">&#8212;</span> <span id="community-h" data-i18n="community_h">Community &amp; social impact</span></p>
   <p class="community__lead" data-i18n="community_lead">Building with people &mdash; each of these is a different role, in a different place.</p>
   <div class="community__list">
 
+    <!-- 1. Meiwa, Jun 2018 -->
+    <article class="ci">
+      <figure class="ci__shot ci__shot--doc"><img src="assets/images/community/meiwa.webp" width="1287" height="913" loading="lazy" alt="Certificate of participation, Meiwa &lsquo;Amigo da Natureza&rsquo; environmental education project"></figure>
+      <div class="ci__text">
+        <h3>Meiwa &mdash; Amigo da Natureza</h3>
+        <p class="xp__meta"><span data-i18n="ci_meiwa_role">Environmental Education Volunteer</span> &middot; <span data-i18n="ci_meiwa_period">Jun 2018</span></p>
+        <p class="xp__topics-label" data-i18n="ci_topics_h">Highlights:</p>
+        <ul class="xp__list">
+          <li data-i18n="ci_meiwa_t1">Reverse logistics for EPS/styrofoam recycling (Movimento Viramais)</li>
+          <li data-i18n="ci_meiwa_t2">Circular-economy education</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 2. Grupo Educacional Bom Jesus, Mar-Nov 2024 -->
+    <article class="ci ci--rev">
+      <figure class="ci__shot ci__shot--doc"><img src="assets/images/community/bomjesus.webp" width="1500" height="1064" loading="lazy" alt="Certificate of volunteering with Col&eacute;gio Bom Jesus &mdash; Centro, in partnership with Hospital Pequeno Pr&iacute;ncipe"></figure>
+      <div class="ci__text">
+        <h3>Grupo Educacional Bom Jesus</h3>
+        <p class="xp__meta"><span data-i18n="ci_bomjesus_role">Volunteer</span> &middot; <span data-i18n="ci_bomjesus_period">Mar&ndash;Nov 2024</span></p>
+        <p class="xp__topics-label" data-i18n="ci_topics_h">Highlights:</p>
+        <ul class="xp__list">
+          <li data-i18n="ci_bomjesus_t1">Visits to nursing homes, CMEIs/daycare centres and refugee-support centres</li>
+          <li data-i18n="ci_bomjesus_t2">Games and art workshops</li>
+          <li data-i18n="ci_bomjesus_t3">Donation drives</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 3. Hospital Pequeno Príncipe, Mar-Nov 2024 -->
+    <article class="ci">
+      <figure class="ci__shot ci__shot--doc"><img src="assets/images/community/pequenoprincipe.webp" width="1500" height="1064" loading="lazy" alt="Certificate of volunteering with Hospital Pequeno Pr&iacute;ncipe&rsquo;s &lsquo;Jovem Abra&ccedil;a Crian&ccedil;a&rsquo; program"></figure>
+      <div class="ci__text">
+        <h3>Hospital Pequeno Pr&iacute;ncipe</h3>
+        <p class="xp__meta"><span data-i18n="ci_pp_role">Volunteer &mdash; &ldquo;Jovem Abra&ccedil;a Crian&ccedil;a&rdquo;</span> &middot; <span data-i18n="ci_pp_period">Mar&ndash;Nov 2024</span></p>
+        <p class="xp__topics-label" data-i18n="ci_topics_h">Highlights:</p>
+        <ul class="xp__list">
+          <li data-i18n="ci_pp_t1">Recreational activities for hospitalised children and teens</li>
+          <li data-i18n="ci_pp_t2">Humanised support during hospital stays</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 4. Interact Club, Aug-Nov 2024 -->
+    <article class="ci ci--rev">
+      <figure class="ci__shot ci__shot--gallery" tabindex="0" role="button" aria-label="Click or press Enter to see more Interact Club photos" data-imgs='[
+          {"src":"assets/images/community/interact.webp","alt":"Giovanna Ribas planting a tree with fellow Interact Club de Curitiba volunteers"},
+          {"src":"assets/images/community/interact-2.webp","alt":"Giovanna Ribas with fellow Interact Club de Curitiba members and their club flag"},
+          {"src":"assets/images/community/interact-3.webp","alt":"Interact Club de Curitiba members with Rotary International volunteers at a tree-planting event"},
+          {"src":"assets/images/community/interact-4.webp","alt":"Giovanna Ribas and fellow volunteers at an Interact Club &lsquo;dia das crian&ccedil;as&rsquo; event"},
+          {"src":"assets/images/community/interact-5.webp","alt":"Making paper flowers for an Interact Club community project"}
+        ]'>
+        <img src="assets/images/community/interact.webp" width="1097" height="946" loading="lazy" alt="Giovanna Ribas planting a tree with fellow Interact Club de Curitiba volunteers">
+        <div class="ci__dots" aria-hidden="true"><span class="is-on"></span><span></span><span></span><span></span><span></span></div>
+        <span class="sr-only ci__gallery-status" aria-live="polite"></span>
+      </figure>
+      <div class="ci__text">
+        <h3>Interact Club de Curitiba</h3>
+        <p class="xp__meta"><span data-i18n="ci_interact_role">Volunteer</span> &middot; <span data-i18n="ci_interact_period">Aug&ndash;Nov 2024</span></p>
+        <p class="xp__topics-label" data-i18n="ci_topics_h">Highlights:</p>
+        <ul class="xp__list">
+          <li data-i18n="ci_interact_t1">Tree-planting and river-cleanup initiatives (Distrito 4730)</li>
+          <li data-i18n="ci_interact_t2">Activities with children around the city</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 5. Diretoria da Mulher, since Mar 2026 -->
     <article class="ci">
       <figure class="ci__shot"><img src="assets/images/community/diretoria.webp" width="1500" height="2000" loading="lazy" alt="Giovanna Ribas with the Diretoria da Mulher team at PUCPR"></figure>
       <div class="ci__text">
         <h3>Diretoria da Mulher &mdash; PUCPR</h3>
-        <p data-i18n="ci_ddm">Events Coordinator at the students&rsquo; union women&rsquo;s board (Mar 2026&ndash;present). I plan and run events and talks on inclusion and women&rsquo;s participation on campus &mdash; including organising the first &ldquo;Literatura com Elas&rdquo; gathering and the &ldquo;Vozes Femininas&rdquo; project.</p>
+        <p class="xp__meta"><span data-i18n="ci_ddm_role">Events Coordinator</span> &middot; <span data-i18n="ci_ddm_period">Since Mar 2026</span></p>
+        <p class="xp__topics-label" data-i18n="ci_topics_h">Highlights:</p>
+        <ul class="xp__list">
+          <li data-i18n="ci_ddm_t1">Plan and run events and talks on inclusion and women&rsquo;s participation on campus</li>
+        </ul>
       </div>
     </article>
 
+    <!-- 6. Blood donor, since Mar 2026 -->
     <article class="ci ci--rev">
-      <figure class="ci__shot"><img src="assets/images/community/teia-briefing.webp" width="1500" height="1000" loading="lazy" alt="A content briefing by Giovanna Ribas next to the Instagram story it became, for Teia do Bem"></figure>
+      <figure class="ci__shot"><img src="assets/images/community/blood.webp" width="1179" height="652" loading="lazy" alt="Giovanna Ribas donating blood"></figure>
       <div class="ci__text">
-        <h3>Teia do Bem</h3>
-        <p data-i18n="ci_teia">Social media strategist (Aug 2026&ndash;present). I build the editorial calendar, write the content briefings and track campaign performance to grow the institution&rsquo;s reach.</p>
+        <h3 data-i18n="ci_blood_h">Blood Donor</h3>
+        <p class="xp__meta"><span data-i18n="ci_blood_role">Recurring Donor</span> &middot; <span data-i18n="ci_blood_org">CHC Biobanco / Hemobanco UFPR</span> &middot; <span data-i18n="ci_blood_period">Since Mar 2026</span></p>
       </div>
     </article>
 
+    <!-- 7. Projeto Borboleta Menarca, since Apr 2026 -->
     <article class="ci ci--poster">
       <figure class="ci__shot"><img src="assets/images/community/borboleta.webp" width="1225" height="1284" loading="lazy" alt="Instagram post for Projeto Borboleta Menarca, credited &lsquo;Design by @giovreiss&rsquo;"></figure>
       <div class="ci__text">
         <h3>Projeto Borboleta Menarca</h3>
-        <p data-i18n="ci_borboleta">Design &amp; visual communication for a project on menstrual dignity and intimate health as a human-rights issue (Apr 2026&ndash;present). I create visual identity and awareness pieces that translate health concepts into approachable visuals for kids, teens and the community.</p>
+        <p class="xp__meta"><span data-i18n="ci_borboleta_role">Design &amp; Visual Communication Volunteer</span> &middot; <span data-i18n="ci_borboleta_period">Since Apr 2026</span></p>
+        <p class="xp__topics-label" data-i18n="ci_topics_h">Highlights:</p>
+        <ul class="xp__list">
+          <li data-i18n="ci_borboleta_t1">Visual identity and awareness pieces on menstrual dignity and intimate health</li>
+          <li data-i18n="ci_borboleta_t2">Translate health concepts into approachable visuals for kids, teens and the community</li>
+        </ul>
+      </div>
+    </article>
+
+    <!-- 8. Teia do Bem, since Aug 2026 -->
+    <article class="ci">
+      <figure class="ci__shot"><img src="assets/images/community/teia-briefing.webp" width="1500" height="1000" loading="lazy" alt="A content briefing by Giovanna Ribas next to the Instagram story it became, for Teia do Bem"></figure>
+      <div class="ci__text">
+        <h3>Teia do Bem</h3>
+        <p class="xp__meta"><span data-i18n="ci_teia_role">Social Media Strategist</span> &middot; <span data-i18n="ci_teia_period">Since Aug 2026</span></p>
+        <p class="xp__topics-label" data-i18n="ci_topics_h">Highlights:</p>
+        <ul class="xp__list">
+          <li data-i18n="ci_teia_t1">Build the editorial calendar</li>
+          <li data-i18n="ci_teia_t2">Write the content briefings</li>
+          <li data-i18n="ci_teia_t3">Track campaign performance to grow reach</li>
+        </ul>
       </div>
     </article>
 
   </div>
-  <p class="community__more" data-i18n="ci_more">I also planned and ran community projects with the Interact Club (Aug&ndash;Nov 2024), and joined environmental actions and activities with children around Curitiba.</p>
+
+  <h3 class="section-label community__subhead"><span aria-hidden="true">&#8212;</span> <span data-i18n="community_events_h">Events</span></h3>
+  <div class="ev-list">
+
+    <!-- Vozes Femininas, 11 Jun 2026 -->
+    <div class="ev-row">
+      <div class="ev-row__thumb"><img src="assets/images/community/vozes-femininas.webp" width="1280" height="720" loading="lazy" alt="Certificate for organising the &lsquo;Vozes Femininas&rsquo; project"></div>
+      <div class="ev-row__body">
+        <h4>Vozes Femininas</h4>
+        <p class="xp__meta"><span data-i18n="ci_vf_org">Diretoria da Mulher &mdash; PUCPR</span> &middot; <span data-i18n="ci_vf_period">Jun 11, 2026</span></p>
+        <p data-i18n="ci_vf_t1">Project giving space to women&rsquo;s voices on campus.</p>
+      </div>
+    </div>
+
+    <!-- Literatura com Elas, 20 Aug 2026 -->
+    <div class="ev-row">
+      <div class="ev-row__thumb"><img src="assets/images/community/literatura.webp" width="1280" height="720" loading="lazy" alt="Certificate for organising the 1st &lsquo;Literatura com Elas&rsquo; gathering"></div>
+      <div class="ev-row__body">
+        <h4>Literatura com Elas</h4>
+        <p class="xp__meta"><span data-i18n="ci_lce_org">Diretoria da Mulher &mdash; PUCPR</span> &middot; <span data-i18n="ci_lce_period">Aug 20, 2026</span></p>
+        <p data-i18n="ci_lce_t1">First edition of this gathering on women&rsquo;s literature and participation.</p>
+      </div>
+    </div>
+
+    <!-- DCE + Identidade PUCPR, 26 Aug 2026 -->
+    <div class="ev-row">
+      <div class="ev-row__thumb"><img src="assets/images/community/dce.webp" width="1500" height="947" loading="lazy" alt="Giovanna Ribas with the group at the &lsquo;DCE + Identidade PUCPR: Juntos&rsquo; gathering"></div>
+      <div class="ev-row__body">
+        <h4>DCE + Identidade PUCPR: Juntos</h4>
+        <p class="xp__meta"><span data-i18n="ci_dce_org">SOMA (DCE) + Identidade Institucional PUCPR</span> &middot; <span data-i18n="ci_dce_period">Aug 26, 2026</span></p>
+        <p data-i18n="ci_dce_t1">1st Student Relationship Gathering &mdash; team integration and strategic topics such as leadership, student protagonism and spirituality, through institutional presentations and guided activities.</p>
+      </div>
+    </div>
+
+    <!-- Lei Maria da Penha panel, 1 Sep 2026 -->
+    <div class="ev-row">
+      <div class="ev-row__thumb"><img src="assets/images/community/maria-penha.webp" width="1208" height="1400" loading="lazy" alt="Giovanna Ribas at OAB Paran&aacute; for a panel on 20 years of the Lei Maria da Penha"></div>
+      <div class="ev-row__body">
+        <h4 data-i18n="ci_mp_h">CAC Debate: 20 Years of the Lei Maria da Penha</h4>
+        <p class="xp__meta"><span data-i18n="ci_mp_org">OAB Paran&aacute;</span> &middot; <span data-i18n="ci_mp_period">Sep 1, 2026</span></p>
+        <p data-i18n="ci_mp_t1">With Fabiane Pieruccini (Desembargadora, TJ/PR), Maryah Salgado and Marina Jonsson (lawyers) &mdash; hosted by the Advocacia Iniciante, Estudos sobre Viol&ecirc;ncia de G&ecirc;nero, Advocacia Criminal and Mulheres Advogadas committees.</p>
+      </div>
+    </div>
+
+    <!-- Maker Faire Curitiba, 6 Sep 2026 -->
+    <div class="ev-row">
+      <div class="ev-row__thumb"><img src="assets/images/community/makerfaire.webp" width="1280" height="577" loading="lazy" alt="Giovanna Ribas with Prof. F&aacute;bio Garcez Bettio and colleagues at Maker Faire Curitiba"></div>
+      <div class="ev-row__body">
+        <h4>Maker Faire Curitiba</h4>
+        <p class="xp__meta"><span data-i18n="ci_mf_org">1st edition</span> &middot; <span data-i18n="ci_mf_period">Sep 6, 2026</span></p>
+        <p data-i18n="ci_mf_t1">Experienced the maker culture firsthand &mdash; collaboration, trial-and-error, building in community &mdash; and helped Prof. F&aacute;bio Garcez Bettio at his maker-space exhibit.</p>
+      </div>
+    </div>
+
+  </div>
   <p class="privacy-note" data-i18n="privacy_note">Photos are chosen with care &mdash; no children&rsquo;s faces in sensitive contexts, no legible badges or personal data.</p>
 </section>
 
 <!-- ============ CONTACT ============ -->
 <section id="contact" class="contact" aria-labelledby="contact-h">
-  <p class="section-label"><span>04</span> <span id="contact-h" data-i18n="contact_h">Contact</span></p>
+  <p class="section-label"><span aria-hidden="true">&#8212;</span> <span id="contact-h" data-i18n="contact_h">Contact</span></p>
   <p class="contact__line" data-i18n="contact_line">Open to build things with good people.</p>
   <ul class="contact__links">
     <li><a href="mailto:giovannareis07@gmail.com">giovannareis07@gmail.com</a></li>
@@ -733,13 +768,6 @@
 
 <footer class="foot">
   <div class="foot__inner">
-    <p class="foot__say" data-i18n="foot_say">Let's build something.</p>
-    <ul class="foot__links">
-      <li><a href="mailto:giovannareis07@gmail.com">Email</a></li>
-      <li><a href="https://www.linkedin.com/in/giovannaribasdosreis/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-      <li><a href="https://github.com/ribasgiovanna" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-      <li><a href="https://www.behance.net/ribestudio" target="_blank" rel="noopener noreferrer">Behance</a></li>
-    </ul>
     <p class="foot__wordmark" aria-hidden="true">Giovanna Ribas dos Reis<span class="dot">.</span></p>
     <p class="foot__note"><span data-i18n="foot_note">Built by hand with HTML, CSS &amp; JavaScript. No framework.</span>
        &nbsp;·&nbsp; &copy; <span id="year"></span> Giovanna Ribas dos Reis</p>
@@ -776,6 +804,7 @@
   </div>
 </div>
 
-<script src="script.js?v=20260911a"></script>
+<script src="script.js?v=20260914h"></script>
+<script src="gr-archive.js?v=20260913b" defer></script>
 </body>
 </html>
